@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2DA166BB-AA06-3EE9-908E-FBBC4687E85F}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>gz</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\gz-ws\gazebo\build\tools\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gz.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gz</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\gz-ws\gazebo\build\tools\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gz.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gz</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\gz-ws\gazebo\build\tools\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gz.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gz</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\gz-ws\gazebo\build\tools\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gz.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gz</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\build\tools\gz_autogen\include_Debug;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\vcpkg\installed\x64-windows\include;D:\vcpkg\installed\x64-windows\include\ignition\msgs1;D:\vcpkg\installed\x64-windows\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\vcpkg\installed\x64-windows\include\QtCore;D:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;D:\vcpkg\installed\x64-windows\include\QtWidgets;D:\vcpkg\installed\x64-windows\include\QtGui;D:\vcpkg\installed\x64-windows\include\QtANGLE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4068;4244;4267;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;CURL_STATICLIB;QT_CORE_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;CURL_STATICLIB;QT_CORE_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\build\tools\gz_autogen\include_Debug;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\vcpkg\installed\x64-windows\include\QtCore;D:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;D:\vcpkg\installed\x64-windows\include\QtWidgets;D:\vcpkg\installed\x64-windows\include\QtGui;D:\vcpkg\installed\x64-windows\include\QtANGLE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\build\tools\gz_autogen\include_Debug;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\vcpkg\installed\x64-windows\include\QtCore;D:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;D:\vcpkg\installed\x64-windows\include\QtWidgets;D:\vcpkg\installed\x64-windows\include\QtGui;D:\vcpkg\installed\x64-windows\include\QtANGLE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>Automatic MOC for target gz</Message>
+      <Command>setlocal
+cd D:\gz-ws\gazebo\build\tools
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/gz-ws/gazebo/build/tools/CMakeFiles/gz_autogen.dir/AutogenInfo.cmake Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>D:\gz-ws\gazebo\build\gazebo\gui\qtpropertybrowser\gzqtpropertybrowser.lib;d:\gz-ws\lib\gazebo_gui.lib;d:\gz-ws\lib\gazebo_sensors.lib;D:\vcpkg\installed\x64-windows\debug\lib\Qt5Widgetsd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_thread-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_system-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_filesystem-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_program_options-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_regex-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_iostreams-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_date_time-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_chrono-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_atomic-vc140-mt-gd.lib;d:\gz-ws\lib\gazebo_client.lib;D:\vcpkg\installed\x64-windows\debug\lib\Qt5Guid.lib;D:\vcpkg\installed\x64-windows\debug\lib\Qt5Cored.lib;D:\vcpkg\installed\x64-windows\lib\qwt.lib;d:\gz-ws\lib\gazebo_physics.lib;d:\gz-ws\lib\gazebo_util.lib;d:\gz-ws\lib\gazebo_ode.lib;d:\gz-ws\lib\gazebo_gimpact.lib;d:\gz-ws\lib\gazebo_opende_ou.lib;d:\gz-ws\lib\gazebo_ccd.lib;d:\gz-ws\lib\gazebo_opcode.lib;d:\gz-ws\lib\gazebo_rendering.lib;D:/vcpkg/installed/x64-windows/lib/ignition-transport4.lib;d:\gz-ws\lib\gazebo_transport.lib;ws2_32.lib;Iphlpapi.lib;d:\gz-ws\lib\gazebo_msgs.lib;d:\gz-ws\lib\gazebo_common.lib;D:\vcpkg\installed\x64-windows\lib\dl.lib;D:\vcpkg\installed\x64-windows\lib\FreeImage.lib;D:\vcpkg\installed\x64-windows\lib\libcurl.lib;D:\vcpkg\installed\x64-windows\lib\sdformat.lib;D:\vcpkg\installed\x64-windows\debug\lib\libprotobufd.lib;D:\gz-ws\lib\Debug\OgreMain_d.lib;D:\gz-ws\lib\Debug\OgreRTShaderSystem_d.lib;D:\gz-ws\lib\Debug\OgreTerrain_d.lib;D:\gz-ws\lib\Debug\OgrePaging_d.lib;D:\vcpkg\installed\x64-windows\debug\lib\ignition-msgs1.lib;D:\vcpkg\installed\x64-windows\debug\lib\ignition-math4.lib;D:\vcpkg\installed\x64-windows\debug\lib\tbb_debug.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/gz-ws/gazebo/build/test;D:/gz-ws/gazebo/build/test/$(Configuration);D:/gz-ws/gazebo/build/deps/libccd;D:/gz-ws/gazebo/build/deps/libccd/$(Configuration);D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib;D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib/$(Configuration);D:/vcpkg/installed/x64-windows/lib;D:/vcpkg/installed/x64-windows/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/gz-ws/gazebo/build/tools/Debug/gz.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/gz-ws/gazebo/build/tools/Debug/gz.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\build\tools\gz_autogen\include_Release;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\vcpkg\installed\x64-windows\include\QtCore;D:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;D:\vcpkg\installed\x64-windows\include\QtWidgets;D:\vcpkg\installed\x64-windows\include\QtGui;D:\vcpkg\installed\x64-windows\include\QtANGLE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4005;4068;4244;4267;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;CURL_STATICLIB;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;CURL_STATICLIB;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\build\tools\gz_autogen\include_Release;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\vcpkg\installed\x64-windows\include\QtCore;D:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;D:\vcpkg\installed\x64-windows\include\QtWidgets;D:\vcpkg\installed\x64-windows\include\QtGui;D:\vcpkg\installed\x64-windows\include\QtANGLE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\build\tools\gz_autogen\include_Release;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\vcpkg\installed\x64-windows\include\QtCore;D:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;D:\vcpkg\installed\x64-windows\include\QtWidgets;D:\vcpkg\installed\x64-windows\include\QtGui;D:\vcpkg\installed\x64-windows\include\QtANGLE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>Automatic MOC for target gz</Message>
+      <Command>setlocal
+cd D:\gz-ws\gazebo\build\tools
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/gz-ws/gazebo/build/tools/CMakeFiles/gz_autogen.dir/AutogenInfo.cmake Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\gazebo\gui\Release\gazebo_gui.lib;..\gazebo\sensors\Release\gazebo_sensors.lib;D:\vcpkg\installed\x64-windows\lib\Qt5Widgets.lib;D:\vcpkg\installed\x64-windows\lib\boost_thread-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_system-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_filesystem-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_program_options-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_regex-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_iostreams-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_date_time-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_chrono-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_atomic-vc140-mt.lib;..\gazebo\Release\gazebo_client.lib;D:\vcpkg\installed\x64-windows\lib\Qt5Gui.lib;D:\vcpkg\installed\x64-windows\lib\Qt5Core.lib;..\gazebo\gui\qtpropertybrowser\Release\gzqtpropertybrowser.lib;D:\vcpkg\installed\x64-windows\lib\qwt.lib;..\gazebo\physics\Release\gazebo_physics.lib;..\gazebo\util\Release\gazebo_util.lib;..\deps\opende\Release\gazebo_ode.lib;..\deps\opende\GIMPACT\Release\gazebo_gimpact.lib;..\deps\opende\ou\Release\gazebo_opende_ou.lib;..\deps\libccd\Release\gazebo_ccd.lib;..\deps\opende\OPCODE\Release\gazebo_opcode.lib;..\gazebo\rendering\Release\gazebo_rendering.lib;D:\gz-ws\lib\ignition-transport4.lib;..\gazebo\transport\Release\gazebo_transport.lib;ws2_32.lib;Iphlpapi.lib;..\gazebo\msgs\Release\gazebo_msgs.lib;..\gazebo\common\Release\gazebo_common.lib;D:\vcpkg\installed\x64-windows\lib\dl.lib;D:\vcpkg\installed\x64-windows\lib\boost_thread-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_system-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_filesystem-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_program_options-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_regex-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_iostreams-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_date_time-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_chrono-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_atomic-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\FreeImage.lib;..\gazebo\common\Release\tinyxml_internal.lib;D:\vcpkg\installed\x64-windows\lib\libcurl.lib;D:\vcpkg\installed\x64-windows\lib\sdformat.lib;D:\vcpkg\installed\x64-windows\lib\libprotobuf.lib;D:\gz-ws\lib\OgreMain.lib;;D:\gz-ws\lib\OgreRTShaderSystem.lib;D:\gz-ws\lib\OgreTerrain.lib;D:\gz-ws\lib\OgrePaging.lib;D:\gz-ws\lib\ignition-msgs1.lib;D:\vcpkg\installed\x64-windows\lib\ignition-math4.lib;D:\vcpkg\installed\x64-windows\lib\libprotobuf.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/gz-ws/gazebo/build/test;D:/gz-ws/gazebo/build/test/$(Configuration);D:/gz-ws/gazebo/build/deps/libccd;D:/gz-ws/gazebo/build/deps/libccd/$(Configuration);D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib;D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib/$(Configuration);D:/vcpkg/installed/x64-windows/lib;D:/vcpkg/installed/x64-windows/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/gz-ws/gazebo/build/tools/Release/gz.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/gz-ws/gazebo/build/tools/Release/gz.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\build\tools\gz_autogen\include_MinSizeRel;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\vcpkg\installed\x64-windows\include\QtCore;D:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;D:\vcpkg\installed\x64-windows\include\QtWidgets;D:\vcpkg\installed\x64-windows\include\QtGui;D:\vcpkg\installed\x64-windows\include\QtANGLE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4005;4068;4244;4267;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;CURL_STATICLIB;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;CURL_STATICLIB;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\build\tools\gz_autogen\include_MinSizeRel;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\vcpkg\installed\x64-windows\include\QtCore;D:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;D:\vcpkg\installed\x64-windows\include\QtWidgets;D:\vcpkg\installed\x64-windows\include\QtGui;D:\vcpkg\installed\x64-windows\include\QtANGLE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\build\tools\gz_autogen\include_MinSizeRel;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\vcpkg\installed\x64-windows\include\QtCore;D:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;D:\vcpkg\installed\x64-windows\include\QtWidgets;D:\vcpkg\installed\x64-windows\include\QtGui;D:\vcpkg\installed\x64-windows\include\QtANGLE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>Automatic MOC for target gz</Message>
+      <Command>setlocal
+cd D:\gz-ws\gazebo\build\tools
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/gz-ws/gazebo/build/tools/CMakeFiles/gz_autogen.dir/AutogenInfo.cmake MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\gazebo\gui\MinSizeRel\gazebo_gui.lib;..\gazebo\sensors\MinSizeRel\gazebo_sensors.lib;D:\vcpkg\installed\x64-windows\lib\Qt5Widgets.lib;D:\vcpkg\installed\x64-windows\lib\boost_thread-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_system-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_filesystem-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_program_options-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_regex-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_iostreams-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_date_time-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_chrono-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_atomic-vc140-mt.lib;..\gazebo\MinSizeRel\gazebo_client.lib;D:\vcpkg\installed\x64-windows\lib\Qt5Gui.lib;D:\vcpkg\installed\x64-windows\lib\Qt5Core.lib;..\gazebo\gui\qtpropertybrowser\MinSizeRel\gzqtpropertybrowser.lib;D:\vcpkg\installed\x64-windows\lib\qwt.lib;..\gazebo\physics\MinSizeRel\gazebo_physics.lib;..\gazebo\util\MinSizeRel\gazebo_util.lib;..\deps\opende\MinSizeRel\gazebo_ode.lib;..\deps\opende\GIMPACT\MinSizeRel\gazebo_gimpact.lib;..\deps\opende\ou\MinSizeRel\gazebo_opende_ou.lib;..\deps\libccd\MinSizeRel\gazebo_ccd.lib;..\deps\opende\OPCODE\MinSizeRel\gazebo_opcode.lib;..\gazebo\rendering\MinSizeRel\gazebo_rendering.lib;D:\gz-ws\lib\ignition-transport4.lib;..\gazebo\transport\MinSizeRel\gazebo_transport.lib;ws2_32.lib;Iphlpapi.lib;..\gazebo\msgs\MinSizeRel\gazebo_msgs.lib;..\gazebo\common\MinSizeRel\gazebo_common.lib;D:\vcpkg\installed\x64-windows\lib\dl.lib;D:\vcpkg\installed\x64-windows\lib\boost_thread-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_system-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_filesystem-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_program_options-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_regex-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_iostreams-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_date_time-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_chrono-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_atomic-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\FreeImage.lib;..\gazebo\common\MinSizeRel\tinyxml_internal.lib;D:\vcpkg\installed\x64-windows\lib\libcurl.lib;D:\vcpkg\installed\x64-windows\lib\sdformat.lib;D:\vcpkg\installed\x64-windows\lib\libprotobuf.lib;D:\gz-ws\lib\OgreMain.lib;;D:\gz-ws\lib\OgreRTShaderSystem.lib;D:\gz-ws\lib\OgreTerrain.lib;D:\gz-ws\lib\OgrePaging.lib;D:\gz-ws\lib\ignition-msgs1.lib;D:\vcpkg\installed\x64-windows\debug\lib\ignition-math4.lib;D:\vcpkg\installed\x64-windows\lib\libprotobuf.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/gz-ws/gazebo/build/test;D:/gz-ws/gazebo/build/test/$(Configuration);D:/gz-ws/gazebo/build/deps/libccd;D:/gz-ws/gazebo/build/deps/libccd/$(Configuration);D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib;D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib/$(Configuration);D:/vcpkg/installed/x64-windows/lib;D:/vcpkg/installed/x64-windows/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/gz-ws/gazebo/build/tools/MinSizeRel/gz.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/gz-ws/gazebo/build/tools/MinSizeRel/gz.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\build\tools\gz_autogen\include_RelWithDebInfo;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\vcpkg\installed\x64-windows\include\QtCore;D:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;D:\vcpkg\installed\x64-windows\include\QtWidgets;D:\vcpkg\installed\x64-windows\include\QtGui;D:\vcpkg\installed\x64-windows\include\QtANGLE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4068;4244;4267;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;CURL_STATICLIB;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;CURL_STATICLIB;QT_CORE_LIB;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\build\tools\gz_autogen\include_RelWithDebInfo;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\vcpkg\installed\x64-windows\include\QtCore;D:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;D:\vcpkg\installed\x64-windows\include\QtWidgets;D:\vcpkg\installed\x64-windows\include\QtGui;D:\vcpkg\installed\x64-windows\include\QtANGLE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\build\tools\gz_autogen\include_RelWithDebInfo;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\vcpkg\installed\x64-windows\include\QtCore;D:\vcpkg\installed\x64-windows\tools\qt5\mkspecs\win32-msvc;D:\vcpkg\installed\x64-windows\include\QtWidgets;D:\vcpkg\installed\x64-windows\include\QtGui;D:\vcpkg\installed\x64-windows\include\QtANGLE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <Message>Automatic MOC for target gz</Message>
+      <Command>setlocal
+cd D:\gz-ws\gazebo\build\tools
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen D:/gz-ws/gazebo/build/tools/CMakeFiles/gz_autogen.dir/AutogenInfo.cmake RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>..\gazebo\gui\RelWithDebInfo\gazebo_gui.lib;..\gazebo\sensors\RelWithDebInfo\gazebo_sensors.lib;D:\vcpkg\installed\x64-windows\lib\Qt5Widgets.lib;D:\vcpkg\installed\x64-windows\lib\boost_thread-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_system-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_filesystem-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_program_options-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_regex-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_iostreams-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_date_time-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_chrono-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_atomic-vc140-mt.lib;..\gazebo\RelWithDebInfo\gazebo_client.lib;D:\vcpkg\installed\x64-windows\lib\Qt5Gui.lib;D:\vcpkg\installed\x64-windows\lib\Qt5Core.lib;..\gazebo\gui\qtpropertybrowser\RelWithDebInfo\gzqtpropertybrowser.lib;D:\vcpkg\installed\x64-windows\lib\qwt.lib;..\gazebo\physics\RelWithDebInfo\gazebo_physics.lib;..\gazebo\util\RelWithDebInfo\gazebo_util.lib;..\deps\opende\RelWithDebInfo\gazebo_ode.lib;..\deps\opende\GIMPACT\RelWithDebInfo\gazebo_gimpact.lib;..\deps\opende\ou\RelWithDebInfo\gazebo_opende_ou.lib;..\deps\libccd\RelWithDebInfo\gazebo_ccd.lib;..\deps\opende\OPCODE\RelWithDebInfo\gazebo_opcode.lib;..\gazebo\rendering\RelWithDebInfo\gazebo_rendering.lib;D:\gz-ws\lib\ignition-transport4.lib;..\gazebo\transport\RelWithDebInfo\gazebo_transport.lib;ws2_32.lib;Iphlpapi.lib;..\gazebo\msgs\RelWithDebInfo\gazebo_msgs.lib;..\gazebo\common\RelWithDebInfo\gazebo_common.lib;D:\vcpkg\installed\x64-windows\lib\dl.lib;D:\vcpkg\installed\x64-windows\lib\boost_thread-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_system-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_filesystem-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_program_options-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_regex-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_iostreams-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_date_time-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_chrono-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_atomic-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\FreeImage.lib;..\gazebo\common\RelWithDebInfo\tinyxml_internal.lib;D:\vcpkg\installed\x64-windows\lib\libcurl.lib;D:\vcpkg\installed\x64-windows\lib\sdformat.lib;D:\vcpkg\installed\x64-windows\lib\libprotobuf.lib;D:\gz-ws\lib\OgreMain.lib;;D:\gz-ws\lib\OgreRTShaderSystem.lib;D:\gz-ws\lib\OgreTerrain.lib;D:\gz-ws\lib\OgrePaging.lib;D:\gz-ws\lib\ignition-msgs1.lib;D:\vcpkg\installed\x64-windows\debug\lib\ignition-math4.lib;D:\vcpkg\installed\x64-windows\lib\libprotobuf.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/gz-ws/gazebo/build/test;D:/gz-ws/gazebo/build/test/$(Configuration);D:/gz-ws/gazebo/build/deps/libccd;D:/gz-ws/gazebo/build/deps/libccd/$(Configuration);D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib;D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib/$(Configuration);D:/vcpkg/installed/x64-windows/lib;D:/vcpkg/installed/x64-windows/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/gz-ws/gazebo/build/tools/RelWithDebInfo/gz.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/gz-ws/gazebo/build/tools/RelWithDebInfo/gz.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\gz-ws\gazebo\build\tools\gz_autogen\mocs_compilation.cpp" />
+    <ClCompile Include="D:\gz-ws\gazebo\tools\gz.cc" />
+    <ClCompile Include="D:\gz-ws\gazebo\tools\gz_topic.cc" />
+    <ClCompile Include="D:\gz-ws\gazebo\tools\gz_log.cc" />
+    <ClCompile Include="D:\gz-ws\gazebo\tools\gz_marker.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\ZERO_CHECK.vcxproj">
+      <Project>{33635C3E-0B61-3C56-A8C8-15A3AD96F21C}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\deps\libccd\gazebo_ccd.vcxproj">
+      <Project>{7C93B337-7302-3837-94F2-FD8EA5BB5B76}</Project>
+      <Name>gazebo_ccd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\gazebo\common\gazebo_common.vcxproj">
+      <Project>{7599AEF9-4848-3173-8FF4-26C3F4D7E35B}</Project>
+      <Name>gazebo_common</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\deps\opende\GIMPACT\gazebo_gimpact.vcxproj">
+      <Project>{BB70D3F3-69AD-3867-B27D-98ECAD3CCDCA}</Project>
+      <Name>gazebo_gimpact</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\gazebo\gui\gazebo_gui.vcxproj">
+      <Project>{596DA5DF-29F0-3B3C-9A95-28A876E758C2}</Project>
+      <Name>gazebo_gui</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\gazebo\msgs\gazebo_msgs.vcxproj">
+      <Project>{7A8E81FD-7B6A-382B-AD4A-33E5A9247A99}</Project>
+      <Name>gazebo_msgs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\deps\opende\gazebo_ode.vcxproj">
+      <Project>{6C700EBD-F842-343E-939C-81EEF460B1B3}</Project>
+      <Name>gazebo_ode</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\deps\opende\OPCODE\gazebo_opcode.vcxproj">
+      <Project>{727AE14A-2196-3E35-91F6-B91C77953ABD}</Project>
+      <Name>gazebo_opcode</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\deps\opende\ou\gazebo_opende_ou.vcxproj">
+      <Project>{634BF328-0FD7-3C53-AD40-54913E05C03C}</Project>
+      <Name>gazebo_opende_ou</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\gazebo\physics\gazebo_physics.vcxproj">
+      <Project>{42BFEB76-BF91-30CE-B2E0-8B8A7C69176B}</Project>
+      <Name>gazebo_physics</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\gazebo\rendering\gazebo_rendering.vcxproj">
+      <Project>{3F801D49-9F4C-3EC1-8E6E-66725DA7DD0A}</Project>
+      <Name>gazebo_rendering</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\gazebo\sensors\gazebo_sensors.vcxproj">
+      <Project>{6FB0FD55-4C3A-39E4-BBF8-317C6FFD9901}</Project>
+      <Name>gazebo_sensors</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\gazebo\transport\gazebo_transport.vcxproj">
+      <Project>{163E5705-3DB4-3B50-BD20-4142913C1399}</Project>
+      <Name>gazebo_transport</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\gazebo\util\gazebo_util.vcxproj">
+      <Project>{39BB8A4C-EE84-3209-8CF7-CE368CB71DD3}</Project>
+      <Name>gazebo_util</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\gazebo\libgazebo_client.vcxproj">
+      <Project>{AA88D82A-7BC5-3C7B-8590-CF6CC67EEFBF}</Project>
+      <Name>libgazebo_client</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\gz-ws\gazebo\build\gazebo\common\tinyxml_internal.vcxproj">
+      <Project>{403C1C9B-51BD-3294-94A6-45DBAA8343FD}</Project>
+      <Name>tinyxml_internal</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\gz-ws\gazebo\build\gazebo\gui\gzclient_autogen\mocs_compilation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\gz-ws\gazebo\gazebo\gui\main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\gz-ws\gazebo\build\gazebo\gui\qrc_resources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\ApplyWrenchDialog.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\building\BuildingEditor.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\building\BuildingModelManip.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\CloneWindow.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\DataLogger.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\plot\EditableLabel.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\building\EditorView.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\model\ImportDialog.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\building\ImportImageView.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\InsertModelWidget.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\plot\IntrospectionCurveHandler.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\JointControlWidget.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\model\JointCreationDialog.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\model\JointInspector.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\LayersWidget.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\building\LevelWidget.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\LogPlayWidget.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\model\MEUserCmdManager.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\model\ModelData.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\model\ModelEditor.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\plot\PlotTracker.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\gazebo\gui\plot\PlotWindow.cc">
+      <Filter>gui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B24A42E7-959C-3761-9179-2309828A0B99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{8f371e04-3c4c-4374-b7df-d64f674f91a2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

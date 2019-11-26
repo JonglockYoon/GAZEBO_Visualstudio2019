@@ -1,0 +1,6 @@
+#define TEST_INTEGRATION_PATH "D:/gz-ws/gazebo/test/integration"
+#define TEST_REGRESSION_PATH "D:/gz-ws/gazebo/test/regression"
+#define TEST_UNIT_PATH "D:/gz-ws/gazebo/test/unit"
+#define TEST_PATH "D:/gz-ws/gazebo/test"
+#define PROJECT_SOURCE_PATH "D:/gz-ws/gazebo"
+#define PROJECT_BINARY_PATH "D:/gz-ws/gazebo/build"
