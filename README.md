@@ -4,7 +4,9 @@ Run procedure<br />
 =============<br />
 1. d:\vcpkg>vcpkg install --triplet x64-windows boost-thread boost-signals boost-filesystem boost-program-options boost-iostreams boost-asio boost-chrono boost-date-time boost-property-tree boost-uuid cppzmq curl dlfcn-win32 freeimage  qwt tbb zeromq zlib zziplib sdformat6 protobuf<br />
 <br />
-​2. d:\vcpkg>vcpkg install --triplet x64-windows ignition-math4 ignition-msgs1 ignition-transport4​<br />
+​2. <br />
+d:\vcpkg>vcpkg install --triplet x64-windows tinyxml tinyxml2 pugixml ois<br />
+d:\vcpkg>vcpkg install --triplet x64-windows ignition-math4 ignition-msgs1 ignition-transport4<br />
 <br />
 ​3. d:\vcpkg>vcpkg install --triplet x64-windows Qt5​<br />
 <br />
