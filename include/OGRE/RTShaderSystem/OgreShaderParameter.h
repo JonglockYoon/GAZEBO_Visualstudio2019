@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -307,11 +303,7 @@ public:
 // Interface.
 public:
 	/** */
-<<<<<<< HEAD
 	Parameter();
-=======
-	Parameter() {}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 	/** Class constructor.
 	@param type The type of this parameter.
@@ -319,10 +311,6 @@ public:
 	@param semantic The semantic of this parameter.
 	@param index The index of this parameter.
 	@param content The content of this parameter.
-<<<<<<< HEAD
-=======
-	@param variability How this parameter varies (bitwise combination of GpuProgramVariability).
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	Parameter(GpuConstantType type, const String& name, 
 		const Semantic& semantic, int index, 
@@ -385,11 +373,7 @@ typedef ShaderParameterList::const_iterator		ShaderParameterConstIterator;
 
 /** Uniform parameter class. Allow fast access to GPU parameter updates.
 */
-<<<<<<< HEAD
 class _OgreRTSSExport UniformParameter : public Parameter
-=======
-class UniformParameter : public Parameter
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 {
 public:
 

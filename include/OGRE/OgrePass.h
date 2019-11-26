@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -102,17 +98,10 @@ namespace Ogre {
 		};
     protected:
         Technique* mParent;
-<<<<<<< HEAD
         unsigned short mIndex; /// Pass index
         String mName; /// Optional name for the pass
         uint32 mHash; /// Pass hash
 		bool mHashDirtyQueued; /// Needs to be dirtied when next loaded
-=======
-        unsigned short mIndex; // pass index
-        String mName; // optional name for the pass
-        uint32 mHash; // pass hash
-		bool mHashDirtyQueued; // needs to be dirtied when next loaded
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         //-------------------------------------------------------------------------
         // Colour properties, only applicable in fixed-function passes
         ColourValue mAmbient;
@@ -138,11 +127,7 @@ namespace Ogre {
 		SceneBlendOperation mBlendOperation;
 		SceneBlendOperation mAlphaBlendOperation;
 
-<<<<<<< HEAD
 		/// Determines if we should use separate blending operations for color and alpha channels
-=======
-		// Determines if we should use separate blending operations for color and alpha channels
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		bool mSeparateBlendOperation;
 
         //-------------------------------------------------------------------------
@@ -156,11 +141,7 @@ namespace Ogre {
 		float mDepthBiasSlopeScale;
 		float mDepthBiasPerIteration;
 
-<<<<<<< HEAD
         /// Colour buffer settings
-=======
-        // Colour buffer settings
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         bool mColourWrite;
 
 		// Alpha reject settings
@@ -168,15 +149,9 @@ namespace Ogre {
 		unsigned char mAlphaRejectVal;
 		bool mAlphaToCoverageEnabled;
 
-<<<<<<< HEAD
 		/// Transparent depth sorting
 		bool mTransparentSorting;
 		/// Transparent depth sorting forced
-=======
-		// Transparent depth sorting
-		bool mTransparentSorting;
-		// Transparent depth sorting forced
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		bool mTransparentSortingForced;
         //-------------------------------------------------------------------------
 
@@ -196,17 +171,10 @@ namespace Ogre {
 		bool mIteratePerLight;
 		/// Iterate per how many lights?
 		unsigned short mLightsPerIteration;
-<<<<<<< HEAD
         /// Should it only be run for a certain light type?
         bool mRunOnlyForOneLightType;
         Light::LightTypes mOnlyLightType;
 		/// With a specific light mask?
-=======
-        // Should it only be run for a certain light type?
-        bool mRunOnlyForOneLightType;
-        Light::LightTypes mOnlyLightType;
-		// With a specific light mask?
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		uint32 mLightMask;
 
         /// Shading options
@@ -230,7 +198,6 @@ namespace Ogre {
         typedef vector<TextureUnitState*>::type TextureUnitStates;
         TextureUnitStates mTextureUnitStates;
 
-<<<<<<< HEAD
 		/// Vertex program details
 		GpuProgramUsage *mVertexProgramUsage;
         /// Vertex program details
@@ -256,37 +223,12 @@ namespace Ogre {
         /// Number of pass iterations to perform
         size_t mPassIterationCount;
 		/// Point size, applies when not using per-vertex point size
-=======
-		// Vertex program details
-		GpuProgramUsage *mVertexProgramUsage;
-        // Vertex program details
-        GpuProgramUsage *mShadowCasterVertexProgramUsage;
-        // Fragment program details
-        GpuProgramUsage *mShadowCasterFragmentProgramUsage;
-        // Vertex program details
-        GpuProgramUsage *mShadowReceiverVertexProgramUsage;
-		// Fragment program details
-		GpuProgramUsage *mFragmentProgramUsage;
-		// Fragment program details
-		GpuProgramUsage *mShadowReceiverFragmentProgramUsage;
-		// Geometry program details
-		GpuProgramUsage *mGeometryProgramUsage;
-        // Is this pass queued for deletion?
-        bool mQueuedForDeletion;
-        // number of pass iterations to perform
-        size_t mPassIterationCount;
-		// point size, applies when not using per-vertex point size
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		Real mPointSize;
 		Real mPointMinSize;
 		Real mPointMaxSize;
 		bool mPointSpritesEnabled;
 		bool mPointAttenuationEnabled;
-<<<<<<< HEAD
 		/// Constant, linear, quadratic coeffs
-=======
-		// constant, linear, quadratic coeffs
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		Real mPointAttenuationCoeffs[3];
 		// TU Content type lookups
 		typedef vector<unsigned short>::type ContentTypeLookup;
@@ -298,19 +240,11 @@ namespace Ogre {
 		bool mLightClipPlanes;
 		/// Illumination stage?
 		IlluminationStage mIlluminationStage;
-<<<<<<< HEAD
 		/// User objects binding.
 		UserObjectBindings	mUserObjectBindings;
 		
 
 		/// Used to get scene blending flags from a blending type
-=======
-		// User objects binding.
-		UserObjectBindings	mUserObjectBindings;
-		
-
-		// Used to get scene blending flags from a blending type
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		void _getBlendFlags(SceneBlendType type, SceneBlendFactor& source, SceneBlendFactor& dest);
 
 	public:
@@ -323,17 +257,10 @@ namespace Ogre {
 		/// The Pass hash functor
 		static HashFunc* msHashFunc;
     public:
-<<<<<<< HEAD
 		OGRE_STATIC_MUTEX(msDirtyHashListMutex);
 		OGRE_STATIC_MUTEX(msPassGraveyardMutex);
 		OGRE_MUTEX(mTexUnitChangeMutex);
 		OGRE_MUTEX(mGpuProgramChangeMutex);
-=======
-		OGRE_STATIC_MUTEX(msDirtyHashListMutex)
-		OGRE_STATIC_MUTEX(msPassGraveyardMutex)
-		OGRE_MUTEX(mTexUnitChangeMutex)
-		OGRE_MUTEX(mGpuProgramChangeMutex)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /// Default constructor
 		Pass(Technique* parent, unsigned short index);
         /// Copy constructor
@@ -343,20 +270,15 @@ namespace Ogre {
         virtual ~Pass();
 
         /// Returns true if this pass is programmable i.e. includes either a vertex or fragment program.
-<<<<<<< HEAD
         bool isProgrammable(void) const { return mVertexProgramUsage || mFragmentProgramUsage || mGeometryProgramUsage ||
 												 mTesselationHullProgramUsage || mTesselationDomainProgramUsage || mComputeProgramUsage; }
         
-=======
-        bool isProgrammable(void) const { return mVertexProgramUsage || mFragmentProgramUsage || mGeometryProgramUsage; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /// Returns true if this pass uses a programmable vertex pipeline
         bool hasVertexProgram(void) const { return mVertexProgramUsage != NULL; }
         /// Returns true if this pass uses a programmable fragment pipeline
         bool hasFragmentProgram(void) const { return mFragmentProgramUsage != NULL; }
         /// Returns true if this pass uses a programmable geometry pipeline
         bool hasGeometryProgram(void) const { return mGeometryProgramUsage != NULL; }
-<<<<<<< HEAD
     	/// Returns true if this pass uses a programmable tesselation control pipeline
         bool hasTesselationHullProgram(void) const { return mTesselationHullProgramUsage != NULL; }
 		/// Returns true if this pass uses a programmable tesselation control pipeline
@@ -365,10 +287,6 @@ namespace Ogre {
         bool hasComputeProgram(void) const { return mComputeProgramUsage != NULL; }
 		/// Returns true if this pass uses a shadow caster vertex program
 	    bool hasShadowCasterVertexProgram(void) const { return mShadowCasterVertexProgramUsage != NULL; }
-=======
-        /// Returns true if this pass uses a shadow caster vertex program
-        bool hasShadowCasterVertexProgram(void) const { return mShadowCasterVertexProgramUsage != NULL; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /// Returns true if this pass uses a shadow caster fragment program
         bool hasShadowCasterFragmentProgram(void) const { return mShadowCasterFragmentProgramUsage != NULL; }
         /// Returns true if this pass uses a shadow receiver vertex program
@@ -376,10 +294,7 @@ namespace Ogre {
         /// Returns true if this pass uses a shadow receiver fragment program
         bool hasShadowReceiverFragmentProgram(void) const { return mShadowReceiverFragmentProgramUsage != NULL; }
 
-<<<<<<< HEAD
         size_t calculateSize(void) const;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /// Gets the index of this Pass in the parent Technique
         unsigned short getIndex(void) const { return mIndex; }
@@ -389,11 +304,7 @@ namespace Ogre {
         from another material and only want to modify a particular pass.
         */
         void setName(const String& name);
-<<<<<<< HEAD
         /// Get the name of the pass
-=======
-        /// get the name of the pass
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         const String& getName(void) const { return mName; }
 
         /** Sets the ambient colour reflectance properties of this pass.
@@ -575,14 +486,9 @@ namespace Ogre {
 			The resulting size is clamped to the minimum and maximum point
 			size.
 		@param enabled Whether point attenuation is enabled
-<<<<<<< HEAD
 		@param constant Parameters to the attenuation function defined above
         @param linear Parameters to the attenuation function defined above
         @param quadratic Parameters to the attenuation function defined above
-=======
-		@param constant, linear, quadratic Parameters to the attenuation
-			function defined above
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		void setPointAttenuation(bool enabled,
 			Real constant = 0.0f, Real linear = 1.0f, Real quadratic = 0.0f);
@@ -651,17 +557,10 @@ namespace Ogre {
         /** Inserts a new TextureUnitState object into the Pass.
         @remarks
         This unit is is added on top of all previous units.
-<<<<<<< HEAD
         @param textureName
             The basic name of the texture e.g. brickwall.jpg, stonefloor.png
         @param texCoordSet
             The index of the texture coordinate set to use.
-=======
-        @param
-        name The basic name of the texture e.g. brickwall.jpg, stonefloor.png
-        @param
-        texCoordSet The index of the texture coordinate set to use.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         @note
         Applies to both fixed-function and programmable passes.
         */
@@ -852,11 +751,7 @@ namespace Ogre {
 			This function allows more control over blending since it allows you to select different blending
 			modes for the color and alpha channels
 			@param op The blending operation mode to use for color channels in this pass
-<<<<<<< HEAD
 			@param alphaOp The blending operation mode to use for alpha channels in this pass
-=======
-			@param op The blending operation mode to use for alpha channels in this pass
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		void setSeparateSceneBlendingOperation(SceneBlendOperation op, SceneBlendOperation alphaOp);
 
@@ -1593,11 +1488,7 @@ namespace Ogre {
 		void _load(void);
 		/** Internal method for unloading this pass. */
 		void _unload(void);
-<<<<<<< HEAD
         /// Is this loaded?
-=======
-        // Is this loaded?
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         bool isLoaded(void) const;
 
         /** Gets the 'hash' of this pass, ie a precomputed number to use for sorting
@@ -1866,7 +1757,6 @@ namespace Ogre {
 		@see UserObjectBindings::setUserAny.		
 		*/
 		const UserObjectBindings& getUserObjectBindings() const { return mUserObjectBindings; }
-<<<<<<< HEAD
 
 		/// Support for shader model 5.0, hull and domain shaders
 		/** Sets the details of the tesselation control program to use.
@@ -1955,8 +1845,6 @@ namespace Ogre {
 		GpuProgramParametersSharedPtr getComputeProgramParameters(void) const;
 		/** Gets the Tesselation EHull program used by this pass, only available after _load(). */
 		const GpuProgramPtr& getComputeProgram(void) const;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
 
     /** Struct recording a pass which can be used for a specific illumination stage.

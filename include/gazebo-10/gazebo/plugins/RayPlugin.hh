@@ -30,11 +30,7 @@
 namespace gazebo
 {
   /// \brief A Ray Sensor Plugin
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE RayPlugin : public SensorPlugin
-=======
-  class GAZEBO_VISIBLE RayPlugin : public SensorPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Constructor
     public: RayPlugin();

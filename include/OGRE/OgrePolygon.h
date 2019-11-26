@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Copyright (c) 2006 Matthias Fink, netAllied GmbH <matthias.fink@web.de>								
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,10 +31,7 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 #include "OgreVector3.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 
 namespace Ogre
@@ -150,9 +143,6 @@ namespace Ogre
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

@@ -12,11 +12,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -64,21 +60,10 @@ class OctreeSphereSceneQuery;
 class OctreeAxisAlignedBoxSceneQuery;
 class OctreePlaneBoundedVolumeListSceneQuery;
 
-<<<<<<< HEAD
 typedef list< WireBoundingBox * >::type BoxList;
 typedef list< unsigned long >::type ColorList;
 
 /** Specialized SceneManager that divides the geometry into an octree in order to facilitate spatial queries.
-=======
-
-typedef list< WireBoundingBox * >::type BoxList;
-typedef list< unsigned long >::type ColorList;
-//typedef list< SceneNode * >::type SceneNodeList;
-
-
-/** Specialized SceneManager that divides the geometry into an octree in order to facilitate spatial queries.
-@remarks
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 */
 
 class _OgreOctreePluginExport OctreeSceneManager : public SceneManager
@@ -203,19 +188,11 @@ public:
     /** Overridden from SceneManager */
     void clearScene(void);
 
-<<<<<<< HEAD
     AxisAlignedBoxSceneQuery* createAABBQuery(const AxisAlignedBox& box, uint32 mask);
     SphereSceneQuery* createSphereQuery(const Sphere& sphere, uint32 mask);
     PlaneBoundedVolumeListSceneQuery* createPlaneBoundedVolumeQuery(const PlaneBoundedVolumeList& volumes, uint32 mask);
     RaySceneQuery* createRayQuery(const Ray& ray, uint32 mask);
     IntersectionSceneQuery* createIntersectionQuery(uint32 mask);
-=======
-    AxisAlignedBoxSceneQuery* createAABBQuery(const AxisAlignedBox& box, unsigned long mask);
-    SphereSceneQuery* createSphereQuery(const Sphere& sphere, unsigned long mask);
-    PlaneBoundedVolumeListSceneQuery* createPlaneBoundedVolumeQuery(const PlaneBoundedVolumeList& volumes, unsigned long mask);
-    RaySceneQuery* createRayQuery(const Ray& ray, unsigned long mask);
-    IntersectionSceneQuery* createIntersectionQuery(unsigned long mask);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 protected:
 

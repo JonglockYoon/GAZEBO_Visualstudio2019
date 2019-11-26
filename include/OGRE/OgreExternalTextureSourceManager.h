@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -44,10 +40,7 @@ email                : pjcast@yahoo.com
 #include "OgreString.h"
 #include "OgreResourceGroupManager.h"
 #include "OgreExternalTextureSource.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {
@@ -119,11 +112,7 @@ namespace Ogre
         */
         static ExternalTextureSourceManager* getSingletonPtr(void);
 	protected:
-<<<<<<< HEAD
 		/// The current texture controller selected
-=======
-		//The current texture controller selected
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		ExternalTextureSource* mCurrExternalTextureSource;
 		
         // Collection of loaded texture System PlugIns, keyed by registered type
@@ -133,10 +122,7 @@ namespace Ogre
 	/** @} */
 	/** @} */
 } 
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

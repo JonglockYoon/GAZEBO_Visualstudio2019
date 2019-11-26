@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -103,11 +99,7 @@ namespace Ogre {
 		/** Merges another Sphere into the current sphere */
 		void merge(const Sphere& oth)
 		{
-<<<<<<< HEAD
 			Vector3 diff = oth.getCenter() - mCenter;
-=======
-			Vector3 diff =  oth.getCenter() - mCenter;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			Real lengthSq = diff.squaredLength();
 			Real radiusDiff = oth.getRadius() - mRadius;
 			
@@ -124,30 +116,11 @@ namespace Ogre {
 					return;
 				}
 			}
-<<<<<<< HEAD
 
 			Real length = Math::Sqrt(lengthSq);
             Real t = (length + radiusDiff) / (2.0f * length);
             mCenter = mCenter + diff * t;
 			mRadius = 0.5f * (length + mRadius + oth.getRadius());
-=======
-			
-			Real length = Math::Sqrt(lengthSq);
-			
-			Vector3 newCenter;
-			Real newRadius;
-			if ((length + oth.getRadius()) > mRadius) 
-			{
-				Real t = (length + radiusDiff) / (2.0f * length);
-				newCenter = mCenter + diff * t;
-			} 
-			// otherwise, we keep our existing center
-			
-			newRadius = 0.5f * (length + mRadius + oth.getRadius());
-			
-			mCenter = newCenter;
-			mRadius = newRadius;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		}
         
 

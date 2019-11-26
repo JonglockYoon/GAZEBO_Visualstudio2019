@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -39,10 +35,7 @@ THE SOFTWARE.
 #include "OgreKeyFrame.h"
 #include "OgreAnimable.h"
 #include "OgrePose.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre 
 {
@@ -239,11 +232,7 @@ namespace Ogre
         virtual void _buildKeyFrameIndexMap(const vector<Real>::type& keyFrameTimes);
 		
 		/** Internal method to re-base the keyframes relative to a given keyframe. */
-<<<<<<< HEAD
 		virtual void _applyBaseKeyFrame(const KeyFrame* base);
-=======
-		virtual void _applyBaseKeyFrame(const KeyFrame* base) {}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Set a listener for this track. */
 		virtual void setListener(Listener* l) { mListener = l; }
@@ -589,9 +578,6 @@ namespace Ogre
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

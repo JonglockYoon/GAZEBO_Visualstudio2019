@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Also see acknowledgements in Readme.html
 
 You may use this sample code for anything you like, it is not covered by the
@@ -28,10 +24,7 @@ Description: Base class for all the OGRE examples
 #include "Ogre.h"
 #include "OgreConfigFile.h"
 #include "ExampleFrameListener.h"
-<<<<<<< HEAD
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 // Static plugins declaration section
 // Note that every entry in here adds an extra header / library dependency
 #ifdef OGRE_STATIC_LIB
@@ -67,11 +60,7 @@ Description: Base class for all the OGRE examples
 #   include "macUtils.h"
 #endif
 
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
-=======
-#ifdef USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 /** This class simply demonstrates basic usage of the CRTShader system.
 It sub class the material manager listener class and when a target scheme callback
@@ -135,11 +124,8 @@ public:
     {
         mFrameListener = 0;
         mRoot = 0;
-<<<<<<< HEAD
 		mOverlaySystem=0;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		// Provide a nice cross platform solution for locating the configuration files
 		// On windows files are searched for in the current working directory, on OS X however
 		// you must provide the full path, the helper function macBundlePath does this for us.
@@ -154,11 +140,7 @@ public:
         mConfigPath = mResourcePath;
 #endif
 
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
-=======
-#ifdef USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		mShaderGenerator	 = NULL;		
 		mMaterialMgrListener = NULL;
 #endif
@@ -168,15 +150,12 @@ public:
     {
         if (mFrameListener)
             delete mFrameListener;
-<<<<<<< HEAD
 		if (mOverlaySystem)
 		{
 			if(mSceneMgr) mSceneMgr->removeRenderQueueListener(mOverlaySystem);
             OGRE_DELETE mOverlaySystem;
 		}
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         if (mRoot)
             OGRE_DELETE mRoot;
 
@@ -196,11 +175,7 @@ public:
         // clean up
         destroyScene();	
 
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
-=======
-#ifdef USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		// Finalize shader generator.
 		finalizeShaderGenerator();
 #endif
@@ -209,10 +184,7 @@ public:
 
 protected:
     Root *mRoot;
-<<<<<<< HEAD
 	OverlaySystem* mOverlaySystem;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #ifdef OGRE_STATIC_LIB
 	StaticPluginLoader mStaticPluginLoader;
 #endif
@@ -222,11 +194,7 @@ protected:
     RenderWindow* mWindow;
 	Ogre::String mResourcePath;
 	Ogre::String mConfigPath;
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
-=======
-#ifdef USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	RTShader::ShaderGenerator*					mShaderGenerator;			// The Shader generator instance.
 	ShaderGeneratorTechniqueResolverListener*	mMaterialMgrListener;		// Material manager listener.	
 #endif
@@ -248,10 +216,7 @@ protected:
 		
         mRoot = OGRE_NEW Root(pluginsPath, 
             mConfigPath + "ogre.cfg", mResourcePath + "Ogre.log");
-<<<<<<< HEAD
 		mOverlaySystem = OGRE_NEW OverlaySystem();
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #ifdef OGRE_STATIC_LIB
 		mStaticPluginLoader.load();
 #endif
@@ -264,11 +229,7 @@ protected:
         chooseSceneManager();
         createCamera();
         createViewports();
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
-=======
-#ifdef USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		// Initialize shader generator.
 		carryOn = initializeShaderGenerator(mSceneMgr);
 		if (!carryOn) 
@@ -291,11 +252,7 @@ protected:
         return true;
 
     }
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
-=======
-#ifdef USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	virtual bool initializeShaderGenerator(SceneManager* sceneMgr)
 	{	
 		if (RTShader::ShaderGenerator::initialize())
@@ -388,12 +345,9 @@ protected:
     {
         // Create the SceneManager, in this case a generic one
         mSceneMgr = mRoot->createSceneManager(ST_GENERIC, "ExampleSMInstance");
-<<<<<<< HEAD
 
 		if(mOverlaySystem)
 			 mSceneMgr->addRenderQueueListener(mOverlaySystem);
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     }
     virtual void createCamera(void)
     {

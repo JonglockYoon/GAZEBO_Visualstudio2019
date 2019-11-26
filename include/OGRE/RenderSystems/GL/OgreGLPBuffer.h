@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -42,11 +38,7 @@ namespace Ogre {
     class _OgreGLExport GLPBuffer
     {
     public:
-<<<<<<< HEAD
         GLPBuffer(PixelComponentType format, uint32 width, uint32 height);
-=======
-        GLPBuffer(PixelComponentType format, size_t width, size_t height);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         virtual ~GLPBuffer();
         
         /** Get the GL context that needs to be active to render to this PBuffer.
@@ -54,24 +46,15 @@ namespace Ogre {
         virtual GLContext *getContext() = 0;
         
         PixelComponentType getFormat() { return mFormat; }
-<<<<<<< HEAD
         uint32 getWidth() { return mWidth; }
         uint32 getHeight() { return mHeight; }
-=======
-        size_t getWidth() { return mWidth; }
-        size_t getHeight() { return mHeight; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         
         /** Get PBuffer component format for an OGRE pixel format.
          */
         static PixelComponentType getPixelComponentType(PixelFormat fmt);
     protected:
         PixelComponentType mFormat;
-<<<<<<< HEAD
         uint32 mWidth, mHeight;
-=======
-        size_t mWidth, mHeight;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
     
 }

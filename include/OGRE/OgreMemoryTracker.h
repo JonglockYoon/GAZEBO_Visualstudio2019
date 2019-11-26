@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -33,11 +29,8 @@ THE SOFTWARE.
 #ifndef _MemoryTracker_H__
 #define _MemoryTracker_H__
 
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 // Don't include prerequisites, can cause a circular dependency
 // This file must be included within another file which already has the prerequisites in it
 //#include "OgrePrerequisites.h"
@@ -67,13 +60,10 @@ namespace __gnu_cxx
 #   endif
 #endif
 
-<<<<<<< HEAD
 #if OGRE_MEMORY_TRACKER
 #   include "Threading/OgreThreadHeaders.h"
 #endif
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 namespace Ogre
 {
 	/** \addtogroup Core
@@ -93,11 +83,7 @@ namespace Ogre
 	class _OgreExport MemoryTracker
 	{
 	protected:
-<<<<<<< HEAD
             OGRE_AUTO_MUTEX;
-=======
-		OGRE_AUTO_MUTEX
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		// Allocation record
 		struct Alloc
@@ -197,12 +183,9 @@ namespace Ogre
 		~MemoryTracker()
 		{
 			reportLeaks();
-<<<<<<< HEAD
 
             // Disable recording so we don't try to record our own deallocation.
             mRecordEnable = false;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		}
 
 		/// Static utility method to get the memory tracker instance
@@ -219,10 +202,7 @@ namespace Ogre
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 

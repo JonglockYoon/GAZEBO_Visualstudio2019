@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,10 +32,7 @@ THE SOFTWARE.
 
 #include "OgreResourceManager.h"
 #include "OgreSingleton.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -75,24 +68,15 @@ namespace Ogre {
                 extension libraries.
             @param filename
                 The filename that will be opened
-<<<<<<< HEAD
             @param archiveType
                 The type of archive that this is. For example: "Zip".
-=======
-            @param refLibrary
-                The library that contains the data-handling code
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             @return
                 If the function succeeds, a valid pointer to an Archive
                 object is returned.
             @par
                 If the function fails, an exception is thrown.
         */
-<<<<<<< HEAD
         Archive* load( const String& filename, const String& archiveType, bool readOnly);
-=======
-        Archive* load( const String& filename, const String& archiveType);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Unloads an archive.
 		@remarks
@@ -153,9 +137,6 @@ namespace Ogre {
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

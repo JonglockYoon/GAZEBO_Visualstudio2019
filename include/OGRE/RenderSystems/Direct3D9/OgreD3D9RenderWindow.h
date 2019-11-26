@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -43,19 +39,9 @@ namespace Ogre
 	public:
 		/** Constructor.
 		@param instance The application instance
-<<<<<<< HEAD
 		*/
 		D3D9RenderWindow					    (HINSTANCE instance);
 		~D3D9RenderWindow					    ();	
-=======
-		@param driver The root driver
-		@param deviceIfSwapChain The existing D3D device to create an additional swap chain from, if this is not
-			the first window.
-		*/
-		D3D9RenderWindow					(HINSTANCE instance);
-		~D3D9RenderWindow					();
-		
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
 		void				create				(const String& name, unsigned int width, unsigned int height,
 												 bool fullScreen, const NameValuePairList *miscParams);
@@ -73,11 +59,7 @@ namespace Ogre
 		unsigned int		getVSyncInterval	() const;
 		void 				reposition			(int left, int top);
 		void 				resize				(unsigned int width, unsigned int height);
-<<<<<<< HEAD
 		void 				swapBuffers			();
-=======
-		void 				swapBuffers			( bool waitForVSync = true );
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		HWND 				getWindowHandle		() const { return mHWnd; }				
 		IDirect3DDevice9*	getD3D9Device		();
 		D3D9Device*			getDevice			();
@@ -100,11 +82,7 @@ namespace Ogre
 		/// @copydoc RenderTarget::_beginUpdate
 		void _beginUpdate();
 	
-<<<<<<< HEAD
 		/// @copydoc RenderTarget::_updateViewport(Viewport* viewport, bool updateStatistics)
-=======
-		/// @copydoc RenderTarget::_updateViewport
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		void _updateViewport(Viewport* viewport, bool updateStatistics = true);
 
 		/// @copydoc RenderTarget::_endUpdate
@@ -122,11 +100,7 @@ namespace Ogre
 		/// Returns true if this window use depth buffer.
 		bool isDepthBuffered() const;
 
-<<<<<<< HEAD
 		/// Returns true if this window should use NV Perf HUD adapter.
-=======
-		/// Returns true if this window should use NV perf hud adapter.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		bool isNvPerfHUDEnable() const;
 
 		/** Validate the device for this window. */

@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -32,16 +28,12 @@ THE SOFTWARE.
 #ifndef __Ogre_Iterator_Wrapper_H__
 #define __Ogre_Iterator_Wrapper_H__
 
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre{
 
 /** 
  * 
-<<<<<<< HEAD
  * @brief Basefunctionality for IteratorWrappers
  *
  * 
@@ -50,16 +42,6 @@ namespace Ogre{
  * @tparam ValType  T::mapped_type in case of a map, T::value_type for vector, list,...
  * 
  * Have a look at VectorIteratorWrapper and MapIteratorWrapper for a concrete usage
-=======
- * \brief Basefunctionality for IteratorWrappers
- *
- * 
- * \param T a Container like vector list map ...
- * \param IteratorType  T::iterator or T::const_iterator
- * \param ValType  T::mapped_type in case of a map, T::value_type for vector, list,...
- * 
- * have a look at VectorIteratorWrapper and MapIteratorWrapper for a concrete usage
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 */
 template <typename T, typename IteratorType, typename ValType>
 class IteratorWrapper
@@ -77,7 +59,6 @@ class IteratorWrapper
 
 	public:
 	
-<<<<<<< HEAD
 		/// Type you expect to get by funktions like peekNext(Value)
 		typedef ValType ValueType;
 		/// Type you expect to get by funktions like peekNext(Value)Ptr
@@ -88,24 +69,11 @@ class IteratorWrapper
 		
 		Useful if you want to use BOOST_FOREACH
 		@note there is no distinction between const_iterator and iterator.
-=======
-		/// type you expect to get by funktions like peekNext(Value)
-		typedef ValType ValueType;
-		/// type you expect to get by funktions like peekNext(Value)Ptr
-		typedef ValType* PointerType;
-
-		/**
-		\brief typedef to fulfill container interface
-		
-		Userfull if you want to use BOOST_FOREACH
-		\note there is no distinction between const_iterator and iterator.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		\n keep this in mind if you want to derivate from this class. 
 		*/
 		typedef IteratorType iterator;
 		
 		/**
-<<<<<<< HEAD
 		@brief Typedef to fulfill container interface
 		
 		Useful if you want to use BOOST_FOREACH
@@ -113,18 +81,6 @@ class IteratorWrapper
 		\n keep this in mind if you want to derivate from this class. 
 		*/
 		typedef IteratorType const_iterator;
-=======
-		\brief typedef to fulfill container interface
-		
-		Userfull if you want to use BOOST_FOREACH
-		\note there is no distinction between const_iterator and iterator.
-		\n keep this in mind if you want to derivate from this class. 
-		*/
-		typedef IteratorType const_iterator;
-		
-		
-		
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		
         /** Constructor.
@@ -150,7 +106,6 @@ class IteratorWrapper
 			++mCurrent;
 		}
 
-<<<<<<< HEAD
 		/** Bookmark to the begin of the underlying collection */
 		const IteratorType& begin() {return mBegin;}
 		
@@ -159,16 +114,6 @@ class IteratorWrapper
 		IteratorType& current(){return mCurrent;}
 		
 		/** Bookmark to the end (one behind the last element) of the underlying collection */
-=======
-		/** bookmark to the begin of the underlying collection */
-		const IteratorType& begin() {return mBegin;}
-		
-		
-		/** full access to the current  iterator */
-		IteratorType& current(){return mCurrent;}
-		
-		/** bookmark to the end (one behind the last element) of the underlying collection */
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		const IteratorType& end() {return mEnd;}
 		
 
@@ -178,7 +123,6 @@ class IteratorWrapper
 
 /** 
  * 
-<<<<<<< HEAD
  * @brief Prepared IteratorWrapper for container like std::vector 
  *
  * 
@@ -186,15 +130,6 @@ class IteratorWrapper
  * @tparam IteratorType  T::iterator or T::const_iterator
  * 
  * Have a look at VectorIterator and ConstVectorIterator for a more concrete usage
-=======
- * \brief Prepiared IteratorWrapper for container like std::vector 
- *
- * 
- * \param T = Container eg vector 
- * \param IteratorType  T::iterator or T::const_iterator
- * 
- * have a look at VectorIterator and ConstVectorIterator for a more concrete usage
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 */
 template <typename T, typename IteratorType>
 class VectorIteratorWrapper : public IteratorWrapper<T, IteratorType, typename  T::value_type>
@@ -206,21 +141,12 @@ class VectorIteratorWrapper : public IteratorWrapper<T, IteratorType, typename  
 	
 
 		/**
-<<<<<<< HEAD
 		 * @brief c'tor
 		 * 
 		 * Constructor that provide a start and end iterator to initialise.
 		 * 
 		 * @param start Start iterator 
 		 * @param last End iterator 
-=======
-		 * \brief c'tor
-		 * 
-		 * Constructor that provide a start and end iterator to initialise.
-		 * 
-		 * @param start start iterator 
-		 * @param end end iterator 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		 */
 		VectorIteratorWrapper ( IteratorType start, IteratorType last )
 		: IteratorWrapper<T, IteratorType, typename T::value_type>( start, last ) 
@@ -251,15 +177,9 @@ class VectorIteratorWrapper : public IteratorWrapper<T, IteratorType, typename  
 
 /** 
  * 
-<<<<<<< HEAD
  * @brief Concrete IteratorWrapper for nonconst access to the underlying container
  * 
  * @tparam T  Container
-=======
- * \brief Concrete IteratorWrapper for nonconst access to the underlying container
- * 
- * \param T  Container 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  * 
 */
 template <typename T>
@@ -287,17 +207,10 @@ class VectorIterator : public VectorIteratorWrapper<T,  typename T::iterator>{
 
 /** 
  * 
-<<<<<<< HEAD
  * @brief Concrete IteratorWrapper for const access to the underlying container
  *
  * 
  * @tparam T = Container
-=======
- * \brief Concrete IteratorWrapper for const access to the underlying container
- *
- * 
- * \param T = Container 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  * 
 */
 template <typename T>
@@ -328,7 +241,6 @@ class ConstVectorIterator : public VectorIteratorWrapper<T,  typename T::const_i
 
 /** 
  * 
-<<<<<<< HEAD
  * @brief Prepared IteratorWrapper for key-value container
  *
  * 
@@ -336,22 +248,12 @@ class ConstVectorIterator : public VectorIteratorWrapper<T,  typename T::const_i
  * @tparam  IteratorType T::iterator or T::const_iterator
  * 
  * Have a look at MapIterator and ConstMapIterator for a concrete usage
-=======
- * \brief Prepiared IteratorWrapper for key-value container
- *
- * 
- * \param T  Container  (map - or also set )
- * \param  IteratorType T::iterator or T::const_iterator
- * 
- * have a look at MapIterator and ConstMapIterator for a concrete usage
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 */
 template <typename T, typename IteratorType>
 class MapIteratorWrapper  : public IteratorWrapper<T, IteratorType, typename T::mapped_type>
 {
 
 	public:
-<<<<<<< HEAD
 		/// Redefined ValueType for a map/set
 		typedef typename IteratorWrapper<T, IteratorType, typename  T::mapped_type>::ValueType ValueType ; 
 		/// Redefined PointerType for a map/set
@@ -360,16 +262,6 @@ class MapIteratorWrapper  : public IteratorWrapper<T, IteratorType, typename T::
 		/// Unused, just to make it clear that map/set::value_type is not a ValueType
 		typedef typename T::value_type PairType ; 
 		/// Type you expect to get by funktions like peekNextKey
-=======
-		/// redefined ValueType for a map/set
-		typedef typename IteratorWrapper<T, IteratorType, typename  T::mapped_type>::ValueType ValueType ; 
-		/// redefined PointerType for a map/set
-		typedef typename IteratorWrapper<T, IteratorType, typename  T::mapped_type>::PointerType PointerType ;	
-		
-		///unused, just to make it clear that map/set::value_type is not a ValueType
-		typedef typename T::value_type PairType ; 
-		/// type you expect to get by funktions like peekNextKey
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		typedef typename T::key_type KeyType;
         
         /** Constructor.
@@ -417,17 +309,10 @@ class MapIteratorWrapper  : public IteratorWrapper<T, IteratorType, typename T::
 
 /** 
  * 
-<<<<<<< HEAD
  * @brief Concrete IteratorWrapper for nonconst access to the underlying key-value container
  *
  * 
  * @remarks Template key-value container
-=======
- * \brief Concrete IteratorWrapper for nonconst access to the underlying key-value container
- *
- * 
- * \param T key-value container
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  * 
 */
 template <typename T>
@@ -457,17 +342,10 @@ class MapIterator : public MapIteratorWrapper<T,  typename T::iterator>{
 
 /** 
  * 
-<<<<<<< HEAD
  * @brief Concrete IteratorWrapper for const access to the underlying key-value container
  *
  * 
  * @tparam T key-value container
-=======
- * \brief Concrete IteratorWrapper for const access to the underlying key-value container
- *
- * 
- * \param T key-value container
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  * 
 */
 template <typename T>
@@ -498,10 +376,6 @@ class ConstMapIterator : public MapIteratorWrapper<T,  typename T::const_iterato
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
-=======
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #endif

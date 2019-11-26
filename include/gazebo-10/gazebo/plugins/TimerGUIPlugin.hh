@@ -50,11 +50,7 @@ namespace gazebo
   /// </plugin>
   ///
   /// Note that the size has to be large enough to fit all widgets.
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE TimerGUIPlugin : public GUIPlugin
-=======
-  class GAZEBO_VISIBLE TimerGUIPlugin : public GUIPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     Q_OBJECT
 

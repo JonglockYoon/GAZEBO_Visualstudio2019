@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -46,11 +42,7 @@ namespace Ogre {
     class Quake3ShaderManager;
     class Quake3Shader;
 
-<<<<<<< HEAD
 #if (OGRE_PLATFORM == OGRE_PLATFORM_WIN32 || OGRE_PLATFORM == OGRE_PLATFORM_WINRT) && !defined(OGRE_STATIC_LIB)
-=======
-#if (OGRE_PLATFORM == OGRE_PLATFORM_WIN32) && !defined(OGRE_STATIC_LIB)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #	ifdef OGRE_BSPPLUGIN_EXPORTS
 #		define _OgreBspPluginExport __declspec(dllexport)
 #	else

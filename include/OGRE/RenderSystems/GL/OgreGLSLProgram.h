@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,12 +32,8 @@ THE SOFTWARE.
 #include "OgreHighLevelGpuProgram.h"
 
 namespace Ogre {
-<<<<<<< HEAD
     namespace GLSL {
     /** Specialisation of HighLevelGpuProgram to provide support for OpenGL
-=======
-    /** Specialisation of HighLevelGpuProgram to provide support for OpenGL 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         Shader Language (GLSL).
     @remarks
 		GLSL has no target assembler or entry point specification like DirectX 9 HLSL.
@@ -72,7 +64,6 @@ namespace Ogre {
             String doGet(const void* target) const;
             void doSet(void* target, const String& shaderNames);
         };
-<<<<<<< HEAD
         /// Command object for setting matrix packing in column-major order
         class CmdColumnMajorMatrices : public ParamCommand
         {
@@ -80,8 +71,6 @@ namespace Ogre {
             String doGet(const void* target) const;
             void doSet(void* target, const String& val);
         };
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         GLSLProgram(ResourceManager* creator, 
             const String& name, ResourceHandle handle,
@@ -108,16 +97,12 @@ namespace Ogre {
         /// Overridden from GpuProgram
         const String& getLanguage(void) const;
 
-<<<<<<< HEAD
         /** Sets whether matrix packing in column-major order. */ 
         void setColumnMajorMatrices(bool columnMajor) { mColumnMajorMatrices = columnMajor; }
         /** Gets whether matrix packed in column-major order. */
         bool getColumnMajorMatrices(void) const { return mColumnMajorMatrices; }
 
         /** Returns the operation type that this geometry program expects to
-=======
-		/** Returns the operation type that this geometry program expects to
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			receive as input
 		*/
 		virtual RenderOperation::OperationType getInputOperationType(void) const 
@@ -179,10 +164,7 @@ namespace Ogre {
 	protected:
 		static CmdPreprocessorDefines msCmdPreprocessorDefines;
         static CmdAttach msCmdAttach;
-<<<<<<< HEAD
         static CmdColumnMajorMatrices msCmdColumnMajorMatrices;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		static CmdInputOperationType msInputOperationTypeCmd;
 		static CmdOutputOperationType msOutputOperationTypeCmd;
 		static CmdMaxOutputVertices msMaxOutputVerticesCmd;
@@ -217,7 +199,6 @@ namespace Ogre {
 		RenderOperation::OperationType mOutputOperationType;
 		/// The maximum amount of vertices that this (geometry) program can output
 		int mMaxOutputVertices;
-<<<<<<< HEAD
 		/// Attached Shader names
 		String mAttachedShaderNames;
 		/// Preprocessor options
@@ -231,18 +212,6 @@ namespace Ogre {
 
     };
     }
-=======
-		/// attached Shader names
-		String mAttachedShaderNames;
-		/// Preprocessor options
-		String mPreprocessorDefines;
-		/// container of attached programs
-		typedef vector< GLSLProgram* >::type GLSLProgramContainer;
-		typedef GLSLProgramContainer::iterator GLSLProgramContainerIterator;
-		GLSLProgramContainer mAttachedGLSLPrograms;
-
-    };
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 }
 
 #endif // __GLSLProgram_H__

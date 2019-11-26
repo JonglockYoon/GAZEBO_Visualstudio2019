@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -33,13 +29,8 @@ THE SOFTWARE.
 #define _ArchiveFactory_H__
 
 #include "OgrePrerequisites.h"
-<<<<<<< HEAD
 #include "OgreFactoryObj.h"
 #include "OgreHeaderPrefix.h"
-=======
-
-#include "OgreFactoryObj.h"
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -69,7 +60,6 @@ namespace Ogre {
     {
     public:
         virtual ~ArchiveFactory() {}
-<<<<<<< HEAD
         /** Creates a new object.
         @param name Name of the object to create
         @return
@@ -79,18 +69,12 @@ namespace Ogre {
         virtual Archive* createInstance(const String& name, bool readOnly) = 0;
 
         virtual Archive* createInstance(const String& name) { return createInstance(name, true); }
-=======
-        // No methods, must just override all methods inherited from FactoryObj
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
 	/** @} */
 	/** @} */
 
 } // namespace
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

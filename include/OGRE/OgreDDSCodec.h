@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -56,20 +52,12 @@ namespace Ogre {
     private:
         String mType;
 
-<<<<<<< HEAD
 		static void flipEndian(void * pData, size_t size, size_t count);	// invokes Bitwise::bswapChunks() if OGRE_ENDIAN_BIG
 		static void flipEndian(void * pData, size_t size);					// invokes Bitwise::bswapBuffer() if OGRE_ENDIAN_BIG
 
 		PixelFormat convertFourCCFormat(uint32 fourcc) const;
 		PixelFormat convertDXToOgreFormat(uint32 fourcc) const;
 		PixelFormat convertPixelFormat(uint32 rgbBits, uint32 rMask,
-=======
-    	void flipEndian(void * pData, size_t size, size_t count) const;
-	    void flipEndian(void * pData, size_t size) const;
-
-		PixelFormat convertFourCCFormat(uint32 fourcc) const;
-		PixelFormat convertPixelFormat(uint32 rgbBits, uint32 rMask, 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			uint32 gMask, uint32 bMask, uint32 aMask) const;
 
 		/// Unpack DXT colours into array of 16 colour values
@@ -85,17 +73,10 @@ namespace Ogre {
         DDSCodec();
         virtual ~DDSCodec() { }
 
-<<<<<<< HEAD
         /// @copydoc Codec::encode
         DataStreamPtr encode(MemoryDataStreamPtr& input, CodecDataPtr& pData) const;
         /// @copydoc Codec::encodeToFile
         void encodeToFile(MemoryDataStreamPtr& input, const String& outFileName, CodecDataPtr& pData) const;
-=======
-        /// @copydoc Codec::code
-        DataStreamPtr code(MemoryDataStreamPtr& input, CodecDataPtr& pData) const;
-        /// @copydoc Codec::codeToFile
-        void codeToFile(MemoryDataStreamPtr& input, const String& outFileName, CodecDataPtr& pData) const;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /// @copydoc Codec::decode
         DecodeResult decode(DataStreamPtr& input) const;
 		/// @copydoc Codec::magicNumberToFileExt

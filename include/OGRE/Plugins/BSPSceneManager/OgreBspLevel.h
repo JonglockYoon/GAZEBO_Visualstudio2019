@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -51,19 +47,11 @@ namespace Ogre {
         are more likely to call SceneManager::setWorldGeometry which will
         automatically arrange the loading of the level. Note that this assumes
         that you have asked for an indoor-specialised SceneManager (specify
-<<<<<<< HEAD
         ST_INDOOR when calling Root::getSceneManager).
         Ogre currently only supports loading from Quake3 Arena level files,
         although any source that can be converted into this classes structure
         could also be used. The Quake3 level load process is in a different
         class called Quake3Level to keep the specifics separate.
-=======
-        ST_INDOOR when calling Root::getSceneManager).</p>
-        Ogre currently only supports loading from Quake3 Arena level files,
-        although any source that can be converted into this classes structure
-        could also be used. The Quake3 level load process is in a different
-        class called Quake3Level to keep the specifics separate.</p>
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     */
     class BspLevel : public Resource
     {
@@ -130,11 +118,7 @@ namespace Ogre {
         int mNumNodes;
         int mNumLeaves;
 		int mNumBrushes;
-<<<<<<< HEAD
         int mLeafStart; /// The index at which leaf nodes begin
-=======
-        int mLeafStart; // the index at which leaf nodes begin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Vertex format for fixed geometry.
             Note that in this case vertex components (position, normal, texture coords etc)
@@ -151,15 +135,7 @@ namespace Ogre {
             float texcoords[2];
             float lightmap[2];
         };
-<<<<<<< HEAD
 
-=======
-        /*
-        /// Array of vertices for whole level.
-        BspVertex* mVertices;
-        int mNumVertices;
-        */
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /// Vertex data holding all the data for the level, but able to render parts of it
         VertexData* mVertexData;
 
@@ -173,22 +149,9 @@ namespace Ogre {
         StaticFaceGroup* mFaceGroups;
         int mNumFaceGroups;
 
-<<<<<<< HEAD
         /// Indexes for the whole level, will be copied to the real indexdata per frame
         size_t mNumIndexes;
         /// System-memory buffer
-=======
-
-        /*
-        /// Array of elements i.e. vertex indexes as used by face groups.
-        int* mElements;
-        int mNumElements;
-        */
-
-        /// indexes for the whole level, will be copied to the real indexdata per frame
-        size_t mNumIndexes;
-        // system-memory buffer
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         HardwareIndexBufferSharedPtr mIndexes;
 
         /// Brushes as used for collision, main memory is here
@@ -208,29 +171,17 @@ namespace Ogre {
             up to the nearest byte obviously, which uses far less space than 4-bytes per linked node per source
             node). Of course the limitation here is that you have to each leaf in turn to determine if it is visible
             rather than just following a list, but since this is only done once per frame this is not such a big
-<<<<<<< HEAD
             overhead.
             Each row in the table is a 'from' cluster, with each bit in the row corresponding to a 'to' cluster,
             both ordered based on cluster index. A 0 in the bit indicates the 'to' cluster is not visible from the
             'from' cluster, whilst a 1 indicates it is.
-=======
-            overhead.</p>
-            Each row in the table is a 'from' cluster, with each bit in the row corresponding to a 'to' cluster,
-            both ordered based on cluster index. A 0 in the bit indicates the 'to' cluster is not visible from the
-            'from' cluster, whilst a 1 indicates it is.</p>
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             As many will notice, this is lifted directly from the Quake implementation of PVS.
         */
         struct VisData
         {
             unsigned char *tableData;
-<<<<<<< HEAD
             int numClusters;            /// Number of clusters, therefore number of rows
             int rowLength;                /// Length in bytes of each row (num clusters / 8 rounded up)
-=======
-            int numClusters;            // Number of clusters, therefore number of rows
-            int rowLength;                // Length in bytes of each row (num clusters / 8 rounded up)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         };
 
         VisData mVisData;
@@ -245,7 +196,6 @@ namespace Ogre {
 
         void tagNodesWithMovable(BspNode* node, const MovableObject* mov, const Vector3& pos);
 
-<<<<<<< HEAD
         /// Storage of patches
 		typedef map<int, PatchSurface*>::type PatchMap;
         PatchMap mPatches;
@@ -258,20 +208,6 @@ namespace Ogre {
 		/// Sky material
 		String mSkyMaterial;
 		/// Sky details
-=======
-        // Storage of patches 
-		typedef map<int, PatchSurface*>::type PatchMap;
-        PatchMap mPatches;
-        // Total number of vertices required for all patches
-        size_t mPatchVertexCount;
-        // Total number of indexes required for all patches
-        size_t mPatchIndexCount;
-		// Sky enabled?
-		bool mSkyEnabled;
-		// Sky material
-		String mSkyMaterial;
-		// Sky details
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		Real mSkyCurvature;
 
 
@@ -282,54 +218,7 @@ namespace Ogre {
 
 
     };
-<<<<<<< HEAD
     typedef SharedPtr<BspLevel> BspLevelPtr;
-=======
-    /** Specialisation of SharedPtr to allow SharedPtr to be assigned to BspLevelPtr 
-    @note Has to be a subclass since we need operator=.
-    We could templatise this instead of repeating per Resource subclass, 
-    except to do so requires a form VC6 does not support i.e.
-    ResourceSubclassPtr<T> : public SharedPtr<T>
-    */
-    class BspLevelPtr : public SharedPtr<BspLevel> 
-    {
-    public:
-        BspLevelPtr() : SharedPtr<BspLevel>() {}
-        explicit BspLevelPtr(BspLevel* rep) : SharedPtr<BspLevel>(rep) {}
-        BspLevelPtr(const BspLevelPtr& r) : SharedPtr<BspLevel>(r) {} 
-        BspLevelPtr(const ResourcePtr& r) : SharedPtr<BspLevel>()
-        {
-			// lock & copy other mutex pointer
-			OGRE_LOCK_MUTEX(*r.OGRE_AUTO_MUTEX_NAME)
-			OGRE_COPY_AUTO_SHARED_MUTEX(r.OGRE_AUTO_MUTEX_NAME)
-            pRep = static_cast<BspLevel*>(r.getPointer());
-            pUseCount = r.useCountPointer();
-            if (pUseCount)
-            {
-                ++(*pUseCount);
-            }
-        }
-
-        /// Operator used to convert a ResourcePtr to a BspLevelPtr
-        BspLevelPtr& operator=(const ResourcePtr& r)
-        {
-            if (pRep == static_cast<BspLevel*>(r.getPointer()))
-                return *this;
-            release();
-			// lock & copy other mutex pointer
-			OGRE_LOCK_MUTEX(*r.OGRE_AUTO_MUTEX_NAME)
-			OGRE_COPY_AUTO_SHARED_MUTEX(r.OGRE_AUTO_MUTEX_NAME)
-            pRep = static_cast<BspLevel*>(r.getPointer());
-            pUseCount = r.useCountPointer();
-            if (pUseCount)
-            {
-                ++(*pUseCount);
-            }
-            return *this;
-        }
-    };
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 }
 
 #endif

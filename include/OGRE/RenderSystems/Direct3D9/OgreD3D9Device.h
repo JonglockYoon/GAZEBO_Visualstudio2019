@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -84,14 +80,11 @@ namespace Ogre {
 		void					copyContentsToMemory(D3D9RenderWindow* window, const PixelBox &dst, RenderTarget::FrameBuffer buffer);
 		void					clearDeviceStreams		();
 	
-<<<<<<< HEAD
 		bool					isVertexProgramBound	() const { return mVertexProgramBound; }
 		bool					isFragmentProgramBound	() const { return mFragmentProgramBound; }
 		void					_setVertexProgramBound	(bool programBound) { mVertexProgramBound = programBound; }
 		void					_setFragmentProgramBound(bool programBound) { mFragmentProgramBound = programBound; }
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	public:
 		D3D9Device	(D3D9DeviceManager* deviceManager,
 					 UINT adapterNumber, 
@@ -101,11 +94,7 @@ namespace Ogre {
 		~D3D9Device	();
 
 	protected:			
-<<<<<<< HEAD
 		D3D9DeviceManager*				mDeviceManager;			    // The manager of this device instance.
-=======
-		D3D9DeviceManager*				mDeviceManager;			// The manager of this device instance.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		IDirect3DDevice9*				mDevice;					// Will hold the device interface.				
 		UINT							mAdapterNumber;				// The adapter that this device belongs to.	
 		HMONITOR						mMonitor;					// The monitor that this device belongs to.
@@ -121,13 +110,9 @@ namespace Ogre {
 		D3DDEVICE_CREATION_PARAMETERS	mCreationParams;			// Creation parameters.
 		uint							mLastPresentFrame;			// Last frame that this device present method called.
 		bool							mDeviceLost;				// True if device entered lost state.
-<<<<<<< HEAD
 		bool							mVertexProgramBound;		// Is a vertex program currently bound to the device
 		bool							mFragmentProgramBound;		// Is a fragment program currently bound to the device
 
-=======
-	
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		struct RenderWindowResources
 		{
 			IDirect3DSwapChain9* 	swapChain;						// Swap chain interface.

@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -323,19 +319,11 @@ namespace Ogre
         bool getOptionKeys( StringVector &refKeys );
 
         /** Overridden from SceneManager */
-<<<<<<< HEAD
         AxisAlignedBoxSceneQuery* createAABBQuery(const AxisAlignedBox& box, uint32 mask = 0xFFFFFFFF);
         SphereSceneQuery* createSphereQuery(const Sphere& sphere, uint32 mask = 0xFFFFFFFF);
         PlaneBoundedVolumeListSceneQuery* createPlaneBoundedVolumeQuery(const PlaneBoundedVolumeList& volumes, uint32 mask = 0xFFFFFFFF);
         RaySceneQuery* createRayQuery(const Ray& ray, uint32 mask = 0xFFFFFFFF);
         IntersectionSceneQuery* createIntersectionQuery(uint32 mask = 0xFFFFFFFF);
-=======
-        AxisAlignedBoxSceneQuery* createAABBQuery(const AxisAlignedBox& box, unsigned long mask = 0xFFFFFFFF);
-        SphereSceneQuery* createSphereQuery(const Sphere& sphere, unsigned long mask = 0xFFFFFFFF);
-        PlaneBoundedVolumeListSceneQuery* createPlaneBoundedVolumeQuery(const PlaneBoundedVolumeList& volumes, unsigned long mask = 0xFFFFFFFF);
-        RaySceneQuery* createRayQuery(const Ray& ray, unsigned long mask = 0xFFFFFFFF);
-        IntersectionSceneQuery* createIntersectionQuery(unsigned long mask = 0xFFFFFFFF);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
 		/// ZoneMap iterator for read-only access to the zonemap 
 		typedef MapIterator<ZoneMap> ZoneIterator;

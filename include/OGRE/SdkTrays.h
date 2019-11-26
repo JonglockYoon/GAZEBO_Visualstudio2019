@@ -4,11 +4,7 @@
  (Object-oriented Graphics Rendering Engine)
  For the latest info, see http://www.ogre3d.org/
  
-<<<<<<< HEAD
  Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
- Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +29,6 @@
 #define __SdkTrays_H__
 
 #include "Ogre.h"
-<<<<<<< HEAD
 #include "OgreOverlaySystem.h"
 #include <math.h>
 
@@ -41,33 +36,17 @@
 
 #include "InputContext.h"
 
-=======
-#include "OgreFontManager.h"
-#include "OgreBorderPanelOverlayElement.h"
-#include "OgreTextAreaOverlayElement.h"
-#include <math.h>
-
-#if OGRE_PLATFORM == OGRE_PLATFORM_ANDROID
-#include "OgreStringSerialiser.h"
-#endif
-#include "OgreTimer.h"
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #if OGRE_COMPILER == OGRE_COMPILER_MSVC
 // TODO - remove this
 #   pragma warning (disable : 4244)
 #endif
 
 #if OGRE_UNICODE_SUPPORT
-<<<<<<< HEAD
 #	if	OGRE_STRING_USE_CUSTOM_MEMORY_ALLOCATOR
 #		define DISPLAY_STRING_TO_STRING(DS) (DS.asUTF8_c_str())
 #	else
 #		define DISPLAY_STRING_TO_STRING(DS) (DS.asUTF8())
 #	endif
-=======
-	#define DISPLAY_STRING_TO_STRING(DS) (DS.asUTF8())
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #else
 	#define DISPLAY_STRING_TO_STRING(DS) (DS)
 #endif
@@ -230,13 +209,8 @@ namespace OgreBites
 			Ogre::Font* f = (Ogre::Font*)Ogre::FontManager::getSingleton().getByName(area->getFontName()).getPointer();
 			Ogre::String s = DISPLAY_STRING_TO_STRING(caption);
 
-<<<<<<< HEAD
 			size_t nl = s.find('\n');
 			if (nl != Ogre::String::npos) s = s.substr(0, nl);
-=======
-			int nl = s.find('\n');
-			if (nl != -1) s = s.substr(0, nl);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 			Ogre::Real width = 0;
 
@@ -767,11 +741,7 @@ namespace OgreBites
 			return mItems;
 		}
 
-<<<<<<< HEAD
 		size_t getNumItems()
-=======
-		unsigned int getNumItems()
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		{
 			return mItems.size();
 		}
@@ -787,11 +757,7 @@ namespace OgreBites
 			}
 			mItemElements.clear();
 
-<<<<<<< HEAD
 			mItemsShown = std::max<int>(2, std::min<int>(mMaxItemsShown, (int)mItems.size()));
-=======
-			mItemsShown = std::max<int>(2, std::min<int>(mMaxItemsShown, mItems.size()));
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 			for (unsigned int i = 0; i < mItemsShown; i++)   // create all the item elements
 			{
@@ -831,11 +797,7 @@ namespace OgreBites
 				mItems.erase(it);
 				if (mItems.size() < mItemsShown)
 				{
-<<<<<<< HEAD
 					mItemsShown = (int)mItems.size();
-=======
-					mItemsShown = mItems.size();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 					nukeOverlayElement(mItemElements.back());
 					mItemElements.pop_back();
 				}
@@ -863,11 +825,7 @@ namespace OgreBites
 				mItems.erase(it);
 				if (mItems.size() < mItemsShown)
 				{
-<<<<<<< HEAD
 					mItemsShown = (int)mItems.size();
-=======
-					mItemsShown = mItems.size();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 					nukeOverlayElement(mItemElements.back());
 					mItemElements.pop_back();
 				}
@@ -1089,11 +1047,7 @@ namespace OgreBites
 		-----------------------------------------------------------------------------*/
 		void setDisplayIndex(unsigned int index)
 		{
-<<<<<<< HEAD
 			index = std::min<int>(index, (int)(mItems.size() - mItemElements.size()));
-=======
-			index = std::min<int>(index, mItems.size() - mItemElements.size());
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			mDisplayIndex = index;
 			Ogre::BorderPanelOverlayElement* ie;
 			Ogre::TextAreaOverlayElement* ta;
@@ -1751,17 +1705,8 @@ namespace OgreBites
 		/*-----------------------------------------------------------------------------
 		| Creates backdrop, cursor, and trays.
 		-----------------------------------------------------------------------------*/
-<<<<<<< HEAD
 		SdkTrayManager(const Ogre::String& name, Ogre::RenderWindow* window, InputContext inputContext, SdkTrayListener* listener = 0) :
 		  mName(name), mWindow(window), mInputContext(inputContext), mWidgetDeathRow(), mListener(listener), mWidgetPadding(8),
-=======
-#if (OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS) || (OGRE_PLATFORM == OGRE_PLATFORM_ANDROID)
-		SdkTrayManager(const Ogre::String& name, Ogre::RenderWindow* window, OIS::MultiTouch* mouse, SdkTrayListener* listener = 0) :
-#else
-		SdkTrayManager(const Ogre::String& name, Ogre::RenderWindow* window, OIS::Mouse* mouse, SdkTrayListener* listener = 0) :
-#endif
-		  mName(name), mWindow(window), mMouse(mouse), mWidgetDeathRow(), mListener(listener), mWidgetPadding(8),
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
                 mWidgetSpacing(2), mTrayPadding(0), mTrayDrag(false), mExpandedMenu(0), mDialog(0), mOk(0), mYes(0),
                 mNo(0), mCursorWasVisible(false), mFpsLabel(0), mStatsPanel(0), mLogo(0), mLoadBar(0),
 				mGroupInitProportion(0.0f), mGroupLoadProportion(0.0f), mLoadInc(0.0f)
@@ -1964,21 +1909,9 @@ namespace OgreBites
             // the position should be based on the orientation, for now simply return
             return;
 #endif
-<<<<<<< HEAD
             Ogre::Real x, y;
             if(mInputContext.getCursorPosition(x, y))
                 mCursor->setPosition(x, y);
-=======
-#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS
-            std::vector<OIS::MultiTouchState> states = mMouse->getMultiTouchStates();
-            if(states.size() > 0)
-                mCursor->setPosition(states[0].X.abs, states[0].Y.abs);
-#elif OGRE_PLATFORM == OGRE_PLATFORM_ANDROID
-			// TODO: handle cursor positioning
-#else
-			mCursor->setPosition(mMouse->getMouseState().X.abs, mMouse->getMouseState().Y.abs);
-#endif
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		}
 
 		void showTrays()
@@ -2240,11 +2173,7 @@ namespace OgreBites
 		ParamsPanel* createParamsPanel(TrayLocation trayLoc, const Ogre::String& name, Ogre::Real width,
 			const Ogre::StringVector& paramNames)
 		{
-<<<<<<< HEAD
 			ParamsPanel* pp = new ParamsPanel(name, width, (Ogre::uint)paramNames.size());
-=======
-			ParamsPanel* pp = new ParamsPanel(name, width, paramNames.size());
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			pp->setAllParamNames(paramNames);
 			moveWidgetToTray(pp, trayLoc);
 			return pp;
@@ -2631,11 +2560,7 @@ namespace OgreBites
 		/*-----------------------------------------------------------------------------
 		| Gets the number of widgets in a tray.
 		-----------------------------------------------------------------------------*/
-<<<<<<< HEAD
 		size_t getNumWidgets(TrayLocation trayLoc)
-=======
-		unsigned int getNumWidgets(TrayLocation trayLoc)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		{
 			return mWidgets[trayLoc].size();
 		}
@@ -2736,11 +2661,7 @@ namespace OgreBites
 			}
 
 			// insert widget into new tray at given position, or at the end if unspecified or invalid
-<<<<<<< HEAD
 			if (place == -1 || place > (int)mWidgets[trayLoc].size()) place = (int)mWidgets[trayLoc].size();
-=======
-			if (place == -1 || place > (int)mWidgets[trayLoc].size()) place = mWidgets[trayLoc].size();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			mWidgets[trayLoc].insert(mWidgets[trayLoc].begin() + place, widget);
 			mTrays[trayLoc]->addChild(widget->getOverlayElement());
 
@@ -2839,60 +2760,32 @@ namespace OgreBites
 				Ogre::String s("FPS: ");
 				s += Ogre::StringConverter::toString((int)stats.lastFPS);
 				
-<<<<<<< HEAD
-=======
-				for (int i = s.length() - 5; i > 5; i -= 3) { s.insert(i, 1, ','); }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 				mFpsLabel->setCaption(s);
 
 				if (mStatsPanel->getOverlayElement()->isVisible())
 				{
 					Ogre::StringVector values;
-<<<<<<< HEAD
 					Ogre::StringStream oss;
-=======
-					std::ostringstream oss;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 					
 					oss.str("");
 					oss << std::fixed << std::setprecision(1) << stats.avgFPS;
 					Ogre::String str = oss.str();
-<<<<<<< HEAD
-=======
-					for (int i = str.length() - 5; i > 0; i -= 3) { str.insert(i, 1, ','); }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 					values.push_back(str);
 
 					oss.str("");
 					oss << std::fixed << std::setprecision(1) << stats.bestFPS;
 					str = oss.str();
-<<<<<<< HEAD
-=======
-					for (int i = str.length() - 5; i > 0; i -= 3) { str.insert(i, 1, ','); }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 					values.push_back(str);
 
 					oss.str("");
 					oss << std::fixed << std::setprecision(1) << stats.worstFPS;
 					str = oss.str();
-<<<<<<< HEAD
 					values.push_back(str);
 
 					str = Ogre::StringConverter::toString(stats.triangleCount);
 					values.push_back(str);
 
 					str = Ogre::StringConverter::toString(stats.batchCount);
-=======
-					for (int i = str.length() - 5; i > 0; i -= 3) { str.insert(i, 1, ','); }
-					values.push_back(str);
-
-					str = Ogre::StringConverter::toString(stats.triangleCount);
-					for (int i = str.length() - 3; i > 0; i -= 3) { str.insert(i, 1, ','); }
-					values.push_back(str);
-
-					str = Ogre::StringConverter::toString(stats.batchCount);
-					for (int i = str.length() - 3; i > 0; i -= 3) { str.insert(i, 1, ','); }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 					values.push_back(str);
 
 					mStatsPanel->setAllParamValues(values);
@@ -3217,15 +3110,7 @@ namespace OgreBites
 
 		Ogre::String mName;                   // name of this tray system
 		Ogre::RenderWindow* mWindow;          // render window
-<<<<<<< HEAD
 		InputContext mInputContext;
-=======
-#if (OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS) || (OGRE_PLATFORM == OGRE_PLATFORM_ANDROID)
-		OIS::MultiTouch* mMouse;              // multitouch device
-#else
-		OIS::Mouse* mMouse;                   // mouse device
-#endif
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		Ogre::Overlay* mBackdropLayer;        // backdrop layer
 		Ogre::Overlay* mTraysLayer;           // widget layer
 		Ogre::Overlay* mPriorityLayer;        // top priority layer

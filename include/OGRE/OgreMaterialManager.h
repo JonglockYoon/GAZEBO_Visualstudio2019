@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -39,10 +35,7 @@ THE SOFTWARE.
 #include "OgreMaterial.h"
 #include "OgreStringVector.h"
 #include "OgreMaterialSerializer.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -112,7 +105,6 @@ namespace Ogre {
 				const String& schemeName, Material* originalMaterial, unsigned short lodIndex, 
 				const Renderable* rend) = 0;
 
-<<<<<<< HEAD
 			/** Called right after illuminated passes were created,
 				so that owner of runtime generated technique can handle this.
 			@return True if notification is handled and should not be propagated further.
@@ -124,8 +116,6 @@ namespace Ogre {
 			@return True if notification is handled and should not be propagated further.
 			*/
 			virtual bool beforeIlluminationPassesCleared(Technique* technique) { return false; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		};
 
     protected:
@@ -136,25 +126,19 @@ namespace Ogre {
         FilterOptions mDefaultMagFilter;
         /// Default Texture filtering - mipmapping
         FilterOptions mDefaultMipFilter;
-<<<<<<< HEAD
 		/// Default Texture filtering - comparison
 		FilterOptions mDefaultCompare;
 
 		bool			mDefaultCompareEnabled;
 		CompareFunction	mDefaultCompareFunction;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /// Default Texture anisotropy
         unsigned int mDefaultMaxAniso;
         /// Serializer - Hold instance per thread if necessary
         OGRE_THREAD_POINTER(MaterialSerializer, mSerializer);
 		/// Default settings
 		MaterialPtr mDefaultSettings;
-<<<<<<< HEAD
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Overridden from ResourceManager
 		Resource* createImpl(const String& name, ResourceHandle handle, 
 			const String& group, bool isManual, ManualResourceLoader* loader,
@@ -171,17 +155,12 @@ namespace Ogre {
 
 		/// The list of per-scheme (and general) material listeners
 		typedef list<Listener*>::type ListenerList;
-<<<<<<< HEAD
 		typedef map<String, ListenerList>::type ListenerMap;
-=======
-		typedef std::map<String, ListenerList> ListenerMap;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		ListenerMap mListenerMap;
 
     public:
 		/// Default material scheme
 		static String DEFAULT_SCHEME_NAME;
-<<<<<<< HEAD
 
 		/// Create a new material
 		/// @see ResourceManager::createResource
@@ -193,9 +172,6 @@ namespace Ogre {
 		/// @see ResourceManager::getResourceByName
 		MaterialPtr getByName(const String& name, const String& groupName = ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);
 
-=======
-		
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Default constructor.
         */
         MaterialManager();
@@ -315,7 +291,6 @@ namespace Ogre {
 		virtual Technique* _arbitrateMissingTechniqueForActiveScheme(
 			Material* mat, unsigned short lodIndex, const Renderable* rend);
 
-<<<<<<< HEAD
 		/// Internal method for sorting out illumination passes for a scheme
 		virtual void _notifyAfterIlluminationPassesCreated(Technique* mat);
 
@@ -323,8 +298,6 @@ namespace Ogre {
 		virtual void _notifyBeforeIlluminationPassesCleared(Technique* mat);
 
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Override standard Singleton retrieval.
         @remarks
         Why do we do this? Well, it's because the Singleton
@@ -364,9 +337,6 @@ namespace Ogre {
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

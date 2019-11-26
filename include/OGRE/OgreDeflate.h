@@ -4,11 +4,7 @@
  (Object-oriented Graphics Rendering Engine)
  For the latest info, see http://www.ogre3d.org/
  
-<<<<<<< HEAD
  Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
- Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -32,17 +28,11 @@
 #ifndef __OGRE_DEFLATE_H__
 #define __OGRE_DEFLATE_H__
 
-<<<<<<< HEAD
 #if OGRE_NO_ZIP_ARCHIVE == 0
 
 #include "OgrePrerequisites.h"
 #include "OgreDataStream.h"
 #include "OgreHeaderPrefix.h"
-=======
-#include "OgrePrerequisites.h"
-#include "OgreDataStream.h"
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 /// forward decls
 struct z_stream_s;
@@ -72,10 +62,7 @@ namespace Ogre
 		String mTempFileName;
 		z_stream* mZStream;
 		size_t mCurrentPos;
-<<<<<<< HEAD
 		size_t mAvailIn;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
 		/// Cache for read data in case skipping around
 		StaticCache<16 * OGRE_STREAM_TEMP_SIZE> mReadCache;
@@ -86,48 +73,31 @@ namespace Ogre
 		/// Whether the underlying stream is valid compressed data
 		bool mIsCompressedValid;
 		
-<<<<<<< HEAD
 		void init();
 		void destroy();
 		void compressFinal();
 
 		size_t getAvailInForSinglePass();
-=======
-		
-		void init();
-		void destroy();
-		void compressFinal();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	public:
 		/** Constructor for creating unnamed stream wrapping another stream.
 		 @param compressedStream The stream that this stream will use when reading / 
 			writing compressed data. The access mode from this stream will be matched.
 		 @param tmpFileName Path/Filename to be used for temporary storage of incoming data
-<<<<<<< HEAD
 		 @param avail_in Available data length to be uncompressed. With it we can uncompress
 			DataStream partly.
 		*/
         DeflateStream(const DataStreamPtr& compressedStream, const String& tmpFileName = "",
 			size_t avail_in = 0);
-=======
-		*/
-        DeflateStream(const DataStreamPtr& compressedStream, const String& tmpFileName = "");
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Constructor for creating named stream wrapping another stream.
 		 @param name The name to give this stream
 		 @param compressedStream The stream that this stream will use when reading / 
 			writing compressed data. The access mode from this stream will be matched.
 		 @param tmpFileName Path/Filename to be used for temporary storage of incoming data
-<<<<<<< HEAD
 		 @param avail_in Available data length to be uncompressed. With it we can uncompress
 			DataStream partly.
 		 */
 		DeflateStream(const String& name, const DataStreamPtr& compressedStream, const String& tmpFileName="",
 			size_t avail_in = 0);
-=======
-		 */
-		DeflateStream(const String& name, const DataStreamPtr& compressedStream, const String& tmpFileName="");	
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
 		~DeflateStream();
 		
@@ -170,11 +140,8 @@ namespace Ogre
 	};
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
 #endif
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

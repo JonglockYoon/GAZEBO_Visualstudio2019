@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -33,10 +29,7 @@ THE SOFTWARE.
 
 #include "OgreShaderPrerequisites.h"
 #include "OgreSingleton.h"
-<<<<<<< HEAD
 #include "OgreFileSystemLayer.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #include "OgreRenderObjectListener.h"
 #include "OgreSceneManager.h"
 #include "OgreShaderRenderState.h"
@@ -65,23 +58,13 @@ public:
 	/** 
 	Initialize the Shader Generator System.
 	Return true upon success.
-<<<<<<< HEAD
-=======
-	@param sceneMgr The scene manager that the shader generator will be bound to. 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	static bool initialize();
 
 	/** 
-<<<<<<< HEAD
 	Destroy the Shader Generator instance.
 	*/
 	static void destroy();
-=======
-	Finalize the Shader Generator instance.
-	*/
-	static void finalize();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 
 	/** Override standard Singleton retrieval.
@@ -151,11 +134,7 @@ public:
 
 	/** 
 	Set the output vertex shader target profiles.
-<<<<<<< HEAD
 	@param vertexShaderProfiles The target profiles for the vertex shader.	
-=======
-	@param vertexShaderProfile The target profiles for the vertex shader.	
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	void setVertexShaderProfiles(const String& vertexShaderProfiles);
 
@@ -172,11 +151,7 @@ public:
 
 	/** 
 	Set the output fragment shader target profiles.
-<<<<<<< HEAD
 	@param fragmentShaderProfiles The target profiles for the fragment shader.	
-=======
-	@param fragmentShaderProfile The target profiles for the fragment shader.	
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	void setFragmentShaderProfiles(const String& fragmentShaderProfiles);
 
@@ -235,16 +210,11 @@ public:
 	bool hasRenderState(const String& schemeName) const;
 	
 
-<<<<<<< HEAD
     /** 
-=======
-	/** 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	Get render state of specific pass.
 	Using this method allows the user to customize the behavior of a specific pass.
 	@param schemeName The destination scheme name.
 	@param materialName The specific material name.
-<<<<<<< HEAD
 	@param passIndex The pass index.
 	*/
 	RenderState* getRenderState(const String& schemeName, const String& materialName, unsigned short passIndex);
@@ -258,13 +228,6 @@ public:
      @param passIndex The pass index.
      */
     RenderState* getRenderState(const String& schemeName, const String& materialName, const String& groupName, unsigned short passIndex);
-=======
-	@param groupName The specific material name.
-	@param passIndex The pass index.
-	*/
-	RenderState* getRenderState(const String& schemeName, const String& materialName, unsigned short passIndex);
-	RenderState* getRenderState(const String& schemeName, const String& materialName, const String& groupName, unsigned short passIndex);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 	/** 
 	Add sub render state factory. Plugins or 3d party applications may implement sub classes of
@@ -310,23 +273,14 @@ public:
 	void destroySubRenderState(SubRenderState* subRenderState);
 
 
-<<<<<<< HEAD
     /** 
 	Checks if a shader based technique has been created for a given technique. 
 	Return true if exist. False if not.
 	@param materialName The source material name.
-=======
-	/** 
-	Checks if a shader based technique has been created for a given technique. 
-	Return true if exist. False if not.
-	@param materialName The source material name.
-	@param groupName The source group name.	
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	@param srcTechniqueSchemeName The source technique scheme name.
 	@param dstTechniqueSchemeName The destination shader based technique scheme name.
 	*/
 	bool hasShaderBasedTechnique(const String& materialName, const String& srcTechniqueSchemeName, const String& dstTechniqueSchemeName) const;
-<<<<<<< HEAD
 
     /**
      Checks if a shader based technique has been created for a given technique.
@@ -339,25 +293,15 @@ public:
     bool hasShaderBasedTechnique(const String& materialName, const String& groupName, const String& srcTechniqueSchemeName, const String& dstTechniqueSchemeName) const;
 
     /** 
-=======
-	bool hasShaderBasedTechnique(const String& materialName, const String& groupName, const String& srcTechniqueSchemeName, const String& dstTechniqueSchemeName) const;
-
-	/** 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	Create shader based technique from a given technique. 
 	Return true upon success. Failure may occur if the source technique is not FFP pure, or different
 	source technique is mapped to the requested destination scheme.
 	@param materialName The source material name.
-<<<<<<< HEAD
-=======
-	@param groupName The source group name.	
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	@param srcTechniqueSchemeName The source technique scheme name.
 	@param dstTechniqueSchemeName The destination shader based technique scheme name.
 	@param overProgrammable If true a shader will be created even if the material has shaders
 	*/
 	bool createShaderBasedTechnique(const String& materialName, const String& srcTechniqueSchemeName, const String& dstTechniqueSchemeName, bool overProgrammable = false);
-<<<<<<< HEAD
 
     /**
      Create shader based technique from a given technique.
@@ -373,25 +317,14 @@ public:
 
 
     /** 
-=======
-	bool createShaderBasedTechnique(const String& materialName, const String& groupName, const String& srcTechniqueSchemeName, const String& dstTechniqueSchemeName, bool overProgrammable = false);
-
-
-	/** 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	Remove shader based technique from a given technique. 
 	Return true upon success. Failure may occur if the given source technique was not previously
 	registered successfully using the createShaderBasedTechnique method.
 	@param materialName The source material name.
-<<<<<<< HEAD
-=======
-	@param groupName The source group name.	
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	@param srcTechniqueSchemeName The source technique scheme name.
 	@param dstTechniqueSchemeName The destination shader based technique scheme name.
 	*/
 	bool removeShaderBasedTechnique(const String& materialName, const String& srcTechniqueSchemeName, const String& dstTechniqueSchemeName);
-<<<<<<< HEAD
 
     /**
      Remove shader based technique from a given technique.
@@ -403,9 +336,6 @@ public:
      @param dstTechniqueSchemeName The destination shader based technique scheme name.
      */
     bool removeShaderBasedTechnique(const String& materialName, const String& groupName, const String& srcTechniqueSchemeName, const String& dstTechniqueSchemeName);
-=======
-	bool removeShaderBasedTechnique(const String& materialName, const String& groupName, const String& srcTechniqueSchemeName, const String& dstTechniqueSchemeName);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 
 	/** 
@@ -472,7 +402,6 @@ public:
 	*/
 	bool validateMaterial(const String& schemeName, const String& materialName, const String& groupName = ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);	
 
-<<<<<<< HEAD
 	/**
 	Invalidate specific material scheme. This action will lead to shader regeneration of the technique belongs to the
 	given scheme name.
@@ -490,8 +419,6 @@ public:
 	@param groupName The source group name.
 	*/
 	bool validateMaterialIlluminationPasses(const String& schemeName, const String& materialName, const String& groupName = ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 	/** 
 	Return custom material Serializer of the shader generator.
@@ -599,11 +526,7 @@ protected:
 	class _OgreRTSSExport SGPass : public RTShaderSystemAlloc
 	{
 	public:
-<<<<<<< HEAD
 		SGPass(SGTechnique* parent, Pass* srcPass, Pass* dstPass, IlluminationStage stage);
-=======
-		SGPass(SGTechnique* parent, Pass* srcPass, Pass* dstPass);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		~SGPass();
 	
 		/** Build the render state. */
@@ -625,15 +548,12 @@ protected:
 		/** Get destination pass. */
 		Pass* getDstPass() { return mDstPass; }
 
-<<<<<<< HEAD
 		/** Get illumination stage. */
 		IlluminationStage getIlluminationStage() { return mStage; }
 
 		/** Get illumination state. */
 		bool isIlluminationPass() { return mStage != IS_UNKNOWN; }
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Get custom FPP sub state of this pass. */
 		SubRenderState* getCustomFFPSubState(int subStateOrder);
 
@@ -656,11 +576,8 @@ protected:
 		Pass* mSrcPass;
 		// Destination pass.
 		Pass* mDstPass;
-<<<<<<< HEAD
 		// Illumination stage
 		IlluminationStage mStage;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		// Custom render state.
 		RenderState* mCustomRenderState;
 		// The compiled render state.		
@@ -693,7 +610,6 @@ protected:
 		/** Acquire the CPU/GPU programs for this technique. */
 		void acquirePrograms();
 
-<<<<<<< HEAD
 		/** Build the render state for illumination passes. */
 		void buildIlluminationTargetRenderState();
 
@@ -703,8 +619,6 @@ protected:
 		/** Destroy the illumination passes entries. */
 		void destroyIlluminationSGPasses();
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Release the CPU/GPU programs of this technique. */
 		void releasePrograms();
 
@@ -729,32 +643,22 @@ protected:
 		/** Create the passes entries. */
 		void createSGPasses();
 
-<<<<<<< HEAD
 		/** Create the illumination passes entries. */
 		void createIlluminationSGPasses();
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Destroy the passes entries. */
 		void destroySGPasses();
 		
 	protected:
-<<<<<<< HEAD
         // Auto mutex.
         OGRE_AUTO_MUTEX;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		// Parent material.		
 		SGMaterial* mParent;
 		// Source technique.
 		Technique* mSrcTechnique;
 		// Destination technique.
 		Technique* mDstTechnique;
-<<<<<<< HEAD
 		// All passes entries, both normal and illumination.
-=======
-		// All passes entries.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		SGPassList mPassEntries;
 		// The custom render states of all passes.
 		RenderStateList mCustomRenderStates;
@@ -829,7 +733,6 @@ protected:
 		@see ShaderGenerator::validateMaterial.
 		*/
 		bool validate(const String& materialName, const String& groupName = ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);
-<<<<<<< HEAD
 
 		/** Validate illumination passes of the specific material.
 		@see ShaderGenerator::invalidateMaterialIlluminationPasses.
@@ -841,9 +744,6 @@ protected:
 		*/
 		bool validateIlluminationPasses(const String& materialName, const String& groupName = ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);
 
-=======
-				
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Add a technique to current techniques list. */
 		void addTechniqueEntry(SGTechnique* techEntry);
 
@@ -1001,19 +901,11 @@ protected:
 	/** Initialize the shader generator instance. */
 	bool _initialize();
 	
-<<<<<<< HEAD
 	/** Destory the shader generator instance. */
 	void _destroy();
 
 	/** Find source technique to generate shader based technique based on it. */
 	Technique* findSourceTechnique(const String& materialName, const String& groupName, const String& srcTechniqueSchemeName, bool allowProgrammable);
-=======
-	/** Finalize the shader generator instance. */
-	void _finalize();
-
-	/** Find source technique to generate shader based technique based on it. */
-	Technique* findSourceTechnique(const String& materialName, const String& groupName, const String& srcTechniqueSchemeName);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 	/** Checks if a given technique has passes with shaders. */
 	bool isProgrammable(Technique* tech) const;
@@ -1036,11 +928,7 @@ protected:
 	@param compiler The compiler instance.
 	@param prop The abstract property node.
 	@param pass The pass that is the parent context of this node.
-<<<<<<< HEAD
 	@param translator The translator for the specific SubRenderState
-=======
-	@param the translator for the specific SubRenderState
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	SubRenderState* createSubRenderState(ScriptCompiler* compiler, PropertyAbstractNode* prop, Pass* pass, SGScriptTranslator* translator);
 	
@@ -1050,11 +938,7 @@ protected:
 	@param compiler The compiler instance.
 	@param prop The abstract property node.
 	@param texState The texture unit state that is the parent context of this node.
-<<<<<<< HEAD
 	@param translator The translator for the specific SubRenderState
-=======
-	@param the translator for the specific SubRenderState
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	SubRenderState* createSubRenderState(ScriptCompiler* compiler, PropertyAbstractNode* prop, TextureUnitState* texState, SGScriptTranslator* translator);
 
@@ -1113,12 +997,8 @@ protected:
     /** Used to check if finalizing */
     bool getIsFinalizing() const;
 protected:	
-<<<<<<< HEAD
         // Auto mutex.
         OGRE_AUTO_MUTEX;
-=======
-	OGRE_AUTO_MUTEX													// Auto mutex.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	// The active scene manager.
 	SceneManager* mActiveSceneMgr;
 	// A map of all scene managers this generator is bound to.
@@ -1151,11 +1031,8 @@ protected:
 	ProgramManager* mProgramManager;
 	// Shader program writer manager.
 	ProgramWriterManager* mProgramWriterManager;
-<<<<<<< HEAD
     // File system layer manager.
 	FileSystemLayer* mFSLayer;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	// Fixed Function Render state builder.
 	FFPRenderStateBuilder* mFFPRenderStateBuilder;
 	// Material entries map.

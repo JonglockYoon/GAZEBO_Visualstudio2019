@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -34,10 +30,7 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 #include "OgreVertexIndexData.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -64,7 +57,6 @@ namespace Ogre {
 			/// A strip of triangles, 3 vertices for the first triangle, and 1 per triangle after that 
             OT_TRIANGLE_STRIP = 5,
 			/// A fan of triangles, 3 vertices for the first triangle, and 1 per triangle after that
-<<<<<<< HEAD
             OT_TRIANGLE_FAN = 6,
 			/// Patch control point operations, used with tesselation stages
 			OT_PATCH_1_CONTROL_POINT	= 7,
@@ -99,9 +91,6 @@ namespace Ogre {
 			OT_PATCH_30_CONTROL_POINT	= 36,
 			OT_PATCH_31_CONTROL_POINT	= 37,
 			OT_PATCH_32_CONTROL_POINT	= 38
-=======
-            OT_TRIANGLE_FAN = 6
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         };
 
 		/// Vertex source data
@@ -140,10 +129,6 @@ namespace Ogre {
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
-=======
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #endif

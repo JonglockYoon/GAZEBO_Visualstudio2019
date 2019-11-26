@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -39,10 +35,7 @@ THE SOFTWARE.
 #include "OgreCommon.h"
 #include "OgreCamera.h"
 #include "OgreFrameListener.h"
-<<<<<<< HEAD
 #include "OgreNameGenerator.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {
@@ -173,10 +166,6 @@ namespace Ogre
 		/** Save a PagedWorld instance to a file. 
 		@param world The world to be saved
 		@param filename The filename to save the data to
-<<<<<<< HEAD
-=======
-		@param arch The Archive that filename is relative to (optional)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		void saveWorld(PagedWorld* world, const String& filename);
 		/** Save a PagedWorld instance to a file. 
@@ -185,11 +174,7 @@ namespace Ogre
 		*/
 		void saveWorld(PagedWorld* world, const DataStreamPtr& stream);
 		/** Get a named world.
-<<<<<<< HEAD
 		@param name The name of the world (not a filename, the identifying name)
-=======
-		@params name The name of the world (not a filename, the identifying name)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		@return The world, or null if the world doesn't exist.
 		*/
 		PagedWorld* getWorld(const String& name);
@@ -406,11 +391,7 @@ namespace Ogre
 
 		/** Tells the paging system to start tracking a given camera. 
 		@remarks
-<<<<<<< HEAD
 			In order for the paging system to function it needs to know which
-=======
-			In order for the paging system to funciton it needs to know which
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			Cameras to track. You may not want to have all your cameras affect
 			the paging system, so just add the cameras you want it to keep track of
 			here. 
@@ -463,11 +444,7 @@ namespace Ogre
 			WorldMap* pWorldMap;
 			CameraList* pCameraList;
 
-<<<<<<< HEAD
 			EventRouter() : pManager(0), pWorldMap(0), pCameraList(0) {}
-=======
-			EventRouter() {}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			~EventRouter() {}
 
 			void cameraPreRenderScene(Camera* cam);

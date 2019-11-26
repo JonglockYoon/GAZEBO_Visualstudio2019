@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,13 +32,10 @@ THE SOFTWARE.
 
 #include "OgreArchive.h"
 #include "OgreArchiveFactory.h"
-<<<<<<< HEAD
 #if OGRE_THREAD_SUPPORT
 #include "Threading/OgreThreadHeaders.h"
 #endif
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 // Forward declaration for zziplib to avoid header file dependency.
 typedef struct zzip_dir		ZZIP_DIR;
@@ -75,11 +68,7 @@ namespace Ogre {
         /// A pointer to file io alternative implementation 
         zzip_plugin_io_handlers* mPluginIo;
 
-<<<<<<< HEAD
         OGRE_AUTO_MUTEX;
-=======
-		OGRE_AUTO_MUTEX
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     public:
         ZipArchive(const String& name, const String& archType, zzip_plugin_io_handlers* pluginIo = NULL);
         ~ZipArchive();
@@ -129,7 +118,6 @@ namespace Ogre {
         /// @copydoc FactoryObj::getType
         const String& getType(void) const;
         /// @copydoc FactoryObj::createInstance
-<<<<<<< HEAD
         Archive *createInstance( const String& name, bool readOnly ) 
         {
 			if(!readOnly)
@@ -139,14 +127,6 @@ namespace Ogre {
         }
         /// @copydoc FactoryObj::destroyInstance
         void destroyInstance( Archive* ptr) { OGRE_DELETE ptr; }
-=======
-        Archive *createInstance( const String& name ) 
-        {
-            return OGRE_NEW ZipArchive(name, "Zip");
-        }
-        /// @copydoc FactoryObj::destroyInstance
-        void destroyInstance( Archive* arch) { OGRE_DELETE arch; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
 
     /** Specialisation of ZipArchiveFactory for embedded Zip files. */
@@ -161,11 +141,7 @@ namespace Ogre {
         /// @copydoc FactoryObj::getType
         const String& getType(void) const;
         /// @copydoc FactoryObj::createInstance
-<<<<<<< HEAD
         Archive *createInstance( const String& name, bool readOnly ) 
-=======
-        Archive *createInstance( const String& name ) 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         {
             ZipArchive * resZipArchive = OGRE_NEW ZipArchive(name, "EmbeddedZip", mPluginIo);
             return resZipArchive;
@@ -224,9 +200,6 @@ namespace Ogre {
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

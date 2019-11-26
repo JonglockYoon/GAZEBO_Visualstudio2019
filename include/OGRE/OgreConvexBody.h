@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Copyright (c) 2006 Matthias Fink, netAllied GmbH <matthias.fink@web.de>								
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,13 +31,10 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 #include "OgrePolygon.h"
-<<<<<<< HEAD
 #if OGRE_THREAD_SUPPORT
 #include "Threading/OgreThreadHeaders.h"
 #endif
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 
 namespace Ogre
@@ -70,11 +63,7 @@ namespace Ogre
 		// Static 'free list' of polygons to save reallocation, shared between all bodies
 		static PolygonList msFreePolygons;
 #if OGRE_THREAD_SUPPORT
-<<<<<<< HEAD
 		OGRE_STATIC_MUTEX(msFreePolygonsMutex);
-=======
-		OGRE_STATIC_MUTEX(msFreePolygonsMutex)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 
 	public:
@@ -271,10 +260,7 @@ namespace Ogre
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif 
 

@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,10 +34,7 @@ THE SOFTWARE.
 #include "OgreIteratorWrappers.h"
 #include "OgreStringVector.h"
 #include "OgreException.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 	/** \addtogroup Core
@@ -106,11 +99,7 @@ namespace Ogre {
 
 		/** Unregisters a codec from the database.
         */
-<<<<<<< HEAD
         static void unregisterCodec( Codec *pCodec )
-=======
-        static void unRegisterCodec( Codec *pCodec )
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         {
             msMapCodecs.erase(pCodec->getType());
         }
@@ -138,11 +127,7 @@ namespace Ogre {
         /** Codes the data in the input stream and saves the result in the output
             stream.
         */
-<<<<<<< HEAD
         virtual DataStreamPtr encode(MemoryDataStreamPtr& input, CodecDataPtr& pData) const = 0;
-=======
-        virtual DataStreamPtr code(MemoryDataStreamPtr& input, CodecDataPtr& pData) const = 0;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Codes the data in the input chunk and saves the result in the output
             filename provided. Provided for efficiency since coding to memory is
             progressive therefore memory required is unknown leading to reallocations.
@@ -150,21 +135,12 @@ namespace Ogre {
         @param outFileName The filename to write to
         @param pData Extra information to be passed to the codec (codec type specific)
         */
-<<<<<<< HEAD
         virtual void encodeToFile(MemoryDataStreamPtr& input, const String& outFileName, CodecDataPtr& pData) const = 0;
-=======
-        virtual void codeToFile(MemoryDataStreamPtr& input, const String& outFileName, CodecDataPtr& pData) const = 0;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /// Result of a decoding; both a decoded data stream and CodecData metadata
         typedef std::pair<MemoryDataStreamPtr, CodecDataPtr> DecodeResult;
         /** Codes the data from the input chunk into the output chunk.
             @param input Stream containing the encoded data
-<<<<<<< HEAD
-=======
-            @note
-                Has a variable number of arguments, which depend on the codec type.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         virtual DecodeResult decode(DataStreamPtr& input) const = 0;
 
@@ -198,9 +174,6 @@ namespace Ogre {
 
 } // namespace
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

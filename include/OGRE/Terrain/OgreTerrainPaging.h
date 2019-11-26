@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -80,11 +76,7 @@ namespace Ogre
 		@param pageMgr The PageManager which this class should attach to.
 		*/
 		TerrainPaging(PageManager* pageMgr);
-<<<<<<< HEAD
 		virtual ~TerrainPaging();
-=======
-		~TerrainPaging();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Create a TerrainPagedWorldSection.
 		@remarks
@@ -106,11 +98,8 @@ namespace Ogre
 			in each direction or 20x20 pages.
 		@param sectionName An optional name to give the section (if none is
 			provided, one will be generated)
-<<<<<<< HEAD
 		@param loadingIntervalMs An optional interval in milliseconds to wait between loading single
 			pages. The default is 900 ms.
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		@return The world section which is already attached to and owned by the world you passed in. 
 			There is no 'destroy' method because you destroy via the PagedWorld, this is just a
 			helper function. 
@@ -118,11 +107,7 @@ namespace Ogre
 		TerrainPagedWorldSection* createWorldSection(PagedWorld* world, TerrainGroup* terrainGroup, 
 			Real loadRadius, Real holdRadius, 
 			int32 minX = -10, int32 minY = -10, int32 maxX = 10, int32 maxY = 10, 
-<<<<<<< HEAD
 			const String& sectionName = StringUtil::BLANK, uint32 loadingIntervalMs = 900);
-=======
-			const String& sectionName = StringUtil::BLANK);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 	protected:
 		PageManager* mManager;

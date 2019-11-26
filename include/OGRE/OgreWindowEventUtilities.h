@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -34,11 +30,8 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 #include "OgrePlatform.h"
-<<<<<<< HEAD
 #include "OgreCommon.h"
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
 #  if !defined(WIN32_LEAN_AND_MEAN)
@@ -143,11 +136,7 @@ namespace Ogre
 			any messages.
 		@param window
 			The RenderWindow you are interested in monitoring
-<<<<<<< HEAD
 		@param listener
-=======
-		@param listner
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			Your callback listener
 		*/
 		static void addWindowEventListener( RenderWindow* window, WindowEventListener* listener );
@@ -157,11 +146,7 @@ namespace Ogre
 			Remove previously added listener
 		@param window
 			The RenderWindow you registered with
-<<<<<<< HEAD
 		@param listener
-=======
-		@param listner
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			The listener registered
 		*/
 		static void removeWindowEventListener( RenderWindow* window, WindowEventListener* listener );
@@ -195,21 +180,12 @@ namespace Ogre
 		//These are public only so GLXProc can access them without adding Xlib headers header
 		typedef multimap<RenderWindow*, WindowEventListener*>::type WindowEventListeners;
 		static WindowEventListeners _msListeners;
-<<<<<<< HEAD
 		static RenderWindowList _msWindows;
-=======
-
-		typedef vector<RenderWindow*>::type Windows;
-		static Windows _msWindows;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	};
 	/** @} */
 	/** @} */
 }
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

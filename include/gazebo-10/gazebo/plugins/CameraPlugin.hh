@@ -26,11 +26,7 @@
 
 namespace gazebo
 {
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE CameraPlugin : public SensorPlugin
-=======
-  class GAZEBO_VISIBLE CameraPlugin : public SensorPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     public: CameraPlugin();
 

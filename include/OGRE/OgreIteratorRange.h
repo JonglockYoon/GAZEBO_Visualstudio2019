@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +28,6 @@ THE SOFTWARE.
 #ifndef __Ogre_Iterator_Range_H__
 #define __Ogre_Iterator_Range_H__
 
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
 
 #if OGRE_USE_BOOST
@@ -43,29 +38,16 @@ THE SOFTWARE.
 #elif OGRE_COMPILER == OGRE_COMPILER_CLANG
 #       pragma GCC diagnostic ignored "-Wdocumentation"
 #endif
-=======
-
-#if OGRE_USE_BOOST
-#   if OGRE_COMPILER == OGRE_COMPILER_CLANG || OGRE_COMPILER == OGRE_COMPILER_GCC
-#       pragma GCC diagnostic push
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #       pragma GCC diagnostic ignored "-Wshadow"
 #       pragma GCC diagnostic ignored "-Wpadded"
 #       pragma GCC diagnostic ignored "-Wweak-vtables"
 #       pragma GCC diagnostic ignored "-Wall"
-<<<<<<< HEAD
 #       pragma GCC diagnostic ignored "-Wundef"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #   endif
 
 #   include <boost/range.hpp>
 
-<<<<<<< HEAD
 #   if OGRE_COMPILER == OGRE_COMPILER_CLANG || OGRE_COMPILER == OGRE_COMPILER_GNUC
-=======
-#   if OGRE_COMPILER == OGRE_COMPILER_CLANG || OGRE_COMPILER == OGRE_COMPILER_GCC
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #       pragma GCC diagnostic pop
 #   endif
 #endif
@@ -74,15 +56,9 @@ namespace Ogre {
 
 /** 
  * 
-<<<<<<< HEAD
  * @brief Base for an iterator_range
  * 
  * @tparam T iterator type
-=======
- * \brief Base for an iterator_range
- * 
- * \param T iterator type   
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  * 
  * This class implements the minimal interface of the (boost::iterator_)range concept
  *\n Also it prepairs for direct usage of boost::iterator_range by providing the real used type via iterator_range::type
@@ -125,29 +101,17 @@ class iterator_range{
 		bool operator!=( const iterator_range& rhs ) const { return !operator==(rhs); }
 
 		/**
-<<<<<<< HEAD
 		@brief typedef to fulfill container interface
 		
 		@note there is no distinction between const_iterator and iterator.
-=======
-		\brief typedef to fulfill container interface
-		
-		\note there is no distinction between const_iterator and iterator.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
 		*/				
 		typedef T iterator;
 		
 		/**
-<<<<<<< HEAD
 		@brief typedef to fulfill container interface
 		
 		@note there is no distinction between const_iterator and iterator.
-=======
-		\brief typedef to fulfill container interface
-		
-		\note there is no distinction between const_iterator and iterator.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
 		*/						
 		typedef T const_iterator;
@@ -168,15 +132,9 @@ class iterator_range{
 
 /** 
  * 
-<<<<<<< HEAD
  * @brief Predefined type
  * 
  * @tparam T iterator type
-=======
- * \brief Predefined type
- * 
- * \param T iterator type   
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  *
  * compatility class for VectorIterator
 */
@@ -217,15 +175,9 @@ struct VectorRange : public iterator_range<typename T::iterator>::type
 
 /** 
  * 
-<<<<<<< HEAD
  * @brief Predefined type
  * 
  * @tparam T iterator type
-=======
- * \brief Predefined type
- * 
- * \param T iterator type   
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  *
  * compatility class for ConstVectorIterator
 */
@@ -284,15 +236,9 @@ struct ConstVectorRange : public iterator_range<typename T::const_iterator>::typ
 
 /** 
  * 
-<<<<<<< HEAD
  * @brief Predefined type
  * 
  * @tparam T iterator type
-=======
- * \brief Predefined type
- * 
- * \param T iterator type   
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  *
  * compatility class for MapIterator
 */
@@ -332,15 +278,9 @@ struct MapRange : public iterator_range<typename T::iterator>::type
 
 /** 
  * 
-<<<<<<< HEAD
  * @brief Predefined type
  * 
  * @tparam T iterator type   
-=======
- * \brief Predefined type
- * 
- * \param T iterator type   
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  *
  * compatility class for ConstMapIterator
 */
@@ -393,14 +333,8 @@ struct ConstMapRange : public iterator_range<typename T::const_iterator>::type
 	
 };
 
-<<<<<<< HEAD
 }
 
 #include "OgreHeaderSuffix.h"
 
-=======
-
-
-}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

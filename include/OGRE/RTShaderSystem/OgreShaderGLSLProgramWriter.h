@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -52,10 +48,6 @@ class _OgreRTSSExport GLSLProgramWriter : public ProgramWriter
 public:
 
 	/** Class constructor. 
-<<<<<<< HEAD
-=======
-	@param language The target shader language.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	GLSLProgramWriter();
 
@@ -95,17 +87,10 @@ protected:
 	void writeOutParameters(std::ostream& os, Function* function, GpuProgramType gpuType);
 
 protected:
-<<<<<<< HEAD
 	typedef	map<GpuConstantType, const char*>::type		GpuConstTypeToStringMap;
 	typedef	map<Parameter::Semantic, const char*>::type	ParamSemanticToStringMap;
 	typedef	map<Parameter::Content, const char*>::type	ParamContentToStringMap;
 	typedef	map<String, String>::type					StringMap;
-=======
-	typedef	std::map<GpuConstantType, const char*>		GpuConstTypeToStringMap;
-	typedef	std::map<Parameter::Semantic, const char*>	ParamSemanticToStringMap;
-	typedef	std::map<Parameter::Content, const char*>	ParamContentToStringMap;
-	typedef	std::map<String, String>					StringMap;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 	// Attributes.
 protected:
@@ -130,14 +115,8 @@ protected:
 class _OgreRTSSExport ShaderProgramWriterGLSLFactory : public ProgramWriterFactory
 {
 public:
-<<<<<<< HEAD
 	ShaderProgramWriterGLSLFactory() : mLanguage("glsl")
 	{
-=======
-	ShaderProgramWriterGLSLFactory()
-	{
-		mLanguage = "glsl";
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	}
 	virtual ~ShaderProgramWriterGLSLFactory() {}
 

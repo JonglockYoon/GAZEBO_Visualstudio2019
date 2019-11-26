@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -33,10 +29,7 @@ THE SOFTWARE.
 #define __DepthBuffer_H__
 
 #include "OgrePrerequisites.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {
@@ -52,21 +45,12 @@ namespace Ogre
 		DepthBuffer sharing is handled automatically for you. However, there are times where you want
 		to specifically control depth buffers to achieve certain effects or increase performance.
 		You can control this by hinting Ogre with POOL IDs. Created depth buffers can live in different
-<<<<<<< HEAD
 		pools, or all together in the same one.
 		Usually, a depth buffer can only be attached to a RenderTarget if it's dimensions are bigger
 		and have the same bit depth and same multisample settings. Depth Buffers are created automatically
 		for new RTs when needed, and stored in the pool where the RenderTarget should have drawn from.
 		By default, all RTs have the Id POOL_DEFAULT, which means all depth buffers are stored by default
 		in that pool. By choosing a different Pool Id for a specific RenderTarget, that RT will only
-=======
-		pools, or alltoghether in the same one.
-		Usually, a depth buffer can only be attached to a RenderTarget only if it's dimensions are bigger
-		and have the same bit depth and same multisample settings. Depth Buffers are created automatically
-		for new RTs when needed, and stored in the pool where the RenderTarget should have drawn from.
-		By default, all RTs have the Id POOL_DEFAULT, which means all depth buffers are stored by default
-		in that pool. By chosing a different Pool Id for a specific RenderTarget, that RT will only
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		retrieve depth buffers from _that_ pool, therefore not conflicting with sharing depth buffers
 		with other RTs (such as shadows maps).
 		Setting an RT to POOL_MANUAL_USAGE means Ogre won't manage the DepthBuffer for you (not recommended)
@@ -109,19 +93,11 @@ namespace Ogre
 					 uint32 fsaa, const String &fsaaHint, bool manual );
 		virtual ~DepthBuffer();
 
-<<<<<<< HEAD
 		/** Sets the pool id in which this DepthBuffer lives.
             Note this will detach any render target from this depth buffer */
 		void _setPoolId( uint16 poolId );
 
 		/// Gets the pool id in which this DepthBuffer lives
-=======
-		//Sets the pool id in which this DepthBuffer lives
-		//Note this will detach any render target from this depth buffer
-		void _setPoolId( uint16 poolId );
-
-		//Gets the pool id in which this DepthBuffer lives
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		virtual uint16 getPoolId() const;
 		virtual uint16 getBitDepth() const;
 		virtual uint32 getWidth() const;
@@ -129,13 +105,8 @@ namespace Ogre
 		virtual uint32 getFsaa() const;
 		virtual const String& getFsaaHint() const;
 
-<<<<<<< HEAD
 		/** Manual DepthBuffers are cleared in RenderSystem's destructor. Non-manual ones are released
             with it's render target (aka, a backbuffer or similar) */
-=======
-		//Manual DepthBuffers are cleared in RenderSystem's destructor. Non-manual ones are released
-		//with it's render target (aka, a backbuffer or similar)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		bool isManual() const;
 
 		/** Returns whether the specified RenderTarget is compatible with this DepthBuffer
@@ -161,11 +132,7 @@ namespace Ogre
 		/** Called when a RenderTarget is detaches from this DepthBuffer
             @remarks
                 Same as DepthBuffer::_notifyRenderTargetAttached()
-<<<<<<< HEAD
 			@param renderTarget The RenderTarget that has just been detached
-=======
-			@param renderTarget The RenderTarget that has just been attached
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
 		virtual void _notifyRenderTargetDetached( RenderTarget *renderTarget );
 
@@ -186,9 +153,6 @@ namespace Ogre
 	};
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

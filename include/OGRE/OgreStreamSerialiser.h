@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -34,11 +30,7 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 #include "OgreDataStream.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre 
 {
@@ -326,7 +318,6 @@ namespace Ogre
 		virtual void read(Node* node, size_t count = 1);
 		virtual void read(bool* val, size_t count = 1);
 
-<<<<<<< HEAD
 		/** Start (un)compressing data
 		@param avail_in Available bytes for uncompressing
 		*/
@@ -337,10 +328,6 @@ namespace Ogre
 	protected:
 		DataStreamPtr mStream;
 		DataStreamPtr mOriginalStream;
-=======
-	protected:
-		DataStreamPtr mStream;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		Endian mEndian;
 		bool mFlipEndian;
 		bool mReadWriteHeader;
@@ -361,11 +348,6 @@ namespace Ogre
 		virtual void checkStream(bool failOnEof = false, 
 			bool validateReadable = false, bool validateWriteable = false) const;
 
-<<<<<<< HEAD
-=======
-		virtual void flipEndian(void * pData, size_t size, size_t count);
-		virtual void flipEndian(void * pData, size_t size);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		virtual void determineEndianness();
 		virtual Chunk* popChunk(uint id);
 
@@ -406,10 +388,7 @@ namespace Ogre
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 

@@ -55,11 +55,7 @@ namespace gazebo
   /// For an example refer to:
   ///   - World file: worlds/harness.world
   ///   - Code: examples/stand_alone/harness
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE HarnessPlugin : public ModelPlugin
-=======
-  class GAZEBO_VISIBLE HarnessPlugin : public ModelPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Constructor.
     public: HarnessPlugin();

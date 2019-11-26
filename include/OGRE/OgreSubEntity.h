@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,10 +34,7 @@ THE SOFTWARE.
 #include "OgreRenderable.h"
 #include "OgreHardwareBufferManager.h"
 #include "OgreResourceGroupManager.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -84,7 +77,6 @@ namespace Ogre {
         /// Pointer to parent.
         Entity* mParentEntity;
 
-<<<<<<< HEAD
         /// Cached pointer to material.
         MaterialPtr mMaterialPtr;
 
@@ -97,17 +89,6 @@ namespace Ogre {
         /// override the end index for the RenderOperation
         size_t mIndexEnd;
 
-=======
-        /// Name of Material in use by this SubEntity.
-        String mMaterialName;
-
-        /// Cached pointer to material.
-        MaterialPtr mMaterial;
-
-        // Pointer to the SubMesh defining geometry.
-        SubMesh* mSubMesh;
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /// Is this SubEntity visible?
         bool mVisible;
 
@@ -123,11 +104,7 @@ namespace Ogre {
 		/// The LOD number of the material to use, calculated by Entity::_notifyCurrentCamera
 		unsigned short mMaterialLodIndex;
 
-<<<<<<< HEAD
         /// Blend buffer details for dedicated geometry
-=======
-        /// blend buffer details for dedicated geometry
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         VertexData* mSkelAnimVertexData;
         /// Quick lookup of buffers
         TempBlendedBufferInfo mTempSkelAnimInfo;
@@ -178,11 +155,7 @@ namespace Ogre {
         /** Returns whether or not this SubEntity is supposed to be visible. */
         virtual bool isVisible(void) const;
 
-<<<<<<< HEAD
         /** Sets the render queue group this SubEntity will be rendered through.
-=======
-        /** Sets the render queue group this subentity will be rendered through.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         @remarks
             Render queues are grouped to allow you to more tightly control the ordering
             of rendered objects. If you do not call this method, the SubEntity will use
@@ -195,11 +168,7 @@ namespace Ogre {
         */
         virtual void setRenderQueueGroup(uint8 queueID);
 
-<<<<<<< HEAD
         /** Sets the render queue group and group priority this SubEntity will be rendered through.
-=======
-        /** Sets the render queue group and group priority this subentity will be rendered through.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         @remarks
             Render queues are grouped to allow you to more tightly control the ordering
             of rendered objects. Within a single render group there another type of grouping
@@ -245,7 +214,6 @@ namespace Ogre {
         */
         void getRenderOperation(RenderOperation& op);
 
-<<<<<<< HEAD
 		/** Tells this SubEntity to draw a subset of the SubMesh by adjusting the index buffer extents.
          * Default value is zero so that the entire index buffer is used when drawing.
          * Valid values are zero to getIndexDataEndIndex()
@@ -271,8 +239,6 @@ namespace Ogre {
 		*/
         void resetIndexDataStartEndIndex();
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Overridden - see Renderable.
         */
         void getWorldTransforms(Matrix4* xform) const;
@@ -347,9 +313,6 @@ namespace Ogre {
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #endif

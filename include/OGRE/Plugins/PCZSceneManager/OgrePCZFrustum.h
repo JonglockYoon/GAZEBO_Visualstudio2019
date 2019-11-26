@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -101,7 +97,6 @@ namespace Ogre
         /* more detailed check for visibility of an AABB */
         PCZFrustum::Visibility getVisibility(const AxisAlignedBox & bound);
 
-<<<<<<< HEAD
 		/** Calculate  culling planes from portal and Frustum
             origin and add to list of culling planes */
 		int addPortalCullingPlanes(PortalBase* portal);
@@ -116,22 +111,6 @@ namespace Ogre
         /// Tell the frustum whether or not to use the originplane
         void setUseOriginPlane(bool yesno) {mUseOriginPlane = yesno;}
 		/// Get an unused PCPlane from the CullingPlane Reservoir
-=======
-		// calculate  culling planes from portal and Frustum 
-		// origin and add to list of  culling planes
-		int addPortalCullingPlanes(PortalBase* portal);
-		// remove  culling planes created from the given portal
-		void removePortalCullingPlanes(PortalBase* portal);
-		// remove all  culling planes
-		void removeAllCullingPlanes(void);
-        // set the origin value
-        void setOrigin(const Vector3 & newOrigin) {mOrigin = newOrigin;}
-        // set the origin plane
-        void setOriginPlane(const Vector3 &rkNormal, const Vector3 &rkPoint);
-        // tell the frustum whether or not to use the originplane
-        void setUseOriginPlane(bool yesno) {mUseOriginPlane = yesno;}
-		// get an unused PCPlane from the CullingPlane Reservoir
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		PCPlane * getUnusedCullingPlane(void);
 
 		/// Set the projection type of this PCZFrustum.

@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -104,13 +100,7 @@ public:
 	@param boneCount The maximum number of bones in the model this material
 		 is assigned to. Note that this parameter can be higher but not
 		 lower than the actual number of bones.
-<<<<<<< HEAD
 	@param weightCount The maximum number of weights/bones affecting a vertex.
-=======
-	@param weightCount The maximum number of weights/bones affecting
-		a vertex. Note that this parameter can be higher but not
-		 lower than the actual number of affecting bones.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	@param skinningType The type of skinning desired.
 	@param correctAntipodalityHandling If correct antipodality handling should be utilized (Only applicable for dual quaternion skinning).
 	@param scalingShearingSupport If scaling and shearing support should be enabled (Only applicable for dual quaternion skinning).
@@ -311,47 +301,28 @@ public:
 protected:
 	/** 
 		@brief
-<<<<<<< HEAD
 			Extracts the maximum amount of bones and weights used in an specific subentity of given entity.
 		
 		@param pEntity The entity from which the information needs to be extracted.
 		@param subEntityIndex The index of subentity from which the information needs to be extracted.
-=======
-			Extracts the maximum amount of bones and weights used in an entity.
-		
-		@param pEntity The entity from which the information needs to be extracted.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		@param boneCount The maximum number of bones used by the entity.
 		@param weightCount The maximum number of weights used by the entity.
 		@return Returns true if the entity can use HS. False if not. 
 	*/
-<<<<<<< HEAD
 	bool extractSkeletonData(const Entity* pEntity, unsigned int subEntityIndex,
 		ushort& boneCount, ushort& weightCount);
-=======
-	bool extractSkeletonData(const Entity* pEntity, ushort& boneCount,
-		ushort& weightCount);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 	/** 
 		@brief
 			Updates an entity's the skeleton data onto one of it's materials.
 		
 		@param pMaterial The material to update with the information.
-<<<<<<< HEAD
 		@param isValid Tells if the material can be used with HS.
-=======
-		@param isVaild Tells if the material can be used with HS.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		@param boneCount The maximum number of bones used by the entity.
 		@param weightCount The maximum number of weights used by the entity.
 		@return Returns true if the data was updated on the material. False if not.
 	*/
-<<<<<<< HEAD
 	bool imprintSkeletonData(const MaterialPtr& pMaterial, bool isValid, 
-=======
-	bool imprintSkeletonData(const MaterialPtr& pMaterial, bool isVaild, 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		ushort boneCount, ushort weightCount, SkinningType skinningType, bool correctAntidpodalityHandling, bool scalingShearingSupport);
 
 protected:

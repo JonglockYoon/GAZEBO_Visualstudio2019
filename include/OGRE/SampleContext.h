@@ -4,11 +4,7 @@
  (Object-oriented Graphics Rendering Engine)
  For the latest info, see http://www.ogre3d.org/
  
-<<<<<<< HEAD
  Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
- Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -32,17 +28,11 @@
 #ifndef __SampleContext_H__
 #define __SampleContext_H__
 
-<<<<<<< HEAD
 #include "OgreBuildSettings.h"
 #include "OgreLogManager.h"
 #include "OgrePlugin.h"
 #include "OgreFileSystemLayer.h"
 #include "OgreOverlaySystem.h"
-=======
-#include "OgreLogManager.h"
-#include "OgrePlugin.h"
-#include "FileSystemLayerImpl.h"
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 // Static plugins declaration section
 // Note that every entry in here adds an extra header / library dependency
@@ -52,7 +42,6 @@
 #  endif
 #  ifdef OGRE_BUILD_RENDERSYSTEM_GLES
 #    define OGRE_STATIC_GLES
-<<<<<<< HEAD
 #    undef INCLUDE_RTSHADER_SYSTEM
 #  endif
 #  ifdef OGRE_BUILD_RENDERSYSTEM_GLES2
@@ -65,20 +54,6 @@
 #		define OGRE_STATIC_Direct3D9
 #    endif
 // dx11 will only work on vista and above, so be careful about statically linking
-=======
-#    undef USE_RTSHADER_SYSTEM
-#  endif
-#  ifdef OGRE_BUILD_RENDERSYSTEM_GLES2
-#undef OGRE_STATIC_GLES
-#    define USE_RTSHADER_SYSTEM
-#    define OGRE_STATIC_GLES2
-#  endif
-#  if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
-#    ifdef OGRE_BUILD_RENDERSYSTEM_D3D9
-#		define OGRE_STATIC_Direct3D9
-#    endif
-// dx11 will only work on vista, so be careful about statically linking
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #    ifdef OGRE_BUILD_RENDERSYSTEM_D3D11
 #      define OGRE_STATIC_Direct3D11
 #    endif
@@ -116,13 +91,10 @@
 #endif
 #endif
 
-<<<<<<< HEAD
 #if OGRE_PLATFORM == OGRE_PLATFORM_ANDROID
 #include <android_native_app_glue.h>
 #endif
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #include "Sample.h"
 
 #include "OIS.h"
@@ -148,36 +120,16 @@ namespace OgreBites
 
 		SampleContext()
 		{
-<<<<<<< HEAD
 			mFSLayer = OGRE_NEW_T(Ogre::FileSystemLayer, Ogre::MEMCATEGORY_GENERAL)(OGRE_VERSION_NAME);
 			mRoot = 0;
 			mWindow = 0;
 			mCurrentSample = 0;
 			mOverlaySystem = 0;
-=======
-			mFSLayer = OGRE_NEW_T(FileSystemLayerImpl, Ogre::MEMCATEGORY_GENERAL)(OGRE_VERSION_NAME);
-			mRoot = 0;
-			mWindow = 0;
-			mCurrentSample = 0;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			mSamplePaused = false;
 			mFirstRun = true;
 			mLastRun = false;
 			mLastSample = 0;
 			mInputMgr = 0;
-<<<<<<< HEAD
-=======
-#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS
-			mMouse = 0;
-			mAccelerometer = 0;
-#elif OGRE_PLATFORM == OGRE_PLATFORM_ANDROID
-			mMouse = 0;
-			mKeyboard = 0;
-#else
-			mKeyboard = 0;
-			mMouse = 0;
-#endif
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		}
 
 		virtual ~SampleContext() 
@@ -216,11 +168,7 @@ namespace OgreBites
 
 			if (s)
 			{
-<<<<<<< HEAD
 				// retrieve sample's required plugins and currently installed plugins
-=======
-                // retrieve sample's required plugins and currently installed plugins
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 				Ogre::Root::PluginInstanceList ip = mRoot->getInstalledPlugins();
 				Ogre::StringVector rp = s->getRequiredPlugins();
 
@@ -256,17 +204,8 @@ namespace OgreBites
 				// test system capabilities against sample requirements
 				s->testCapabilities(mRoot->getRenderSystem()->getCapabilities());
 
-<<<<<<< HEAD
 				s->_setup(mWindow, mInputContext, mFSLayer, mOverlaySystem);   // start new sample
 			}
-=======
-#if (OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS) || (OGRE_PLATFORM == OGRE_PLATFORM_ANDROID)
-				s->_setup(mWindow, mMouse, mFSLayer);   // start new sample
-#else
-				s->_setup(mWindow, mKeyboard, mMouse, mFSLayer);   // start new sample
-#endif
-            }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #if OGRE_PROFILING
             if (prof)
                 prof->setEnabled(true);
@@ -344,23 +283,15 @@ namespace OgreBites
 #else
 			mRoot->saveConfig();
 			shutdown();
-<<<<<<< HEAD
 			if (mRoot)
 			{
 				OGRE_DELETE mOverlaySystem;
 				OGRE_DELETE mRoot;
 			}
-=======
-			if (mRoot) OGRE_DELETE mRoot;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #ifdef OGRE_STATIC_LIB
 			mStaticPluginLoader.unload();
 #endif
 #endif
-<<<<<<< HEAD
-=======
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		}
 
 		/*-----------------------------------------------------------------------------
@@ -376,11 +307,8 @@ namespace OgreBites
 
             if (!mFirstRun) mRoot->setRenderSystem(mRoot->getRenderSystemByName(mNextRenderer));
 
-<<<<<<< HEAD
             mLastRun = true;  // assume this is our last run
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             setup();
 
             if (!mFirstRun) recoverLastSample();
@@ -393,10 +321,7 @@ namespace OgreBites
 				mLastRun = true;  // assume this is our last run
 
 				initApp(initialSample);
-<<<<<<< HEAD
                 loadStartUpSample();
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         
                 if (mRoot->getRenderSystem() != NULL)
                 {
@@ -410,11 +335,8 @@ namespace OgreBites
 #endif
 		}
 #endif
-<<<<<<< HEAD
 
         virtual void loadStartUpSample() {}
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         
 		virtual bool isCurrentSamplePaused()
 		{
@@ -485,18 +407,12 @@ namespace OgreBites
 			if (mCurrentSample && !mSamplePaused) mCurrentSample->windowResized(rw);
 
 #if (OGRE_PLATFORM != OGRE_PLATFORM_APPLE_IOS) && (OGRE_PLATFORM != OGRE_PLATFORM_ANDROID)
-<<<<<<< HEAD
 			if(mInputContext.mMouse)
 			{
 				const OIS::MouseState& ms = mInputContext.mMouse->getMouseState();
 				ms.width = rw->getWidth();
 				ms.height = rw->getHeight();
 			}
-=======
-			const OIS::MouseState& ms = mMouse->getMouseState();
-			ms.width = rw->getWidth();
-			ms.height = rw->getHeight();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 		}
 
@@ -655,13 +571,10 @@ namespace OgreBites
 		}
 #endif
 
-<<<<<<< HEAD
         bool isFirstRun() { return mFirstRun; }
         void setFirstRun(bool flag) { mFirstRun = flag; }
         bool isLastRun() { return mLastRun; }
         void setLastRun(bool flag) { mLastRun = flag; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	protected:
 
         /*-----------------------------------------------------------------------------
@@ -692,7 +605,6 @@ namespace OgreBites
 			mRoot = Ogre::Root::getSingletonPtr();
 #else
             Ogre::String pluginsPath = Ogre::StringUtil::BLANK;
-<<<<<<< HEAD
 #   ifndef OGRE_STATIC_LIB
             pluginsPath = mFSLayer->getConfigFilePath("plugins.cfg");
 #   endif
@@ -704,18 +616,6 @@ namespace OgreBites
 #   endif
 #endif
 			mOverlaySystem = OGRE_NEW Ogre::OverlaySystem();
-=======
-            #ifndef OGRE_STATIC_LIB
-				pluginsPath = mFSLayer->getConfigFilePath("plugins.cfg");
-            #endif
-			mRoot = OGRE_NEW Ogre::Root(pluginsPath, mFSLayer->getWritablePath("ogre.cfg"), 
-				mFSLayer->getWritablePath("ogre.log"));
-#endif
-
-#ifdef OGRE_STATIC_LIB
-            mStaticPluginLoader.load();
-#endif
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		}
 
 		/*-----------------------------------------------------------------------------
@@ -744,11 +644,7 @@ namespace OgreBites
 		-----------------------------------------------------------------------------*/
 		virtual void setupInput(bool nograb = false)
 		{
-<<<<<<< HEAD
 #if OGRE_PLATFORM != OGRE_PLATFORM_ANDROID && OGRE_PLATFORM != OGRE_PLATFORM_WINRT
-=======
-#if OGRE_PLATFORM != OGRE_PLATFORM_ANDROID
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			OIS::ParamList pl;
 			size_t winHandle = 0;
 			std::ostringstream winHandleStr;
@@ -767,7 +663,6 @@ namespace OgreBites
                 pl.insert(std::make_pair("w32_keyboard", "DISCL_NONEXCLUSIVE"));
             }
 
-<<<<<<< HEAD
 #if (OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS)
             // Pass the view to OIS so the contentScalingFactor can be used
 			std::ostringstream viewHandleStr;
@@ -792,13 +687,6 @@ namespace OgreBites
 #else
 			if(mInputContext.mMultiTouch)
 				mInputContext.mMultiTouch->setEventCallback(this);
-=======
-			mInputMgr = OIS::InputManager::createInputSystem(pl);
-
-			createInputDevices();      // create the specific input devices
-
-			windowResized(mWindow);    // do an initial adjustment of mouse area
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 		}
 
@@ -809,7 +697,6 @@ namespace OgreBites
 		-----------------------------------------------------------------------------*/
 		virtual void createInputDevices()
 		{
-<<<<<<< HEAD
 #if OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS
 			mInputContext.mMultiTouch = static_cast<OIS::MultiTouch*>(mInputMgr->createInputObject(OIS::OISMultiTouch, true));
 			mInputContext.mAccelerometer = static_cast<OIS::JoyStick*>(mInputMgr->createInputObject(OIS::OISJoyStick, true));
@@ -822,20 +709,6 @@ namespace OgreBites
 #else
 			mInputContext.mKeyboard = static_cast<OIS::Keyboard*>(mInputMgr->createInputObject(OIS::OISKeyboard, true));
 			mInputContext.mMouse = static_cast<OIS::Mouse*>(mInputMgr->createInputObject(OIS::OISMouse, true));
-=======
-#if OGRE_PLATFORM != OGRE_PLATFORM_ANDROID
-#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS
-			mMouse = static_cast<OIS::MultiTouch*>(mInputMgr->createInputObject(OIS::OISMultiTouch, true));
-			mAccelerometer = static_cast<OIS::JoyStick*>(mInputMgr->createInputObject(OIS::OISJoyStick, true));
-#else
-            OIS::Object* obj = mInputMgr->createInputObject(OIS::OISKeyboard, true);
-			mKeyboard = static_cast<OIS::Keyboard*>(obj);
-			mMouse = static_cast<OIS::Mouse*>(mInputMgr->createInputObject(OIS::OISMouse, true));
-
-			mKeyboard->setEventCallback(this);
-#endif
-			mMouse->setEventCallback(this);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 		}
 
@@ -845,28 +718,17 @@ namespace OgreBites
 		-----------------------------------------------------------------------------*/
 		virtual void locateResources()
 		{
-<<<<<<< HEAD
 #if OGRE_PLATFORM == OGRE_PLATFORM_NACL
-=======
-#if OGRE_PLATFORM == OGRE_PLATFORM_ANDROID
-			// TODO: This is handled externally for now
-#elif OGRE_PLATFORM == OGRE_PLATFORM_NACL
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             Ogre::ResourceGroupManager::getSingleton().addResourceLocation("Essential.zip", "EmbeddedZip", "Essential");
             Ogre::ResourceGroupManager::getSingleton().addResourceLocation("Popular.zip", "EmbeddedZip", "Popular");
 #else
 			// load resource paths from config file
 			Ogre::ConfigFile cf;
-<<<<<<< HEAD
 #	if OGRE_PLATFORM == OGRE_PLATFORM_ANDROID
             cf.load(openAPKFile(mFSLayer->getConfigFilePath("resources.cfg")));
 #	else
 			cf.load(mFSLayer->getConfigFilePath("resources.cfg"));
 #	endif
-=======
-			cf.load(mFSLayer->getConfigFilePath("resources.cfg"));
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			Ogre::ConfigFile::SectionIterator seci = cf.getSectionIterator();
 			Ogre::String sec, type, arch;
 
@@ -893,7 +755,6 @@ namespace OgreBites
 					Ogre::ResourceGroupManager::getSingleton().addResourceLocation(arch, type, sec);
 				}
 			}
-<<<<<<< HEAD
 
 
         const Ogre::ResourceGroupManager::LocationList genLocs = Ogre::ResourceGroupManager::getSingleton().getResourceLocationList("General");
@@ -976,9 +837,6 @@ namespace OgreBites
 #		endif /* INCLUDE_RTSHADER_SYSTEM */
 #	endif /* OGRE_PLATFORM != OGRE_PLATFORM_ANDROID */
 #endif /* OGRE_PLATFORM == OGRE_PLATFORM_NACL */
-=======
-#endif
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		}
 
 		/*-----------------------------------------------------------------------------
@@ -1055,10 +913,7 @@ namespace OgreBites
 
 			// remove window event listener before shutting down OIS
 			Ogre::WindowEventUtilities::removeWindowEventListener(mWindow, this);
-<<<<<<< HEAD
             mWindow = 0;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 			shutdownInput();
 		}
@@ -1068,7 +923,6 @@ namespace OgreBites
 		-----------------------------------------------------------------------------*/
 		virtual void shutdownInput()
 		{
-<<<<<<< HEAD
 			// detach input devices
 			windowResized(mWindow);    // do an initial adjustment of mouse area
 			if(mInputContext.mKeyboard)
@@ -1095,17 +949,6 @@ namespace OgreBites
 #endif
 				if(mInputContext.mAccelerometer)
 	                mInputMgr->destroyInputObject(mInputContext.mAccelerometer);
-=======
-#if OGRE_PLATFORM != OGRE_PLATFORM_ANDROID
-			if (mInputMgr)
-			{
-#if OGRE_PLATFORM != OGRE_PLATFORM_APPLE_IOS
-				mInputMgr->destroyInputObject(mKeyboard);
-#else
-                mInputMgr->destroyInputObject(mAccelerometer);
-#endif
-				mInputMgr->destroyInputObject(mMouse);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 				OIS::InputManager::destroyInputSystem(mInputMgr);
 				mInputMgr = 0;
@@ -1118,7 +961,6 @@ namespace OgreBites
 		-----------------------------------------------------------------------------*/
 		virtual void captureInputDevices()
 		{
-<<<<<<< HEAD
 			mInputContext.capture();
 		}
         
@@ -1149,34 +991,6 @@ namespace OgreBites
 #ifdef OGRE_STATIC_LIB
         Ogre::StaticPluginLoader mStaticPluginLoader;
 #endif
-=======
-#if OGRE_PLATFORM != OGRE_PLATFORM_ANDROID
-#if OGRE_PLATFORM != OGRE_PLATFORM_APPLE_IOS
-			mKeyboard->capture();
-#else
-            mAccelerometer->capture();
-#endif
-			mMouse->capture();
-#endif
-		}
-
-		FileSystemLayer* mFSLayer; 		// File system abstraction layer
-		Ogre::Root* mRoot;              // OGRE root
-		OIS::InputManager* mInputMgr;   // OIS input manager
-#ifdef OGRE_STATIC_LIB
-        Ogre::StaticPluginLoader mStaticPluginLoader;
-#endif
-#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS
-		OIS::MultiTouch* mMouse;        // multitouch device
-		OIS::JoyStick* mAccelerometer;  // accelerometer device
-#elif OGRE_PLATFORM == OGRE_PLATFORM_ANDROID
-		OIS::MultiTouch* mMouse;        // multitouch device
-		OIS::Keyboard* mKeyboard;       // keyboard device
-#else
-		OIS::Keyboard* mKeyboard;       // keyboard device
-		OIS::Mouse* mMouse;             // mouse device
-#endif
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		Sample* mCurrentSample;         // currently running sample
 		bool mSamplePaused;             // whether current sample is paused
 		bool mFirstRun;                 // whether or not this is the first run

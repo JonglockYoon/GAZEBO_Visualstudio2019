@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -48,13 +44,9 @@ THE SOFTWARE.
 #endif
 #define UINT8 uint8_t
 #define WINAPI_INLINE inline
-<<<<<<< HEAD
 #ifndef __uuidof(Object)
 #   define __uuidof(Object) IID_##Object
 #endif
-=======
-#define __uuidof(Object) IID_##Object
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #endif
 

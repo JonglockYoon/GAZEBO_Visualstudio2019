@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -40,10 +36,7 @@ THE SOFTWARE.
 #include "OgreArchive.h"
 #include "OgreIteratorWrappers.h"
 #include <ctime>
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 // If X11/Xlib.h gets included before this header (for example it happens when
 // including wxWidgets and FLTK), Status is defined as an int which we don't
@@ -148,10 +141,6 @@ namespace Ogre {
         /** This event is fired when a stage of preparing linked world geometry 
             has been completed. The number of stages required will have been 
             included in the resourceCount passed in resourceGroupLoadStarted.
-<<<<<<< HEAD
-=======
-        @param description Text description of what was just prepared
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         virtual void worldGeometryPrepareStageEnded(void) {}
         /** This event is fired when a resource group finished preparing. */
@@ -180,7 +169,6 @@ namespace Ogre {
         /** This event is fired when a stage of loading linked world geometry 
             has been completed. The number of stages required will have been 
             included in the resourceCount passed in resourceGroupLoadStarted.
-<<<<<<< HEAD
         */
         virtual void worldGeometryStageEnded(void) = 0;
         /** This event is fired when a resource group finished loading. */
@@ -195,13 +183,6 @@ namespace Ogre {
 		*/
 		virtual void resourceRemove(const ResourcePtr& resource)
 		{ (void)resource; }
-=======
-        @param description Text description of what was just loaded
-        */
-        virtual void worldGeometryStageEnded(void) = 0;
-        /** This event is fired when a resource group finished loading. */
-        virtual void resourceGroupLoadEnded(const String& groupName) = 0;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
 
 	/**
@@ -280,11 +261,7 @@ namespace Ogre {
     class _OgreExport ResourceGroupManager : public Singleton<ResourceGroupManager>, public ResourceAlloc
     {
     public:
-<<<<<<< HEAD
         OGRE_AUTO_MUTEX; // public to allow external locking
-=======
-		OGRE_AUTO_MUTEX // public to allow external locking
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Default resource group name
 		static String DEFAULT_RESOURCE_GROUP_NAME;
         /// Internal resource group name (should be used by OGRE internal only)
@@ -346,15 +323,9 @@ namespace Ogre {
 				LOADED = 4
 			};
 			/// General mutex for dealing with group content
-<<<<<<< HEAD
                     OGRE_AUTO_MUTEX;
 			/// Status-specific mutex, separate from content-changing mutex
                     OGRE_MUTEX(statusMutex);
-=======
-			OGRE_AUTO_MUTEX
-			/// Status-specific mutex, separate from content-changing mutex
-			OGRE_MUTEX(statusMutex)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			/// Group name
 			String name;
 			/// Group status
@@ -436,7 +407,6 @@ namespace Ogre {
 		void fireResourcePrepareEnded(void);
 		/// Internal event firing method
 		void fireResourceGroupPrepareEnded(const String& groupName);
-<<<<<<< HEAD
 		/// Internal event firing method
 		void fireResourceCreated(const ResourcePtr& resource);
 		/// Internal event firing method
@@ -449,8 +419,6 @@ namespace Ogre {
          @param filename Fully qualified name of the file to test for
          */
         bool resourceExists(ResourceGroup* group, const String& filename);
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/// Stored current group - optimisation for when bulk loading a group
 		ResourceGroup* mCurrentGroup;
@@ -678,11 +646,7 @@ namespace Ogre {
 			this allows duplicate names in alternate paths.
         */
         void addResourceLocation(const String& name, const String& locType, 
-<<<<<<< HEAD
             const String& resGroup = DEFAULT_RESOURCE_GROUP_NAME, bool recursive = false, bool readOnly = true);
-=======
-            const String& resGroup = DEFAULT_RESOURCE_GROUP_NAME, bool recursive = false);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Removes a resource location from the search path. */ 
         void removeResourceLocation(const String& name, 
 			const String& resGroup = DEFAULT_RESOURCE_GROUP_NAME);
@@ -855,15 +819,6 @@ namespace Ogre {
         @param filename Fully qualified name of the file to test for
         */
         bool resourceExists(const String& group, const String& filename);
-<<<<<<< HEAD
-=======
-
-        /** Find out if the named file exists in a group. 
-        @param group Pointer to the resource group
-        @param filename Fully qualified name of the file to test for
-        */
-        bool resourceExists(ResourceGroup* group, const String& filename);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
         /** Find out if the named file exists in any group. 
         @param filename Fully qualified name of the file to test for
@@ -906,12 +861,6 @@ namespace Ogre {
         */
         StringVectorPtr findResourceLocation(const String& groupName, const String& pattern);
 
-<<<<<<< HEAD
-=======
-		/** Retrieve the modification time of a given file */
-		time_t resourceModifiedTime(ResourceGroup* group, const String& filename); 
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Create a new resource file in a given group.
 		@remarks
 			This method creates a new file in a resource group and passes you back a 
@@ -1152,9 +1101,6 @@ namespace Ogre {
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

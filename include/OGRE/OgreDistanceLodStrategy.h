@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -46,7 +42,6 @@ namespace Ogre {
 	*  @{
 	*/
 
-<<<<<<< HEAD
     /** Level of detail strategy based on distance from camera. This is an abstract base class for DistanceLodBoxStrategy and DistanceLodSphereStrategy.
         @remarks
             The purpose of the reference view is to ensure a consistent experience for all users. Monitors of different resolutions and aspect ratios will each have different results for the distance queries.
@@ -58,10 +53,6 @@ namespace Ogre {
             If all your testers had varying resolutions or you just didn't care, then this feature is useless for you and should be disabled (default: disabled).
      */
     class _OgreExport DistanceLodStrategy : public LodStrategy
-=======
-    /** Level of detail strategy based on distance from camera. */
-    class _OgreExport DistanceLodStrategy : public LodStrategy, public Singleton<DistanceLodStrategy>
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     {
     protected:
         /// @copydoc LodStrategy::getValueImpl
@@ -69,11 +60,7 @@ namespace Ogre {
 
     public:
         /** Default constructor. */
-<<<<<<< HEAD
         DistanceLodStrategy(const String& name);
-=======
-        DistanceLodStrategy();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /// @copydoc LodStrategy::getBaseValue
         virtual Real getBaseValue() const;
@@ -96,12 +83,9 @@ namespace Ogre {
         /// @copydoc LodStrategy::isSorted
         virtual bool isSorted(const Mesh::LodValueList& values) const;
 
-<<<<<<< HEAD
         /** Get the squared depth from camera to the LOD object */
         virtual Real getSquaredDepth(const MovableObject *movableObject, const Ogre::Camera *camera) const = 0;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Sets the reference view upon which the distances were based.
         @note
             This automatically enables use of the reference view.
@@ -117,7 +101,6 @@ namespace Ogre {
         void setReferenceViewEnabled(bool value);
 
         /** Determine if use of the reference view is enabled */
-<<<<<<< HEAD
         bool isReferenceViewEnabled() const;
 
     private:
@@ -153,9 +136,6 @@ namespace Ogre {
 
         /// @copydoc DistanceLodStrategy::getSquaredDepth
         Real getSquaredDepth(const MovableObject *movableObject, const Ogre::Camera *camera) const;
-=======
-        bool getReferenceViewEnabled() const;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Override standard Singleton retrieval.
         @remarks
@@ -172,11 +152,7 @@ namespace Ogre {
         but the implementation stays in this single compilation unit,
         preventing link errors.
         */
-<<<<<<< HEAD
         static DistanceLodSphereStrategy& getSingleton(void);
-=======
-        static DistanceLodStrategy& getSingleton(void);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Override standard Singleton retrieval.
         @remarks
         Why do we do this? Well, it's because the Singleton
@@ -192,7 +168,6 @@ namespace Ogre {
         but the implementation stays in this single compilation unit,
         preventing link errors.
         */
-<<<<<<< HEAD
         static DistanceLodSphereStrategy* getSingletonPtr(void);
     };
     /** @} */
@@ -259,17 +234,6 @@ namespace Ogre {
     };
     /** @} */
     /** @} */
-=======
-        static DistanceLodStrategy* getSingletonPtr(void);
-
-    private:
-        bool mReferenceViewEnabled;
-        Real mReferenceViewValue;
-
-    };
-	/** @} */
-	/** @} */
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 } // namespace
 

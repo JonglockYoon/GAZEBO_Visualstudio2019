@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,10 +32,7 @@ THE SOFTWARE.
 #include "OgreMaterial.h"
 #include "OgreRenderSystem.h"
 #include "OgreRenderQueue.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 	/** \addtogroup Core
@@ -61,19 +54,11 @@ namespace Ogre {
         */
         enum PassType
         {
-<<<<<<< HEAD
             PT_CLEAR,           /// Clear target to one colour
 			PT_STENCIL,			/// Set stencil operation
             PT_RENDERSCENE,     /// Render the scene or part of it
             PT_RENDERQUAD,      /// Render a full screen quad
 			PT_RENDERCUSTOM		/// Render a custom sequence
-=======
-            PT_CLEAR,           // Clear target to one colour
-			PT_STENCIL,			// Set stencil operation
-            PT_RENDERSCENE,     // Render the scene or part of it
-            PT_RENDERQUAD,      // Render a full screen quad
-			PT_RENDERCUSTOM		// Render a custom sequence
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         };
         
         /** Set the type of composition pass */
@@ -339,13 +324,8 @@ namespace Ogre {
 		Real mClearDepth;
 		/// Clear stencil value (in case of PT_CLEAR)
 		uint32 mClearStencil;
-<<<<<<< HEAD
         /** Inputs (for material used for rendering the quad).
             An empty string signifies that no input is used */
-=======
-        /// Inputs (for material used for rendering the quad)
-        /// An empty string signifies that no input is used
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         InputTex mInputs[OGRE_MAX_TEXTURE_LAYERS];
 		/// Stencil operation parameters
 		bool mStencilCheck;
@@ -357,11 +337,7 @@ namespace Ogre {
 		StencilOperation mStencilPassOp;
 		bool mStencilTwoSidedOperation;
 
-<<<<<<< HEAD
         /// True if quad should not cover whole screen
-=======
-        /// true if quad should not cover whole screen
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         bool mQuadCornerModified;
         /// quad positions in normalised coordinates [-1;1]x[-1;1] (in case of PT_RENDERQUAD)
         Real mQuadLeft;
@@ -370,11 +346,7 @@ namespace Ogre {
         Real mQuadBottom;
 
 		bool mQuadFarCorners, mQuadFarCornersViewSpace;
-<<<<<<< HEAD
 		/// The type name of the custom composition pass.
-=======
-		//The type name of the custom composition pass.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		String mCustomType;
     };
 	/** @} */
@@ -382,9 +354,6 @@ namespace Ogre {
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

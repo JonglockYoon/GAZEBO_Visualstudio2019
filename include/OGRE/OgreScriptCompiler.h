@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -39,10 +35,7 @@ THE SOFTWARE.
 #include "OgreCompositor.h"
 #include "OgreCompositionPass.h"
 #include "OgreAny.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {
@@ -133,11 +126,7 @@ namespace Ogre
 		map<String,String>::type mEnv;
 	public:
 		String name, cls;
-<<<<<<< HEAD
 		vector<String>::type bases;
-=======
-		std::vector<String> bases;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		uint32 id;
 		bool abstract;
 		AbstractNodeList children;
@@ -265,7 +254,6 @@ namespace Ogre
 		void removeNameExclusion(const String &type);
 		/// Internal method for firing the handleEvent method
 		bool _fireEvent(ScriptCompilerEvent *evt, void *retval);
-<<<<<<< HEAD
 
 		/// Adds a custom word id which can be used for custom script translators
 		/** 
@@ -280,8 +268,6 @@ namespace Ogre
 		*/
 		uint32 registerCustomWordId(const String &word);
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	private: // Tree processing
 		AbstractNodeListPtr convertToAST(const ConcreteNodeListPtr &nodes);
 		/// This built-in function processes import nodes
@@ -305,13 +291,10 @@ namespace Ogre
 		String mGroup;
 		// The word -> id conversion table
 		IdMap mIds;
-<<<<<<< HEAD
 
 		// The largest registered id
 		uint32 mLargestRegisteredWordId;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		// This is an environment map
 		typedef map<String,String>::type Environment;
 		Environment mEnv;
@@ -419,11 +402,7 @@ namespace Ogre
 	class _OgreExport ScriptCompilerManager : public Singleton<ScriptCompilerManager>, public ScriptLoader, public ScriptCompilerAlloc
 	{
 	private:
-<<<<<<< HEAD
             OGRE_AUTO_MUTEX;
-=======
-		OGRE_AUTO_MUTEX
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		// A list of patterns loaded by this compiler manager
 		StringVector mScriptPatterns;
@@ -457,7 +436,6 @@ namespace Ogre
 		/// Retrieves a ScriptTranslator from the supported managers
 		ScriptTranslator *getTranslator(const AbstractNodePtr &node);
 
-<<<<<<< HEAD
 		/// Adds a custom word id which can be used for custom script translators
 		/** 
 		@param
@@ -471,8 +449,6 @@ namespace Ogre
 		*/
 		uint32 registerCustomWordId(const String &word);
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Adds a script extension that can be handled (e.g. *.material, *.pu, etc.)
 		void addScriptPattern(const String &pattern);
 		/// @copydoc ScriptLoader::getScriptPatterns
@@ -756,10 +732,7 @@ namespace Ogre
 			ID_2D,
 			ID_3D,
 			ID_CUBIC,
-<<<<<<< HEAD
 			ID_2DARRAY,
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			ID_UNLIMITED,
 			ID_ALPHA,
 			ID_GAMMA,
@@ -778,13 +751,10 @@ namespace Ogre
 			ID_BILINEAR,
 			ID_TRILINEAR,
 			ID_ANISOTROPIC,
-<<<<<<< HEAD
 		ID_CMPTEST,
 			ID_ON,
 			ID_OFF,
 		ID_CMPFUNC,
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		ID_MAX_ANISOTROPY,
 		ID_MIPMAP_BIAS,
 		ID_COLOUR_OP,
@@ -909,7 +879,6 @@ namespace Ogre
 #ifdef RTSHADER_SYSTEM_BUILD_CORE_SHADERS
         ID_RT_SHADER_SYSTEM,
 #endif
-<<<<<<< HEAD
 		/// Suport for shader model 5.0
 		// More program IDs
 		ID_TESSELATION_HULL_PROGRAM,
@@ -927,17 +896,12 @@ namespace Ogre
 		// Support for subroutine
 		ID_SUBROUTINE,
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		ID_END_BUILTIN_IDS
 	};
 	/** @} */
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

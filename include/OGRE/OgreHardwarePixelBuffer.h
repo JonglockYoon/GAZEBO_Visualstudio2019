@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,10 +34,7 @@ THE SOFTWARE.
 #include "OgreSharedPtr.h"
 #include "OgrePixelFormat.h"
 #include "OgreImage.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -60,7 +53,6 @@ namespace Ogre {
     class _OgreExport HardwarePixelBuffer : public HardwareBuffer
     {
     protected: 
-<<<<<<< HEAD
         /// Extents
         uint32 mWidth, mHeight, mDepth;
         /// Pitches (offsets between rows and slices)
@@ -70,37 +62,16 @@ namespace Ogre {
         /// Currently locked region (local coords)
         PixelBox mCurrentLock;
 		/// The current locked box of this surface (entire surface coords)
-=======
-        // Extents
-        size_t mWidth, mHeight, mDepth;
-        // Pitches (offsets between rows and slices)
-        size_t mRowPitch, mSlicePitch;
-        // Internal format
-        PixelFormat mFormat;
-        // Currently locked region (local coords)
-        PixelBox mCurrentLock;
-		// The current locked box of this surface (entire surface coords)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		Image::Box mLockedBox;
 
         
         /// Internal implementation of lock(), must be overridden in subclasses
         virtual PixelBox lockImpl(const Image::Box lockBox,  LockOptions options) = 0;
 
-<<<<<<< HEAD
         /** Internal implementation of lock(), do not OVERRIDE or CALL this
             for HardwarePixelBuffer implementations, but override the previous method */
         virtual void* lockImpl(size_t offset, size_t length, LockOptions options);
 
-=======
-        /// Internal implementation of lock(), do not OVERRIDE or CALL this
-        /// for HardwarePixelBuffer implementations, but override the previous method
-        virtual void* lockImpl(size_t offset, size_t length, LockOptions options);
-
-        /// Internal implementation of unlock(), must be overridden in subclasses
-        // virtual void unlockImpl(void) = 0;
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Notify TextureBuffer of destruction of render target.
 			Called by RenderTexture when destroyed.
 		*/
@@ -108,20 +79,12 @@ namespace Ogre {
 		friend class RenderTexture;
     public:
         /// Should be called by HardwareBufferManager
-<<<<<<< HEAD
         HardwarePixelBuffer(uint32 mWidth, uint32 mHeight, uint32 mDepth,
-=======
-        HardwarePixelBuffer(size_t mWidth, size_t mHeight, size_t mDepth,
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
                 PixelFormat mFormat,
                 HardwareBuffer::Usage usage, bool useSystemMemory, bool useShadowBuffer);
         ~HardwarePixelBuffer();
 
-<<<<<<< HEAD
         /** Make every lock method from HardwareBuffer available.
-=======
-        /** make every lock method from HardwareBuffer available.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         See http://www.research.att.com/~bs/bs_faq2.html#overloadderived
         */
         using HardwareBuffer::lock;	
@@ -150,11 +113,7 @@ namespace Ogre {
         
         /** Copies a box from another PixelBuffer to a region of the 
         	this PixelBuffer. 
-<<<<<<< HEAD
 			@param src		Source pixel buffer
-=======
-			@param dst		Source pixel buffer
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         	@param srcBox	Image::Box describing the source region in src
         	@param dstBox	Image::Box describing the destination region in this buffer
 			@remarks The source and destination regions dimensions don't have to match, in which
@@ -201,15 +160,9 @@ namespace Ogre {
 		 */
 		virtual void blitToMemory(const Image::Box &srcBox, const PixelBox &dst) = 0;
 
-<<<<<<< HEAD
 		/** Convenience function that blits this entire buffer to a pixelbox.
 			The image is scaled as needed.
 			@param dst		PixelBox describing the destination pixels and format in memory
-=======
-		/** Convience function that blits this entire buffer to a pixelbox.
-			The image is scaled as needed.
-			@param src		PixelBox containing the source pixels and format in memory
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			@note Only call this function when the buffer is unlocked. 
 		*/
 		void blitToMemory(const PixelBox &dst)
@@ -227,19 +180,11 @@ namespace Ogre {
         virtual RenderTexture *getRenderTarget(size_t slice=0);
         
         /// Gets the width of this buffer
-<<<<<<< HEAD
         uint32 getWidth() const { return mWidth; }
         /// Gets the height of this buffer
         uint32 getHeight() const { return mHeight; }
         /// Gets the depth of this buffer
         uint32 getDepth() const { return mDepth; }
-=======
-        size_t getWidth() const { return mWidth; }
-        /// Gets the height of this buffer
-        size_t getHeight() const { return mHeight; }
-        /// Gets the depth of this buffer
-        size_t getDepth() const { return mDepth; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /// Gets the native pixel format of this buffer
         PixelFormat getFormat() const { return mFormat; }
     };
@@ -257,11 +202,8 @@ namespace Ogre {
 	/** @} */
 	/** @} */
 }
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 

@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,10 +33,7 @@ THE SOFTWARE.
 #include "OgreRenderable.h"
 #include "OgreMesh.h"
 #include "OgreLodStrategy.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -128,11 +121,7 @@ namespace Ogre {
 	class _OgreExport StaticGeometry : public BatchedGeometryAlloc
 	{
 	public:
-<<<<<<< HEAD
 		/** Struct holding geometry optimised per SubMesh / LOD level, ready
-=======
-		/** Struct holding geometry optimised per SubMesh / lod level, ready
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			for copying to instances. 
 		@remarks
 			Since we're going to be duplicating geometry lots of times, it's
@@ -349,11 +338,7 @@ namespace Ogre {
 			Region* mParent;
 			/// LOD level (0 == full LOD)
 			unsigned short mLod;
-<<<<<<< HEAD
 			/// LOD value at which this LOD starts to apply (squared)
-=======
-			/// lod value at which this LOD starts to apply (squared)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			Real mLodValue;
 			/// Lookup of Material Buckets in this region
 			MaterialBucketMap mMaterialBucketMap;
@@ -369,15 +354,9 @@ namespace Ogre {
 			LODBucket(Region* parent, unsigned short lod, Real lodValue);
 			virtual ~LODBucket();
 			Region* getParent(void) { return mParent; }
-<<<<<<< HEAD
 			/// Get the LOD index
 			ushort getLod(void) const { return mLod; }
 			/// Get the LOD value
-=======
-			/// Get the lod index
-			ushort getLod(void) const { return mLod; }
-			/// Get the lod value
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			Real getLodValue(void) const { return mLodValue; }
 			/// Assign a queued submesh to this bucket, using specified mesh LOD
 			void assign(QueuedSubMesh* qsm, ushort atLod);
@@ -430,25 +409,15 @@ namespace Ogre {
 			uint32 mRegionID;
 			/// Center of the region
 			Vector3 mCentre;
-<<<<<<< HEAD
 			/// LOD values as built up - use the max at each level
-=======
-			/// Lod values as built up - use the max at each level
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			Mesh::LodValueList mLodValues;
 			/// Local AABB relative to region centre
 			AxisAlignedBox mAABB;
 			/// Local bounding radius
 			Real mBoundingRadius;
-<<<<<<< HEAD
 			/// The current LOD level, as determined from the last camera
 			ushort mCurrentLod;
 			/// Current LOD value, passed on to do material LOD later
-=======
-			/// The current lod level, as determined from the last camera
-			ushort mCurrentLod;
-			/// Current lod value, passed on to do material lod later
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			Real mLodValue;
 			/// List of LOD buckets			
 			LODBucketList mLodBucketList;
@@ -456,11 +425,7 @@ namespace Ogre {
 			mutable LightList mLightList;
 			/// The last frame that this light list was updated in
 			mutable ulong mLightListUpdated;
-<<<<<<< HEAD
             /// LOD strategy reference
-=======
-            /// Lod strategy reference
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             const LodStrategy *mLodStrategy;
             /// Current camera
             Camera *mCamera;
@@ -498,11 +463,7 @@ namespace Ogre {
 			/// @copydoc ShadowCaster::getShadowVolumeRenderableIterator
 			ShadowRenderableListIterator getShadowVolumeRenderableIterator(
 				ShadowTechnique shadowTechnique, const Light* light, 
-<<<<<<< HEAD
 				HardwareIndexBufferSharedPtr* indexBuffer, size_t* indexBufferUsedSize,
-=======
-				HardwareIndexBufferSharedPtr* indexBuffer, 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 				bool extrudeVertices, Real extrusionDistance, unsigned long flags = 0 );
 			/// Overridden from MovableObject
 			EdgeData* getEdgeList(void);
@@ -770,11 +731,7 @@ namespace Ogre {
 			the sparseness of population is no issue when it comes to rendering.
 			The default is Vector3(0,0,0).
 		@note Must be called before 'build'.
-<<<<<<< HEAD
 		@param origin Vector3 expressing the 3D origin of the geometry.
-=======
-		@param size Vector3 expressing the 3D origin of the geometry.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		virtual void setOrigin(const Vector3& origin) { mOrigin = origin; }
 		/** Gets the origin of this geometry. */
@@ -821,10 +778,7 @@ namespace Ogre {
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 

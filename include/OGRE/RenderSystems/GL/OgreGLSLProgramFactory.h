@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -39,11 +35,8 @@ THE SOFTWARE.
 
 namespace Ogre
 {
-<<<<<<< HEAD
     namespace GLSL {
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     /** Factory class for GLSL programs. */
     class _OgreGLExport GLSLProgramFactory : public HighLevelGpuProgramFactory
     {
@@ -64,10 +57,7 @@ namespace Ogre
 		GLSLLinkProgramManager* mLinkProgramManager;
 
     };
-<<<<<<< HEAD
     }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 }
 
 #endif // __GLSLProgramFactory_H__

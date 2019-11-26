@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -160,7 +156,6 @@ protected:
 	@param programSet The program set container.
 	*/
 	bool createGpuPrograms(ProgramSet* programSet);
-<<<<<<< HEAD
 		
 	/** 
 	Generates a unique guid value from a string
@@ -168,19 +163,13 @@ protected:
 	@return A string representing a 128 bit hash value of the original string
 	*/
 	String generateGUID(const String& programString);
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 	/** Create GPU program based on the give CPU program.
 	@param shaderProgram The CPU program instance.
 	@param programWriter The program writer instance.
 	@param language The target shader language.
 	@param profiles The profiles string for program compilation.
-<<<<<<< HEAD
 	@param profilesList The profiles string for program compilation as string list.
-=======
-	@param profiles The profiles string for program compilation as string list.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	@param cachePath The output path to write the program into.
 	*/
 	GpuProgramPtr createGpuProgram(Program* shaderProgram, 
@@ -203,12 +192,7 @@ protected:
 	void removeProgramProcessor(ProgramProcessor* processor);
 
 	/** Destroy a GPU program by name.
-<<<<<<< HEAD
 	@param gpuProgram The program to destroy.
-=======
-	@param name The name of the program to destroy.
-	@param type The type of the program to destroy.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	void destroyGpuProgram(GpuProgramPtr& gpuProgram);
 

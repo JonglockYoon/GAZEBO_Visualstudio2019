@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -41,7 +37,6 @@ THE SOFTWARE.
 
 
 namespace Ogre {
-<<<<<<< HEAD
 
 
     namespace GLSL {
@@ -49,10 +44,6 @@ namespace Ogre {
     }
 
     class GLStateCacheManager;
-=======
-    
-	class GLSLProgramFactory;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 	/**
       Implementation of GL as a rendering system.
@@ -84,19 +75,10 @@ namespace Ogre {
         /// Holds texture type settings for every stage
         GLenum mTextureTypes[OGRE_MAX_TEXTURE_LAYERS];
 
-<<<<<<< HEAD
         /// Number of fixed-function texture units
         unsigned short mFixedFunctionTextureUnits;
 
         void initConfigOptions(void);
-=======
-		/// Number of fixed-function texture units
-		unsigned short mFixedFunctionTextureUnits;
-
-        void initConfigOptions(void);
-        void initInputDevices(void);
-        void processInputDevices(void);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         void setGLLight(size_t index, Light* lt);
         void makeGLMatrix(GLfloat gl_matrix[16], const Matrix4& m);
@@ -110,7 +92,6 @@ namespace Ogre {
         /// Store last depth write state
         bool mDepthWrite;
 		/// Store last stencil mask state
-<<<<<<< HEAD
 		uint32 mStencilWriteMask;
 		/// Store last colour write state
 		bool mColourWrite[4];
@@ -118,12 +99,6 @@ namespace Ogre {
 		/// Store scissor box
 		int mScissorBox[4];
 
-=======
-		uint32 mStencilMask;
-		/// Store last colour write state
-		bool mColourWrite[4];
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         GLint convertCompareFunction(CompareFunction func) const;
         GLint convertStencilOp(StencilOperation op, bool invert = false) const;
 
@@ -144,11 +119,7 @@ namespace Ogre {
 
         HardwareBufferManager* mHardwareBufferManager;
         GLGpuProgramManager* mGpuProgramManager;
-<<<<<<< HEAD
         GLSL::GLSLProgramFactory* mGLSLProgramFactory;
-=======
-		GLSLProgramFactory* mGLSLProgramFactory;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         unsigned short mCurrentLights;
 
@@ -166,11 +137,8 @@ namespace Ogre {
 		/// List of background thread contexts
 		GLContextList mBackgroundContextList;
 
-<<<<<<< HEAD
 		GLStateCacheManager* mStateCacheManager;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Manager object for creating render textures.
             Direct render to texture via GL_EXT_framebuffer_object is preferable 
 			to pbuffers, which depend on the GL support used and are generally 
@@ -178,12 +146,8 @@ namespace Ogre {
         */
         GLRTTManager *mRTTManager;
 
-<<<<<<< HEAD
         ushort mActiveTextureUnit;
         ushort mMaxBuiltInTextureAttribIndex;
-=======
-		ushort mActiveTextureUnit;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         // local data members of _render that were moved here to improve performance
         // (save allocations)
@@ -193,10 +157,6 @@ namespace Ogre {
 
 	protected:
 		void setClipPlanesImpl(const PlaneList& clipPlanes);
-<<<<<<< HEAD
-=======
-		bool activateGLTextureUnit(size_t unit);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         void bindVertexElementToGpu( const VertexElement &elem, HardwareVertexBufferSharedPtr vertexBuffer,
                 const size_t vertexStart, 
                 vector<GLuint>::type &attribsBound, vector<GLuint>::type &instanceAttribsBound );
@@ -231,19 +191,11 @@ namespace Ogre {
         /** See
           RenderSystem
          */
-<<<<<<< HEAD
         virtual RenderSystemCapabilities* createRenderSystemCapabilities() const;
         /** See
           RenderSystem
          */
         void initialiseFromRenderSystemCapabilities(RenderSystemCapabilities* caps, RenderTarget* primary);
-=======
-				virtual RenderSystemCapabilities* createRenderSystemCapabilities() const;
-        /** See
-          RenderSystem
-         */
-				void initialiseFromRenderSystemCapabilities(RenderSystemCapabilities* caps, RenderTarget* primary);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** See
           RenderSystem
          */
@@ -266,7 +218,6 @@ namespace Ogre {
          */
         void setLightingEnabled(bool enabled);
         
-<<<<<<< HEAD
         /// @copydoc RenderSystem::_createRenderWindow
         RenderWindow* _createRenderWindow(const String &name, unsigned int width, unsigned int height, 
                                           bool fullScreen, const NameValuePairList *miscParams = 0);
@@ -284,25 +235,6 @@ namespace Ogre {
 		
         /// @copydoc RenderSystem::createMultiRenderTarget
         virtual MultiRenderTarget * createMultiRenderTarget(const String & name); 
-=======
-		/// @copydoc RenderSystem::_createRenderWindow
-		RenderWindow* _createRenderWindow(const String &name, unsigned int width, unsigned int height, 
-			bool fullScreen, const NameValuePairList *miscParams = 0);
-
-		/// @copydoc RenderSystem::_createRenderWindows
-		bool _createRenderWindows(const RenderWindowDescriptionList& renderWindowDescriptions, 
-			RenderWindowList& createdWindows);
-
-		/// @copydoc RenderSystem::_createDepthBufferFor
-		DepthBuffer* _createDepthBufferFor( RenderTarget *renderTarget );
-
-		/// Mimics D3D9RenderSystem::_getDepthStencilFormatFor, if no FBO RTT manager, outputs GL_NONE
-		void _getDepthStencilFormatFor( GLenum internalColourFormat, GLenum *depthFormat,
-										GLenum *stencilFormat );
-		
-		/// @copydoc RenderSystem::createMultiRenderTarget
-		virtual MultiRenderTarget * createMultiRenderTarget(const String & name); 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
         /** See
           RenderSystem
@@ -503,13 +435,8 @@ namespace Ogre {
           RenderSystem.
          */
         void setStencilBufferParams(CompareFunction func = CMPF_ALWAYS_PASS, 
-<<<<<<< HEAD
             uint32 refValue = 0, uint32 compareMask = 0xFFFFFFFF, uint32 writeMask = 0xFFFFFFFF,
 			StencilOperation stencilFailOp = SOP_KEEP, 
-=======
-            uint32 refValue = 0, uint32 mask = 0xFFFFFFFF, 
-            StencilOperation stencilFailOp = SOP_KEEP, 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             StencilOperation depthFailOp = SOP_KEEP,
             StencilOperation passOp = SOP_KEEP, 
             bool twoSidedOperation = false);
@@ -517,7 +444,6 @@ namespace Ogre {
           RenderSystem
          */
         void _setTextureUnitFiltering(size_t unit, FilterType ftype, FilterOptions filter);
-<<<<<<< HEAD
 		 /** See
           RenderSystem
          */
@@ -526,8 +452,6 @@ namespace Ogre {
           RenderSystem
          */
 		void _setTextureUnitCompareEnabled(size_t unit, bool compare);
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** See
           RenderSystem
          */
@@ -556,52 +480,30 @@ namespace Ogre {
         /** See
           RenderSystem
          */
-<<<<<<< HEAD
         void bindGpuProgramParameters(GpuProgramType gptype, 
                                       GpuProgramParametersSharedPtr params, uint16 variabilityMask);
         /** See
             RenderSystem
         */
         void bindGpuProgramPassIterationParameters(GpuProgramType gptype);
-=======
-		void bindGpuProgramParameters(GpuProgramType gptype, 
-			GpuProgramParametersSharedPtr params, uint16 variabilityMask);
-		/** See
-		  RenderSystem
-		 */
-		void bindGpuProgramPassIterationParameters(GpuProgramType gptype);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** See
           RenderSystem
          */
         void setScissorTest(bool enabled, size_t left = 0, size_t top = 0, size_t right = 800, size_t bottom = 600) ;
         void clearFrameBuffer(unsigned int buffers, 
-<<<<<<< HEAD
                               const ColourValue& colour = ColourValue::Black, 
                               Real depth = 1.0f, unsigned short stencil = 0);
-=======
-            const ColourValue& colour = ColourValue::Black, 
-            Real depth = 1.0f, unsigned short stencil = 0);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         HardwareOcclusionQuery* createHardwareOcclusionQuery(void);
         Real getHorizontalTexelOffset(void);
         Real getVerticalTexelOffset(void);
         Real getMinimumDepthInputValue(void);
         Real getMaximumDepthInputValue(void);
-<<<<<<< HEAD
         OGRE_MUTEX(mThreadInitMutex);
         void registerThread();
         void unregisterThread();
         void preExtraThreadsStarted();
         void postExtraThreadsStarted();
         GLSupport* getGLSupportRef() { return mGLSupport; }
-=======
-		OGRE_MUTEX(mThreadInitMutex)
-		void registerThread();
-		void unregisterThread();
-		void preExtraThreadsStarted();
-		void postExtraThreadsStarted();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         // ----------------------------------
         // GLRenderSystem specific members
@@ -630,12 +532,9 @@ namespace Ogre {
 
 		/// @copydoc RenderSystem::getDisplayMonitorCount
 		unsigned int getDisplayMonitorCount() const;
-<<<<<<< HEAD
 
 		/// @copydoc RenderSystem::hasAnisotropicMipMapFilter
 		virtual bool hasAnisotropicMipMapFilter() const { return false; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         
 		/// @copydoc RenderSystem::beginProfileEvent
         virtual void beginProfileEvent( const String &eventName );
@@ -645,11 +544,7 @@ namespace Ogre {
 
 		/// @copydoc RenderSystem::markProfileEvent
         virtual void markProfileEvent( const String &eventName );
-<<<<<<< HEAD
     };
-=======
-};
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 }
 #endif
 

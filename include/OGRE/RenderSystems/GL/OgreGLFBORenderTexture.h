@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -53,11 +49,7 @@ namespace Ogre {
         virtual void getCustomAttribute(const String& name, void* pData);
 
 		/// Override needed to deal with multisample buffers
-<<<<<<< HEAD
 		virtual void swapBuffers();
-=======
-		virtual void swapBuffers(bool waitForVSync = true);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/// Override so we can attach the depth buffer to the FBO
 		virtual bool attachDepthBuffer( DepthBuffer *depthBuffer );
@@ -99,11 +91,7 @@ namespace Ogre {
         
         /** Request a render buffer. If format is GL_NONE, return a zero buffer.
         */
-<<<<<<< HEAD
         GLSurfaceDesc requestRenderBuffer(GLenum format, uint32 width, uint32 height, uint fsaa);
-=======
-        GLSurfaceDesc requestRenderBuffer(GLenum format, size_t width, size_t height, uint fsaa);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Request the specify render buffer in case shared somewhere. Ignore
             silently if surface.buffer is 0.
         */
@@ -149,10 +137,7 @@ namespace Ogre {
             RBFormat(GLenum inFormat, size_t inWidth, size_t inHeight, uint fsaa):
                 format(inFormat), width(inWidth), height(inHeight), samples(fsaa)
             {}
-<<<<<<< HEAD
             RBFormat() {}
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             GLenum format;
             size_t width;
             size_t height;
@@ -208,10 +193,7 @@ namespace Ogre {
         void detectFBOFormats();
         GLuint _tryFormat(GLenum depthFormat, GLenum stencilFormat);
         bool _tryPackedFormat(GLenum packedFormat);
-<<<<<<< HEAD
         void _createTempFramebuffer(GLuint fmt, GLuint &fb, GLuint &tid);
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
     
 

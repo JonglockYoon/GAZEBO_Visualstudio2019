@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,7 +33,6 @@ THE SOFTWARE.
 #include "OgreRenderable.h"
 #include "OgreMovableObject.h"
 #include "OgreMesh.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
 
 namespace Ogre
@@ -271,233 +266,6 @@ namespace Ogre
 		*/
 		void _defragmentBatch( bool optimizeCulling, InstancedEntityVec &usedEntities,
 								CustomParamsVec &usedParams );
-=======
-
-namespace Ogre
-{
-	/** \addtogroup Core
-	*  @{
-	*/
-	/** \addtogroup Scene
-	*  @{
-	*/
-
-	/** InstanceBatch forms part of the new Instancing system
-		This is an abstract class that must be derived to implement different instancing techniques
-		(@see InstanceManager::InstancingTechnique)
-		OGRE wasn't truly thought for instancing. OGRE assumes that either:
-			a. One MovableObject -> No Renderable
-			b. One MovableObject -> One Renderable
-			c. One MovableObject -> Many Renderable.
-		However, instances work on reverse: Many MovableObject have the same Renderable.
-		<b>Instancing is already difficult to cull by a CPU</b>, but the main drawback from this assumption
-		is that it makes it even harder to take advantage from OGRE's culling capabilities
-		(i.e. @see OctreeSceneManager)
-		@par
-		To workaround this problem, InstanceBatch updates on almost every frame,
-		growing the bounding box to fit all instances that are not being culled individually.
-		This helps by avoiding a huge bbox that may cover the whole scene, which decreases shadow
-		quality considerably (as it is seen as large shadow receiver)
-		Furthermore, if no individual instance is visible, the InstanceBatch switches it's visibility
-		(@see MovableObject::setVisible) to avoid sending this Renderable to the GPU. This happens because
-		even when no individual instance is visible, their merged bounding box may cause OGRE to think
-		the batch is visible (i.e. the camera is looking between object A & B, but A & B aren't visible)
-		@par
-		<b>As it happens with instancing in general, all instanced entities from the same batch will share
-		the same textures and materials</b>
-		@par
-		Each InstanceBatch preallocates a fixed amount of mInstancesPerBatch instances once it's been
-		built (@see build, @see buildFrom).
-		@see createInstancedEntity and @see removeInstancedEntity on how to retrieve those instances
-		remove them from scene.
-		Note that, on GPU side, removing an instance from scene doesn't save GPU cycles on what
-		respects vertex shaders, but saves a little fillrate and pixel shaders; unless all instances
-		are removed, which saves GPU.
-		For more information, @see InstancedEntity
-		For information on how Ogre manages multiple Instance batches, @see InstanceManager
-
-        @remarks
-			Design discussion webpage
-        @author
-            Matias N. Goldberg ("dark_sylinc")
-        @version
-            1.0
-     */
-	class _OgreExport InstanceBatch : public Renderable, public MovableObject
-	{
-	public:
-		typedef vector<InstancedEntity*>::type InstancedEntityVec;
-	protected:
-		RenderOperation		mRenderOperation;
-		size_t				mInstancesPerBatch;
-
-		InstanceManager		*mCreator;
-
-		MaterialPtr			mMaterial;
-
-		MeshPtr				 mMeshReference;
-		Mesh::IndexMap const *mIndexToBoneMap;
-
-		//InstancedEntities are all allocated at build time and kept as "unused"
-		//when they're requested, they're removed from there when requested,
-		//and put back again when they're no longer needed
-		//Note each InstancedEntity has a unique ID ranging from [0; mInstancesPerBatch)
-		InstancedEntityVec	mInstancedEntities;
-		InstancedEntityVec	mUnusedEntities;
-
-		/// This bbox contains all (visible) instanced entities
-		AxisAlignedBox		mFullBoundingBox;
-		Real				mBoundingRadius;
-		bool				mBoundsDirty;
-        /// Set to false by derived classes that need it
-		bool				mBoundsUpdated;
-		Camera				*mCurrentCamera;
-
-		unsigned short		mMaterialLodIndex;
-
-        /// Set to false at start of each _updateRenderQueue
-		bool				mDirtyAnimation;
-
-		/// False if a technique doesn't support skeletal animation
-		bool				mTechnSupportsSkeletal;
-
-		/// Cached distance to last camera for getSquaredViewDepth
-		mutable Real mCachedCameraDist;
-		/// The camera for which the cached distance is valid
-		mutable const Camera *mCachedCamera;
-
-		/// Tells that the list of entity instances with shared transforms has changed
-		bool mTransformSharingDirty;
-
-		/// When true remove the memory of the VertexData we've created because no one else will
-		bool mRemoveOwnVertexData;
-		/// When true remove the memory of the IndexData we've created because no one else will
-		bool mRemoveOwnIndexData;
-
-		virtual void setupVertices( const SubMesh* baseSubMesh ) = 0;
-		virtual void setupIndices( const SubMesh* baseSubMesh ) = 0;
-		virtual void createAllInstancedEntities(void);
-		virtual void deleteAllInstancedEntities(void);
-		virtual void deleteUnusedInstancedEntities(void);
-		/// Creates a new InstancedEntity instance
-		virtual InstancedEntity* generateInstancedEntity(size_t num);
-
-		/** Takes an array of 3x4 matrices and makes it camera relative. Note the second argument
-			takes number of floats in the array, not number of matrices. Assumes mCachedCamera
-			contains the camera which is about to be rendered to.
-		*/
-		void makeMatrixCameraRelative3x4( float *mat3x4, size_t numFloats );
-
-		/// Returns false on errors that would prevent building this batch from the given submesh
-		virtual bool checkSubMeshCompatibility( const SubMesh* baseSubMesh );
-
-		void updateVisibility(void);
-
-		/** @see _defragmentBatch */
-		void defragmentBatchNoCull( InstancedEntityVec &usedEntities );
-
-		/** @see _defragmentBatch
-			This one takes the entity closest to the minimum corner of the bbox, then starts
-			gathering entities closest to this entity. There might be much better algorithms (i.e.
-			involving space partition), but this one is simple and works well enough
-		*/
-		void defragmentBatchDoCull( InstancedEntityVec &usedEntities );
-
-	public:
-		InstanceBatch( InstanceManager *creator, MeshPtr &meshReference, const MaterialPtr &material,
-						size_t instancesPerBatch, const Mesh::IndexMap *indexToBoneMap,
-						const String &batchName );
-		virtual ~InstanceBatch();
-
-		MeshPtr& _getMeshRef() { return mMeshReference; }
-
-		/** Raises an exception if trying to change it after being built
-		*/
-		void _setInstancesPerBatch( size_t instancesPerBatch );
-
-		const Mesh::IndexMap* _getIndexToBoneMap() const { return mIndexToBoneMap; }
-
-		/** Returns true if this technique supports skeletal animation
-		@remarks
-			A virtual function could have been used, but using a simple variable overriden
-			by the derived class is faster than virtual call overhead. And both are clean
-			ways of implementing it.
-		*/
-		bool _supportsSkeletalAnimation() const { return mTechnSupportsSkeletal; }
-
-		/** @see InstanceManager::updateDirtyBatches */
-		void _updateBounds(void);
-
-		/** Some techniques have a limit on how many instances can be done.
-			Sometimes even depends on the material being used.
-			@par
-			Note this is a helper function, as such it takes a submesh base to compute
-			the parameters, instead of using the object's own. This allows
-			querying for a technique without requiering to actually build it.
-			@param baseSubMesh The base submesh that will be using to build it.
-			@param flags @see InstanceManagerFlags
-			@return The max instances limit
-		*/
-		virtual size_t calculateMaxNumInstances( const SubMesh *baseSubMesh, uint16 flags ) const = 0;
-
-		/** Constructs all the data needed to use this batch, as well as the
-			InstanceEntities. Placed here because in the constructor virtual
-			tables may not have been yet filled.
-			@param baseSubMesh A sub mesh which the instances will be based upon from.
-			@remarks
-				Call this only ONCE. This is done automatically by Ogre::InstanceManager
-				Caller is responsable for freeing buffers in this RenderOperation
-				Buffers inside the RenderOp may be null if the built failed.
-			@return
-				A render operation which is very useful to pass to other InstanceBatches
-				(@see buildFrom) so that they share the same vertex buffers and indices,
-				when possible
-        */
-		virtual RenderOperation build( const SubMesh* baseSubMesh );
-
-		/** Instancing consumes significantly more GPU memory than regular rendering
-			methods. However, multiple batches can share most, if not all, of the
-			vertex & index buffers to save memory.
-			Derived classes are free to overload this method to manipulate what to
-			reference from Render Op.
-			For example, Hardware based instancing uses it's own vertex buffer for the
-			last source binding, but shares the other sources.
-			@param renderOperation The RenderOp to reference.
-			@remarks
-				Caller is responsable for freeing buffers passed as input arguments
-				This function replaces the need to call build()
-        */
-		virtual void buildFrom( const SubMesh *baseSubMesh, const RenderOperation &renderOperation );
-
-		const Ogre::MeshPtr& _getMeshReference(void) const { return mMeshReference; }
-
-		/** @return true if it can not create more InstancedEntities
-			(Num InstancedEntities == mInstancesPerBatch)
-		*/
-		bool isBatchFull(void) const { return mUnusedEntities.empty(); }
-
-		/** Returns true if it no instanced entity has been requested or all of them have been removed
-		*/
-		bool isBatchUnused(void) const { return mUnusedEntities.size() == mInstancedEntities.size(); }
-
-		/** Fills the input vector with the instances that are currently being used or were requested
-			Used for defragmentation, @see InstanceManager::defragmentBatches
-		*/
-		void getInstancedEntitiesInUse( InstancedEntityVec &outEntities );
-
-		/** @see InstanceManager::defragmentBatches
-			This function takes InstancedEntities and pushes back all entities it can fit here
-			Extra entities in mUnusedEntities are destroyed
-			(so that used + unused = mInstancedEntities.size())
-			@param optimizeCulling true will call the DoCull version, false the NoCull
-			@param Array of InstancedEntities to parent with this batch. Those reparented
-			are removed from this input vector
-			@remarks:
-			This function assumes caller holds data to mInstancedEntities! Otherwise
-			you can get memory leaks. Don't call this directly if you don't know what you're doing!
-		*/
-		void _defragmentBatch( bool optimizeCulling, InstancedEntityVec &usedEntities );
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** @see InstanceManager::_defragmentBatchDiscard
 			Destroys unused entities and clears the mInstancedEntity container which avoids leaving
@@ -554,15 +322,12 @@ namespace Ogre
 		/** Tells that the list of entity instances with shared transforms has changed */
 		void _markTransformSharingDirty() { mTransformSharingDirty = true; }
 
-<<<<<<< HEAD
 		/** @see InstancedEntity::setCustomParam */
 		void _setCustomParam( InstancedEntity *instancedEntity, unsigned char idx, const Vector4 &newParam );
 
 		/** @see InstancedEntity::getCustomParam */
 		const Vector4& _getCustomParam( InstancedEntity *instancedEntity, unsigned char idx );
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		//Renderable overloads
         /** @copydoc Renderable::getMaterial. */
 		const MaterialPtr& getMaterial(void) const		{ return mMaterial; }
@@ -592,14 +357,8 @@ namespace Ogre
         using Renderable::getUserAny;
         using Renderable::setUserAny;
 	};
-<<<<<<< HEAD
 } // namespace Ogre
 
 #include "OgreHeaderSuffix.h"
 
 #endif // __InstanceBatch_H__
-=======
-}
-
-#endif
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14

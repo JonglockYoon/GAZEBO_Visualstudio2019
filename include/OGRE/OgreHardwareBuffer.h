@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -135,19 +131,12 @@ namespace Ogre {
 				Mandatory on static buffers, i.e. those created without the HBU_DYNAMIC flag. 
 				*/ 
 			    HBL_READ_ONLY,
-<<<<<<< HEAD
                 /** As HBL_DISCARD, except the application guarantees not to overwrite any 
                 region of the buffer which has already been used in this frame, can allow
                 some optimisation on some APIs. */
                 HBL_NO_OVERWRITE,
 				/** Lock the buffer for writing only.*/
 				HBL_WRITE_ONLY
-=======
-                /** As HBL_NORMAL, except the application guarantees not to overwrite any 
-                region of the buffer which has already been used in this frame, can allow
-                some optimisation on some APIs. */
-                HBL_NO_OVERWRITE
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     			
 		    };
 	    protected:
@@ -170,11 +159,7 @@ namespace Ogre {
     public:
 		    /// Constructor, to be called by HardwareBufferManager only
             HardwareBuffer(Usage usage, bool systemMemory, bool useShadowBuffer) 
-<<<<<<< HEAD
 				: mUsage(usage), mIsLocked(false), mLockStart(0), mLockSize(0), mSystemMemory(systemMemory), 
-=======
-				: mUsage(usage), mIsLocked(false), mSystemMemory(systemMemory), 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
                 mUseShadowBuffer(useShadowBuffer), mShadowBuffer(NULL), mShadowUpdated(false), 
                 mSuppressHardwareUpdate(false) 
             {
@@ -367,7 +352,6 @@ namespace Ogre {
     };
 	/** @} */
 	/** @} */
-<<<<<<< HEAD
 
 	/** Locking helper. Guaranteed unlocking even in case of exception. */
     template <typename T> struct HardwareBufferLockGuard
@@ -390,8 +374,6 @@ namespace Ogre {
         const T& pBuf;
         void* pData;
     };
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 }
 #endif
 

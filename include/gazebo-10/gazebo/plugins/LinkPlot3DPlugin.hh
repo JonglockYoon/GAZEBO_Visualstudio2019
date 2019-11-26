@@ -66,11 +66,7 @@ namespace gazebo
   ///      </plot>
   ///
   ///    </plugin>
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE LinkPlot3DPlugin : public ModelPlugin
-=======
-  class GAZEBO_VISIBLE LinkPlot3DPlugin : public ModelPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Constructor.
     public: LinkPlot3DPlugin();

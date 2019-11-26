@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,10 +32,7 @@ THE SOFTWARE.
 #include "OgreCommon.h"
 #include "OgreColourValue.h"
 #include "OgreFrustum.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 	/** \addtogroup Core
@@ -71,7 +64,6 @@ namespace Ogre {
 			virtual ~Listener() {}
 
 			/** Notification of when a new camera is set to target listening Viewport. */
-<<<<<<< HEAD
 			virtual void viewportCameraChanged(Viewport* viewport);
 
 			/** Notification of when target listening Viewport's dimensions changed. */
@@ -88,42 +80,12 @@ namespace Ogre {
                 Pointer to the render target to be the destination
                 for the rendering.
             @param left, top, width, height
-=======
-			virtual void viewportCameraChanged(Viewport* viewport) {}
-
-			/** Notification of when target listening Viewport's dimensions changed. */
-			virtual void viewportDimensionsChanged(Viewport* viewport) {}
-
-			/** Notification of when target listening Viewport's is destroyed. */
-			virtual void viewportDestroyed(Viewport* viewport) {}
-		};
-
-        /** The usual constructor.
-            @param
-                cam Pointer to a camera to be the source for the image.
-            @param
-                target Pointer to the render target to be the destination
-                for the rendering.
-            @param
-                left
-            @param
-                top
-            @param
-                width
-            @param
-                height
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
                 Dimensions of the viewport, expressed as a value between
                 0 and 1. This allows the dimensions to apply irrespective of
                 changes in the target's size: e.g. to fill the whole area,
                 values of 0,0,1,1 are appropriate.
-<<<<<<< HEAD
             @param ZOrder
                 Relative Z-order on the target. Lower = further to
-=======
-            @param
-                ZOrder Relative Z-order on the target. Lower = further to
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
                 the front.
         */
         Viewport(
@@ -221,7 +183,6 @@ namespace Ogre {
 
         /** Sets the dimensions (after creation).
             @param
-<<<<<<< HEAD
                 left Left point of viewport.
             @param
                 top Top point of the viewport.
@@ -230,15 +191,6 @@ namespace Ogre {
             @param
                 height Height of the viewport.
             @note Dimensions relative to the size of the target,
-=======
-                left
-            @param
-                top
-            @param
-                width
-            @param
-                height Dimensions relative to the size of the target,
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
                 represented as real values between 0 and 1. i.e. the full
                 target area is 0, 0, 1, 1.
         */
@@ -396,11 +348,7 @@ namespace Ogre {
 			The visibility mask is a way to exclude objects from rendering for
 			a given viewport. For each object in the frustum, a check is made
 			between this mask and the objects visibility flags 
-<<<<<<< HEAD
 			(MovableObject::setVisibilityFlags). If a binary 'and'
-=======
-			(@see MovableObject::setVisibilityFlags), and if a binary 'and'
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			returns zero, the object will not be rendered.
 		*/
 		void setVisibilityMask(uint32 mask) { mVisibilityMask = mask; }
@@ -418,11 +366,7 @@ namespace Ogre {
 			be updated using a custom sequence of render queue invocations, with
 			potentially customised ordering and render state options. You should
 			create the named sequence through Root first, then set the name here.
-<<<<<<< HEAD
 		@param sequenceName The name of the RenderQueueInvocationSequence to use. If you
-=======
-		@param The name of the RenderQueueInvocationSequence to use. If you
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			specify a blank string, behaviour will return to the default render
 			queue management.
 		*/
@@ -445,19 +389,11 @@ namespace Ogre {
     protected:
         Camera* mCamera;
         RenderTarget* mTarget;
-<<<<<<< HEAD
         /// Relative dimensions, irrespective of target dimensions (0..1)
         float mRelLeft, mRelTop, mRelWidth, mRelHeight;
         /// Actual dimensions, based on target dimensions
         int mActLeft, mActTop, mActWidth, mActHeight;
         /// Z-order
-=======
-        // Relative dimensions, irrespective of target dimensions (0..1)
-        float mRelLeft, mRelTop, mRelWidth, mRelHeight;
-        // Actual dimensions, based on target dimensions
-        int mActLeft, mActTop, mActWidth, mActHeight;
-        /// ZOrder
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         int mZOrder;
         /// Background options
         ColourValue mBackColour;
@@ -489,9 +425,6 @@ namespace Ogre {
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

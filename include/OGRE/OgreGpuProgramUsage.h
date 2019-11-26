@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -34,11 +30,7 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 #include "OgreGpuProgram.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre 
 {
@@ -83,17 +75,10 @@ namespace Ogre
     protected:
         GpuProgramType mType;
 		Pass* mParent;
-<<<<<<< HEAD
         /// The program link
         GpuProgramPtr mProgram;
 
         /// Program parameters
-=======
-        // The program link
-        GpuProgramPtr mProgram;
-
-        /// program parameters
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         GpuProgramParametersSharedPtr mParameters;
 		
 		/// Whether to recreate parameters next load
@@ -153,11 +138,8 @@ namespace Ogre
         /// Unload this usage 
         void _unload(void);
 
-<<<<<<< HEAD
         size_t calculateSize(void) const;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		// Resource Listener
 		void unloadingComplete(Resource* prog);
 		void loadingComplete(Resource* prog);
@@ -166,10 +148,7 @@ namespace Ogre
 	/** @} */
 	/** @} */
 }
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

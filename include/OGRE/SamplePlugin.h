@@ -4,11 +4,7 @@
  (Object-oriented Graphics Rendering Engine)
  For the latest info, see http://www.ogre3d.org/
  
-<<<<<<< HEAD
  Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
- Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -40,11 +36,7 @@
 #  define _OgreSampleExport
 #  define _OgreSampleClassExport
 #else
-<<<<<<< HEAD
 #  if (OGRE_PLATFORM == OGRE_PLATFORM_WIN32 || OGRE_PLATFORM == OGRE_PLATFORM_WINRT) && !defined(__MINGW32__)
-=======
-#  if (OGRE_PLATFORM == OGRE_PLATFORM_WIN32) && !defined(__MINGW32__)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #    define _OgreSampleExport __declspec(dllexport)
 #    define _OgreSampleClassExport
 #  elif defined ( OGRE_GCC_VISIBILITY )

@@ -40,11 +40,7 @@ namespace gazebo
   /// "looked at"
   ///
   /// 3. "desired_z": A single axis, representing the desired Z axis.
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE LookAtDemoPlugin : public GUIPlugin
-=======
-  class GAZEBO_VISIBLE LookAtDemoPlugin : public GUIPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     Q_OBJECT
 

@@ -26,11 +26,7 @@
 
 namespace gazebo
 {
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE SphereAtlasDemoPlugin : public ModelPlugin
-=======
-  class GAZEBO_VISIBLE SphereAtlasDemoPlugin : public ModelPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     public: SphereAtlasDemoPlugin();
     public: virtual void Load(physics::ModelPtr _model, sdf::ElementPtr _sdf);

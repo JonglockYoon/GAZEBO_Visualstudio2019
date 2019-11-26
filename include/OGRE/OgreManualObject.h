@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,11 +33,7 @@ THE SOFTWARE.
 #include "OgreMovableObject.h"
 #include "OgreRenderable.h"
 #include "OgreResourceGroupManager.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {
@@ -259,11 +251,7 @@ namespace Ogre
 		@note
 			32-bit indexes are not supported on all cards and will only be used
             when required, if an index is > 65535.
-<<<<<<< HEAD
 		@param i1, i2, i3 3 vertex indices from 0 to 4294967295 defining a face.
-=======
-		@param i1, i2, i3 3 vertex indices from 0 to 4294967295 defining a face. 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		virtual void triangle(uint32 i1, uint32 i2, uint32 i3);
 		/** Add a set of 4 vertex indices to construct a quad (out of 2 
@@ -272,11 +260,7 @@ namespace Ogre
 		@note
 			32-bit indexes are not supported on all cards and will only be used
             when required, if an index is > 65535.
-<<<<<<< HEAD
 		@param i1, i2, i3, i4 4 vertex indices from 0 to 4294967295 defining a quad. 
-=======
-		@param i1, i2, i3 3 vertex indices from 0 to 4294967295 defining a face. 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		virtual void quad(uint32 i1, uint32 i2, uint32 i3, uint32 i4);
 
@@ -301,11 +285,7 @@ namespace Ogre
 		@param subIndex The index of the subsection to alter
 		@param name The name of the new material to use
 		*/
-<<<<<<< HEAD
 		virtual void setMaterialName(size_t subIndex, const String& name, const String & group = ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
-=======
-		virtual void setMaterialName(size_t subindex, const String& name, const String & group = ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Convert this object to a Mesh. 
 		@remarks
@@ -414,11 +394,7 @@ namespace Ogre
 		/** Implement this method to enable stencil shadows. */
 		ShadowRenderableListIterator getShadowVolumeRenderableIterator(
 			ShadowTechnique shadowTechnique, const Light* light, 
-<<<<<<< HEAD
 			HardwareIndexBufferSharedPtr* indexBuffer, size_t* indexBufferUsedSize,
-=======
-			HardwareIndexBufferSharedPtr* indexBuffer, 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			bool extrudeVertices, Real extrusionDist, unsigned long flags = 0);
 
 
@@ -591,11 +567,8 @@ namespace Ogre
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 
 

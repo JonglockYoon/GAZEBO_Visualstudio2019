@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,10 +32,7 @@ THE SOFTWARE.
 #include "OgreHardwareBuffer.h"
 #include "OgreResource.h"
 #include "OgreImage.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -60,7 +53,6 @@ namespace Ogre {
 		TU_STATIC_WRITE_ONLY = HardwareBuffer::HBU_STATIC_WRITE_ONLY, 
 		TU_DYNAMIC_WRITE_ONLY = HardwareBuffer::HBU_DYNAMIC_WRITE_ONLY,
 		TU_DYNAMIC_WRITE_ONLY_DISCARDABLE = HardwareBuffer::HBU_DYNAMIC_WRITE_ONLY_DISCARDABLE,
-<<<<<<< HEAD
 		/// Mipmaps will be automatically generated for this texture
 		TU_AUTOMIPMAP = 16,
 		/** This texture will be a render target, i.e. used as a target for render to texture
@@ -68,16 +60,6 @@ namespace Ogre {
 		TU_RENDERTARGET = 32,
 		/// Default to automatic mipmap generation static textures
 		TU_DEFAULT = TU_AUTOMIPMAP | TU_STATIC_WRITE_ONLY
-=======
-		/// mipmaps will be automatically generated for this texture
-		TU_AUTOMIPMAP = 0x100,
-		/// this texture will be a render target, i.e. used as a target for render to texture
-		/// setting this flag will ignore all other texture usages except TU_AUTOMIPMAP
-		TU_RENDERTARGET = 0x200,
-		/// default to automatic mipmap generation static textures
-		TU_DEFAULT = TU_AUTOMIPMAP | TU_STATIC_WRITE_ONLY
-        
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
 
     /** Enum identifying the texture type
@@ -93,13 +75,9 @@ namespace Ogre {
         /// 3D cube map, used in combination with 3D texture coordinates
         TEX_TYPE_CUBE_MAP = 4,
         /// 2D texture array
-<<<<<<< HEAD
         TEX_TYPE_2D_ARRAY = 5,
         /// 2D non-square texture, used in combination with 2D texture coordinates
         TEX_TYPE_2D_RECT = 6
-=======
-        TEX_TYPE_2D_ARRAY = 5
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
 
 	/** Enum identifying special mipmap numbers
@@ -112,12 +90,6 @@ namespace Ogre {
 		MIP_DEFAULT = -1
 	};
 
-<<<<<<< HEAD
-=======
-    // Forward declaration
-    class TexturePtr;
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     /** Abstract class representing a Texture resource.
         @remarks
             The actual concrete subclass which will exist for a texture
@@ -133,11 +105,8 @@ namespace Ogre {
         Texture(ResourceManager* creator, const String& name, ResourceHandle handle,
             const String& group, bool isManual = false, ManualResourceLoader* loader = 0);
 
-<<<<<<< HEAD
         virtual ~Texture() {}
         
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Sets the type of texture; can only be changed before load() 
         */
         virtual void setTextureType(TextureType ttype ) { mTextureType = ttype; }
@@ -148,21 +117,13 @@ namespace Ogre {
 
         /** Gets the number of mipmaps to be used for this texture.
         */
-<<<<<<< HEAD
         virtual uint8 getNumMipmaps(void) const {return mNumMipmaps;}
-=======
-        virtual size_t getNumMipmaps(void) const {return mNumMipmaps;}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Sets the number of mipmaps to be used for this texture.
             @note
                 Must be set before calling any 'load' method.
         */
-<<<<<<< HEAD
         virtual void setNumMipmaps(uint8 num) {mNumRequestedMipmaps = mNumMipmaps = num;}
-=======
-        virtual void setNumMipmaps(size_t num) {mNumRequestedMipmaps = mNumMipmaps = num;}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Are mipmaps hardware generated?
 		@remarks
@@ -229,7 +190,6 @@ namespace Ogre {
 
 		/** Returns the height of the texture.
         */
-<<<<<<< HEAD
         virtual uint32 getHeight(void) const { return mHeight; }
 
         /** Returns the width of the texture.
@@ -259,46 +219,11 @@ namespace Ogre {
         /** Set the width of the texture; can only do this before load();
         */
         virtual void setWidth(uint32 w) { mWidth = mSrcWidth = w; }
-=======
-        virtual size_t getHeight(void) const { return mHeight; }
-
-        /** Returns the width of the texture.
-        */
-        virtual size_t getWidth(void) const { return mWidth; }
-
-        /** Returns the depth of the texture (only applicable for 3D textures).
-        */
-        virtual size_t getDepth(void) const { return mDepth; }
-
-        /** Returns the height of the original input texture (may differ due to hardware requirements).
-        */
-        virtual size_t getSrcHeight(void) const { return mSrcHeight; }
-
-        /** Returns the width of the original input texture (may differ due to hardware requirements).
-        */
-        virtual size_t getSrcWidth(void) const { return mSrcWidth; }
-
-        /** Returns the original depth of the input texture (only applicable for 3D textures).
-        */
-        virtual size_t getSrcDepth(void) const { return mSrcDepth; }
-
-        /** Set the height of the texture; can only do this before load();
-        */
-        virtual void setHeight(size_t h) { mHeight = mSrcHeight = h; }
-
-        /** Set the width of the texture; can only do this before load();
-        */
-        virtual void setWidth(size_t w) { mWidth = mSrcWidth = w; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Set the depth of the texture (only applicable for 3D textures);
             can only do this before load();
         */
-<<<<<<< HEAD
         virtual void setDepth(uint32 d)  { mDepth = mSrcDepth = d; }
-=======
-        virtual void setDepth(size_t d)  { mDepth = mSrcDepth = d; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Returns the TextureUsage identifier for this Texture
         */
@@ -456,30 +381,17 @@ namespace Ogre {
 		 @param name The name of the attribute to retrieve
 		 @param pData Pointer to memory matching the type of data you want to retrieve.
 		*/
-<<<<<<< HEAD
 		virtual void getCustomAttribute(const String& name, void* pData);
-=======
-		virtual void getCustomAttribute(const String& name, void* pData) {}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
 
 
     protected:
-<<<<<<< HEAD
         uint32 mHeight;
         uint32 mWidth;
         uint32 mDepth;
 
         uint8 mNumRequestedMipmaps;
 		uint8 mNumMipmaps;
-=======
-        size_t mHeight;
-        size_t mWidth;
-        size_t mDepth;
-
-        size_t mNumRequestedMipmaps;
-		size_t mNumMipmaps;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		bool mMipmapsHardwareGenerated;
         float mGamma;
 		bool mHwGamma;
@@ -488,17 +400,10 @@ namespace Ogre {
 
         TextureType mTextureType;
 		PixelFormat mFormat;
-<<<<<<< HEAD
         int mUsage; /// Bit field, so this can't be TextureUsage
 
         PixelFormat mSrcFormat;
         uint32 mSrcWidth, mSrcHeight, mSrcDepth;
-=======
-        int mUsage; // Bit field, so this can't be TextureUsage
-
-        PixelFormat mSrcFormat;
-        size_t mSrcWidth, mSrcHeight, mSrcDepth;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         PixelFormat mDesiredFormat;
         unsigned short mDesiredIntegerBitDepth;
@@ -528,73 +433,11 @@ namespace Ogre {
 		String getSourceFileType() const;
 
     };
-<<<<<<< HEAD
-=======
-
-    /** Specialisation of SharedPtr to allow SharedPtr to be assigned to TexturePtr 
-    @note Has to be a subclass since we need operator=.
-    We could templatise this instead of repeating per Resource subclass, 
-    except to do so requires a form VC6 does not support i.e.
-    ResourceSubclassPtr<T> : public SharedPtr<T>
-    */
-    class _OgreExport TexturePtr : public SharedPtr<Texture> 
-    {
-    public:
-        TexturePtr() : SharedPtr<Texture>() {}
-        explicit TexturePtr(Texture* rep) : SharedPtr<Texture>(rep) {}
-        TexturePtr(const TexturePtr& r) : SharedPtr<Texture>(r) {} 
-        TexturePtr(const ResourcePtr& r) : SharedPtr<Texture>()
-        {
-			// lock & copy other mutex pointer
-            OGRE_MUTEX_CONDITIONAL(r.OGRE_AUTO_MUTEX_NAME)
-            {
-			    OGRE_LOCK_MUTEX(*r.OGRE_AUTO_MUTEX_NAME)
-			    OGRE_COPY_AUTO_SHARED_MUTEX(r.OGRE_AUTO_MUTEX_NAME)
-                pRep = static_cast<Texture*>(r.getPointer());
-                pUseCount = r.useCountPointer();
-                if (pUseCount)
-                {
-                    ++(*pUseCount);
-                }
-            }
-        }
-
-        /// Operator used to convert a ResourcePtr to a TexturePtr
-        TexturePtr& operator=(const ResourcePtr& r)
-        {
-            if (pRep == static_cast<Texture*>(r.getPointer()))
-                return *this;
-            release();
-			// lock & copy other mutex pointer
-            OGRE_MUTEX_CONDITIONAL(r.OGRE_AUTO_MUTEX_NAME)
-            {
-			    OGRE_LOCK_MUTEX(*r.OGRE_AUTO_MUTEX_NAME)
-			    OGRE_COPY_AUTO_SHARED_MUTEX(r.OGRE_AUTO_MUTEX_NAME)
-                pRep = static_cast<Texture*>(r.getPointer());
-                pUseCount = r.useCountPointer();
-                if (pUseCount)
-                {
-                    ++(*pUseCount);
-                }
-            }
-			else
-			{
-				// RHS must be a null pointer
-				assert(r.isNull() && "RHS must be null if it has no mutex!");
-				setNull();
-			}
-            return *this;
-        }
-    };
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	/** @} */
 	/** @} */
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

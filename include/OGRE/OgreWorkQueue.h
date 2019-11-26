@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -33,16 +29,10 @@ THE SOFTWARE.
 #define __OgreWorkQueue_H__
 
 #include "OgrePrerequisites.h"
-<<<<<<< HEAD
 #include "OgreAny.h"
 #include "OgreSharedPtr.h"
 #include "Threading/OgreThreadHeaders.h"
 #include "OgreHeaderPrefix.h"
-=======
-#include "OgreAtomicWrappers.h"
-#include "OgreAny.h"
-#include "OgreSharedPtr.h"
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {
@@ -80,17 +70,10 @@ namespace Ogre
 	class _OgreExport WorkQueue : public UtilityAlloc
 	{
 	protected:
-<<<<<<< HEAD
 		typedef map<String, uint16>::type ChannelMap;
 		ChannelMap mChannelMap;
 		uint16 mNextChannel;
 		OGRE_MUTEX(mChannelMapMutex);
-=======
-		typedef std::map<String, uint16> ChannelMap;
-		ChannelMap mChannelMap;
-		uint16 mNextChannel;
-		OGRE_MUTEX(mChannelMapMutex)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	public:
 		/// Numeric identifier for a request
 		typedef unsigned long long int RequestID;
@@ -279,7 +262,6 @@ namespace Ogre
 			if it fails.
 		@param forceSynchronous Forces the request to be processed immediately
 			even if threading is enabled.
-<<<<<<< HEAD
 		@param idleThread Request should be processed on the idle thread.
 		    Idle requests will be processed on a single worker thread. You should use this in the following situations:
 			1. If a request handler can't process multiple requests in parallel.
@@ -289,12 +271,6 @@ namespace Ogre
 		*/
 		virtual RequestID addRequest(uint16 channel, uint16 requestType, const Any& rData, uint8 retryCount = 0, 
 			bool forceSynchronous = false, bool idleThread = false) = 0;
-=======
-		@return The ID of the request that has been added
-		*/
-		virtual RequestID addRequest(uint16 channel, uint16 requestType, const Any& rData, uint8 retryCount = 0, 
-			bool forceSynchronous = false) = 0;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Abort a previously issued request.
 		If the request is still waiting to be processed, it will be 
@@ -306,15 +282,11 @@ namespace Ogre
 		/** Abort all previously issued requests in a given channel.
 		Any requests still waiting to be processed of the given channel, will be 
 		removed from the queue.
-<<<<<<< HEAD
 		Requests which are processed, but response handler is not called will also be removed.
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		@param channel The type of request to be aborted
 		*/
 		virtual void abortRequestsByChannel(uint16 channel) = 0;
 
-<<<<<<< HEAD
 		/** Abort all previously issued requests in a given channel.
 		Any requests still waiting to be processed of the given channel, will be 
 		removed from the queue.
@@ -323,8 +295,6 @@ namespace Ogre
 		*/
 		virtual void abortPendingRequestsByChannel(uint16 channel) = 0;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Abort all previously issued requests.
 		Any requests still waiting to be processed will be removed from the queue.
 		Any requests that are being processed will still complete.
@@ -462,20 +432,13 @@ namespace Ogre
 
 		/// @copydoc WorkQueue::addRequest
 		virtual RequestID addRequest(uint16 channel, uint16 requestType, const Any& rData, uint8 retryCount = 0, 
-<<<<<<< HEAD
 			bool forceSynchronous = false, bool idleThread = false);
-=======
-			bool forceSynchronous = false);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// @copydoc WorkQueue::abortRequest
 		virtual void abortRequest(RequestID id);
 		/// @copydoc WorkQueue::abortRequestsByChannel
 		virtual void abortRequestsByChannel(uint16 channel);
-<<<<<<< HEAD
 		/// @copydoc WorkQueue::abortPendingRequestsByChannel
 		virtual void abortPendingRequestsByChannel(uint16 channel);
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// @copydoc WorkQueue::abortAllRequests
 		virtual void abortAllRequests();
 		/// @copydoc WorkQueue::setPaused
@@ -501,21 +464,12 @@ namespace Ogre
 
 		typedef deque<Request*>::type RequestQueue;
 		typedef deque<Response*>::type ResponseQueue;
-<<<<<<< HEAD
 		RequestQueue mRequestQueue; // Guarded by mRequestMutex
 		RequestQueue mProcessQueue; // Guarded by mProcessMutex
 		ResponseQueue mResponseQueue; // Guarded by mResponseMutex
 
 		/// Thread function
 		struct _OgreExport WorkerFunc OGRE_THREAD_WORKER_INHERIT
-=======
-		RequestQueue mRequestQueue;
-		RequestQueue mProcessQueue;
-		ResponseQueue mResponseQueue;
-
-		/// Thread function
-		struct WorkerFunc OGRE_THREAD_WORKER_INHERIT
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		{
 			DefaultWorkQueueBase* mQueue;
 
@@ -523,11 +477,8 @@ namespace Ogre
 				: mQueue(q) {}
 
 			void operator()();
-<<<<<<< HEAD
 			
 			void operator()() const;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 			void run();
 		};
@@ -540,11 +491,7 @@ namespace Ogre
 		class _OgreExport RequestHandlerHolder : public UtilityAlloc
 		{
 		protected:
-<<<<<<< HEAD
 			OGRE_RW_MUTEX(mRWMutex);
-=======
-			OGRE_RW_MUTEX(mRWMutex)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			RequestHandler* mHandler;
 		public:
 			RequestHandlerHolder(RequestHandler* handler)
@@ -593,16 +540,11 @@ namespace Ogre
 
 		RequestHandlerListByChannel mRequestHandlers;
 		ResponseHandlerListByChannel mResponseHandlers;
-<<<<<<< HEAD
 		RequestID mRequestCount; // Guarded by mRequestMutex
-=======
-		RequestID mRequestCount;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		bool mPaused;
 		bool mAcceptRequests;
 		bool mShuttingDown;
 
-<<<<<<< HEAD
 		//NOTE: If you lock multiple mutexes at the same time, the order is important!
 		// For example if threadA locks mIdleMutex first then tries to lock mProcessMutex,
 		// and threadB locks mProcessMutex first, then mIdleMutex. In this case you can get livelock and the system is dead!
@@ -612,12 +554,6 @@ namespace Ogre
 		OGRE_MUTEX(mProcessMutex);
 		OGRE_MUTEX(mResponseMutex);
 		OGRE_RW_MUTEX(mRequestHandlerMutex);
-=======
-		OGRE_MUTEX(mRequestMutex)
-		OGRE_MUTEX(mProcessMutex)
-		OGRE_MUTEX(mResponseMutex)
-		OGRE_RW_MUTEX(mRequestHandlerMutex)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 
 		void processRequestResponse(Request* r, bool synchronous);
@@ -627,7 +563,6 @@ namespace Ogre
 		virtual void notifyWorkers() = 0;
 		/// Put a Request on the queue with a specific RequestID.
 		void addRequestWithRID(RequestID rid, uint16 channel, uint16 requestType, const Any& rData, uint8 retryCount);
-<<<<<<< HEAD
 		
 		RequestQueue mIdleRequestQueue; // Guarded by mIdleMutex
 		bool mIdleThreadRunning; // Guarded by mIdleMutex
@@ -635,9 +570,6 @@ namespace Ogre
 		
 
 		bool processIdleRequests();
-=======
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	};
 
 
@@ -649,10 +581,7 @@ namespace Ogre
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #endif
 

@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -39,10 +35,7 @@ THE SOFTWARE.
 #include "OgreStringVector.h"
 #include "OgreResource.h"
 #include "OgreLogManager.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 // Because there are more than 32 possible Capabilities, more than 1 int is needed to store them all.
 // In fact, an array of integers is used to store capabilities. However all the capabilities are defined in the single
@@ -96,11 +89,8 @@ namespace Ogre
 		RSC_HWSTENCIL               = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON, 5),
 		/// Supports hardware vertex and index buffers
 		RSC_VBO                     = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON, 7),
-<<<<<<< HEAD
 		/// Supports 32bit hardware index buffers
 		RSC_32BIT_INDEX             = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON, 8),
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Supports vertex programs (vertex shaders)
 		RSC_VERTEX_PROGRAM          = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON, 9),
 		/// Supports fragment programs (pixel shaders)
@@ -148,7 +138,6 @@ namespace Ogre
 		RSC_TEXTURE_COMPRESSION_VTC = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 2),
 		/// Supports compressed textures in the PVRTC format
 		RSC_TEXTURE_COMPRESSION_PVRTC = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 3),
-<<<<<<< HEAD
 		/// Supports compressed textures in the ATC format
 		RSC_TEXTURE_COMPRESSION_ATC = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 4),
 		/// Supports compressed textures in the ETC1 format
@@ -195,39 +184,13 @@ namespace Ogre
 		RSC_HWOCCLUSION_ASYNCHRONOUS = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 24),
 		/// Supports asynchronous hardware occlusion queries
 		RSC_ATOMIC_COUNTERS = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 25),
-=======
-		/// Supports fixed-function pipeline
-		RSC_FIXED_FUNCTION = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 4),
-		/// Supports MRTs with different bit depths
-		RSC_MRT_DIFFERENT_BIT_DEPTHS = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 5),
-		/// Supports Alpha to Coverage (A2C)
-		RSC_ALPHA_TO_COVERAGE = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 6),
-		/// Supports Blending operations other than +
-		RSC_ADVANCED_BLEND_OPERATIONS = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 7),
-		/// Supports a separate depth buffer for RTTs. D3D 9 & 10, OGL w/FBO (RSC_FBO implies this flag)
-		RSC_RTT_SEPARATE_DEPTHBUFFER = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 8),
-		/// Supports using the MAIN depth buffer for RTTs. D3D 9&10, OGL w/FBO support unknown
-		/// (undefined behavior?), OGL w/ copy supports it
-		RSC_RTT_MAIN_DEPTHBUFFER_ATTACHABLE = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 9),
-		/// Supports attaching a depth buffer to an RTT that has width & height less or equal than RTT's.
-		/// Otherwise must be of _exact_ same resolution. D3D 9, OGL 3.0 (not 2.0, not D3D10)
-		RSC_RTT_DEPTHBUFFER_RESOLUTION_LESSEQUAL = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 10),
-		/// Supports using vertex buffers for instance data
-		RSC_VERTEX_BUFFER_INSTANCE_DATA = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 11),
-		/// Supports using vertex buffers for instance data
-		RSC_CAN_GET_COMPILED_SHADER_BUFFER = OGRE_CAPS_VALUE(CAPS_CATEGORY_COMMON_2, 12),
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		// ***** DirectX specific caps *****
 		/// Is DirectX feature "per stage constants" supported
 		RSC_PERSTAGECONSTANT = OGRE_CAPS_VALUE(CAPS_CATEGORY_D3D9, 0),
 
 		// ***** GL Specific Caps *****
-<<<<<<< HEAD
 		/// Supports OpenGL version 1.5
-=======
-		/// Supports openGL GLEW version 1.5
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		RSC_GL1_5_NOVBO    = OGRE_CAPS_VALUE(CAPS_CATEGORY_GL, 1),
 		/// Support for Frame Buffer Objects (FBOs)
 		RSC_FBO              = OGRE_CAPS_VALUE(CAPS_CATEGORY_GL, 2),
@@ -244,13 +207,9 @@ namespace Ogre
 		/// Support for point parameters EXT implementation
 		RSC_POINT_EXTENDED_PARAMETERS_EXT = OGRE_CAPS_VALUE(CAPS_CATEGORY_GL, 8),
 		/// Support for Separate Shader Objects
-<<<<<<< HEAD
 		RSC_SEPARATE_SHADER_OBJECTS = OGRE_CAPS_VALUE(CAPS_CATEGORY_GL, 9),
 		/// Support for Vertex Array Objects (VAOs)
         RSC_VAO              = OGRE_CAPS_VALUE(CAPS_CATEGORY_GL, 10)
-=======
-		RSC_SEPARATE_SHADER_OBJECTS = OGRE_CAPS_VALUE(CAPS_CATEGORY_GL, 9)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	};
 
 	/// DriverVersion is used by RenderSystemCapabilities and both GL and D3D9
@@ -296,11 +255,7 @@ namespace Ogre
 	{
 		GPU_UNKNOWN = 0,
 		GPU_NVIDIA = 1,
-<<<<<<< HEAD
 		GPU_AMD = 2,
-=======
-		GPU_ATI = 2, 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		GPU_INTEL = 3,
 		GPU_S3 = 4,
 		GPU_MATROX = 5,
@@ -311,17 +266,11 @@ namespace Ogre
         GPU_NOKIA = 10,
 		GPU_MS_SOFTWARE = 11, // Microsoft software device
 		GPU_MS_WARP = 12, // Microsoft WARP (Windows Advanced Rasterization Platform) software device - http://msdn.microsoft.com/en-us/library/dd285359.aspx
-<<<<<<< HEAD
         GPU_ARM = 13, // For the Mali chipsets
         GPU_QUALCOMM = 14,
 
 		/// placeholder
 		GPU_VENDOR_COUNT = 15
-=======
-
-		/// placeholder
-		GPU_VENDOR_COUNT = 13
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	};
 
 	/** singleton class for storing the capabilities of the graphics card. 
@@ -387,11 +336,8 @@ namespace Ogre
 		Real mMaxPointSize;
 		/// Are non-POW2 textures feature-limited?
 		bool mNonPOW2TexturesLimited;
-<<<<<<< HEAD
 		/// The maximum supported anisotropy
 		Real mMaxSupportedAnisotropy;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// The number of vertex texture units supported
 		ushort mNumVertexTextureUnits;
 		/// Are vertex texture units shared with fragment processor?
@@ -403,7 +349,6 @@ namespace Ogre
 		/// The list of supported shader profiles
 		ShaderProfiles mSupportedShaderProfiles;
 
-<<<<<<< HEAD
 		// Support for new shader stages in shader model 5.0
 		/// The number of floating-point constants tesselation Hull programs support
 		ushort mTesselationHullProgramConstantFloatCount;           
@@ -426,8 +371,6 @@ namespace Ogre
 
 
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	public:	
 		RenderSystemCapabilities ();
 		virtual ~RenderSystemCapabilities ();
@@ -770,7 +713,6 @@ namespace Ogre
 		{
 			return mNonPOW2TexturesLimited;
 		}
-<<<<<<< HEAD
 		/// Set the maximum supported anisotropic filtering
 		void setMaxSupportedAnisotropy(Real s)
 		{
@@ -781,8 +723,6 @@ namespace Ogre
 		{
 			return mMaxSupportedAnisotropy;
 		}
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/// Set the number of vertex texture units supported
 		void setNumVertexTextureUnits(ushort n)
@@ -844,7 +784,6 @@ namespace Ogre
 		/** Write the capabilities to the pass in Log */
 		void log(Log* pLog);
 
-<<<<<<< HEAD
 		// Support for new shader stages in shader model 5.0
 		/// The number of floating-point constants tesselation Hull programs support
 		void setTesselationHullProgramConstantFloatCount(ushort c)
@@ -939,19 +878,14 @@ namespace Ogre
 			return mComputeProgramConstantBoolCount;           
 		}
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	};
 
 	/** @} */
 	/** @} */
 } // namespace
 
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif // __RenderSystemCapabilities__
 

@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -34,10 +30,7 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 #include "OgreCommon.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 	/** \addtogroup Core
@@ -125,7 +118,6 @@ namespace Ogre {
         PF_DXT4 = 20,
         /// DDS (DirectDraw Surface) DXT5 format
         PF_DXT5 = 21,
-<<<<<<< HEAD
 		/// 16-bit pixel format, 16 bits (float) for red
         PF_FLOAT16_R = 32,
         /// 48-bit pixel format, 16 bits (float) for red, 16 bits (float) for green, 16 bits (float) for blue
@@ -149,31 +141,6 @@ namespace Ogre {
 		/// 32-bit pixel format, 16-bit green, 16-bit red
 		PF_SHORT_GR = 34,
 		/// 48-bit pixel format, 16 bits for red, green and blue
-=======
-		// 16-bit pixel format, 16 bits (float) for red
-        PF_FLOAT16_R = 32,
-        // 48-bit pixel format, 16 bits (float) for red, 16 bits (float) for green, 16 bits (float) for blue
-        PF_FLOAT16_RGB = 22,
-        // 64-bit pixel format, 16 bits (float) for red, 16 bits (float) for green, 16 bits (float) for blue, 16 bits (float) for alpha
-        PF_FLOAT16_RGBA = 23,
-		// 32-bit pixel format, 32 bits (float) for red
-        PF_FLOAT32_R = 33,
-        // 96-bit pixel format, 32 bits (float) for red, 32 bits (float) for green, 32 bits (float) for blue
-        PF_FLOAT32_RGB = 24,
-        // 128-bit pixel format, 32 bits (float) for red, 32 bits (float) for green, 32 bits (float) for blue, 32 bits (float) for alpha
-        PF_FLOAT32_RGBA = 25,
-		// 32-bit, 2-channel s10e5 floating point pixel format, 16-bit green, 16-bit red
-		PF_FLOAT16_GR = 35,
-		// 64-bit, 2-channel floating point pixel format, 32-bit green, 32-bit red
-		PF_FLOAT32_GR = 36,
-		// Depth texture format
-		PF_DEPTH = 29,
-		// 64-bit pixel format, 16 bits for red, green, blue and alpha
-		PF_SHORT_RGBA = 30,
-		// 32-bit pixel format, 16-bit green, 16-bit red
-		PF_SHORT_GR = 34,
-		// 48-bit pixel format, 16 bits for red, green and blue
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		PF_SHORT_RGB = 37,
         /// PVRTC (PowerVR) RGB 2 bpp
         PF_PVRTC_RGB2 = 38,
@@ -183,7 +150,6 @@ namespace Ogre {
         PF_PVRTC_RGB4 = 40,
         /// PVRTC (PowerVR) RGBA 4 bpp
         PF_PVRTC_RGBA4 = 41,
-<<<<<<< HEAD
         /// PVRTC (PowerVR) Version 2, 2 bpp
         PF_PVRTC2_2BPP = 42,
         /// PVRTC (PowerVR) Version 2, 4 bpp
@@ -292,14 +258,6 @@ namespace Ogre {
 		PF_ATC_RGBA_INTERPOLATED_ALPHA = 94,
 		// Number of pixel formats currently defined
         PF_COUNT = 95
-=======
-        /// 8-bit pixel format, all bits red.
-        PF_R8 = 42,
-        /// 16-bit pixel format, 8 bits red, 8 bits green.
-        PF_RG8 = 43,
-		// Number of pixel formats currently defined
-        PF_COUNT = 44
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
 	typedef vector<PixelFormat>::type PixelFormatList;
 
@@ -307,7 +265,6 @@ namespace Ogre {
      * Flags defining some on/off properties of pixel formats
      */
     enum PixelFormatFlags {
-<<<<<<< HEAD
         /// This format has an alpha channel
         PFF_HASALPHA        = 0x00000001,      
         /** This format is compressed. This invalidates the values in elemBytes,
@@ -325,23 +282,6 @@ namespace Ogre {
         PFF_LUMINANCE       = 0x00000020,
         /// This is an integer format
         PFF_INTEGER         = 0x00000040
-=======
-        // This format has an alpha channel
-        PFF_HASALPHA        = 0x00000001,      
-        // This format is compressed. This invalidates the values in elemBytes,
-        // elemBits and the bit counts as these might not be fixed in a compressed format.
-        PFF_COMPRESSED    = 0x00000002,
-        // This is a floating point format
-        PFF_FLOAT           = 0x00000004,         
-        // This is a depth format (for depth textures)
-        PFF_DEPTH           = 0x00000008,
-        // Format is in native endian. Generally true for the 16, 24 and 32 bits
-        // formats which can be represented as machine integers.
-        PFF_NATIVEENDIAN    = 0x00000010,
-        // This is an intensity format instead of a RGB one. The luminance
-        // replaces R,G and B. (but not A)
-        PFF_LUMINANCE       = 0x00000020
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
     
     /** Pixel component format */
@@ -351,13 +291,9 @@ namespace Ogre {
         PCT_SHORT = 1,   /// Short per component (16 bit fixed 0.0..1.0))
         PCT_FLOAT16 = 2, /// 16 bit float per component
         PCT_FLOAT32 = 3, /// 32 bit float per component
-<<<<<<< HEAD
         PCT_SINT = 4,   /// Signed integer per component
         PCT_UINT = 5,   /// Unsigned integer per component
         PCT_COUNT = 6    /// Number of pixel types
-=======
-        PCT_COUNT = 4    /// Number of pixel types
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
     
 	/** A primitive describing a volume (3D), image (2D) or line (1D) of pixels in memory.
@@ -391,11 +327,7 @@ namespace Ogre {
     		@param pixelFormat	Format of this buffer
     		@param pixelData    Pointer to the actual data
     	*/
-<<<<<<< HEAD
     	PixelBox(uint32 width, uint32 height, uint32 depth, PixelFormat pixelFormat, void *pixelData=0):
-=======
-    	PixelBox(size_t width, size_t height, size_t depth, PixelFormat pixelFormat, void *pixelData=0):
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     		Box(0, 0, 0, width, height, depth),
     		data(pixelData), format(pixelFormat)
     	{
@@ -458,14 +390,11 @@ namespace Ogre {
       	*/
       	PixelBox getSubVolume(const Box &def) const;
         
-<<<<<<< HEAD
       	/** Return a data pointer pointing to top left front pixel of the pixel box.
             @remarks Non consecutive pixel boxes are supported.
          */
         void* getTopLeftFrontPixelPtr() const;
         
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /**
          * Get colour value from a certain location in the PixelBox. The z coordinate
          * is only valid for cubemaps and volume textures. This uses the first (largest)
@@ -520,11 +449,7 @@ namespace Ogre {
 				width*height*depth*PixelUtil::getNumElemBytes(format). In the compressed
 				case, this does serious magic.
 		*/
-<<<<<<< HEAD
 		static size_t getMemorySize(uint32 width, uint32 height, uint32 depth, PixelFormat format);
-=======
-		static size_t getMemorySize(size_t width, size_t height, size_t depth, PixelFormat format);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
         /** Returns the property flags for this pixel format
           @return
@@ -539,11 +464,8 @@ namespace Ogre {
         static bool hasAlpha(PixelFormat format);
         /** Shortcut method to determine if the format is floating point */
         static bool isFloatingPoint(PixelFormat format);
-<<<<<<< HEAD
         /** Shortcut method to determine if the format is integer */
         static bool isInteger(PixelFormat format);
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Shortcut method to determine if the format is compressed */
         static bool isCompressed(PixelFormat format);
         /** Shortcut method to determine if the format is a depth format. */
@@ -553,11 +475,7 @@ namespace Ogre {
         /** Shortcut method to determine if the format is a luminance format. */
         static bool isLuminance(PixelFormat format);
 		
-<<<<<<< HEAD
 		/** Return whether a certain image extent is valid for this image format.
-=======
-		/** Return wether a certain image extent is valid for this image format.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			@param width
 				The width of the area
 			@param height
@@ -579,11 +497,7 @@ namespace Ogre {
 		/** Gives the masks for the R, G, B and A component
 		  @note			Only valid for native endian formats
         */
-<<<<<<< HEAD
         static void getBitMasks(PixelFormat format, uint64 rgba[4]);
-=======
-        static void getBitMasks(PixelFormat format, uint32 rgba[4]);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Gives the bit shifts for R, G, B and A component
 		@note			Only valid for native endian formats
@@ -594,11 +508,7 @@ namespace Ogre {
         */
         static String getFormatName(PixelFormat srcformat);
 
-<<<<<<< HEAD
         /** Returns whether the format can be packed or unpacked with the packColour()
-=======
-        /** Returns wether the format can be packed or unpacked with the packColour()
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         and unpackColour() functions. This is generally not true for compressed and
         depth formats as they are special. It can only be true for formats with a
         fixed element size.
@@ -654,13 +564,9 @@ namespace Ogre {
         */
         static void packColour(const ColourValue &colour, const PixelFormat pf,  void* dest);
         /** Pack a colour value to memory
-<<<<<<< HEAD
             @param r,g,b,a	The four colour components, range 0.0f to 1.0f
                             (an exception to this case exists for floating point pixel
                             formats, which don't clamp to 0.0f..1.0f)
-=======
-        	@param r,g,b,a	The four colour components, range 0x00 to 0xFF
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         	@param pf		Pixelformat in which to write the colour
         	@param dest		Destination memory location
         */
@@ -681,14 +587,10 @@ namespace Ogre {
         */
         static void unpackColour(ColourValue *colour, PixelFormat pf,  const void* src);
         /** Unpack a colour value from memory
-<<<<<<< HEAD
         	@param r        The red channel is returned here (as byte)
             @param g        The blue channel is returned here (as byte)
             @param b        The green channel is returned here (as byte)
             @param a        The alpha channel is returned here (as byte)
-=======
-        	@param r,g,b,a	The colour is returned here (as byte)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         	@param pf		Pixelformat in which to read the colour
         	@param src		Source memory location
         	@remarks 	This function returns the colour components in 8 bit precision,
@@ -697,14 +599,10 @@ namespace Ogre {
         */
         static void unpackColour(uint8 *r, uint8 *g, uint8 *b, uint8 *a, PixelFormat pf,  const void* src);
         /** Unpack a colour value from memory
-<<<<<<< HEAD
             @param r        The red channel is returned here (as float)
             @param g        The blue channel is returned here (as float)
             @param b        The green channel is returned here (as float)
             @param a        The alpha channel is returned here (as float)
-=======
-        	@param r,g,b,a	The colour is returned here (as float)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         	@param pf		Pixelformat in which to read the colour
         	@param src		Source memory location
         */
@@ -715,17 +613,10 @@ namespace Ogre {
          	just a copy is done.
          	@param	src			Pointer to source region
          	@param	srcFormat	Pixel format of source region
-<<<<<<< HEAD
          	@param  dst			Pointer to destination region
          	@param	dstFormat	Pixel format of destination region
          */
         static void bulkPixelConversion(void *src, PixelFormat srcFormat, void *dst, PixelFormat dstFormat, unsigned int count);
-=======
-         	@param   dst			Pointer to destination region
-         	@param	dstFormat	Pixel format of destination region
-         */
-        static void bulkPixelConversion(void *src, PixelFormat srcFormat, void *dest, PixelFormat dstFormat, unsigned int count);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
       	/** Convert pixels from one format to another. No dithering or filtering is being done. Converting
           	from RGB to luminance takes the R channel. 
@@ -735,24 +626,18 @@ namespace Ogre {
          	dimensions. In case the source and destination format match, a plain copy is done.
         */
         static void bulkPixelConversion(const PixelBox &src, const PixelBox &dst);
-<<<<<<< HEAD
 
       	/** Flips pixels inplace in vertical direction.
             @param	box			PixelBox containing pixels, pitches and format
             @remarks Non consecutive pixel boxes are supported.
          */
         static void bulkPixelVerticalFlip(const PixelBox &box);
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
 	/** @} */
 	/** @} */
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

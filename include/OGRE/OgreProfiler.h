@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -48,11 +44,7 @@ Ogre-dependent is in the visualization/logging routines and the use of the Timer
 #include "OgrePrerequisites.h"
 #include "OgreSingleton.h"
 #include "OgreString.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
-#include "OgreOverlay.h"
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #if OGRE_PROFILING == 1
 #	define OgreProfile( a ) Ogre::Profile _OgreProfileInstance( (a) )
@@ -83,10 +75,6 @@ namespace Ogre {
 	/** \addtogroup General
 	*  @{
 	*/
-<<<<<<< HEAD
-=======
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	/** List of reserved profiling masks
 	*/
 	enum ProfileGroupMask
@@ -128,7 +116,6 @@ namespace Ogre {
 			/// The group ID
 			uint32 mGroupID;
 			
-<<<<<<< HEAD
     };
 
 	/** Represents the total timing information of a profile
@@ -279,11 +266,6 @@ namespace Ogre {
 		DisplayMode mDisplayMode;
 	};
 
-=======
-
-    };
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     /** The profiler allows you to measure the performance of your code
         @remarks
             Do not create profiles directly from this unless you want a profile to last
@@ -413,31 +395,12 @@ namespace Ogre {
             /** Clears the profiler statistics */
             void reset();
 
-<<<<<<< HEAD
-=======
-			enum DisplayMode
-			{
-				/// Display % frame usage on the overlay
-				DISPLAY_PERCENTAGE,
-				/// Display milliseconds on the overlay
-				DISPLAY_MILLISECONDS
-			};
-
-			/** Set the display mode for the overlay. 
-			*/
-			void setDisplayMode(DisplayMode d) { mDisplayMode = d; }
-			/** Get the display mode for the overlay. 
-			*/
-			DisplayMode getDisplayMode() const { return mDisplayMode; }
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             /** Sets the Profiler so the display of results are updated every n frames*/
             void setUpdateDisplayFrequency(uint freq);
 
             /** Gets the frequency that the Profiler display is updated */
             uint getUpdateDisplayFrequency() const;
 
-<<<<<<< HEAD
 			/**
 			@remarks
 				Register a ProfileSessionListener from the Profiler
@@ -453,18 +416,6 @@ namespace Ogre {
 				A valid listener derived class
 			*/
 			void removeListener(ProfileSessionListener* listener);
-=======
-			/** Set the size of the profiler overlay, in pixels. */
-			void setOverlayDimensions(Real width, Real height);
-
-			/** Set the position of the profiler overlay, in pixels. */
-			void setOverlayPosition(Real left, Real top);
-
-			Real getOverlayWidth() const;
-			Real getOverlayHeight() const;
-			Real getOverlayLeft() const;
-			Real getOverlayTop() const;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
             /** Override standard Singleton retrieval.
             @remarks
@@ -499,33 +450,16 @@ namespace Ogre {
             */
             static Profiler* getSingletonPtr(void);
 
-<<<<<<< HEAD
         protected:
 			friend class ProfileInstance;
 
 			typedef vector<ProfileSessionListener*>::type TProfileSessionListener;
 			TProfileSessionListener mListeners;
-=======
-			
-
-        protected:
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
             /** Initializes the profiler's GUI elements */
             void initialize();
 
-<<<<<<< HEAD
 			void displayResults();
-=======
-			class ProfileInstance;
-			friend class ProfileInstance;
-            typedef list<OverlayElement*>::type ProfileBarList;
-
-			void displayResults(void);
-            /** Prints the profiling results of each frame 
-            @remarks Recursive, for all the little children. */
-            void displayResults(ProfileInstance* instance, ProfileBarList::iterator& bIter, Real& maxTimeMillisecs, Real& newGuiHeight, int& profileCount);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 			/** Processes frame stats for all of the mRoot's children */
 			void processFrameStats(void);
@@ -535,124 +469,6 @@ namespace Ogre {
             /** Handles a change of the profiler's enabled state*/
             void changeEnableState();
 
-<<<<<<< HEAD
-=======
-            /** An internal function to create the container which will hold our display elements*/
-            OverlayContainer* createContainer();
-
-            /** An internal function to create a text area */
-            OverlayElement* createTextArea(const String& name, Real width, Real height, Real top, Real left, 
-                                       uint fontSize, const String& caption, bool show = true);
-
-            /** An internal function to create a panel */
-            OverlayElement* createPanel(const String& name, Real width, Real height, Real top, Real left, 
-                                    const String& materialName, bool show = true);
-
-
-            /// Represents the total timing information of a profile
-            /// since profiles can be called more than once each frame
-            struct ProfileFrame 
-			{
-
-                /// The total time this profile has taken this frame
-                ulong	frameTime;
-
-                /// The number of times this profile was called this frame
-                uint	calls;
-
-                /// The hierarchical level of this profile, 0 being the main loop
-                uint	hierarchicalLvl;
-
-            };
-			
-            /// Represents a history of each profile during the duration of the app
-            struct ProfileHistory 
-			{
-                /// The current percentage of frame time this profile has taken
-                Real	currentTimePercent; 
-				/// The current frame time this profile has taken in milliseconds
-				Real	currentTimeMillisecs;
-
-                /// The maximum percentage of frame time this profile has taken
-                Real	maxTimePercent; 
-				/// The maximum frame time this profile has taken in milliseconds
-				Real	maxTimeMillisecs; 
-
-                /// The minimum percentage of frame time this profile has taken
-                Real	minTimePercent; 
-				/// The minimum frame time this profile has taken in milliseconds
-				Real	minTimeMillisecs; 
-
-                /// The number of times this profile has been called each frame
-                uint	numCallsThisFrame;
-
-                /// The total percentage of frame time this profile has taken
-                Real	totalTimePercent;
-				/// The total frame time this profile has taken in milliseconds
-				Real	totalTimeMillisecs;
-
-                /// The total number of times this profile was called
-                /// (used to calculate average)
-                ulong	totalCalls; 
-
-                /// The hierarchical level of this profile, 0 being the root profile
-                uint	hierarchicalLvl;
-
-			};
-
-			/// Represents an individual profile call
-			class ProfileInstance :
-				public ProfilerAlloc
-			{
-				friend class Profiler;
-			public:
-				ProfileInstance(void);
-				virtual ~ProfileInstance(void);
-
-				typedef Ogre::map<String,ProfileInstance*>::type ProfileChildren;
-
-				void logResults();
-				void reset();
-
-				inline bool watchForMax(void) { return history.currentTimePercent == history.maxTimePercent; }
-				inline bool watchForMin(void) { return history.currentTimePercent == history.minTimePercent; }
-				inline bool watchForLimit(Real limit, bool greaterThan = true)
-				{
-					if (greaterThan)
-						return history.currentTimePercent > limit;
-					else
-						return history.currentTimePercent < limit;
-				}
-
-				bool watchForMax(const String& profileName);
-				bool watchForMin(const String& profileName);
-				bool watchForLimit(const String& profileName, Real limit, bool greaterThan = true);
-                                
-				/// The name of the profile
-				String          name;
-
-				/// The name of the parent, null if root
-				ProfileInstance* parent;
-
-				ProfileChildren children;
-
-				ProfileFrame frame;
-				ulong frameNumber;
-
-				ProfileHistory history;
-
-				/// The time this profile was started
-				ulong           currTime;
-
-				/// Represents the total time of all child profiles to subtract
-				/// from this profile
-				ulong           accum;
-
-				/// The hierarchical level of this profile, 0 being the root profile
-				uint            hierarchicalLvl;
-			};
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			// lol. Uses typedef; put's original container type in name.
             typedef set<String>::type DisabledProfileMap;
 			typedef ProfileInstance::ProfileChildren ProfileChildren;
@@ -664,54 +480,9 @@ namespace Ogre {
             /// Holds the names of disabled profiles
             DisabledProfileMap mDisabledProfiles;
 
-<<<<<<< HEAD
             /// Whether the GUI elements have been initialized
             bool mInitialized;
 
-=======
-            /// Holds the display bars for each profile results
-            ProfileBarList mProfileBars;
-
-            /// Whether the GUI elements have been initialized
-            bool mInitialized;
-
-            /// The max number of profiles we can display
-            uint mMaxDisplayProfiles;
-
-            /// The overlay which contains our profiler results display
-            Overlay* mOverlay;
-
-            /// The window that displays the profiler results
-            OverlayContainer* mProfileGui;
-
-            /// The height of each bar
-            Real mBarHeight;
-
-            /// The height of the stats window
-            Real mGuiHeight;
-
-            /// The width of the stats window
-            Real mGuiWidth;
-
-			/// The horz position of the stats window
-			Real mGuiLeft;
-
-			/// The vertical position of the stats window
-			Real mGuiTop;
-
-			/// The size of the indent for each profile display bar
-            Real mBarIndent;
-
-            /// The width of the border between the profile window and each bar
-            Real mGuiBorderWidth;
-
-            /// The width of the min, avg, and max lines in a profile display
-            Real mBarLineWidth;
-
-			/// The distance between bars
-			Real mBarSpacing;
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             /// The number of frames that must elapse before the current
             /// frame display is updated
             uint mUpdateDisplayFrequency;
@@ -735,12 +506,6 @@ namespace Ogre {
 			/// Mask to decide whether a type of profile is enabled or not
 			uint32 mProfileMask;
 
-<<<<<<< HEAD
-=======
-			/// How to display the overlay
-			DisplayMode mDisplayMode;
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			/// The max frame time recorded
 			ulong mMaxTotalFrameTime;
 
@@ -755,9 +520,6 @@ namespace Ogre {
 
 } // end namespace
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

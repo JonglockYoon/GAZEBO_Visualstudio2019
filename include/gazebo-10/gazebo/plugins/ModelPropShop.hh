@@ -29,11 +29,7 @@ namespace gazebo
 {
   /// \brief This plugin will generate 5 pictures of a model: perspective,
   /// top, front, side, back.
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE ModelPropShop : public SystemPlugin
-=======
-  class GAZEBO_VISIBLE ModelPropShop : public SystemPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Destructor
     public: virtual ~ModelPropShop();

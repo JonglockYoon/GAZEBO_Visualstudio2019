@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,10 +34,7 @@ THE SOFTWARE.
 #include "OgreException.h"
 #include "OgreGpuProgram.h"
 #include "OgreSingleton.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -66,10 +59,7 @@ namespace Ogre {
 		SharedParametersMap mSharedParametersMap;
 		MicrocodeMap mMicrocodeCache;
 		bool mSaveMicrocodesToCache;
-<<<<<<< HEAD
 		bool mCacheDirty;			// When this is true the cache is 'dirty' and should be resaved to disk.
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			
 		static String addRenderSystemToName( const String &  name );
 
@@ -81,13 +71,10 @@ namespace Ogre {
 		GpuProgramManager();
 		virtual ~GpuProgramManager();
 
-<<<<<<< HEAD
 		/// Get a resource by name
 		/// @see GpuProgramManager::getResourceByName
 		GpuProgramPtr getByName(const String& name, bool preferHighLevelPrograms = true);
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Loads a GPU program from a file of assembly. 
 		@remarks
 			This method creates a new program of the type specified as the second parameter.
@@ -175,20 +162,12 @@ namespace Ogre {
             GpuProgramType gptype, const String& syntaxCode, bool isManual = false, 
             ManualResourceLoader* loader = 0);
 
-<<<<<<< HEAD
         /** Overrides the standard ResourceManager getResourceByName method.
-=======
-        /** Overrides the standard ResourceManager getByName method.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         @param name The name of the program to retrieve
         @param preferHighLevelPrograms If set to true (the default), high level programs will be
             returned in preference to low-level programs.
         */
-<<<<<<< HEAD
         ResourcePtr getResourceByName(const String& name, bool preferHighLevelPrograms = true);
-=======
-        ResourcePtr getByName(const String& name, bool preferHighLevelPrograms = true);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 
 		/** Create a new set of shared parameters, which can be used across many 
@@ -214,13 +193,10 @@ namespace Ogre {
         */
 		void setSaveMicrocodesToCache( const bool val );
 
-<<<<<<< HEAD
 		/** Returns true if the microcodecache changed during the run.
 		*/
 		bool isCacheDirty(void) const;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		bool canGetCompiledShaderBuffer();
         /** Check if a microcode is available for a program in the microcode cache.
         @param name The name of the program.
@@ -234,25 +210,18 @@ namespace Ogre {
         /** Creates a microcode to be later added to the cache.
 		@param size The size of the microcode in bytes
         */
-<<<<<<< HEAD
 		virtual Microcode createMicrocode( const uint32 size ) const;
-=======
-		virtual Microcode createMicrocode( const size_t size ) const;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Adds a microcode for a program to the microcode cache.
         @param name The name of the program.
         */
 		virtual void addMicrocodeToCache( const String & name, const Microcode & microcode );
 
-<<<<<<< HEAD
 		/** Removes a microcode for a program from the microcode cache.
         @param name The name of the program.
         */
 		virtual void removeMicrocodeFromCache( const String & name );
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Saves the microcode cache to disk.
         @param stream The destination stream
         */
@@ -305,9 +274,6 @@ namespace Ogre {
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

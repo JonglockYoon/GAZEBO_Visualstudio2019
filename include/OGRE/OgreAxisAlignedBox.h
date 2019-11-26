@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -73,7 +69,6 @@ namespace Ogre {
 
 	public:
 		/*
-<<<<<<< HEAD
            1-------2
           /|      /|
          / |     / |
@@ -82,16 +77,6 @@ namespace Ogre {
         | /     | /
         |/      |/
         6-------7
-=======
-		1-----2
-		/|    /|
-		/ |   / |
-		5-----4  |
-		|  0--|--3
-		| /   | /
-		|/    |/
-		6-----7
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		typedef enum {
 			FAR_LEFT_BOTTOM = 0,
@@ -303,7 +288,6 @@ namespace Ogre {
 		anticlockwise around this face (looking onto the face from
 		outside the box). Like this:
 		<pre>
-<<<<<<< HEAD
            1-------2
           /|      /|
          / |     / |
@@ -313,18 +297,6 @@ namespace Ogre {
         |/      |/
         6-------7
 		</pre>
-=======
-		1-----2
-		/|    /|
-		/ |   / |
-		5-----4  |
-		|  0--|--3
-		| /   | /
-		|/    |/
-		6-----7
-		</pre>
-		@remarks as this implementation uses a static member, make sure to use your own copy !
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		inline const Vector3* getAllCorners(void) const
 		{
@@ -352,11 +324,7 @@ namespace Ogre {
 			return mCorners;
 		}
 
-<<<<<<< HEAD
 		/** Gets the position of one of the corners
-=======
-		/** gets the position of one of the corners
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		Vector3 getCorner(CornerEnum cornerToGet) const
 		{
@@ -383,11 +351,7 @@ namespace Ogre {
 			}
 		}
 
-<<<<<<< HEAD
 		_OgreExport friend std::ostream& operator<<( std::ostream& o, const AxisAlignedBox &aab )
-=======
-		_OgreExport friend std::ostream& operator<<( std::ostream& o, const AxisAlignedBox aab )
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		{
 			switch (aab.mExtent)
 			{
@@ -795,23 +759,15 @@ namespace Ogre {
                    mMinimum.z <= v.z && v.z <= mMaximum.z;
         }
 		
-<<<<<<< HEAD
 		/** Returns the squared minimum distance between a given point and any part of the box.
 		 *  This is faster than distance since avoiding a squareroot, so use if you can. */
         Real squaredDistance(const Vector3& v) const
         {
 
-=======
-		/** Returns the minimum distance between a given point and any part of the box. */
-		Real distance(const Vector3& v) const
-		{
-			
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			if (this->contains(v))
 				return 0;
 			else
 			{
-<<<<<<< HEAD
 				Vector3 maxDist(0,0,0);
 
 				if (v.x < mMinimum.x)
@@ -837,26 +793,6 @@ namespace Ogre {
         Real distance (const Vector3& v) const
         {
 			return Ogre::Math::Sqrt(squaredDistance(v));
-=======
-				Real maxDist = std::numeric_limits<Real>::min();
-
-				if (v.x < mMinimum.x)
-					maxDist = std::max(maxDist, mMinimum.x - v.x);
-				if (v.y < mMinimum.y)
-					maxDist = std::max(maxDist, mMinimum.y - v.y);
-				if (v.z < mMinimum.z)
-					maxDist = std::max(maxDist, mMinimum.z - v.z);
-				
-				if (v.x > mMaximum.x)
-					maxDist = std::max(maxDist, v.x - mMaximum.x);
-				if (v.y > mMaximum.y)
-					maxDist = std::max(maxDist, v.y - mMaximum.y);
-				if (v.z > mMaximum.z)
-					maxDist = std::max(maxDist, v.z - mMaximum.z);
-				
-				return maxDist;
-			}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		}
 
         /** Tests whether another box contained by this box.

@@ -57,11 +57,7 @@ namespace gazebo
   /// to compute these properties from the link collision shapes. This
   /// computation will not be accurate if the object is not composed of simple
   /// collision shapes.
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE BuoyancyPlugin : public ModelPlugin
-=======
-  class GAZEBO_VISIBLE BuoyancyPlugin : public ModelPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Constructor.
     public: BuoyancyPlugin();

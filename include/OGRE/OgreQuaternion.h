@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -53,16 +49,9 @@ namespace Ogre {
 	*/
 	/** Implementation of a Quaternion, i.e. a rotation around an axis.
 		For more information about Quaternions and the theory behind it, we recommend reading:
-<<<<<<< HEAD
         http://www.ogre3d.org/tikiwiki/Quaternion+and+Rotation+Primer and
         http://www.cprogramming.com/tutorial/3d/quaternions.html and
         http://www.gamedev.net/page/resources/_/reference/programming/math-and-physics/quaternions/quaternion-powers-r1095
-=======
-		http://www.ogre3d.org/tikiwiki/Quaternion+and+Rotation+Primer
-		http://www.cprogramming.com/tutorial/3d/quaternions.html
-		http://www.gamedev.net/page/resources/_/reference/programming/math-and-physics/
-		quaternions/quaternion-powers-r1095
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     */
     class _OgreExport Quaternion
     {
@@ -212,13 +201,8 @@ namespace Ogre {
         Real Norm () const;
         /// Normalises this quaternion, and returns the previous length
         Real normalise(void); 
-<<<<<<< HEAD
         Quaternion Inverse () const;  /// Apply to non-zero quaternion
         Quaternion UnitInverse () const;  /// Apply to unit-length quaternion
-=======
-        Quaternion Inverse () const;  // apply to non-zero quaternion
-        Quaternion UnitInverse () const;  // apply to unit-length quaternion
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         Quaternion Exp () const;
         Quaternion Log () const;
 
@@ -255,7 +239,6 @@ namespace Ogre {
             from -180 to 180 degrees.
 		*/
 		Radian getYaw(bool reprojectAxis = true) const;		
-<<<<<<< HEAD
 		
         /** Equality with tolerance (tolerance is max angle difference)
         @remark Both equals() and orientationEquals() measure the exact same thing.
@@ -273,10 +256,6 @@ namespace Ogre {
             Real d = this->Dot(other);
             return 1 - d*d < tolerance;
         }
-=======
-		/// Equality with tolerance (tolerance is max angle difference)
-		bool equals(const Quaternion& rhs, const Radian& tolerance) const;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
 	    /** Performs Spherical linear interpolation between two quaternions, and returns the result.
 			Slerp ( 0.0f, A, B ) = A
@@ -301,20 +280,12 @@ namespace Ogre {
             const Quaternion& rkP, const Quaternion& rkQ,
             int iExtraSpins);
 
-<<<<<<< HEAD
         /// Setup for spherical quadratic interpolation
-=======
-        // setup for spherical quadratic interpolation
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         static void Intermediate (const Quaternion& rkQ0,
             const Quaternion& rkQ1, const Quaternion& rkQ2,
             Quaternion& rka, Quaternion& rkB);
 
-<<<<<<< HEAD
         /// Spherical quadratic interpolation
-=======
-        // spherical quadratic interpolation
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         static Quaternion Squad (Real fT, const Quaternion& rkP,
             const Quaternion& rkA, const Quaternion& rkB,
             const Quaternion& rkQ, bool shortestPath = false);

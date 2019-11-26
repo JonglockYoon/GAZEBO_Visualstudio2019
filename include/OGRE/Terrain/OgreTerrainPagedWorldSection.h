@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,12 +32,8 @@ THE SOFTWARE.
 #include "OgreTerrainPrerequisites.h"
 #include "OgrePagedWorldSection.h"
 #include "OgrePageManager.h"
-<<<<<<< HEAD
 #include "OgreWorkQueue.h"
 #include "OgreTerrainGroup.h"
-=======
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 
 namespace Ogre
@@ -86,12 +78,8 @@ namespace Ogre
 		into the pages. Lastly, you get the standard terrain data files which are
 		saved as per TerrainGroup.
 	*/
-<<<<<<< HEAD
 	class _OgreTerrainExport TerrainPagedWorldSection : public PagedWorldSection,
 		public WorkQueue::RequestHandler, public WorkQueue::ResponseHandler
-=======
-	class _OgreTerrainExport TerrainPagedWorldSection : public PagedWorldSection
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	{
 	public:
 		/** Constructor.
@@ -100,11 +88,7 @@ namespace Ogre
 		@param sm The SceneManager to use (can be left as null if to be loaded)
 		*/
 		TerrainPagedWorldSection(const String& name, PagedWorld* parent, SceneManager* sm);
-<<<<<<< HEAD
 		virtual ~TerrainPagedWorldSection();
-=======
-		~TerrainPagedWorldSection();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Initialise this section from an existing TerrainGroup instance. 
 		@remarks
@@ -156,20 +140,16 @@ namespace Ogre
 		/// Convenience method - this section always uses a grid strategy
 		virtual Grid2DPageStrategyData* getGridStrategyData() const;
 
-<<<<<<< HEAD
 		/// Set the interval between the loading of single pages in milliseconds (ms)
 		virtual void setLoadingIntervalMs(uint32 loadingIntervalMs);
 		/// Get the interval between the loading of single pages in milliseconds (ms)
 		virtual uint32 getLoadingIntervalMs() const;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Overridden from PagedWorldSection
 		void loadPage(PageID pageID, bool forceSynchronous = false);
 		/// Overridden from PagedWorldSection
 		void unloadPage(PageID pageID, bool forceSynchronous = false);
 
-<<<<<<< HEAD
 		/// WorkQueue::RequestHandler override
 		WorkQueue::Response* handleRequest(const WorkQueue::Request* req, const WorkQueue* srcQ);
 		/// WorkQueue::ResponseHandler override
@@ -202,10 +182,6 @@ namespace Ogre
 		uint16 mWorkQueueChannel;
 		unsigned long mNextLoadingTime;
 		uint32 mLoadingIntervalMs;
-=======
-	protected:
-		TerrainGroup* mTerrainGroup;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/// Overridden from PagedWorldSection
 		void loadSubtypeData(StreamSerialiser& ser);

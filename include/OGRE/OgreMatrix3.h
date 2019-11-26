@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -115,7 +111,6 @@ namespace Ogre
 			std::swap(m[2][2], other.m[2][2]);
 		}
 
-<<<<<<< HEAD
         /// Member access, allows use of construct mat[r][c]
         inline const Real* operator[] (size_t iRow) const
         {
@@ -129,13 +124,6 @@ namespace Ogre
 
 
 
-=======
-        // member access, allows use of construct mat[r][c]
-        inline Real* operator[] (size_t iRow) const
-		{
-			return (Real*)m[iRow];
-		}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /*inline operator Real* ()
 		{
 			return (Real*)m[0];
@@ -144,11 +132,7 @@ namespace Ogre
         void SetColumn(size_t iCol, const Vector3& vec);
         void FromAxes(const Vector3& xAxis, const Vector3& yAxis, const Vector3& zAxis);
 
-<<<<<<< HEAD
         /// Assignment and comparison
-=======
-        // assignment and comparison
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         inline Matrix3& operator= (const Matrix3& rkMatrix)
 		{
 			memcpy(m,rkMatrix.m,9*sizeof(Real));
@@ -199,11 +183,7 @@ namespace Ogre
         Matrix3 Inverse (Real fTolerance = 1e-06) const;
         Real Determinant () const;
 
-<<<<<<< HEAD
         /// Singular value decomposition
-=======
-        // singular value decomposition
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         void SingularValueDecomposition (Matrix3& rkL, Vector3& rkS,
             Matrix3& rkR) const;
         void SingularValueComposition (const Matrix3& rkL,
@@ -218,11 +198,7 @@ namespace Ogre
 
         Real SpectralNorm () const;
 
-<<<<<<< HEAD
         /// Note: Matrix must be orthonormal
-=======
-        // matrix must be orthonormal
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         void ToAngleAxis (Vector3& rkAxis, Radian& rfAngle) const;
 		inline void ToAngleAxis (Vector3& rkAxis, Degree& rfAngle) const {
 			Radian r;
@@ -231,15 +207,9 @@ namespace Ogre
 		}
         void FromAngleAxis (const Vector3& rkAxis, const Radian& fRadians);
 
-<<<<<<< HEAD
         /** The matrix must be orthonormal.  The decomposition is yaw*pitch*roll
             where yaw is rotation about the Up vector, pitch is rotation about the
             Right axis, and roll is rotation about the Direction axis. */
-=======
-        // The matrix must be orthonormal.  The decomposition is yaw*pitch*roll
-        // where yaw is rotation about the Up vector, pitch is rotation about the
-        // Right axis, and roll is rotation about the Direction axis.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         bool ToEulerAnglesXYZ (Radian& rfYAngle, Radian& rfPAngle,
             Radian& rfRAngle) const;
         bool ToEulerAnglesXZY (Radian& rfYAngle, Radian& rfPAngle,

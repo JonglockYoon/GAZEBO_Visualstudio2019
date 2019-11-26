@@ -39,11 +39,7 @@ namespace gazebo
   /// measurement occurs on the largest face of the box. All normal forces on
   /// each box shape are summed and divided by the area of the largest face
   /// to compute pressure.
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE PressurePlugin : public SensorPlugin
-=======
-  class GAZEBO_VISIBLE PressurePlugin : public SensorPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Constructor.
     public: PressurePlugin();

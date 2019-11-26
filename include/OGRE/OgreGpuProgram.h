@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -40,10 +36,7 @@ THE SOFTWARE.
 #include "OgreSerializer.h"
 #include "OgreRenderOperation.h"
 #include "OgreGpuProgramParams.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -58,22 +51,12 @@ namespace Ogre {
 	{
 		GPT_VERTEX_PROGRAM,
 		GPT_FRAGMENT_PROGRAM,
-<<<<<<< HEAD
 		GPT_GEOMETRY_PROGRAM,
 		GPT_DOMAIN_PROGRAM,
 		GPT_HULL_PROGRAM,
 		GPT_COMPUTE_PROGRAM
 	};
 
-=======
-		GPT_GEOMETRY_PROGRAM
-	};
-
-
-    // Forward declaration 
-    class GpuProgramPtr;
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	/** Defines a program which runs on the GPU such as a vertex or fragment program. 
 	@remarks
 		This class defines the low-level program in assembler code, the sort used to
@@ -174,14 +157,11 @@ namespace Ogre {
 			change, this definition will alter, but previous params may reference the old def. */
 		mutable GpuLogicalBufferStructPtr mFloatLogicalToPhysical;
 		/** Record of logical to physical buffer maps. Mandatory for low-level
-<<<<<<< HEAD
          programs or high-level programs which set their params the same way.
          This is a shared pointer because if the program is recompiled and the parameters
          change, this definition will alter, but previous params may reference the old def. */
 		mutable GpuLogicalBufferStructPtr mDoubleLogicalToPhysical;
 		/** Record of logical to physical buffer maps. Mandatory for low-level
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			programs or high-level programs which set their params the same way. 
 			This is a shared pointer because if the program is recompiled and the parameters
 			change, this definition will alter, but previous params may reference the old def.*/
@@ -210,12 +190,6 @@ namespace Ogre {
         */
         bool isRequiredCapabilitiesSupported(void) const;
 
-<<<<<<< HEAD
-=======
-		/// @copydoc Resource::calculateSize
-		size_t calculateSize(void) const { return 0; } // TODO 
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// @copydoc Resource::loadImpl
 		void loadImpl(void);
 
@@ -443,86 +417,18 @@ namespace Ogre {
 		*/
 		virtual const GpuNamedConstants& getConstantDefinitions() const { return *mConstantDefs.get(); }
 
-<<<<<<< HEAD
 		/// @copydoc Resource::calculateSize
 		virtual size_t calculateSize(void) const;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
     protected:
         /// Virtual method which must be implemented by subclasses, load from mSource
         virtual void loadFromSource(void) = 0;
 
 	};
-<<<<<<< HEAD
-=======
-
-
-	/** Specialisation of SharedPtr to allow SharedPtr to be assigned to GpuProgramPtr 
-	@note Has to be a subclass since we need operator=.
-	We could templatise this instead of repeating per Resource subclass, 
-	except to do so requires a form VC6 does not support i.e.
-	ResourceSubclassPtr<T> : public SharedPtr<T>
-	*/
-	class _OgreExport GpuProgramPtr : public SharedPtr<GpuProgram> 
-	{
-	public:
-		GpuProgramPtr() : SharedPtr<GpuProgram>() {}
-		explicit GpuProgramPtr(GpuProgram* rep) : SharedPtr<GpuProgram>(rep) {}
-		GpuProgramPtr(const GpuProgramPtr& r) : SharedPtr<GpuProgram>(r) {} 
-		GpuProgramPtr(const ResourcePtr& r) : SharedPtr<GpuProgram>()
-		{
-			// lock & copy other mutex pointer
-            OGRE_MUTEX_CONDITIONAL(r.OGRE_AUTO_MUTEX_NAME)
-            {
-			    OGRE_LOCK_MUTEX(*r.OGRE_AUTO_MUTEX_NAME)
-			    OGRE_COPY_AUTO_SHARED_MUTEX(r.OGRE_AUTO_MUTEX_NAME)
-			    pRep = static_cast<GpuProgram*>(r.getPointer());
-			    pUseCount = r.useCountPointer();
-			    if (pUseCount)
-			    {
-				    ++(*pUseCount);
-			    }
-            }
-		}
-
-		/// Operator used to convert a ResourcePtr to a GpuProgramPtr
-		GpuProgramPtr& operator=(const ResourcePtr& r)
-		{
-			if (pRep == static_cast<GpuProgram*>(r.getPointer()))
-				return *this;
-			release();
-			// lock & copy other mutex pointer
-            OGRE_MUTEX_CONDITIONAL(r.OGRE_AUTO_MUTEX_NAME)
-            {
-                OGRE_LOCK_MUTEX(*r.OGRE_AUTO_MUTEX_NAME)
-			    OGRE_COPY_AUTO_SHARED_MUTEX(r.OGRE_AUTO_MUTEX_NAME)
-			    pRep = static_cast<GpuProgram*>(r.getPointer());
-			    pUseCount = r.useCountPointer();
-			    if (pUseCount)
-			    {
-				    ++(*pUseCount);
-			    }
-            }
-			else
-			{
-				// RHS must be a null pointer
-				assert(r.isNull() && "RHS must be null if it has no mutex!");
-				setNull();
-			}
-			return *this;
-		}
-        /// Operator used to convert a HighLevelGpuProgramPtr to a GpuProgramPtr
-        GpuProgramPtr& operator=(const HighLevelGpuProgramPtr& r);
-	};
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	/** @} */
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

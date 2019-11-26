@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -109,13 +105,8 @@ public:
 	@see RenderObjectListener::notifyRenderSingleObject.
 	@param rend The renderable that is about to be rendered.
 	@param pass The pass that used for this rendering.
-<<<<<<< HEAD
 	@param source The auto parameter source.
 	@param pLightList The light list used in the current rendering context.
-=======
-	@source The auto parameter source.
-	@pLightList The light list used in the current rendering context.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	virtual void updateGpuProgramsParams(Renderable* rend, Pass* pass,  const AutoParamDataSource* source, 	const LightList* pLightList) { }
 
@@ -262,10 +253,7 @@ public:
 	@param compiler The compiler instance.
 	@param prop The abstract property node.
 	@param pass The pass that is the parent context of this node.
-<<<<<<< HEAD
     @param translator The translator instance holding existing scripts.
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	virtual SubRenderState* createInstance(ScriptCompiler* compiler, PropertyAbstractNode* prop, Pass* pass, SGScriptTranslator* translator) { return NULL; }
 
@@ -275,10 +263,7 @@ public:
 	@param compiler The compiler instance.
 	@param prop The abstract property node.
 	@param texState The pass that is the parent context of this node.
-<<<<<<< HEAD
     @param translator The translator instance holding existing scripts.
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	virtual SubRenderState* createInstance(ScriptCompiler* compiler, PropertyAbstractNode* prop, TextureUnitState* texState, SGScriptTranslator* translator) { return NULL; }
 

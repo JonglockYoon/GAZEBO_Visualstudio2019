@@ -26,11 +26,7 @@ namespace gazebo
   class HeightmapLODPluginPrivate;
 
   /// \brief Plugin that sets the heightmap LOD
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE HeightmapLODPlugin : public VisualPlugin
-=======
-  class GAZEBO_VISIBLE HeightmapLODPlugin : public VisualPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Constructor.
     public: HeightmapLODPlugin();

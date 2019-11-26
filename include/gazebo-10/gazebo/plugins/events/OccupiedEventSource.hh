@@ -55,11 +55,7 @@ namespace gazebo
   ///      </event>
   ///   </plugin>
   /// \endverbatim
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE OccupiedEventSource : public EventSource
-=======
-  class GAZEBO_VISIBLE OccupiedEventSource : public EventSource
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     // Documentation inherited
     public: OccupiedEventSource(transport::PublisherPtr _pub,

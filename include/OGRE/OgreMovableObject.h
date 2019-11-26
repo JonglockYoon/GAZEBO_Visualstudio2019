@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -43,10 +39,7 @@ THE SOFTWARE.
 #include "OgreAnimable.h"
 #include "OgreAny.h"
 #include "OgreUserObjectBindings.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -333,20 +326,12 @@ namespace Ogre {
 			this MovableObject. This can be a pointer back to one of your own
 			classes for instance.		
 		*/
-<<<<<<< HEAD
 		OGRE_DEPRECATED virtual void setUserAny(const Any& anything) { getUserObjectBindings().setUserAny(anything); }
-=======
-		virtual void setUserAny(const Any& anything) { getUserObjectBindings().setUserAny(anything); }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** @deprecated use UserObjectBindings::getUserAny via getUserObjectBindings() instead.
 			Retrieves the custom user value associated with this object.
 		*/
-<<<<<<< HEAD
 		OGRE_DEPRECATED virtual const Any& getUserAny(void) const { return getUserObjectBindings().getUserAny(); }
-=======
-		virtual const Any& getUserAny(void) const { return getUserObjectBindings().getUserAny(); }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Return an instance of user objects binding associated with this class.
 		You can use it to associate one or more custom objects with this class instance.
@@ -426,17 +411,10 @@ namespace Ogre {
 		static uint32 getDefaultQueryFlags() { return msDefaultQueryFlags; }
 
 		
-<<<<<<< HEAD
         /** Sets the visibility flags for this object.
         @remarks
 			As well as a simple true/false value for visibility (as seen in setVisible), 
 			you can also set visibility flags which when 'and'ed with the SceneManager's
-=======
-        /** Sets the visiblity flags for this object.
-        @remarks
-			As well as a simple true/false value for visibility (as seen in setVisible), 
-			you can also set visiblity flags which when 'and'ed with the SceneManager's
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			visibility mask can also make an object invisible.
         */
         virtual void setVisibilityFlags(uint32 flags) { mVisibilityFlags = flags; }
@@ -519,11 +497,7 @@ namespace Ogre {
         /// Define a default implementation of method from ShadowCaster which implements no shadows
         ShadowRenderableListIterator getShadowVolumeRenderableIterator(
             ShadowTechnique shadowTechnique, const Light* light, 
-<<<<<<< HEAD
             HardwareIndexBufferSharedPtr* indexBuffer, size_t* indexBufferUsedSize,
-=======
-            HardwareIndexBufferSharedPtr* indexBuffer, 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             bool extrudeVertices, Real extrusionDist, unsigned long flags = 0);
 		
         /** Overridden member from ShadowCaster. */
@@ -605,11 +579,7 @@ namespace Ogre {
 	{
 	protected:
 		/// Type flag, allocated if requested
-<<<<<<< HEAD
 		uint32 mTypeFlag;
-=======
-		unsigned long mTypeFlag;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/// Internal implementation of create method - must be overridden
 		virtual MovableObject* createInstanceImpl(
@@ -655,11 +625,7 @@ namespace Ogre {
 			to a number of different types of object, should you always wish them
 			to be treated the same in queries.
 		*/
-<<<<<<< HEAD
 		void _notifyTypeFlags(uint32 flag) { mTypeFlag = flag; }
-=======
-		void _notifyTypeFlags(unsigned long flag) { mTypeFlag = flag; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Gets the type flag for this factory.
 		@remarks
@@ -673,10 +639,7 @@ namespace Ogre {
 	/** @} */
 
 }
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

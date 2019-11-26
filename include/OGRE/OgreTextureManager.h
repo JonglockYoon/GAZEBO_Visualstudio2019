@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -68,7 +64,6 @@ namespace Ogre {
         TextureManager(void);
         virtual ~TextureManager();
 
-<<<<<<< HEAD
 
 		/// Create a new texture
 		/// @see ResourceManager::createResource
@@ -79,8 +74,6 @@ namespace Ogre {
 		/// @see ResourceManager::getResourceByName
 		TexturePtr getByName(const String& name, const String& groupName = ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Create a new texture, or retrieve an existing one with the same
             name if it already exists.
             @param
@@ -216,17 +209,12 @@ namespace Ogre {
         virtual TexturePtr loadImage( 
             const String &name, const String& group, const Image &img, 
             TextureType texType = TEX_TYPE_2D,
-<<<<<<< HEAD
             int numMipmaps = MIP_DEFAULT, Real gamma = 1.0f, bool isAlpha = false,
-=======
-            int iNumMipmaps = MIP_DEFAULT, Real gamma = 1.0f, bool isAlpha = false,
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             PixelFormat desiredFormat = PF_UNKNOWN, bool hwGammaCorrection = false);
 			
         /** Loads a texture from a raw data stream.
             @note
                 The texture will create as manual texture without loader.
-<<<<<<< HEAD
             @param name
                 The name to give the resulting texture
             @param group
@@ -252,49 +240,15 @@ namespace Ogre {
                 The gamma adjustment factor to apply to this texture (brightening/darkening)
 				while loading
 			@param hwGammaCorrection Pass 'true' to enable hardware gamma correction
-=======
-            @param
-                name The name to give the resulting texture
-            @param
-                group The name of the resource group to assign the texture to
-            @param
-                stream Incoming data stream
-            @param
-                width, height The dimensions of the texture
-            @param
-                format The format of the data being passed in; the manager reserves
-                the right to create a different format for the texture if the 
-                original format is not available in this context.
-            @param
-                texType The type of texture to load/create, defaults to normal 2D textures
-            @param
-                numMipmaps The number of pre-filtered mipmaps to generate. If left to MIP_DEFAULT then
-                the TextureManager's default number of mipmaps will be used (see setDefaultNumMipmaps())
-				If set to MIP_UNLIMITED mipmaps will be generated until the lowest possible
-				level, 1x1x1.
-            @param
-                gamma The gamma adjustment factor to apply to this texture (brightening/darkening)
-				 while loading
-			 @param hwGammaCorrection Pass 'true' to enable hardware gamma correction
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 				 (sRGB) on this texture. The hardware will convert from gamma space
 				 to linear space when reading from this texture. Only applicable for 
 				 8-bits per channel textures, will be ignored for other types. Has the advantage
 				 over pre-applied gamma that the texture precision is maintained.
-<<<<<<< HEAD
         */
         virtual TexturePtr loadRawData(const String &name, const String& group,
             DataStreamPtr& stream, ushort width, ushort height, 
             PixelFormat format, TextureType texType = TEX_TYPE_2D, 
             int numMipmaps = MIP_DEFAULT, Real gamma = 1.0f, bool hwGammaCorrection = false);
-=======
-
-        */
-        virtual TexturePtr loadRawData(const String &name, const String& group,
-            DataStreamPtr& stream, ushort uWidth, ushort uHeight, 
-            PixelFormat format, TextureType texType = TEX_TYPE_2D, 
-            int iNumMipmaps = MIP_DEFAULT, Real gamma = 1.0f, bool hwGammaCorrection = false);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Create a manual texture with specified width, height and depth (not loaded from a file).
             @param
@@ -303,17 +257,12 @@ namespace Ogre {
                 group The name of the resource group to assign the texture to
             @param
                 texType The type of texture to load/create, defaults to normal 2D textures
-<<<<<<< HEAD
             @param width
                 The width of the texture
             @param height
                 The height of the texture
             @param depth
                 The depth of the texture
-=======
-            @param
-                width, height, depth The dimensions of the texture
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             @param
                 numMipmaps The number of pre-filtered mipmaps to generate. If left to MIP_DEFAULT then
                 the TextureManager's default number of mipmaps will be used (see setDefaultNumMipmaps())
@@ -349,11 +298,7 @@ namespace Ogre {
         */
         virtual TexturePtr createManual(const String & name, const String& group,
             TextureType texType, uint width, uint height, uint depth, 
-<<<<<<< HEAD
 			int numMipmaps, PixelFormat format, int usage = TU_DEFAULT, ManualResourceLoader* loader = 0,
-=======
-			int num_mips, PixelFormat format, int usage = TU_DEFAULT, ManualResourceLoader* loader = 0,
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			bool hwGammaCorrection = false, uint fsaa = 0, const String& fsaaHint = StringUtil::BLANK);
 			
         /** Create a manual texture with a depth of 1 (not loaded from a file).
@@ -363,15 +308,10 @@ namespace Ogre {
                 group The name of the resource group to assign the texture to
             @param
                 texType The type of texture to load/create, defaults to normal 2D textures
-<<<<<<< HEAD
             @param width
                 The width of the texture
             @param height
                 The height of the texture
-=======
-            @param
-                width, height The dimensions of the texture
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             @param
                 numMipmaps The number of pre-filtered mipmaps to generate. If left to MIP_DEFAULT then
                 the TextureManager's default number of mipmaps will be used (see setDefaultNumMipmaps()).
@@ -406,20 +346,12 @@ namespace Ogre {
 				not support it.
         */
         TexturePtr createManual(const String & name, const String& group,
-<<<<<<< HEAD
             TextureType texType, uint width, uint height, int numMipmaps,
-=======
-            TextureType texType, uint width, uint height, int num_mips,
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             PixelFormat format, int usage = TU_DEFAULT, ManualResourceLoader* loader = 0,
 			bool hwGammaCorrection = false, uint fsaa = 0, const String& fsaaHint = StringUtil::BLANK)
 		{
 			return createManual(name, group, texType, width, height, 1, 
-<<<<<<< HEAD
 				numMipmaps, format, usage, loader, hwGammaCorrection, fsaa, fsaaHint);
-=======
-				num_mips, format, usage, loader, hwGammaCorrection, fsaa, fsaaHint);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		}
 
         /** Sets preferred bit depth for integer pixel format textures.
@@ -431,11 +363,7 @@ namespace Ogre {
         */
         virtual void setPreferredIntegerBitDepth(ushort bits, bool reloadTextures = true);
 
-<<<<<<< HEAD
         /** Gets preferred bit depth for integer pixel format textures.
-=======
-        /** gets preferred bit depth for integer pixel format textures.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         virtual ushort getPreferredIntegerBitDepth(void) const;
 
@@ -448,11 +376,7 @@ namespace Ogre {
         */
         virtual void setPreferredFloatBitDepth(ushort bits, bool reloadTextures = true);
 
-<<<<<<< HEAD
         /** Gets preferred bit depth for float pixel format textures.
-=======
-        /** gets preferred bit depth for float pixel format textures.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         virtual ushort getPreferredFloatBitDepth(void) const;
 

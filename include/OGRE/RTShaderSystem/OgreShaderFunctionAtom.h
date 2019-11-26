@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -99,7 +95,6 @@ public:
 	// Used field mask
 	enum OpMask
 	{
-<<<<<<< HEAD
 		OPM_ALL		= 0x0001,
 		OPM_X		= 0x0002,
 		OPM_Y		= 0x0004,
@@ -116,13 +111,6 @@ public:
 		OPM_XZW		= OPM_X | OPM_Z | OPM_W,
 		OPM_YZW		= OPM_Y | OPM_Z | OPM_W,
 		OPM_XYZW	= OPM_X | OPM_Y | OPM_Z | OPM_W
-=======
-		OPM_ALL = 1 << 0,
-		OPM_X	= 1 << 1,
-		OPM_Y	= 1 << 2,
-		OPM_Z	= 1 << 3,
-		OPM_W	= 1 << 4
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	};
 
 	/** Class constructor 

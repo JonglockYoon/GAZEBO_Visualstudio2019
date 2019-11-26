@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -138,11 +134,7 @@ namespace Ogre
 		void updateVertexTexture(void);
 
 		/** Affects VTF texture's width dimension */
-<<<<<<< HEAD
 		virtual bool matricesTogetherPerRow() const = 0;
-=======
-		virtual bool matricesToghetherPerRow() const = 0;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** update the lookup numbers for entities with shared transforms */
 		virtual void updateSharedLookupIndexes();
@@ -219,11 +211,7 @@ namespace Ogre
 		void createVertexSemantics( VertexData *thisVertexData, VertexData *baseVertexData,
 			const HWBoneIdxVec &hwBoneIdx, const HWBoneWgtVec &hwBoneWgt );
 
-<<<<<<< HEAD
 		virtual bool matricesTogetherPerRow() const { return false; }
-=======
-		virtual bool matricesToghetherPerRow() const { return false; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	public:
 		InstanceBatchVTF( InstanceManager *creator, MeshPtr &meshReference, const MaterialPtr &material,
 							size_t instancesPerBatch, const Mesh::IndexMap *indexToBoneMap,

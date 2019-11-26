@@ -55,7 +55,6 @@
 #       include <tr1/unordered_map>
 #       include <tr1/unordered_set>
 #   endif
-<<<<<<< HEAD
 #elif !defined(STLPORT)
 #   if (OGRE_COMPILER == OGRE_COMPILER_MSVC) && _MSC_FULL_VER >= 150030729 // VC++ 9.0 SP1+
 #    	include <unordered_map>
@@ -65,15 +64,6 @@
 #       include <boost/unordered_set.hpp>
 #   else
 #   	error "Your compiler doesn't support unordered_set and unordered_map. Try to compile Ogre with Boost or STLPort."
-=======
-#else
-#   if (OGRE_COMPILER == OGRE_COMPILER_MSVC) && !defined(STLPORT) && OGRE_COMP_VER >= 1600 // VC++ 10.0
-#    	include <unordered_map>
-#    	include <unordered_set>
-#	else
-#   	include <hash_set>
-#   	include <hash_map>
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #	endif
 #endif 
 
@@ -102,11 +92,7 @@ extern "C" {
 
 }
 
-<<<<<<< HEAD
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32 || OGRE_PLATFORM == OGRE_PLATFORM_WINRT
-=======
-#if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #  undef min
 #  undef max
 #  if defined( __MINGW32__ )
@@ -131,16 +117,6 @@ extern "C" {
 }
 #endif
 
-<<<<<<< HEAD
-=======
-#if OGRE_THREAD_SUPPORT
-#	if !defined(NOMINMAX) && defined(_MSC_VER)
-#		define NOMINMAX // required to stop windows.h messing up std::min
-#	endif
-#   include "Threading/OgreThreadHeaders.h"
-#endif
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #if defined ( OGRE_GCC_VISIBILITY ) && ((OGRE_PLATFORM == OGRE_PLATFORM_APPLE && !__LP64__) && OGRE_PLATFORM != OGRE_PLATFORM_APPLE_IOS)
 #   pragma GCC visibility pop
 #endif

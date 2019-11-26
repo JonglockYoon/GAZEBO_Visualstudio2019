@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,10 +34,7 @@ THE SOFTWARE.
 #include "OgreRectangle2D.h"
 #include "OgreRenderSystem.h"
 #include "OgreCompositionTechnique.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 	/** \addtogroup Core
@@ -78,7 +71,6 @@ namespace Ogre {
             parse all available .compositor scripts. */
         void initialise(void);
 
-<<<<<<< HEAD
 		/**
 		 * Create a new compositor
 		 * @see ResourceManager::createResource
@@ -92,8 +84,6 @@ namespace Ogre {
 		CompositorPtr getByName(const String& name, const String& groupName = ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);
 
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** @see ScriptLoader::parseScript
         */
         void parseScript(DataStreamPtr& stream, const String& groupName);
@@ -297,11 +287,7 @@ namespace Ogre {
 
 		typedef std::pair<String, String> StringPair;
 		typedef map<TextureDef, TexturePtr, TextureDefLess>::type TextureDefMap;
-<<<<<<< HEAD
 		typedef map<StringPair, TextureDefMap>::type ChainTexturesByDef;
-=======
-		typedef std::map<StringPair, TextureDefMap> ChainTexturesByDef;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
 		ChainTexturesByDef mChainTexturesByDef;
 
@@ -316,9 +302,6 @@ namespace Ogre {
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -39,11 +35,8 @@ THE SOFTWARE.
 #include "OgreSerializer.h"
 #include "OgreRenderOperation.h"
 #include "OgreAny.h"
-<<<<<<< HEAD
 #include "Threading/OgreThreadHeaders.h"
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -68,7 +61,6 @@ namespace Ogre {
 		GCT_SAMPLER2D = 6,
 		GCT_SAMPLER3D = 7,
 		GCT_SAMPLERCUBE = 8,
-<<<<<<< HEAD
 		GCT_SAMPLERRECT = 9,
 		GCT_SAMPLER1DSHADOW = 10,
 		GCT_SAMPLER2DSHADOW = 11,
@@ -100,24 +92,6 @@ namespace Ogre {
 		GCT_MATRIX_DOUBLE_4X2 = 37,
 		GCT_MATRIX_DOUBLE_4X3 = 38,
 		GCT_MATRIX_DOUBLE_4X4 = 39,
-=======
-		GCT_SAMPLER1DSHADOW = 9,
-		GCT_SAMPLER2DSHADOW = 10,
-		GCT_SAMPLER2DARRAY = 11,
-		GCT_MATRIX_2X2 = 12,
-		GCT_MATRIX_2X3 = 13,
-		GCT_MATRIX_2X4 = 14,
-		GCT_MATRIX_3X2 = 15,
-		GCT_MATRIX_3X3 = 16,
-		GCT_MATRIX_3X4 = 17,
-		GCT_MATRIX_4X2 = 18,
-		GCT_MATRIX_4X3 = 19,
-		GCT_MATRIX_4X4 = 20,
-		GCT_INT1 = 21,
-		GCT_INT2 = 22,
-		GCT_INT3 = 23,
-		GCT_INT4 = 24,
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		GCT_UNKNOWN = 99
 	};
 
@@ -149,11 +123,7 @@ namespace Ogre {
 	{
 		/// Data type
 		GpuConstantType constType;
-<<<<<<< HEAD
 		/// Physical start index in buffer (either float, double or int buffer)
-=======
-		/// Physical start index in buffer (either float or int buffer)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		size_t physicalIndex;
 		/// Logical index - used to communicate this constant to the rendersystem
 		size_t logicalIndex;
@@ -192,7 +162,6 @@ namespace Ogre {
 
 		}
 
-<<<<<<< HEAD
         bool isDouble() const
 		{
 			return isDouble(constType);
@@ -224,8 +193,6 @@ namespace Ogre {
             
 		}
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		bool isSampler() const
 		{
 			return isSampler(constType);
@@ -249,7 +216,6 @@ namespace Ogre {
 
 		}
 
-<<<<<<< HEAD
 		bool isSubroutine() const
 		{
 			return isSubroutine(constType);
@@ -259,8 +225,6 @@ namespace Ogre {
 		{
 			return c == GCT_SUBROUTINE;
 		}
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Get the element size of a given type, including whether to pad the 
 			elements into multiples of 4 (e.g. SM1 and D3D does, GLSL doesn't)
@@ -290,13 +254,10 @@ namespace Ogre {
 				case GCT_MATRIX_2X2:
 				case GCT_MATRIX_2X3:
 				case GCT_MATRIX_2X4:
-<<<<<<< HEAD
                 case GCT_DOUBLE1:
                 case GCT_DOUBLE2:
                 case GCT_DOUBLE3:
                 case GCT_DOUBLE4:
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 					return 8; // 2 float4s
 				case GCT_MATRIX_3X2:
 				case GCT_MATRIX_3X3:
@@ -305,7 +266,6 @@ namespace Ogre {
 				case GCT_MATRIX_4X2:
 				case GCT_MATRIX_4X3:
 				case GCT_MATRIX_4X4:
-<<<<<<< HEAD
                 case GCT_MATRIX_DOUBLE_2X2:
                 case GCT_MATRIX_DOUBLE_2X3:
                 case GCT_MATRIX_DOUBLE_2X4:
@@ -318,9 +278,6 @@ namespace Ogre {
                 case GCT_MATRIX_DOUBLE_4X3:
                 case GCT_MATRIX_DOUBLE_4X4:
                     return 32;
-=======
-					return 16; // 4 float4s
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 				default:
 					return 4;
 				};
@@ -330,10 +287,7 @@ namespace Ogre {
 				switch(ctype)
 				{
 				case GCT_FLOAT1:
-<<<<<<< HEAD
                 case GCT_DOUBLE1:
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 				case GCT_INT1:
 				case GCT_SAMPLER1D:
 				case GCT_SAMPLER2D:
@@ -345,7 +299,6 @@ namespace Ogre {
 					return 1;
 				case GCT_FLOAT2:
 				case GCT_INT2:
-<<<<<<< HEAD
                 case GCT_DOUBLE2:
 					return 2;
 				case GCT_FLOAT3:
@@ -380,30 +333,6 @@ namespace Ogre {
 				case GCT_MATRIX_4X4:
                 case GCT_MATRIX_DOUBLE_4X4:
 					return 16;
-=======
-					return 2;
-				case GCT_FLOAT3:
-				case GCT_INT3:
-					return 3;
-				case GCT_FLOAT4:
-				case GCT_INT4:
-					return 4;
-				case GCT_MATRIX_2X2:
-					return 4;
-				case GCT_MATRIX_2X3:
-				case GCT_MATRIX_3X2:
-					return 6;
-				case GCT_MATRIX_2X4:
-				case GCT_MATRIX_4X2:
-					return 8; 
-				case GCT_MATRIX_3X3:
-					return 9;
-				case GCT_MATRIX_3X4:
-				case GCT_MATRIX_4X3:
-					return 12; 
-				case GCT_MATRIX_4X4:
-					return 16; 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 				default:
 					return 4;
 				};
@@ -427,21 +356,14 @@ namespace Ogre {
 	{
 		/// Total size of the float buffer required
 		size_t floatBufferSize;
-<<<<<<< HEAD
 		/// Total size of the double buffer required
 		size_t doubleBufferSize;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Total size of the int buffer required
 		size_t intBufferSize;
 		/// Map of parameter names to GpuConstantDefinition
 		GpuConstantDefinitionMap map;
 
-<<<<<<< HEAD
 		GpuNamedConstants() : floatBufferSize(0), doubleBufferSize(0), intBufferSize(0) {}
-=======
-		GpuNamedConstants() : floatBufferSize(0), intBufferSize(0) {}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Generate additional constant entries for arrays based on a base definition.
 		@remarks
@@ -477,11 +399,8 @@ namespace Ogre {
 		*/
 		void load(DataStreamPtr& stream);
 
-<<<<<<< HEAD
         size_t calculateSize(void) const;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	protected:
 		/** Indicates whether all array entries will be generated and added to the definitions map
 		@remarks
@@ -527,7 +446,6 @@ namespace Ogre {
 	/// Container struct to allow params to safely & update shared list of logical buffer assignments
 	struct _OgreExport GpuLogicalBufferStruct : public GpuParamsAlloc
 	{
-<<<<<<< HEAD
             OGRE_MUTEX(mutex);
             
             /// Map from logical index to physical buffer location
@@ -535,14 +453,6 @@ namespace Ogre {
             /// Shortcut to know the buffer size needs
             size_t bufferSize;
             GpuLogicalBufferStruct() : bufferSize(0) {}
-=======
-		OGRE_MUTEX(mutex)
-			/// Map from logical index to physical buffer location
-			GpuLogicalIndexUseMap map;
-		/// Shortcut to know the buffer size needs
-		size_t bufferSize;
-		GpuLogicalBufferStruct() : bufferSize(0) {}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	};
 	typedef SharedPtr<GpuLogicalBufferStruct> GpuLogicalBufferStructPtr;
 
@@ -551,14 +461,11 @@ namespace Ogre {
 	to physical index map is derived from GpuProgram
 	*/
 	typedef vector<float>::type FloatConstantList;
-<<<<<<< HEAD
 	/** Definition of container that holds the current double constants.
      @note Not necessarily in direct index order to constant indexes, logical
      to physical index map is derived from GpuProgram
      */
 	typedef vector<double>::type DoubleConstantList;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	/** Definition of container that holds the current float constants.
 	@note Not necessarily in direct index order to constant indexes, logical
 	to physical index map is derived from GpuProgram
@@ -585,10 +492,7 @@ namespace Ogre {
 	protected:
 		GpuNamedConstants mNamedConstants;
 		FloatConstantList mFloatConstants;
-<<<<<<< HEAD
 		DoubleConstantList mDoubleConstants;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		IntConstantList mIntConstants;
 		String mName;
 
@@ -630,11 +534,8 @@ namespace Ogre {
 		*/
 		unsigned long getVersion() const { return mVersion; }
 
-<<<<<<< HEAD
         size_t calculateSize(void) const;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Mark the shared set as being dirty (values modified).
 		@remarks
 		You do not need to call this yourself, set is marked as dirty whenever
@@ -657,7 +558,6 @@ namespace Ogre {
 		*/
 		const GpuNamedConstants& getConstantDefinitions() const;
 	
-<<<<<<< HEAD
 		/** @copydoc GpuProgramParameters::setNamedConstant(const String& name, Real val) */
 		void setNamedConstant(const String& name, Real val);
 		/** @copydoc GpuProgramParameters::setNamedConstant(const String& name, int val) */
@@ -679,54 +579,27 @@ namespace Ogre {
 		/** @copydoc GpuProgramParameters::setNamedConstant(const String& name, const ColourValue& colour) */
 		void setNamedConstant(const String& name, const ColourValue& colour);
 		/** @copydoc GpuProgramParameters::setNamedConstant(const String& name, const int *val, size_t count) */
-=======
-		/** @copydoc GpuProgramParameters::setNamedConstant */
-		void setNamedConstant(const String& name, Real val);
-		/** @copydoc GpuProgramParameters::setNamedConstant */
-		void setNamedConstant(const String& name, int val);
-		/** @copydoc GpuProgramParameters::setNamedConstant */
-		void setNamedConstant(const String& name, const Vector4& vec);
-		/** @copydoc GpuProgramParameters::setNamedConstant */
-		void setNamedConstant(const String& name, const Vector3& vec);
-		/** @copydoc GpuProgramParameters::setNamedConstant */
-		void setNamedConstant(const String& name, const Matrix4& m);
-		/** @copydoc GpuProgramParameters::setNamedConstant */
-		void setNamedConstant(const String& name, const Matrix4* m, size_t numEntries);
-		/** @copydoc GpuProgramParameters::setNamedConstant */
-		void setNamedConstant(const String& name, const float *val, size_t count);
-		/** @copydoc GpuProgramParameters::setNamedConstant */
-		void setNamedConstant(const String& name, const double *val, size_t count);
-			/** @copydoc GpuProgramParameters::setNamedConstant */
-		void setNamedConstant(const String& name, const ColourValue& colour);
-		/** @copydoc GpuProgramParameters::setNamedConstant */
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		void setNamedConstant(const String& name, const int *val, size_t count);
 
 		/// Get a pointer to the 'nth' item in the float buffer
 		float* getFloatPointer(size_t pos) { _markDirty(); return &mFloatConstants[pos]; }
 		/// Get a pointer to the 'nth' item in the float buffer
 		const float* getFloatPointer(size_t pos) const { return &mFloatConstants[pos]; }
-<<<<<<< HEAD
 		/// Get a pointer to the 'nth' item in the double buffer
 		double* getDoublePointer(size_t pos) { _markDirty(); return &mDoubleConstants[pos]; }
 		/// Get a pointer to the 'nth' item in the double buffer
 		const double* getDoublePointer(size_t pos) const { return &mDoubleConstants[pos]; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Get a pointer to the 'nth' item in the int buffer
 		int* getIntPointer(size_t pos) { _markDirty(); return &mIntConstants[pos]; }
 		/// Get a pointer to the 'nth' item in the int buffer
 		const int* getIntPointer(size_t pos) const { return &mIntConstants[pos]; }
 
-<<<<<<< HEAD
 		/// Get a reference to the list of float constants
 		const FloatConstantList& getFloatConstantList() const { return mFloatConstants; }
 		/// Get a reference to the list of double constants
 		const DoubleConstantList& getDoubleConstantList() const { return mDoubleConstants; }
 		/// Get a reference to the list of int constants
 		const IntConstantList& getIntConstantList() const { return mIntConstants; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Internal method that the RenderSystem might use to store optional data. */
 		void _setRenderSystemData(const Any& data) const { mRenderSystemData = data; }
@@ -955,11 +828,8 @@ namespace Ogre {
 			ACT_SURFACE_EMISSIVE_COLOUR,
 			/// Surface shininess, as set in Pass::setShininess
 			ACT_SURFACE_SHININESS,
-<<<<<<< HEAD
 			/// Surface alpha rejection value, not as set in Pass::setAlphaRejectionValue, but a floating number between 0.0f and 1.0f instead (255.0f / Pass::getAlphaRejectionValue())
 			ACT_SURFACE_ALPHA_REJECTION_VALUE,
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 
 			/// The number of active light sources (better than gl_MaxLights)
@@ -1080,11 +950,8 @@ namespace Ogre {
 			ACT_LIGHT_NUMBER,
 			/// Returns (int) 1 if the  given light casts shadows, 0 otherwise (index set in extra param)
 			ACT_LIGHT_CASTS_SHADOWS,
-<<<<<<< HEAD
 			/// Returns (int) 1 if the  given light casts shadows, 0 otherwise (index set in extra param)
 			ACT_LIGHT_CASTS_SHADOWS_ARRAY,
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 
 			/** The distance a shadow volume should be extruded when using
@@ -1113,13 +980,10 @@ namespace Ogre {
 			combined with the current world matrix
 			*/
 			ACT_SPOTLIGHT_WORLDVIEWPROJ_MATRIX,
-<<<<<<< HEAD
 			/** An array of the view/projection matrix of a given spotlight projection frustum,
              combined with the current world matrix
              */
 			ACT_SPOTLIGHT_WORLDVIEWPROJ_MATRIX_ARRAY,
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			/// A custom parameter which will come from the renderable, using 'data' as the identifier
 			ACT_CUSTOM,
 			/** provides current elapsed time
@@ -1258,7 +1122,6 @@ namespace Ogre {
 			*/
 			ACT_SHADOW_SCENE_DEPTH_RANGE,
 
-<<<<<<< HEAD
             /** Provides an array of information about the depth range of the scene as viewed
              from a given shadow camera. Requires an index parameter which maps
              to a light index relative to the current light list.
@@ -1266,8 +1129,6 @@ namespace Ogre {
             */
 			ACT_SHADOW_SCENE_DEPTH_RANGE_ARRAY,
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			/** Provides the fixed shadow colour as configured via SceneManager::setShadowColour;
 			useful for integrated modulative shadows.
 			*/
@@ -1303,13 +1164,9 @@ namespace Ogre {
 			*/
 			ACT_LOD_CAMERA_POSITION_OBJECT_SPACE, 
 			/** Binds custom per-light constants to the shaders. */
-<<<<<<< HEAD
 			ACT_LIGHT_CUSTOM,
 
             ACT_UNKNOWN = 999
-=======
-			ACT_LIGHT_CUSTOM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		};
 
 		/** Defines the type of the extra data item used by the auto constant.
@@ -1390,7 +1247,6 @@ namespace Ogre {
 
 		typedef vector<GpuSharedParametersUsage>::type GpuSharedParamUsageList;
 
-<<<<<<< HEAD
 		// Map that store subroutines associated with slots
 		typedef HashMap<unsigned int, String> SubroutineMap;
 		typedef HashMap<unsigned int, String>::const_iterator SubroutineIterator;
@@ -1411,17 +1267,6 @@ namespace Ogre {
 		/** Logical index to physical index map - for low-level programs
 		or high-level programs which pass params this way. */
 		GpuLogicalBufferStructPtr mDoubleLogicalToPhysical;
-=======
-	protected:
-		static AutoConstantDefinition AutoConstantDictionary[];
-		/// Packed list of floating-point constants (physical indexing)
-		FloatConstantList mFloatConstants;
-		/// Packed list of integer constants (physical indexing)
-		IntConstantList mIntConstants;
-		/** Logical index to physical index map - for low-level programs
-		or high-level programs which pass params this way. */
-		GpuLogicalBufferStructPtr mFloatLogicalToPhysical;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Logical index to physical index map - for low-level programs
 		or high-level programs which pass params this way. */
 		GpuLogicalBufferStructPtr mIntLogicalToPhysical;
@@ -1441,14 +1286,10 @@ namespace Ogre {
 		/** Gets the low-level structure for a logical index. 
 		*/
 		GpuLogicalIndexUse* _getFloatConstantLogicalIndexUse(size_t logicalIndex, size_t requestedSize, uint16 variability);
-<<<<<<< HEAD
 		/** Gets the low-level structure for a logical index.
          */
 		GpuLogicalIndexUse* _getDoubleConstantLogicalIndexUse(size_t logicalIndex, size_t requestedSize, uint16 variability);
 		/** Gets the physical buffer index associated with a logical int constant index.
-=======
-		/** Gets the physical buffer index associated with a logical int constant index. 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		GpuLogicalIndexUse* _getIntConstantLogicalIndexUse(size_t logicalIndex, size_t requestedSize, uint16 variability);
 
@@ -1477,11 +1318,7 @@ namespace Ogre {
 		void _setNamedConstants(const GpuNamedConstantsPtr& constantmap);
 
 		/** Internal method for providing a link to a logical index->physical index map for parameters. */
-<<<<<<< HEAD
 		void _setLogicalIndexes(const GpuLogicalBufferStructPtr& floatIndexMap, const GpuLogicalBufferStructPtr& doubleIndexMap,
-=======
-		void _setLogicalIndexes(const GpuLogicalBufferStructPtr& floatIndexMap, 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			const GpuLogicalBufferStructPtr&  intIndexMap);
 
 
@@ -1516,7 +1353,6 @@ namespace Ogre {
 		@param vec The value to set
 		*/
 		void setConstant(size_t index, const Vector3& vec);
-<<<<<<< HEAD
 		/** Sets a 4-element floating-point parameter to the program via Vector2.
          @param index The logical constant index at which to place the parameter (each constant is
          a 4D float).
@@ -1525,8 +1361,6 @@ namespace Ogre {
          @param vec The value to set
          */
 		void setConstant(size_t index, const Vector2& vec);
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Sets a Matrix4 parameter to the program.
 		@param index The logical constant index at which to place the parameter (each constant is
 		a 4D float).
@@ -1635,7 +1469,6 @@ namespace Ogre {
 		@param val The value to set
 		*/
 		void _writeRawConstant(size_t physicalIndex, Real val);
-<<<<<<< HEAD
 		/** Write a variable number of floating-point parameters to the program.
          @note You can use these methods if you have already derived the physical
          constant buffer location, for a slight speed improvement over using
@@ -1644,8 +1477,6 @@ namespace Ogre {
          @param val The value to set
          */
 		void _writeRawConstant(size_t physicalIndex, Real val, size_t count);
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Write a single integer parameter to the program.
 		@note You can use these methods if you have already derived the physical
 		constant buffer location, for a slight speed improvement over using
@@ -1662,7 +1493,6 @@ namespace Ogre {
 		@param vec The value to set
 		*/
 		void _writeRawConstant(size_t physicalIndex, const Vector3& vec);
-<<<<<<< HEAD
 		/** Write a 2-element floating-point parameter to the program via Vector2.
          @note You can use these methods if you have already derived the physical
          constant buffer location, for a slight speed improvement over using
@@ -1671,8 +1501,6 @@ namespace Ogre {
          @param vec The value to set
          */
 		void _writeRawConstant(size_t physicalIndex, const Vector2& vec);
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Write a Matrix4 parameter to the program.
 		@note You can use these methods if you have already derived the physical
 		constant buffer location, for a slight speed improvement over using
@@ -1740,7 +1568,6 @@ namespace Ogre {
 		high-level programs which use logical parameter indexes).
 		@return std::numeric_limits<size_t>::max() if not found
 		*/
-<<<<<<< HEAD
 		/** Get the current list of mappings from low-level logical param indexes
          to physical buffer locations in the double buffer.
          @note
@@ -1759,8 +1586,6 @@ namespace Ogre {
          high-level programs which use logical parameter indexes).
          @return std::numeric_limits<size_t>::max() if not found
          */
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		size_t getIntLogicalIndexForPhysicalIndex(size_t physicalIndex);
 
 		/** Get the current list of mappings from low-level logical param indexes
@@ -1775,15 +1600,12 @@ namespace Ogre {
 		float* getFloatPointer(size_t pos) { return &mFloatConstants[pos]; }
 		/// Get a pointer to the 'nth' item in the float buffer
 		const float* getFloatPointer(size_t pos) const { return &mFloatConstants[pos]; }
-<<<<<<< HEAD
 		/// Get a reference to the list of double constants
 		const DoubleConstantList& getDoubleConstantList() const { return mDoubleConstants; }
 		/// Get a pointer to the 'nth' item in the double buffer
 		double* getDoublePointer(size_t pos) { return &mDoubleConstants[pos]; }
 		/// Get a pointer to the 'nth' item in the double buffer
 		const double* getDoublePointer(size_t pos) const { return &mDoubleConstants[pos]; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Get a reference to the list of int constants
 		const IntConstantList& getIntConstantList() const { return mIntConstants; }
 		/// Get a pointer to the 'nth' item in the int buffer
@@ -1865,16 +1687,12 @@ namespace Ogre {
 		@note Only applicable for low-level programs.
 		*/
 		const AutoConstantEntry* findFloatAutoConstantEntry(size_t logicalIndex);
-<<<<<<< HEAD
 		/** Finds an auto constant that's affecting a given logical parameter
          index for double-point values.
          @note Only applicable for low-level programs.
          */
 		const AutoConstantEntry* findDoubleAutoConstantEntry(size_t logicalIndex);
 		/** Finds an auto constant that's affecting a given logical parameter
-=======
-		/** Finds an auto constant that's affecting a given logical parameter 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		index for integer values.
 		@note Only applicable for low-level programs.
 		*/
@@ -1887,15 +1705,11 @@ namespace Ogre {
 		the floating-point buffer
 		*/
 		const AutoConstantEntry* _findRawAutoConstantEntryFloat(size_t physicalIndex);
-<<<<<<< HEAD
 		/** Finds an auto constant that's affecting a given physical position in
          the double-point buffer
          */
 		const AutoConstantEntry* _findRawAutoConstantEntryDouble(size_t physicalIndex);
 		/** Finds an auto constant that's affecting a given physical position in
-=======
-		/** Finds an auto constant that's affecting a given physical position in 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		the integer buffer
 		*/
 		const AutoConstantEntry* _findRawAutoConstantEntryInt(size_t physicalIndex);
@@ -1959,7 +1773,6 @@ namespace Ogre {
 		@note
 		This named option will only work if you are using a parameters object created
 		from a high-level program (HighLevelGpuProgram).
-<<<<<<< HEAD
         @param name The name of the parameter
 		@param vec The value to set
 		*/
@@ -1969,17 +1782,6 @@ namespace Ogre {
          @param vec The value to set
          */
 		void setNamedConstant(const String& name, const Vector2& vec);
-=======
-		@param index The index at which to place the parameter
-		NB this index refers to the number of floats, so a Vector3 is 3. Note that many 
-		rendersystems & programs assume that every floating point parameter is passed in
-		as a vector of 4 items, so you are strongly advised to check with 
-		RenderSystemCapabilities before using this version - if in doubt use Vector4
-		or ColourValue instead (both are 4D).
-		@param vec The value to set
-		*/
-		void setNamedConstant(const String& name, const Vector3& vec);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Sets a Matrix4 parameter to the program.
 		@param name The name of the parameter
 		@param m The value to set
@@ -2118,7 +1920,6 @@ namespace Ogre {
 		and return std::numeric_limits<size_t>::max() 
 		*/
 		size_t _getFloatConstantPhysicalIndex(size_t logicalIndex, size_t requestedSize, uint16 variability);
-<<<<<<< HEAD
 		/** Gets the physical buffer index associated with a logical double constant index.
          @note Only applicable to low-level programs.
          @param logicalIndex The logical parameter index
@@ -2127,9 +1928,6 @@ namespace Ogre {
          */
 		size_t _getDoubleConstantPhysicalIndex(size_t logicalIndex, size_t requestedSize, uint16 variability);
 		/** Gets the physical buffer index associated with a logical int constant index.
-=======
-		/** Gets the physical buffer index associated with a logical int constant index. 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		@note Only applicable to low-level programs.
 		@param logicalIndex The logical parameter index
 		@param requestedSize The requested size - pass 0 to ignore missing entries
@@ -2233,7 +2031,6 @@ namespace Ogre {
 		*/
 		void _copySharedParams();
 
-<<<<<<< HEAD
 		size_t calculateSize(void) const;
 
 		/** Set subroutine name by slot name
@@ -2247,10 +2044,6 @@ namespace Ogre {
 		/** Get map with 
 		 */
 		const SubroutineMap& getSubroutineMap() const { return mSubroutineMap; }
-=======
-
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	};
 
 	/// Shared pointer used to hold references to GpuProgramParameters instances
@@ -2259,11 +2052,8 @@ namespace Ogre {
 	/** @} */
 	/** @} */
 }
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 

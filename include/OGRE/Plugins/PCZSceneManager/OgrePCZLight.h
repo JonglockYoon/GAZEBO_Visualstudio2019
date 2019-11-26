@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -50,10 +46,6 @@ namespace Ogre
     typedef list<PCZone*>::type ZoneList;
 
     /** Specialized version of Ogre::Light which caches which zones the light affects
-<<<<<<< HEAD
-=======
-    @remarks
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     */
 
     class _OgrePCZPluginExport PCZLight : public Light
@@ -82,19 +74,11 @@ namespace Ogre
         */
         void addZoneToAffectedZonesList(PCZone * zone);
 
-<<<<<<< HEAD
         /** Check if a zone is in the list of zones affected by the light
         */
         bool affectsZone(PCZone * zone);
 
         /** @return Flag indicating if the light affects a zone which is visible
-=======
-        /** check if a zone is in the list of zones affected by the light 
-        */
-        bool affectsZone(PCZone * zone);
-
-        /** returns flag indicating if the light affects a zone which is visible
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         *   in the current frame
         */
         bool affectsVisibleZone(void) {return mAffectsVisibleZone;}
@@ -106,7 +90,6 @@ namespace Ogre
         */
         void updateZones(PCZone * defaultZone, unsigned long frameCount);
 
-<<<<<<< HEAD
         /// Manually remove a zone from the affected list
 		void removeZoneFromAffectedZonesList(PCZone * zone);
 
@@ -121,21 +104,6 @@ namespace Ogre
 
     protected:
         /** Flag indicating if any of the zones in the affectedZonesList is 
-=======
-		void removeZoneFromAffectedZonesList(PCZone * zone); // manually remove a zone from the affected list
-
-		// MovableObject notified when SceneNode changes
-		virtual void _notifyMoved(void);   
-
-		// clear update flag
-		void clearNeedsUpdate(void)   { mNeedsUpdate = false; } 
-
-		// get status of need for update. this checks all affected zones
-		bool getNeedsUpdate(void);   
-
-    protected:
-        /** flag indicating if any of the zones in the affectedZonesList is 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         *   visible in the current frame
         */
         bool mAffectsVisibleZone;
@@ -144,11 +112,7 @@ namespace Ogre
         */
         ZoneList affectedZonesList;
 
-<<<<<<< HEAD
 		/// Flag recording if light has moved, therefore affected list needs updating
-=======
-		// flag recording if light has moved, therefore affected list needs updating 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		bool mNeedsUpdate;   
 	};
 

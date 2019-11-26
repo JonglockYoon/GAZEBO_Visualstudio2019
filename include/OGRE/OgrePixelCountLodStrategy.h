@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -46,7 +42,6 @@ namespace Ogre {
 	/** \addtogroup LOD
 	*  @{
 	*/
-<<<<<<< HEAD
 	/** Abstract base class for level of detail strategy based on pixel count approximations from bounding sphere projection. */
     class _OgreExport PixelCountLodStrategy : public LodStrategy
     {
@@ -57,18 +52,6 @@ namespace Ogre {
     public:
         /** Default constructor. */
         PixelCountLodStrategy(const String& name);
-=======
-	/** Level of detail strategy based on pixel count approximation from bounding sphere projection. */
-    class _OgreExport PixelCountLodStrategy : public LodStrategy, public Singleton<PixelCountLodStrategy>
-    {
-    protected:
-        /// @copydoc LodStrategy::getValueImpl
-        virtual Real getValueImpl(const MovableObject *movableObject, const Camera *camera) const;
-
-    public:
-        /** Default constructor. */
-        PixelCountLodStrategy();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /// @copydoc LodStrategy::getBaseValue
         virtual Real getBaseValue() const;
@@ -87,7 +70,6 @@ namespace Ogre {
 
         /// @copydoc LodStrategy::isSorted
         virtual bool isSorted(const Mesh::LodValueList& values) const;
-<<<<<<< HEAD
     };
 	/** @} */
 	/** @} */
@@ -100,8 +82,6 @@ namespace Ogre {
 
         /// @copydoc LodStrategy::getValueImpl
         Real getValueImpl(const MovableObject *movableObject, const Camera *camera) const;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Override standard Singleton retrieval.
         @remarks
@@ -118,11 +98,7 @@ namespace Ogre {
         but the implementation stays in this single compilation unit,
         preventing link errors.
         */
-<<<<<<< HEAD
         static AbsolutePixelCountLodStrategy& getSingleton(void);
-=======
-        static PixelCountLodStrategy& getSingleton(void);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Override standard Singleton retrieval.
         @remarks
         Why do we do this? Well, it's because the Singleton
@@ -138,7 +114,6 @@ namespace Ogre {
         but the implementation stays in this single compilation unit,
         preventing link errors.
         */
-<<<<<<< HEAD
         static AbsolutePixelCountLodStrategy* getSingletonPtr(void);
     };
     /** @} */
@@ -188,13 +163,6 @@ namespace Ogre {
     };
     /** @} */
     /** @} */
-=======
-        static PixelCountLodStrategy* getSingletonPtr(void);
-
-    };
-	/** @} */
-	/** @} */
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 } // namespace
 

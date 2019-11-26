@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -57,10 +53,6 @@ class _OgreRTSSExport ProgramProcessor : public RTShaderSystemAlloc
 public:	
 
 	/** Class constructor.
-<<<<<<< HEAD
-=======
-	@param type The type of this program.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	ProgramProcessor();
 
@@ -138,11 +130,7 @@ protected:
 		// The actual source parameters count.
 		size_t mSrcParameterCount;
 		// The number of used floats.
-<<<<<<< HEAD
 		int mUsedFloatCount;
-=======
-		size_t mUsedFloatCount;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	};
 	typedef vector<MergeParameter>::type	MergeParameterList;
 
@@ -152,11 +140,7 @@ protected:
 	struct _OgreRTSSExport MergeCombination
 	{		
 		// The count of each source type. I.E (1 FLOAT1, 0 FLOAT2, 1 FLOAT3, 0 FLOAT4).
-<<<<<<< HEAD
 		size_t srcParameterTypeCount[4];
-=======
-		size_t srcParamterTypeCount[4];
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		// Source parameters mask. OPM_ALL means all fields used, otherwise it is split source parameter.
 		int srcParameterMask[4];
 
@@ -166,17 +150,10 @@ protected:
 			int float3Count, int float3Mask,
 			int float4Count, int float4Mask)
 		{
-<<<<<<< HEAD
 			srcParameterTypeCount[0] = float1Count;
 			srcParameterTypeCount[1] = float2Count;
 			srcParameterTypeCount[2] = float3Count;
 			srcParameterTypeCount[3] = float4Count;
-=======
-			srcParamterTypeCount[0] = float1Count;
-			srcParamterTypeCount[1] = float2Count;
-			srcParamterTypeCount[2] = float3Count;
-			srcParamterTypeCount[3] = float4Count;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			srcParameterMask[0] 	= float1Mask;
 			srcParameterMask[1] 	= float2Mask;
 			srcParameterMask[2] 	= float3Mask;
@@ -284,11 +261,7 @@ protected:
 	int mMaxTexCoordSlots;
 	// Maximum texcoord floats count.
 	int mMaxTexCoordFloats;
-<<<<<<< HEAD
     map<Function *, String *>::type  mFunctionMap;           // Map between function signatures and source code
-=======
-    std::map<Function *, String *>  mFunctionMap;           // Map between function signatures and source code
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 };
 

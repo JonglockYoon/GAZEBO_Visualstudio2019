@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,13 +32,9 @@ THE SOFTWARE.
 #include "OgreString.h"
 #include "OgreSharedPtr.h"
 #include "OgreStringInterface.h"
-<<<<<<< HEAD
 #include "OgreAtomicScalar.h"
 #include "Threading/OgreThreadHeaders.h"
 #include "OgreHeaderPrefix.h"
-=======
-#include "OgreAtomicWrappers.h"
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -87,11 +79,7 @@ namespace Ogre {
 	class _OgreExport Resource : public StringInterface, public ResourceAlloc
     {
 	public:
-<<<<<<< HEAD
         OGRE_AUTO_MUTEX; // public to allow external locking
-=======
-		OGRE_AUTO_MUTEX // public to allow external locking
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		class Listener
 		{
 		public:
@@ -102,21 +90,13 @@ namespace Ogre {
 			@deprecated
 				Use loadingComplete instead.
 			*/
-<<<<<<< HEAD
 			OGRE_DEPRECATED virtual void backgroundLoadingComplete(Resource*) {}
-=======
-			virtual void backgroundLoadingComplete(Resource*) {}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 			/** Callback to indicate that background preparing has completed.
 			@deprecated
 				Use preparingComplete instead.
 			*/
-<<<<<<< HEAD
 			OGRE_DEPRECATED virtual void backgroundPreparingComplete(Resource*) {}
-=======
-			virtual void backgroundPreparingComplete(Resource*) {}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 			/** Called whenever the resource finishes loading. 
 			@remarks
@@ -129,11 +109,7 @@ namespace Ogre {
 			virtual void loadingComplete(Resource*) {}
 
 
-<<<<<<< HEAD
 			/** Called whenever the resource finishes preparing (paging into memory).
-=======
-			/** called whenever the resource finishes preparing (paging into memory).
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			@remarks
 				If a Resource has been marked as background loaded (@see Resource::setBackgroundLoaded)
 				the call does not itself occur in the thread which is doing the preparing;
@@ -189,11 +165,7 @@ namespace Ogre {
 
 		typedef set<Listener*>::type ListenerList;
 		ListenerList mListenerList;
-<<<<<<< HEAD
 		OGRE_MUTEX(mListenerListMutex);
-=======
-		OGRE_MUTEX(mListenerListMutex)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Protected unnamed constructor to prevent default construction. 
 		*/
@@ -244,11 +216,6 @@ namespace Ogre {
 			whether this resource is being loaded from a ManualResourceLoader. 
 		*/
 		virtual void unloadImpl(void) = 0;
-<<<<<<< HEAD
-=======
-		/** Calculate the size of a resource; this will only be called after 'load' */
-		virtual size_t calculateSize(void) const = 0;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
     public:
 		/** Standard constructor.
@@ -398,13 +365,8 @@ namespace Ogre {
 		virtual bool isBackgroundLoaded(void) const { return mIsBackgroundLoaded; }
 
 		/** Tells the resource whether it is background loaded or not.
-<<<<<<< HEAD
 
          @see Resource::isBackgroundLoaded. Note that calling this only
-=======
-		@remarks
-			@see Resource::isBackgroundLoaded . Note that calling this only
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			defers the normal on-demand loading behaviour of a resource, it
 			does not actually set up a thread to make sure the resource gets
 			loaded in the background. You should use ResourceBackgroundLoadingQueue
@@ -503,11 +465,8 @@ namespace Ogre {
 		*/
 		virtual void _fireUnloadingComplete(void);
 
-<<<<<<< HEAD
 		/** Calculate the size of a resource; this will only be called after 'load' */
 		virtual size_t calculateSize(void) const;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
     };
 
@@ -576,9 +535,6 @@ namespace Ogre {
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

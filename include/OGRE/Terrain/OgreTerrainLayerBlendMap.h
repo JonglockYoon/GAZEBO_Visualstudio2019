@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -81,18 +77,10 @@ namespace Ogre
 		/** Constructor
 		@param parent The parent terrain
 		@param layerIndex The layer index (should be 1 or higher)
-<<<<<<< HEAD
 		@param buf The buffer holding the data
 		*/
 		TerrainLayerBlendMap(Terrain* parent, uint8 layerIndex, HardwarePixelBuffer* buf);
 		virtual ~TerrainLayerBlendMap();
-=======
-		@param box The region of the blend map to address (in image space)
-		@param buf The buffer holding the data
-		*/
-		TerrainLayerBlendMap(Terrain* parent, uint8 layerIndex, HardwarePixelBuffer* buf);
-		~TerrainLayerBlendMap();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Get the parent terrain
 		Terrain* getParent() const { return mParent; }
 		/// Get the index of the layer this is targeting

@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -41,13 +37,9 @@ THE SOFTWARE.
 
 namespace Ogre
 {
-<<<<<<< HEAD
 
 class GLStateCacheManager;
 
-=======
-    
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 class _OgreGLExport GLSupport
 {
 public:
@@ -80,7 +72,6 @@ public:
     virtual bool supportsPBuffers();
     virtual GLPBuffer *createPBuffer(PixelComponentType format, size_t width, size_t height);
 
-<<<<<<< HEAD
     GLStateCacheManager* getStateCacheManager() const
     {
         return mStateCacheManager;
@@ -91,8 +82,6 @@ public:
         mStateCacheManager = stateCacheMgr;
     }
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     /**
     * Start anything special
     */
@@ -153,11 +142,8 @@ private:
     String mVersion;
     String mVendor;
 
-<<<<<<< HEAD
     GLStateCacheManager* mStateCacheManager;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 }; // class GLSupport
 
 } // namespace Ogre

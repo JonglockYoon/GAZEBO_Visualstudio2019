@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -35,10 +31,7 @@ THE SOFTWARE.
 #include "OgrePrerequisites.h"
 #include "OgreHardwareVertexBuffer.h"
 #include "OgreHardwareIndexBuffer.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 	/** \addtogroup Core
@@ -165,11 +158,7 @@ namespace Ogre {
 			must not include any elements which do not already exist in the 
 			current declaration; you can drop elements by 
 			excluding them from the declaration if you wish, however.
-<<<<<<< HEAD
 		@param bufferUsage Vector of usage flags which indicate the usage options
-=======
-		@param bufferUsages Vector of usage flags which indicate the usage options
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			for each new vertex buffer created. The indexes of the entries must correspond
 			to the buffer binding values referenced in the declaration.
 		@param mgr Optional pointer to the manager to use to create new declarations
@@ -260,17 +249,10 @@ namespace Ogre {
     public:
         IndexData();
         ~IndexData();
-<<<<<<< HEAD
 		/// Pointer to the HardwareIndexBuffer to use, must be specified if useIndexes = true
 		HardwareIndexBufferSharedPtr indexBuffer;
 
 		/// Index in the buffer to start from for this operation
-=======
-		/// pointer to the HardwareIndexBuffer to use, must be specified if useIndexes = true
-		HardwareIndexBufferSharedPtr indexBuffer;
-
-		/// index in the buffer to start from for this operation
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		size_t indexStart;
 
 		/// The number of indexes to use from the buffer
@@ -303,17 +285,8 @@ namespace Ogre {
 	class _OgreExport VertexCacheProfiler : public BufferAlloc
     {
 		public:
-<<<<<<< HEAD
 			VertexCacheProfiler(unsigned int cachesize = 16)
 				: size ( cachesize ), tail (0), buffersize (0), hit (0), miss (0)
-=======
-			enum CacheType {
-				FIFO, LRU
-			};
-
-			VertexCacheProfiler(unsigned int cachesize = 16, CacheType cachetype = FIFO )
-				: size ( cachesize ), type ( cachetype ), tail (0), buffersize (0), hit (0), miss (0)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			{
 				cache = OGRE_ALLOC_T(uint32, size, MEMCATEGORY_GEOMETRY);
 			}
@@ -333,10 +306,6 @@ namespace Ogre {
 		private:
 			unsigned int size;
 			uint32 *cache;
-<<<<<<< HEAD
-=======
-			CacheType type;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 			unsigned int tail, buffersize;
 			unsigned int hit, miss;
@@ -346,11 +315,8 @@ namespace Ogre {
 	/** @} */
 	/** @} */
 }
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 

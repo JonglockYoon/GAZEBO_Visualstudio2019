@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Also see acknowledgements in Readme.html
 
 You may use this sample code for anything you like, it is not covered by the
@@ -47,10 +43,7 @@ D:        Step right
 #include "Ogre.h"
 #include "OgreStringConverter.h"
 #include "OgreException.h"
-<<<<<<< HEAD
 #include "OgreOverlaySystem.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 
 //Use this define to signify OIS will be used as a DLL
@@ -60,11 +53,7 @@ D:        Step right
 
 using namespace Ogre;
 
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
-=======
-#ifdef USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #include "OgreRTShaderSystem.h"
 #endif
 
@@ -149,11 +138,7 @@ public:
 		WindowEventUtilities::addWindowEventListener(mWindow, this);		
 	}
 
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
-=======
-#ifdef USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	virtual void processShaderGeneratorInput()
 	{		
 		// Switch to default scheme.
@@ -454,11 +439,7 @@ public:
 			if( processUnbufferedKeyInput(evt) == false )
 				return false;
 
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
-=======
-#ifdef USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		processShaderGeneratorInput();
 #endif
 

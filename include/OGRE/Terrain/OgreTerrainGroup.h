@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,10 +33,7 @@ THE SOFTWARE.
 #include "OgreTerrain.h"
 #include "OgreWorkQueue.h"
 #include "OgreIteratorWrappers.h"
-<<<<<<< HEAD
 #include "OgreTerrainAutoUpdateLod.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {
@@ -336,11 +329,7 @@ namespace Ogre
 			Terrain* instance;
 
 			TerrainSlot(long _x, long _y) : x(_x), y(_y), instance(0) {}
-<<<<<<< HEAD
 			virtual ~TerrainSlot();
-=======
-			~TerrainSlot();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			void freeInstance();
 		};
 		
@@ -512,7 +501,6 @@ namespace Ogre
 		static const uint32 CHUNK_ID;
 		static const uint16 CHUNK_VERSION;
 
-<<<<<<< HEAD
 		/// Loads terrain's next LOD level.
 		void increaseLodLevel(long x, long y, bool synchronous = false);
 		/// Removes terrain's highest LOD level.
@@ -523,8 +511,6 @@ namespace Ogre
 		void autoUpdateLod(long x, long y, bool synchronous, const Any &data);
 		void autoUpdateLodAll(bool synchronous, const Any &data);
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	protected:
 		SceneManager *mSceneManager;
 		Terrain::Alignment mAlignment;
@@ -537,10 +523,7 @@ namespace Ogre
 		String mFilenamePrefix;
 		String mFilenameExtension;
 		String mResourceGroup;
-<<<<<<< HEAD
 		TerrainAutoUpdateLod *mAutoUpdateLod;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		Terrain::DefaultGpuBufferAllocator mBufferAllocator;
 		
 		/// Get the position of a terrain instance
@@ -557,10 +540,7 @@ namespace Ogre
 		{
 			TerrainSlot* slot;
 			TerrainGroup* origin;
-<<<<<<< HEAD
 			static uint loadingTaskNum;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			_OgreTerrainExport friend std::ostream& operator<<(std::ostream& o, const LoadRequest& r)
 			{ return o; }		
 		};

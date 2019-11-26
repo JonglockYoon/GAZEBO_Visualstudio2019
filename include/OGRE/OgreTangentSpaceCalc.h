@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,10 +33,7 @@ THE SOFTWARE.
 #include "OgreVector2.h"
 #include "OgreVector3.h"
 #include "OgreVertexIndexData.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {
@@ -112,11 +105,7 @@ namespace Ogre
 			tangents using this method, and the 'w' co-ordinate will be populated
 			with the parity of the triangle (+1 or -1), which will allow you to generate
 			the bitangent properly.
-<<<<<<< HEAD
 		@param enabled true to enable 4-component tangents (default false). If you enable
-=======
-		@param enable true to enable 4-component tangents (default false). If you enable
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			this, you will probably also want to enable mirror splitting (see setSplitMirrored), 
 			and your shader must understand how to deal with the parity.
 		*/
@@ -276,10 +265,6 @@ namespace Ogre
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
-=======
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #endif

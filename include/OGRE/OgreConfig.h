@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -49,13 +45,9 @@ THE SOFTWARE.
 1 - RELEASE_EXCEPTIONS - Standard asserts in debug builds, exceptions in release builds
 2 - EXCEPTIONS - Exceptions in debug builds, exceptions in release builds
 */
-<<<<<<< HEAD
 #ifndef OGRE_ASSERT_MODE
 #define OGRE_ASSERT_MODE 0
 #endif
-=======
-#define OGRE_ASSERT_MODE 0
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 /** If set to >0, OGRE will always 'think' that the graphics card only has the
     number of texture units specified. Very useful for testing multipass fallback.
@@ -87,14 +79,6 @@ THE SOFTWARE.
 */
 #define OGRE_MAX_BLEND_WEIGHTS 4
 
-<<<<<<< HEAD
-=======
-/** Define this if you want to link OGRE as a static lib (preferably as a project file)
-*/
-//#define OGRE_STATIC_LIB
-
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 // define the memory allocator configuration to use
 #define OGRE_MEMORY_ALLOCATOR_STD 1
 #define OGRE_MEMORY_ALLOCATOR_NED 2
@@ -186,7 +170,6 @@ WARNING: Use only when you want to provide your own image loading code via codec
 #define OGRE_NO_DDS_CODEC 0
 #endif
 
-<<<<<<< HEAD
 /** Disables use of the internal image codec for loading ETC files.
  WARNING: Use only when you want to provide your own image loading code via codecs.
  */
@@ -194,8 +177,6 @@ WARNING: Use only when you want to provide your own image loading code via codec
 #define OGRE_NO_ETC_CODEC 1
 #endif
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 /** Disables use of the ZIP archive support.
 WARNING: Disabling this will make the samples unusable.
 */
@@ -203,13 +184,4 @@ WARNING: Disabling this will make the samples unusable.
 #define OGRE_NO_ZIP_ARCHIVE 0
 #endif
 
-<<<<<<< HEAD
-=======
-/** Enables the use of the new script compilers when Ogre compiles resource scripts.
-*/
-#ifndef OGRE_USE_NEW_COMPILERS
-#define OGRE_USE_NEW_COMPILERS 1
-#endif
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

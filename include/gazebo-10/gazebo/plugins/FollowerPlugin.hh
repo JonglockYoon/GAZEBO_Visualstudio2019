@@ -35,11 +35,7 @@ namespace gazebo
   /// depth image and commands a differential drive vehicle to move towards the
   /// object. The plugin is essentially an integration of the DiffDrivePlugin
   /// and DepthCameraPlugin.
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE FollowerPlugin : public ModelPlugin
-=======
-  class GAZEBO_VISIBLE FollowerPlugin : public ModelPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Constructor.
     public: FollowerPlugin();

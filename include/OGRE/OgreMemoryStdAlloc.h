@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,10 +34,7 @@ THE SOFTWARE.
 
 #include "OgreAlignedAllocator.h"
 #include "OgreMemoryTracker.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {
@@ -71,11 +64,7 @@ namespace Ogre
 #endif
             )
 		{
-<<<<<<< HEAD
 			void* ptr = new unsigned char[count];
-=======
-			void* ptr = malloc(count);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #if OGRE_MEMORY_TRACKER
 			// this alloc policy doesn't do pools
 			MemoryTracker::get()._recordAlloc(ptr, count, 0, file, line, func);
@@ -88,11 +77,7 @@ namespace Ogre
 #if OGRE_MEMORY_TRACKER
 			MemoryTracker::get()._recordDealloc(ptr);
 #endif
-<<<<<<< HEAD
 			delete[]((unsigned char*)ptr);
-=======
-			free(ptr);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		}
 
 		/// Get the maximum size of a single allocation
@@ -168,10 +153,7 @@ namespace Ogre
 
 }// namespace Ogre
 
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif // __MemoryStdAlloc_H__

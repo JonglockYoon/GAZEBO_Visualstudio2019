@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -51,11 +47,7 @@ namespace Ogre {
     class _OgreParticleFXExport RingEmitter : public AreaEmitter
     {
     public:
-<<<<<<< HEAD
         /// @see AreaEmitter
-=======
-        // See AreaEmitter
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Command object for inner size (see ParamCommand).*/
         class CmdInnerX : public ParamCommand
         {
@@ -73,19 +65,11 @@ namespace Ogre {
 
         RingEmitter(ParticleSystem* psys);
 
-<<<<<<< HEAD
         /// @see ParticleEmitter
         void _initParticle(Particle* pParticle);
 
         /** Sets the size of the clear space inside the area from where NO particles are emitted.
         @param x, y
-=======
-        /** See ParticleEmitter. */
-        void _initParticle(Particle* pParticle);
-
-        /** Sets the size of the clear space inside the area from where NO particles are emitted.
-        @param x,y,z
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             Parametric values describing the proportion of the shape which is hollow in each direction.
             E.g. 0 is solid, 0.5 is half-hollow etc
         */
@@ -109,11 +93,7 @@ namespace Ogre {
         Real getInnerSizeY(void) const;
 
     protected:
-<<<<<<< HEAD
         /// @see ParticleEmitter
-=======
-        // See ParticleEmitter
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         static CmdInnerX msCmdInnerX;
         static CmdInnerY msCmdInnerY;
 

@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -39,7 +35,6 @@ THE SOFTWARE.
 #include "OgreStringVector.h"
 #include "OgreException.h"
 #include <ctime>
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
 
 namespace Ogre {
@@ -50,32 +45,15 @@ namespace Ogre {
     /** \addtogroup Resources
      *  @{
      */
-=======
-
-namespace Ogre {
-
-	/** \addtogroup Core
-	*  @{
-	*/
-	/** \addtogroup Resources
-	*  @{
-	*/
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     /** Information about a file/directory within the archive will be
     returned using a FileInfo struct.
     @see
     Archive
     */
     struct FileInfo {
-<<<<<<< HEAD
         /// The archive in which the file has been found (for info when performing
         /// multi-Archive searches, note you should still open through ResourceGroupManager)
         const Archive* archive;
-=======
-		/// The archive in which the file has been found (for info when performing
-		/// multi-Archive searches, note you should still open through ResourceGroupManager)
-		const Archive* archive;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /// The file's fully qualified name
         String filename;
         /// Path name; separated by '/' and ending with '/'
@@ -114,13 +92,8 @@ namespace Ogre {
         String mName; 
         /// Archive type code
         String mType;
-<<<<<<< HEAD
         /// Read-only flag
         bool mReadOnly;
-=======
-		/// Read-only flag
-		bool mReadOnly;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     public:
 
 
@@ -133,13 +106,8 @@ namespace Ogre {
         */
         virtual ~Archive() {}
 
-<<<<<<< HEAD
         /// Get the name of this archive
         const String& getName(void) const { return mName; }
-=======
-		/// Get the name of this archive
-		const String& getName(void) const { return mName; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /// Returns whether this archive is case sensitive in the way it matches files
         virtual bool isCaseSensitive(void) const = 0;
@@ -160,17 +128,10 @@ namespace Ogre {
         */
         virtual void unload() = 0;
 
-<<<<<<< HEAD
         /** Reports whether this Archive is read-only, or whether the contents
             can be updated. 
         */
         virtual bool isReadOnly() const { return mReadOnly; }
-=======
-		/** Reports whether this Archive is read-only, or whether the contents
-			can be updated. 
-		*/
-		virtual bool isReadOnly() const { return mReadOnly; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Open a stream on a given file. 
         @note
@@ -185,7 +146,6 @@ namespace Ogre {
         */
         virtual DataStreamPtr open(const String& filename, bool readOnly = true) const = 0;
 
-<<<<<<< HEAD
         /** Create a new file (or overwrite one already there). 
             @note If the archive is read-only then this method will fail.
             @param filename The fully qualified name of the file
@@ -199,33 +159,6 @@ namespace Ogre {
             @param filename The fully qualified name of the file
         */
         virtual void remove(const String& filename) const;
-=======
-		/** Create a new file (or overwrite one already there). 
-		@note If the archive is read-only then this method will fail.
-		@param filename The fully qualified name of the file
-		@return A shared pointer to a DataStream which can be used to 
-		read / write the file. 
-		*/
-		virtual DataStreamPtr create(const String& filename) const
-		{
-                        (void)filename;
-			OGRE_EXCEPT(Exception::ERR_NOT_IMPLEMENTED, 
-				"This archive does not support creation of files.", 
-				"Archive::create");
-		}
-
-		/** Delete a named file.
-		@remarks Not possible on read-only archives
-		@param filename The fully qualified name of the file
-		*/
-		virtual void remove(const String& filename) const
-		{
-                        (void)filename;
-			OGRE_EXCEPT(Exception::ERR_NOT_IMPLEMENTED, 
-				"This archive does not support removal of files.", 
-				"Archive::remove");
-		}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** List all file names in the archive.
         @note
@@ -267,13 +200,8 @@ namespace Ogre {
         /** Find out if the named file exists (note: fully qualified filename required) */
         virtual bool exists(const String& filename) = 0; 
 
-<<<<<<< HEAD
         /** Retrieve the modification time of a given file */
         virtual time_t getModifiedTime(const String& filename) = 0; 
-=======
-		/** Retrieve the modification time of a given file */
-		virtual time_t getModifiedTime(const String& filename) = 0; 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 
         /** Find all files or directories matching a given pattern in this
@@ -293,7 +221,6 @@ namespace Ogre {
         const String& getType(void) const { return mType; }
         
     };
-<<<<<<< HEAD
     /** @} */
     /** @} */
 
@@ -301,11 +228,4 @@ namespace Ogre {
 
 #include "OgreHeaderSuffix.h"
 
-=======
-	/** @} */
-	/** @} */
-
-}
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

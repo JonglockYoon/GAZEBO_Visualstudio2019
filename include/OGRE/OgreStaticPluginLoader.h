@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Also see acknowledgements in Readme.html
 
 You may use this sample code for anything you like, it is not covered by the
@@ -43,12 +39,9 @@ Description: Utility class to load plugins statically
 #ifdef OGRE_STATIC_GL
 #  include "OgreGLPlugin.h"
 #endif
-<<<<<<< HEAD
 #ifdef OGRE_STATIC_GL3Plus
 #  include "OgreGL3PlusPlugin.h"
 #endif
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #ifdef OGRE_STATIC_GLES
 #  include "OgreGLESPlugin.h"
 #endif
@@ -103,12 +96,9 @@ namespace Ogre
 #ifdef OGRE_STATIC_GL
 		GLPlugin* mGLPlugin;
 #endif
-<<<<<<< HEAD
 #ifdef OGRE_STATIC_GL3Plus
 		GL3PlusPlugin* mGL3PlusPlugin;
 #endif
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #ifdef OGRE_STATIC_GLES
 		GLESPlugin* mGLESPlugin;
 #endif
@@ -132,13 +122,10 @@ namespace Ogre
 			mGLPlugin = OGRE_NEW GLPlugin();
 			root.installPlugin(mGLPlugin);
 #endif
-<<<<<<< HEAD
 #ifdef OGRE_STATIC_GL3Plus
 			mGL3PlusPlugin = OGRE_NEW GL3PlusPlugin();
 			root.installPlugin(mGL3PlusPlugin);
 #endif
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #ifdef OGRE_STATIC_GLES
 			mGLESPlugin = OGRE_NEW GLESPlugin();
 			root.installPlugin(mGLESPlugin);
@@ -212,12 +199,9 @@ namespace Ogre
 #ifdef OGRE_STATIC_GL
 			OGRE_DELETE mGLPlugin;
 #endif
-<<<<<<< HEAD
 #ifdef OGRE_STATIC_GL3Plus
 			OGRE_DELETE mGL3PlusPlugin;
 #endif
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #ifdef OGRE_STATIC_GLES
 			OGRE_DELETE mGLESPlugin;
 #endif

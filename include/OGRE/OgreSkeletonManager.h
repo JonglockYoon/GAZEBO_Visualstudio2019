@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -59,7 +55,6 @@ namespace Ogre {
         SkeletonManager();
         ~SkeletonManager();
 
-<<<<<<< HEAD
 		/// Create a new skeleton
 		/// @see ResourceManager::createResource
 		SkeletonPtr create (const String& name, const String& group,
@@ -70,8 +65,6 @@ namespace Ogre {
 		/// @see ResourceManager::getResourceByName
 		SkeletonPtr getByName(const String& name, const String& groupName = ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Override standard Singleton retrieval.
         @remarks
         Why do we do this? Well, it's because the Singleton

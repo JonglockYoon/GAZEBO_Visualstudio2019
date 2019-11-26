@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -35,11 +31,8 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 #include "OgreString.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
 #include "Threading/OgreThreadHeaders.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_NACL
 namespace pp
@@ -123,11 +116,7 @@ namespace Ogre {
 
 		class Stream;
 
-<<<<<<< HEAD
 		OGRE_AUTO_MUTEX; // public to allow external locking
-=======
-		OGRE_AUTO_MUTEX // public to allow external locking
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /**
         @remarks
             Usual constructor - called by LogManager.
@@ -178,11 +167,7 @@ namespace Ogre {
         /**
         @remarks
             Register a listener to this log
-<<<<<<< HEAD
         @param listener
-=======
-        @param
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             A valid listener derived class
         */
         void addListener(LogListener* listener);
@@ -190,11 +175,7 @@ namespace Ogre {
         /**
         @remarks
             Unregister a listener from this log
-<<<<<<< HEAD
         @param listener
-=======
-        @param
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             A valid listener derived class
         */
         void removeListener(LogListener* listener);
@@ -281,9 +262,6 @@ namespace Ogre {
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

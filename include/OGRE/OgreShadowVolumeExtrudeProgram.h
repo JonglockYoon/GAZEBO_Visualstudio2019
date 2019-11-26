@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -35,10 +31,7 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 #include "OgreLight.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 	/** \addtogroup Core
@@ -146,76 +139,49 @@ namespace Ogre {
         static String mPointArbvp1;
         static String mPointVs_1_1;
 		static String mPointVs_4_0;
-<<<<<<< HEAD
 		static String mPointVs_glsl;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		static String mPointVs_glsles;
         static String mDirArbvp1;
         static String mDirVs_1_1;
 		static String mDirVs_4_0;
-<<<<<<< HEAD
 		static String mDirVs_glsl;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		static String mDirVs_glsles;
         // same as above, except the color is set to 1 to enable debug volumes to be seen
         static String mPointArbvp1Debug;
         static String mPointVs_1_1Debug;
 		static String mPointVs_4_0Debug;
-<<<<<<< HEAD
 		static String mPointVs_glslDebug;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		static String mPointVs_glslesDebug;
         static String mDirArbvp1Debug;
         static String mDirVs_1_1Debug;
 		static String mDirVs_4_0Debug;
-<<<<<<< HEAD
 		static String mDirVs_glslDebug;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		static String mDirVs_glslesDebug;
 		
         static String mPointArbvp1Finite;
         static String mPointVs_1_1Finite;
 		static String mPointVs_4_0Finite;
-<<<<<<< HEAD
 		static String mPointVs_glslFinite;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		static String mPointVs_glslesFinite;
         static String mDirArbvp1Finite;
         static String mDirVs_1_1Finite;
 		static String mDirVs_4_0Finite;
-<<<<<<< HEAD
 		static String mDirVs_glslFinite;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		static String mDirVs_glslesFinite;
         // same as above, except the color is set to 1 to enable debug volumes to be seen
         static String mPointArbvp1FiniteDebug;
         static String mPointVs_1_1FiniteDebug;
 		static String mPointVs_4_0FiniteDebug;
-<<<<<<< HEAD
 		static String mPointVs_glslFiniteDebug;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		static String mPointVs_glslesFiniteDebug;
         static String mDirArbvp1FiniteDebug;
         static String mDirVs_1_1FiniteDebug;
 		static String mDirVs_4_0FiniteDebug;
-<<<<<<< HEAD
 		static String mDirVs_glslFiniteDebug;
 		static String mDirVs_glslesFiniteDebug;
 
 		static String mGeneralFs_4_0;
 		static String mGeneralFs_glsl;
-=======
-		static String mDirVs_glslesFiniteDebug;
-
-		static String mGeneralFs_4_0;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		static String mGeneralFs_glsles;
 
 		static bool mInitialised;
@@ -255,11 +221,8 @@ namespace Ogre {
         static const String& getPointLightExtruderVs_1_1(void) { return mPointVs_1_1; }
 		/// Get extruder program source for point lights, compatible with vs_4_0
 		static const String& getPointLightExtruderVs_4_0(void) { return mPointVs_4_0; }
-<<<<<<< HEAD
 		/// Get extruder program source for point lights, compatible with glsl
 		static const String& getPointLightExtruderVs_glsl(void) { return mPointVs_glsl; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Get extruder program source for point lights, compatible with glsles
 		static const String& getPointLightExtruderVs_glsles(void) { return mPointVs_glsles; }
         /// Get extruder program source for directional lights, compatible with arbvp1
@@ -268,11 +231,8 @@ namespace Ogre {
         static const String& getDirectionalLightExtruderVs_1_1(void) { return mDirVs_1_1; }
 		/// Get extruder program source for directional lights, compatible with vs_4_0
 		static const String& getDirectionalLightExtruderVs_4_0(void) { return mDirVs_4_0; }
-<<<<<<< HEAD
 		/// Get extruder program source for directional lights, compatible with glsl
 		static const String& getDirectionalLightExtruderVs_glsl(void) { return mDirVs_glsl; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Get extruder program source for directional lights, compatible with glsles
 		static const String& getDirectionalLightExtruderVs_glsles(void) { return mDirVs_glsles; }
 
@@ -282,11 +242,8 @@ namespace Ogre {
         static const String& getPointLightExtruderVs_1_1Debug(void) { return mPointVs_1_1Debug; }
 		/// Get extruder program source for debug point lights, compatible with vs_4_0
 		static const String& getPointLightExtruderVs_4_0Debug(void) { return mPointVs_4_0Debug; }
-<<<<<<< HEAD
 		/// Get extruder program source for debug point lights, compatible with glsl
 		static const String& getPointLightExtruderVs_glslDebug(void) { return mPointVs_glslDebug; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Get extruder program source for debug point lights, compatible with glsles
 		static const String& getPointLightExtruderVs_glslesDebug(void) { return mPointVs_glslesDebug; }
         /// Get extruder program source for debug directional lights, compatible with arbvp1
@@ -295,11 +252,8 @@ namespace Ogre {
         static const String& getDirectionalLightExtruderVs_1_1Debug(void) { return mDirVs_1_1Debug; }
 		/// Get extruder program source for debug directional lights, compatible with vs_4_0
 		static const String& getDirectionalLightExtruderVs_4_0Debug(void) { return mDirVs_4_0Debug; }
-<<<<<<< HEAD
 		/// Get extruder program source for debug directional lights, compatible with glsl
 		static const String& getDirectionalLightExtruderVs_glslDebug(void) { return mDirVs_glslDebug; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Get extruder program source for debug directional lights, compatible with glsles
 		static const String& getDirectionalLightExtruderVs_glslesDebug(void) { return mDirVs_glslesDebug; }
         /// General purpose method to get any of the program sources
@@ -315,11 +269,8 @@ namespace Ogre {
         static const String& getPointLightExtruderVs_1_1Finite(void) { return mPointVs_1_1Finite; }
 		/// Get FINITE extruder program source for point lights, compatible with vs_4_0
 		static const String& getPointLightExtruderVs_4_0Finite(void) { return mPointVs_4_0Finite; }
-<<<<<<< HEAD
 		/// Get FINITE extruder program source for point lights, compatible with glsl
 		static const String& getPointLightExtruderVs_glslFinite(void) { return mPointVs_glslFinite; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Get FINITE extruder program source for point lights, compatible with glsles
 		static const String& getPointLightExtruderVs_glslesFinite(void) { return mPointVs_glslesFinite; }
         /// Get FINITE extruder program source for directional lights, compatible with arbvp1
@@ -328,11 +279,8 @@ namespace Ogre {
         static const String& getDirectionalLightExtruderVs_1_1Finite(void) { return mDirVs_1_1Finite; }
 		/// Get FINITE extruder program source for directional lights, compatible with vs_4_0
 		static const String& getDirectionalLightExtruderVs_4_0Finite(void) { return mDirVs_4_0Finite; }
-<<<<<<< HEAD
 		/// Get FINITE extruder program source for directional lights, compatible with glsl
 		static const String& getDirectionalLightExtruderVs_glslFinite(void) { return mDirVs_glslFinite; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Get FINITE extruder program source for directional lights, compatible with glsles
 		static const String& getDirectionalLightExtruderVs_glslesFinite(void) { return mDirVs_glslesFinite; }
 
@@ -342,11 +290,8 @@ namespace Ogre {
         static const String& getPointLightExtruderVs_1_1FiniteDebug(void) { return mPointVs_1_1FiniteDebug; }
 		/// Get extruder program source for debug point lights, compatible with vs_4_0
 		static const String& getPointLightExtruderVs_4_0FiniteDebug(void) { return mPointVs_4_0FiniteDebug; }
-<<<<<<< HEAD
 		/// Get extruder program source for debug point lights, compatible with glsl
 		static const String& getPointLightExtruderVs_glslFiniteDebug(void) { return mPointVs_glslFiniteDebug; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Get extruder program source for debug point lights, compatible with glsles
 		static const String& getPointLightExtruderVs_glslesFiniteDebug(void) { return mPointVs_glslesFiniteDebug; }
         /// Get FINITE extruder program source for debug directional lights, compatible with arbvp1
@@ -355,11 +300,8 @@ namespace Ogre {
         static const String& getDirectionalLightExtruderVs_1_1FiniteDebug(void) { return mDirVs_1_1FiniteDebug; }
 		/// Get FINITE extruder program source for debug directional lights, compatible with vs_4_0
 		static const String& getDirectionalLightExtruderVs_4_0FiniteDebug(void) { return mDirVs_4_0FiniteDebug; }
-<<<<<<< HEAD
 		/// Get FINITE extruder program source for debug directional lights, compatible with glsl
 		static const String& getDirectionalLightExtruderVs_glslFiniteDebug(void) { return mDirVs_glslFiniteDebug; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Get FINITE extruder program source for debug directional lights, compatible with glsles
 		static const String& getDirectionalLightExtruderVs_glslesFiniteDebug(void) { return mDirVs_glslesFiniteDebug; }
 
@@ -367,10 +309,7 @@ namespace Ogre {
 	/** @} */
 	/** @} */
 }
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

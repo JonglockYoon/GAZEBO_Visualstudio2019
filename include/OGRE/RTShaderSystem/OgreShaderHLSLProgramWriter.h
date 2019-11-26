@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -54,10 +50,6 @@ class _OgreRTSSExport HLSLProgramWriter : public ProgramWriter
 public:
 
 	/** Class constructor. 
-<<<<<<< HEAD
-=======
-	@param language The target shader language.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	HLSLProgramWriter();
 
@@ -89,21 +81,13 @@ protected:
 	void writeUniformParameter(std::ostream& os, UniformParameterPtr parameter);
 
 	/** Write a function parameter. */
-<<<<<<< HEAD
 	void writeFunctionParameter(std::ostream& os, ParameterPtr parameter, const char* forcedSemantic);
-=======
-	void writeFunctionParameter(std::ostream& os, ParameterPtr parameter);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 	/** Write a local parameter. */
 	void writeLocalParameter(std::ostream& os, ParameterPtr parameter);
 
 	/** Write a function declaration. */
-<<<<<<< HEAD
 	void writeFunctionDeclaration(std::ostream& os, Function* function);
-=======
-	void writeFunctionDeclaration(std::ostream& os, Function* function, bool & needToTranslateHlsl4Color, ParameterPtr & colorParameter);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 	/** Write function atom instance. */
 	void writeAtomInstance(std::ostream& os, FunctionAtom* atom);	
@@ -114,10 +98,7 @@ protected:
 
 	// Attributes.
 protected:
-<<<<<<< HEAD
 	bool mIsShaderModel4;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	// Map between GPU constant type to string value.
 	GpuConstTypeToStringMap mGpuConstTypeMap;
 	// Map between parameter semantic to string value.

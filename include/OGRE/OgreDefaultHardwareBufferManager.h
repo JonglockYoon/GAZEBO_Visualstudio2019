@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -35,15 +31,10 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 #include "OgreHardwareBufferManager.h"
-<<<<<<< HEAD
 #include "OgreHardwareCounterBuffer.h"
 #include "OgreHardwareIndexBuffer.h"
 #include "OgreHardwareUniformBuffer.h"
 #include "OgreHardwareVertexBuffer.h"
-=======
-#include "OgreHardwareVertexBuffer.h"
-#include "OgreHardwareIndexBuffer.h"
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 	/** \addtogroup Core
@@ -104,7 +95,6 @@ namespace Ogre {
 
     };
 
-<<<<<<< HEAD
 	/// Specialisation of HardwareUniformBuffer for emulation
 	class _OgreExport DefaultHardwareUniformBuffer : public HardwareUniformBuffer
 	{
@@ -157,18 +147,12 @@ namespace Ogre {
 		void unlock(void);
 	};
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	/** Specialisation of HardwareBufferManagerBase to emulate hardware buffers.
 	@remarks
 		You might want to instantiate this class if you want to utilise
 		classes like MeshSerializer without having initialised the 
 		rendering system (which is required to create a 'real' hardware
-<<<<<<< HEAD
 		buffer manager).
-=======
-		buffer manager.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	*/
 	class _OgreExport DefaultHardwareBufferManagerBase : public HardwareBufferManagerBase
 	{
@@ -179,17 +163,12 @@ namespace Ogre {
 		HardwareVertexBufferSharedPtr 
             createVertexBuffer(size_t vertexSize, size_t numVerts, 
 				HardwareBuffer::Usage usage, bool useShadowBuffer = false);
-<<<<<<< HEAD
 		/// Create a hardware index buffer
-=======
-		/// Create a hardware vertex buffer
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		HardwareIndexBufferSharedPtr 
             createIndexBuffer(HardwareIndexBuffer::IndexType itype, size_t numIndexes, 
 				HardwareBuffer::Usage usage, bool useShadowBuffer = false);
 		/// Create a hardware vertex buffer
 		RenderToVertexBufferSharedPtr createRenderToVertexBuffer();
-<<<<<<< HEAD
 		/// Create a hardware uniform buffer
 		HardwareUniformBufferSharedPtr createUniformBuffer(size_t sizeBytes, 
 									HardwareBuffer::Usage usage = HardwareBuffer::HBU_DYNAMIC_WRITE_ONLY_DISCARDABLE, 
@@ -198,8 +177,6 @@ namespace Ogre {
 		HardwareCounterBufferSharedPtr createCounterBuffer(size_t sizeBytes,
                                                            HardwareBuffer::Usage usage = HardwareBuffer::HBU_DYNAMIC_WRITE_ONLY_DISCARDABLE,
                                                            bool useShadowBuffer = false, const String& name = "");
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
 
 	/// DefaultHardwareBufferManager as a Singleton

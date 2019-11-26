@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -35,18 +31,12 @@ THE SOFTWARE.
 #include "OgreGLPrerequisites.h"
 #include "OgreGpuProgram.h"
 #include "OgreHardwareVertexBuffer.h"
-<<<<<<< HEAD
 #include "OgreGLUniformCache.h"
 
 namespace Ogre {
     namespace GLSL {
 
     /// Structure used to keep track of named uniforms in the linked program object
-=======
-
-namespace Ogre {
-	/// Structure used to keep track of named uniforms in the linked program object
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	struct GLUniformReference
 	{
 		/// GL location handle
@@ -76,10 +66,7 @@ namespace Ogre {
 		GLSLGpuProgram* mGeometryProgram;
 		/// Linked fragment program
 		GLSLGpuProgram* mFragmentProgram;
-<<<<<<< HEAD
         GLUniformCache *mUniformCache;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/// Flag to indicate that uniform references have already been built
 		bool		mUniformRefsBuilt;
@@ -161,10 +148,7 @@ namespace Ogre {
 
 	};
 
-<<<<<<< HEAD
     }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 }
 
 #endif // __GLSLLinkProgram_H__

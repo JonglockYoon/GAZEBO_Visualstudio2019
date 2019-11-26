@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -202,12 +198,6 @@ protected:
 	/** Delete parameter from a given list */
 	void deleteParameter(ShaderParameterList& parameterList, ParameterPtr parameter);
 
-<<<<<<< HEAD
-=======
-	/** Function atom comparison function used to sort atoms. */
-	static int sAtomInstanceCompare(const void * p0, const void *p1);
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 protected:
 	// Function name.
 	String mName;

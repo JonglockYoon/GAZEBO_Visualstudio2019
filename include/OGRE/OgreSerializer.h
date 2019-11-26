@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,10 +32,7 @@ THE SOFTWARE.
 #include "OgrePrerequisites.h"
 #include "OgreString.h"
 #include "OgreDataStream.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -77,11 +70,7 @@ namespace Ogre {
         uint32 mCurrentstreamLen;
         DataStreamPtr mStream;
         String mVersion;
-<<<<<<< HEAD
 		bool mFlipEndian; /// Default to native endian, derive from header
-=======
-		bool mFlipEndian; // default to native endian, derive from header
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         // Internal methods
         virtual void writeFileHeader(void);
@@ -114,12 +103,6 @@ namespace Ogre {
         
         virtual void flipToLittleEndian(void* pData, size_t size, size_t count = 1);
         virtual void flipFromLittleEndian(void* pData, size_t size, size_t count = 1);
-<<<<<<< HEAD
-=======
-        
-        virtual void flipEndian(void * pData, size_t size, size_t count);
-        virtual void flipEndian(void * pData, size_t size);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/// Determine the endianness of the incoming stream compared to native
 		virtual void determineEndianness(DataStreamPtr& stream);
@@ -131,9 +114,6 @@ namespace Ogre {
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #endif

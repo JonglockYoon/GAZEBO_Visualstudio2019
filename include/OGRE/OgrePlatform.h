@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -43,11 +39,8 @@ namespace Ogre {
 #define OGRE_PLATFORM_APPLE_IOS 4
 #define OGRE_PLATFORM_ANDROID 5
 #define OGRE_PLATFORM_NACL 6
-<<<<<<< HEAD
 #define OGRE_PLATFORM_WINRT 7
 #define OGRE_PLATFORM_FLASHCC 8
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #define OGRE_COMPILER_MSVC 1
 #define OGRE_COMPILER_GNUC 2
@@ -64,14 +57,10 @@ namespace Ogre {
 
 /* Finds the compiler type and version.
 */
-<<<<<<< HEAD
 #if (defined( __WIN32__ ) || defined( _WIN32 )) && defined(__ANDROID__) // We are using NVTegra
 #   define OGRE_COMPILER OGRE_COMPILER_GNUC
 #   define OGRE_COMP_VER 470
 #elif defined( __GCCE__ )
-=======
-#if defined( __GCCE__ )
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #   define OGRE_COMPILER OGRE_COMPILER_GCCE
 #   define OGRE_COMP_VER _MSC_VER
 //#	include <staticlibinit_gcce.h> // This is a GCCE toolchain workaround needed when compiling with GCCE 
@@ -113,7 +102,6 @@ namespace Ogre {
 #   define FORCEINLINE __inline
 #endif
 
-<<<<<<< HEAD
 /* define OGRE_NORETURN macro */
 #if OGRE_COMPILER == OGRE_COMPILER_MSVC
 #	define OGRE_NORETURN __declspec(noreturn)
@@ -156,16 +144,6 @@ namespace Ogre {
     // Device                                                     Simulator
     // Both requiring OS version 6.0 or greater
 #   if __ENVIRONMENT_IPHONE_OS_VERSION_MIN_REQUIRED__ >= 60000 || __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
-=======
-/* Finds the current platform */
-
-#if defined( __WIN32__ ) || defined( _WIN32 )
-#   define OGRE_PLATFORM OGRE_PLATFORM_WIN32
-#elif defined( __APPLE_CC__)
-    // Device                                                     Simulator
-    // Both requiring OS version 4.0 or greater
-#   if __ENVIRONMENT_IPHONE_OS_VERSION_MIN_REQUIRED__ >= 40000 || __IPHONE_OS_VERSION_MIN_REQUIRED >= 40000
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #       define OGRE_PLATFORM OGRE_PLATFORM_APPLE_IOS
 #   else
 #       define OGRE_PLATFORM OGRE_PLATFORM_APPLE
@@ -191,11 +169,7 @@ namespace Ogre {
 #endif
 
     /* Find the arch type */
-<<<<<<< HEAD
 #if defined(__x86_64__) || defined(_M_X64) || defined(__powerpc64__) || defined(__alpha__) || defined(__ia64__) || defined(__s390__) || defined(__s390x__) || defined(__arm64__) || defined(__aarch64__) || defined(__mips64) || defined(__mips64_)
-=======
-#if defined(__x86_64__) || defined(_M_X64) || defined(__powerpc64__) || defined(__alpha__) || defined(__ia64__) || defined(__s390__) || defined(__s390x__)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #   define OGRE_ARCH_TYPE OGRE_ARCHITECTURE_64
 #else
 #   define OGRE_ARCH_TYPE OGRE_ARCHITECTURE_32
@@ -208,7 +182,6 @@ namespace Ogre {
 #define OGRE_QUOTE(x) OGRE_QUOTE_INPLACE(x)
 #define OGRE_WARN( x )  message( __FILE__ "(" QUOTE( __LINE__ ) ") : " x "\n" )
 
-<<<<<<< HEAD
 // For marking functions as deprecated
 #if OGRE_COMPILER == OGRE_COMPILER_MSVC
 #   define OGRE_DEPRECATED __declspec(deprecated)
@@ -222,11 +195,6 @@ namespace Ogre {
 //----------------------------------------------------------------------------
 // Windows Settings
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32 || OGRE_PLATFORM == OGRE_PLATFORM_WINRT
-=======
-//----------------------------------------------------------------------------
-// Windows Settings
-#if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 // If we're not including this from a client build, specify that the stuff
 // should get exported. Otherwise, import it.
@@ -277,43 +245,12 @@ namespace Ogre {
 #  define OGRE_UNICODE_SUPPORT 1
 #endif
 
-<<<<<<< HEAD
 #endif // OGRE_PLATFORM == OGRE_PLATFORM_WIN32 || OGRE_PLATFORM == OGRE_PLATFORM_WINRT
 
 //----------------------------------------------------------------------------
 // Linux/Apple/iOS/Android/NaCl Settings
 #if OGRE_PLATFORM == OGRE_PLATFORM_LINUX || OGRE_PLATFORM == OGRE_PLATFORM_APPLE || OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS || \
     OGRE_PLATFORM == OGRE_PLATFORM_ANDROID || OGRE_PLATFORM == OGRE_PLATFORM_NACL || OGRE_PLATFORM == OGRE_PLATFORM_FLASHCC
-=======
-#endif // OGRE_PLATFORM == OGRE_PLATFORM_WIN32
-
-//----------------------------------------------------------------------------
-// Android Settings
-/*
-#if OGRE_PLATFORM == OGRE_PLATFORM_ANDROID
-#   define _OgreExport 
-#	define OGRE_UNICODE_SUPPORT 1
-#   define OGRE_DEBUG_MODE 0
-#   define _OgrePrivate
-#	  define CLOCKS_PER_SEC  1000
-//  pragma def were found here: http://www.inf.pucrs.br/~eduardob/disciplinas/SistEmbarcados/Mobile/Nokia/Tools/Carbide_vs/WINSCW/Help/PDF/C_Compilers_Reference_3.2.pdf
-#	  pragma warn_unusedarg off
-#	  pragma warn_emptydecl off
-#	  pragma warn_possunwant off
-// A quick define to overcome different names for the same function
-#   define stricmp strcasecmp
-#   ifdef DEBUG
-#       define OGRE_DEBUG_MODE 1
-#   else
-#       define OGRE_DEBUG_MODE 0
-#   endif
-#endif
-*/
-//----------------------------------------------------------------------------
-// Linux/Apple/iOs/Android/NaCl Settings
-#if OGRE_PLATFORM == OGRE_PLATFORM_LINUX || OGRE_PLATFORM == OGRE_PLATFORM_APPLE || OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS || \
-    OGRE_PLATFORM == OGRE_PLATFORM_ANDROID || OGRE_PLATFORM == OGRE_PLATFORM_NACL
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 // Enable GCC symbol visibility
 #   if defined( OGRE_GCC_VISIBILITY )
@@ -333,17 +270,6 @@ namespace Ogre {
 #       define OGRE_DEBUG_MODE 0
 #   endif
 
-<<<<<<< HEAD
-=======
-#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
-    #define OGRE_PLATFORM_LIB "OgrePlatform.bundle"
-#elif OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS
-    #define OGRE_PLATFORM_LIB "OgrePlatform.a"
-#else //OGRE_PLATFORM_LINUX
-    #define OGRE_PLATFORM_LIB "libOgrePlatform.so"
-#endif
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 // Always enable unicode support for the moment
 // Perhaps disable in old versions of gcc if necessary
 #define OGRE_UNICODE_SUPPORT 1
@@ -351,7 +277,6 @@ namespace Ogre {
 #endif
 
 //----------------------------------------------------------------------------
-<<<<<<< HEAD
 // Android Settings
 #if OGRE_PLATFORM == OGRE_PLATFORM_ANDROID
 #   ifdef OGRE_UNICODE_SUPPORT
@@ -389,8 +314,6 @@ namespace Ogre {
 #endif
 
 //----------------------------------------------------------------------------
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 // Endian Settings
 // check for BIG_ENDIAN config flag, set OGRE_ENDIAN correctly
 #ifdef OGRE_CONFIG_BIG_ENDIAN
@@ -399,7 +322,6 @@ namespace Ogre {
 #    define OGRE_ENDIAN OGRE_ENDIAN_LITTLE
 #endif
 
-<<<<<<< HEAD
 //----------------------------------------------------------------------------
 // Set the default locale for strings
 #if OGRE_PLATFORM == OGRE_PLATFORM_ANDROID
@@ -418,19 +340,13 @@ namespace Ogre {
 #   define OGRE_BUILD_SUFFIX ""
 #endif
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 // Integer formats of fixed bit width
 typedef unsigned int uint32;
 typedef unsigned short uint16;
 typedef unsigned char uint8;
 typedef int int32;
 typedef short int16;
-<<<<<<< HEAD
 typedef signed char int8;
-=======
-typedef char int8;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 // define uint64 type
 #if OGRE_COMPILER == OGRE_COMPILER_MSVC
 	typedef unsigned __int64 uint64;
@@ -440,7 +356,6 @@ typedef char int8;
 	typedef long long int64;
 #endif
 
-<<<<<<< HEAD
 // Disable these warnings (too much noise)
 #if OGRE_COMPILER == OGRE_COMPILER_MSVC
 #ifndef _CRT_SECURE_NO_WARNINGS
@@ -486,8 +401,6 @@ typedef char int8;
 // We have this issue in OgreMemorySTLAlloc.h - so we see it over and over
 #   pragma warning (disable : 4345)
 #endif
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 }
 

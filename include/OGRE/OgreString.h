@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -33,10 +29,7 @@ THE SOFTWARE.
 #define _String_H__
 
 #include "OgrePrerequisites.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 // If we're using the GCC 3.1 C++ Std lib
 #if OGRE_COMPILER == OGRE_COMPILER_GNUC && OGRE_COMP_VER >= 310 && !defined(STLPORT)
@@ -87,11 +80,7 @@ namespace Ogre {
         /** Removes any whitespace characters, be it standard space or
             TABs and so on.
             @remarks
-<<<<<<< HEAD
                 The user may specify whether they want to trim only the
-=======
-                The user may specify wether they want to trim only the
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
                 beginning or the end of the String ( the default action is
                 to trim both).
         */
@@ -116,11 +105,7 @@ namespace Ogre {
             @param
                 delims A list of delimiter characters to split by
 			@param
-<<<<<<< HEAD
                 doubleDelims A list of double delimeters characters to tokenise by
-=======
-                delims A list of double delimeters characters to tokenise by
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             @param
                 maxSplits The maximum number of splits to perform (0 for unlimited splits). If this
                 parameters is > 0, the splitting process will stop after this many splits, left to right.
@@ -236,9 +221,6 @@ namespace Ogre {
 
 } // namespace Ogre
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif // _String_H__

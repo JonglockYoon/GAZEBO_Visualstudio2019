@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,11 +34,7 @@ THE SOFTWARE.
 #if !defined(NOMINMAX) && defined(_MSC_VER)
 #	define NOMINMAX // required to stop windows.h messing up std::min
 #endif
-<<<<<<< HEAD
 #include <windows.h>
-=======
-#include "windows.h"
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {
@@ -63,7 +55,6 @@ namespace Ogre
         LARGE_INTEGER mStartTime;
         LARGE_INTEGER mFrequency;
 
-<<<<<<< HEAD
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
 		DWORD_PTR mTimerMask;
 #endif
@@ -71,9 +62,6 @@ namespace Ogre
 		DWORD GetTickCount() { return (DWORD)GetTickCount64(); }
 #endif
 
-=======
-		DWORD_PTR mTimerMask;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     public:
 		/** Timer constructor.  MUST be called on same thread that calls getMilliseconds() */
 		Timer();

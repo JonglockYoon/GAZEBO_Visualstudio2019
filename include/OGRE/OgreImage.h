@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -140,7 +136,6 @@ namespace Ogre {
 				</ul>
 				Of course, you will never have multiple faces (cube map) and
 				depth too.
-<<<<<<< HEAD
 			@param data
                 The data pointer
             @param width
@@ -153,52 +148,24 @@ namespace Ogre {
 				Pixel Format
             @param autoDelete
                 If memory associated with this buffer is to be destroyed
-=======
-			@param
-                The data pointer
-            @param
-				Width of image
-            @param
-				Height of image
-			@param
-                Image Depth (in 3d images, numbers of layers, otherwise 1)
-            @param
-				Pixel Format
-            @param
-                if memory associated with this buffer is to be destroyed
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 				with the Image object. Note: it's important that if you set
 				this option to true, that you allocated the memory using OGRE_ALLOC_T
 				with a category of MEMCATEGORY_GENERAL to ensure the freeing of memory 
 				matches up.
-<<<<<<< HEAD
 			@param numFaces
 				The number of faces the image data has inside (6 for cubemaps, 1 otherwise)
             @param numMipMaps
                 The number of mipmaps the image data has inside
-=======
-			@param
-				the number of faces the image data has inside (6 for cubemaps, 1 otherwise)
-            @param
-                the number of mipmaps the image data has inside
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             @note
                  The memory associated with this buffer is NOT destroyed with the
                  Image object, unless autoDelete is set to true.
 			@remarks 
 				The size of the buffer must be numFaces*PixelUtil::getMemorySize(width, height, depth, format)
          */
-<<<<<<< HEAD
 		Image& loadDynamicImage( uchar* data, uint32 width, uint32 height,
 							uint32 depth,
 							 PixelFormat format, bool autoDelete = false, 
 							 size_t numFaces = 1, uint8 numMipMaps = 0);
-=======
-		Image& loadDynamicImage( uchar* data, size_t width, size_t height, 
-							size_t depth,
-							 PixelFormat format, bool autoDelete = false, 
-							 size_t numFaces = 1, size_t numMipMaps = 0);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
 		/** Stores a pointer to raw data in memory. The pixel format has to be specified.
             @remarks
@@ -220,7 +187,6 @@ namespace Ogre {
 				</ul>
 				Of course, you will never have multiple faces (cube map) and
 				depth too.
-<<<<<<< HEAD
             @param data
                 The data pointer
             @param width
@@ -228,15 +194,6 @@ namespace Ogre {
             @param height
 				Height of image
             @param format
-=======
-            @param
-                The data pointer
-            @param
-				Width of image
-            @param
-				Height of image
-            @param
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 				Pixel Format
             @note
                  The memory associated with this buffer is NOT destroyed with the
@@ -245,13 +202,8 @@ namespace Ogre {
 				Image::loadDynamicImage(data, width, height, depth, format, ...) to be compatible
 				with future Ogre versions.
          */
-<<<<<<< HEAD
  		Image& loadDynamicImage( uchar* data, uint32 width,
 								 uint32 height, PixelFormat format)
-=======
- 		Image& loadDynamicImage( uchar* data, size_t width,
-								 size_t height, PixelFormat format)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		{
 			return loadDynamicImage(data, width, height, 1, format);
 		}
@@ -276,11 +228,7 @@ namespace Ogre {
         */
         Image & loadRawData( 
             DataStreamPtr& stream, 
-<<<<<<< HEAD
             uint32 width, uint32 height, uint32 depth,
-=======
-            size_t width, size_t height, size_t depth,
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             PixelFormat format,
 			size_t numFaces = 1, size_t numMipMaps = 0);
         /** Loads raw data from a stream. The pixel format has to be specified. 
@@ -304,11 +252,7 @@ namespace Ogre {
         */
         Image & loadRawData( 
             DataStreamPtr& stream, 
-<<<<<<< HEAD
             uint32 width, uint32 height,
-=======
-            size_t width, size_t height, 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             PixelFormat format )
 		{
 			return loadRawData(stream, width, height, 1, format);
@@ -381,11 +325,7 @@ namespace Ogre {
 			codec to use. Can be left blank if the stream data includes
 			a header to identify the data.
 		*/
-<<<<<<< HEAD
 		Image & loadTwoImagesAsRGBA(DataStreamPtr& rgbStream, DataStreamPtr& alphaStream, PixelFormat format = PF_BYTE_RGBA,
-=======
-		Image & loadTwoImagesAsRGBA(DataStreamPtr& rgbStream, DataStreamPtr& alphaStream, PixelFormat = PF_BYTE_RGBA,
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			const String& rgbType = StringUtil::BLANK, const String& alphaType = StringUtil::BLANK);
 
 		/** Utility method to combine 2 separate images into this one, with the first
@@ -439,11 +379,7 @@ namespace Ogre {
 
         /** Returns the number of mipmaps contained in the image.
         */
-<<<<<<< HEAD
         uint8 getNumMipmaps() const;
-=======
-        size_t getNumMipmaps() const;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Returns true if the image has the appropriate flag set.
         */
@@ -451,7 +387,6 @@ namespace Ogre {
 
         /** Gets the width of the image in pixels.
         */
-<<<<<<< HEAD
         uint32 getWidth(void) const;
 
         /** Gets the height of the image in pixels.
@@ -461,17 +396,6 @@ namespace Ogre {
         /** Gets the depth of the image.
         */
         uint32 getDepth(void) const;
-=======
-        size_t getWidth(void) const;
-
-        /** Gets the height of the image in pixels.
-        */
-        size_t getHeight(void) const;
-
-        /** Gets the depth of the image.
-        */
-        size_t getDepth(void) const;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		
 		/** Get the number of faces of the image. This is usually 6 for a cubemap, and
 		    1 for a normal image.
@@ -544,19 +468,13 @@ namespace Ogre {
 		/** Resize a 2D image, applying the appropriate filter. */
 		void resize(ushort width, ushort height, Filter filter = FILTER_BILINEAR);
 		
-<<<<<<< HEAD
         /// Static function to calculate size in bytes from the number of mipmaps, faces and the dimensions
         static size_t calculateSize(size_t mipmaps, size_t faces, uint32 width, uint32 height, uint32 depth, PixelFormat format);
-=======
-        // Static function to calculate size in bytes from the number of mipmaps, faces and the dimensions
-        static size_t calculateSize(size_t mipmaps, size_t faces, size_t width, size_t height, size_t depth, PixelFormat format);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/// Static function to get an image type string from a stream via magic numbers
 		static String getFileExtFromMagic(DataStreamPtr stream);
 
     protected:
-<<<<<<< HEAD
         /// The width of the image in pixels
 		uint32 mWidth;
         /// The height of the image in pixels
@@ -578,29 +496,6 @@ namespace Ogre {
 		uchar* mBuffer;
 
 		/// A bool to determine if we delete the buffer or the calling app does
-=======
-        // The width of the image in pixels
-	size_t mWidth;
-        // The height of the image in pixels
-	size_t mHeight;
-        // The depth of the image
-	size_t mDepth;
-        // The size of the image buffer
-	size_t mBufSize;
-        // The number of mipmaps the image contains
-	size_t mNumMipmaps;
-        // Image specific flags.
-	int mFlags;
-
-        // The pixel format of the image
-	PixelFormat mFormat;
-
-        // The number of bytes per pixel
-	uchar mPixelSize;
-	uchar* mBuffer;
-
-		// A bool to determine if we delete the buffer or the calling app does
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		bool mAutoDelete;
     };
 

@@ -4,11 +4,7 @@
  (Object-oriented Graphics Rendering Engine)
  For the latest info, see http://www.ogre3d.org/
  
-<<<<<<< HEAD
  Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
- Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +29,6 @@
 #define __Sample_H__
 
 #include "Ogre.h"
-<<<<<<< HEAD
 #include "OgreOverlaySystem.h"
 #include <iostream>
 
@@ -43,38 +38,19 @@
 #ifdef INCLUDE_RTSHADER_SYSTEM
 #	include "OgreRTShaderSystem.h"
 #endif //INCLUDE_RTSHADER_SYSTEM
-=======
-#include <iostream>
-
-#include "OIS.h"
-
-#ifdef USE_RTSHADER_SYSTEM
-#	include "OgreRTShaderSystem.h"
-#endif //USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS
 #	include "macUtils.h"
 #endif
 
-<<<<<<< HEAD
 #if OGRE_PLATFORM == OGRE_PLATFORM_NACL && !defined(INCLUDE_RTSHADER_SYSTEM)
 #   define INCLUDE_RTSHADER_SYSTEM
-=======
-#if OGRE_PLATFORM == OGRE_PLATFORM_NACL && !defined(USE_RTSHADER_SYSTEM)
-#   define USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #include "OgreShaderGenerator.h"
 #endif
 
 
 namespace OgreBites
 {
-<<<<<<< HEAD
-=======
-	class FileSystemLayer;
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	/*=============================================================================
 	| Base class responsible for everything specific to one sample.
 	| Designed to be subclassed for each sample.
@@ -82,10 +58,6 @@ namespace OgreBites
 	class Sample : public Ogre::GeneralAllocatedObject
     {
     public:
-<<<<<<< HEAD
-=======
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/*=============================================================================
 		| Utility comparison structure for sorting samples using SampleSet.
 		=============================================================================*/
@@ -102,11 +74,7 @@ namespace OgreBites
 			}
 		};
 
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
-=======
-#ifdef USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		Sample() : mShaderGenerator(0)
 #else
 		Sample()
@@ -119,16 +87,6 @@ namespace OgreBites
 			mResourcesLoaded = false;
 			mContentSetup = false;
 
-<<<<<<< HEAD
-=======
-#if (OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS) || (OGRE_PLATFORM == OGRE_PLATFORM_ANDROID)
-			mMouse = 0;
-			mAccelerometer = 0;
-#else
-			mKeyboard = 0;
-			mMouse = 0;
-#endif
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			mFSLayer = 0;
         }
 
@@ -179,7 +137,6 @@ namespace OgreBites
 		/*-----------------------------------------------------------------------------
 		| Sets up a sample. Used by the SampleContext class. Do not call directly.
 		-----------------------------------------------------------------------------*/
-<<<<<<< HEAD
 		virtual void _setup(Ogre::RenderWindow* window, InputContext inputContext, Ogre::FileSystemLayer* fsLayer, Ogre::OverlaySystem* overlaySys)
 		{
 			// assign mRoot here in case Root was initialised after the Sample's constructor ran.
@@ -187,21 +144,6 @@ namespace OgreBites
 			mOverlaySystem = overlaySys;
 			mWindow = window;
 			mInputContext = inputContext;
-=======
-#if (OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS) || (OGRE_PLATFORM == OGRE_PLATFORM_ANDROID)
-		virtual void _setup(Ogre::RenderWindow* window, OIS::MultiTouch* mouse, FileSystemLayer* fsLayer)
-#else
-		virtual void _setup(Ogre::RenderWindow* window, OIS::Keyboard* keyboard, OIS::Mouse* mouse, FileSystemLayer* fsLayer)
-#endif
-		{
-			// assign mRoot here in case Root was initialised after the Sample's constructor ran.
-			mRoot = Ogre::Root::getSingletonPtr();
-			mWindow = window;
-#if (OGRE_PLATFORM != OGRE_PLATFORM_APPLE_IOS) && (OGRE_PLATFORM != OGRE_PLATFORM_ANDROID)
-			mKeyboard = keyboard;
-#endif
-			mMouse = mouse;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			mFSLayer = fsLayer;
 
 			locateResources();
@@ -233,16 +175,10 @@ namespace OgreBites
 			mResourcesLoaded = false;
 			if (mSceneMgr) 
 			{
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
 				mShaderGenerator->removeSceneManager(mSceneMgr);
 #endif
 				mSceneMgr->removeRenderQueueListener(mOverlaySystem);
-=======
-#ifdef USE_RTSHADER_SYSTEM
-				mShaderGenerator->removeSceneManager(mSceneMgr);
-#endif
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 				mRoot->destroySceneManager(mSceneMgr);				
 			}
 			mSceneMgr = 0;
@@ -315,17 +251,11 @@ namespace OgreBites
 		virtual void createSceneManager()
 		{
 			mSceneMgr = Ogre::Root::getSingleton().createSceneManager(Ogre::ST_GENERIC);
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
 			mShaderGenerator->addSceneManager(mSceneMgr);
 #endif
             if(mOverlaySystem)
                 mSceneMgr->addRenderQueueListener(mOverlaySystem);
-=======
-#ifdef USE_RTSHADER_SYSTEM
-			mShaderGenerator->addSceneManager(mSceneMgr);
-#endif
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		}
 
 		/*-----------------------------------------------------------------------------
@@ -359,32 +289,16 @@ namespace OgreBites
 		}	
 
 		Ogre::Root* mRoot;                // OGRE root object
-<<<<<<< HEAD
 		Ogre::OverlaySystem* mOverlaySystem; // OverlaySystem
 		Ogre::RenderWindow* mWindow;      // context render window
 		InputContext mInputContext;
 		Ogre::FileSystemLayer* mFSLayer; 		  // file system abstraction layer
-=======
-		Ogre::RenderWindow* mWindow;      // context render window
-#if (OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS) || (OGRE_PLATFORM == OGRE_PLATFORM_ANDROID)
-		OIS::MultiTouch* mMouse;          // context multitouch device
-		OIS::JoyStick* mAccelerometer;    // context accelerometer device
-#else
-		OIS::Keyboard* mKeyboard;         // context keyboard device
-		OIS::Mouse* mMouse;               // context mouse device
-#endif
-		FileSystemLayer* mFSLayer; 		  // file system abstraction layer
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		Ogre::SceneManager* mSceneMgr;    // scene manager for this sample
 		Ogre::NameValuePairList mInfo;    // custom sample info
 		bool mDone;                       // flag to mark the end of the sample
 		bool mResourcesLoaded;    // whether or not resources have been loaded
 		bool mContentSetup;       // whether or not scene was created
-<<<<<<< HEAD
 #ifdef INCLUDE_RTSHADER_SYSTEM
-=======
-#ifdef USE_RTSHADER_SYSTEM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		Ogre::RTShader::ShaderGenerator*			mShaderGenerator;			// The Shader generator instance.
     public:
 		void setShaderGenerator(Ogre::RTShader::ShaderGenerator* shaderGenerator) 

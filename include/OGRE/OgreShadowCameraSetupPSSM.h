@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Copyright (c) 2006 Matthias Fink, netAllied GmbH <matthias.fink@web.de>								
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,10 +31,7 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 #include "OgreShadowCameraSetupLiSPSM.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {
@@ -67,11 +60,7 @@ namespace Ogre
 		typedef vector<Real>::type OptimalAdjustFactorList;
 
 	protected:
-<<<<<<< HEAD
 		uint mSplitCount;
-=======
-		size_t mSplitCount;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		SplitPointList mSplitPoints;
 		OptimalAdjustFactorList mOptimalAdjustFactors;
 		Real mSplitPadding;
@@ -89,11 +78,7 @@ namespace Ogre
 		@param farDist The far plane to use for the last split
 		@param lambda Factor to use to reduce the split size 
 		*/
-<<<<<<< HEAD
 		void calculateSplitPoints(uint splitCount, Real nearDist, Real farDist, Real lambda = 0.95);
-=======
-		void calculateSplitPoints(size_t splitCount, Real nearDist, Real farDist, Real lambda = 0.95);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/** Manually configure a new splitting scheme.
 		@param newSplitPoints A list which is splitCount + 1 entries long, containing the
@@ -118,11 +103,7 @@ namespace Ogre
 		*/
 		Real getSplitPadding() const { return mSplitPadding; }
 		/// Get the number of splits. 
-<<<<<<< HEAD
 		uint getSplitCount() const { return mSplitCount; }
-=======
-		size_t getSplitCount() const { return mSplitCount; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/// Returns a LiSPSM shadow camera with PSSM splits base on iteration.
 		virtual void getShadowCamera(const Ogre::SceneManager *sm, const Ogre::Camera *cam,
@@ -143,10 +124,7 @@ namespace Ogre
 	/** @} */
 	/** @} */
 }
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

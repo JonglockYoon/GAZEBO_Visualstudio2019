@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -40,10 +36,7 @@ THE SOFTWARE.
 #include "OgreIteratorWrappers.h"
 #include "OgreScriptLoader.h"
 #include "OgreResourceGroupManager.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -91,11 +84,7 @@ namespace Ogre {
 		typedef map<String, ParticleEmitterFactory*>::type ParticleEmitterFactoryMap;
 		typedef map<String, ParticleSystemRendererFactory*>::type ParticleSystemRendererFactoryMap;
     protected:
-<<<<<<< HEAD
 		OGRE_AUTO_MUTEX;
-=======
-		OGRE_AUTO_MUTEX
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			
         /// Templates based on scripts
         ParticleTemplateMap mSystemTemplates;
@@ -157,13 +146,8 @@ namespace Ogre {
             Note that the object passed to this function will not be destroyed by the ParticleSystemManager,
             since it may have been allocated on a different heap in the case of plugins. The caller must
             destroy the object later on, probably on plugin shutdown.
-<<<<<<< HEAD
         @param factory
             Pointer to a ParticleEmitterFactory subclass created by the plugin or application code.
-=======
-        @param
-            factory Pointer to a ParticleEmitterFactory subclass created by the plugin or application code.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         void addEmitterFactory(ParticleEmitterFactory* factory);
 
@@ -181,13 +165,8 @@ namespace Ogre {
             Note that the object passed to this function will not be destroyed by the ParticleSystemManager,
             since it may have been allocated on a different heap in the case of plugins. The caller must
             destroy the object later on, probably on plugin shutdown.
-<<<<<<< HEAD
         @param factory
             Pointer to a ParticleAffectorFactory subclass created by the plugin or application code.
-=======
-        @param
-            factory Pointer to a ParticleAffectorFactory subclass created by the plugin or application code.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         void addAffectorFactory(ParticleAffectorFactory* factory);
 
@@ -196,13 +175,8 @@ namespace Ogre {
             Note that the object passed to this function will not be destroyed by the ParticleSystemManager,
             since it may have been allocated on a different heap in the case of plugins. The caller must
             destroy the object later on, probably on plugin shutdown.
-<<<<<<< HEAD
         @param factory
             Pointer to a ParticleSystemRendererFactory subclass created by the plugin or application code.
-=======
-        @param
-            factory Pointer to a ParticleSystemRendererFactory subclass created by the plugin or application code.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		void addRendererFactory(ParticleSystemRendererFactory* factory);
 
@@ -215,19 +189,11 @@ namespace Ogre {
             Note that particle system templates can either be created programmatically by an application 
             and registered using this method, or they can be defined in a script file (*.particle) which is
             loaded by the engine at startup, very much like Material scripts.
-<<<<<<< HEAD
         @param name
             The name of the template. Must be unique across all templates.
         @param sysTemplate
             A pointer to a particle system to be used as a template. The manager
             will take over ownership of this pointer.
-=======
-        @param
-            name The name of the template. Must be unique across all templates.
-        @param
-            sysTemplate A pointer to a particle system to be used as a template. The manager
-                will take over ownership of this pointer.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             
         */
         void addTemplate(const String& name, ParticleSystem* sysTemplate);
@@ -237,30 +203,18 @@ namespace Ogre {
             This method removes a given template from the particle system manager, optionally deleting
             the template if the deleteTemplate method is called.  Throws an exception if the template
             could not be found.
-<<<<<<< HEAD
         @param name
             The name of the template to remove.
         @param deleteTemplate
             Whether or not to delete the template before removing it.
-=======
-        @param
-            name The name of the template to remove.
-        @param
-            deleteTemplate Whether or not to delete the template before removing it.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         void removeTemplate(const String& name, bool deleteTemplate = true);
 
         /** Removes a specified template from the ParticleSystemManager.
         @remarks
             This method removes all templates from the ParticleSystemManager.
-<<<<<<< HEAD
         @param deleteTemplate
             Whether or not to delete the templates before removing them.
-=======
-        @param
-            deleteTemplate Whether or not to delete the templates before removing them.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         void removeAllTemplates(bool deleteTemplate = true);
 
@@ -268,13 +222,8 @@ namespace Ogre {
         /** Removes all templates that belong to a secific Resource Group from the ParticleSystemManager.
         @remarks
             This method removes all templates that belong in a particular resource group from the ParticleSystemManager.
-<<<<<<< HEAD
         @param resourceGroup
             Resource group to delete templates for
-=======
-        @param
-            resourceGroup to delete templates for
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         void removeTemplatesByResourceGroup(const String& resourceGroup);
 
@@ -283,19 +232,11 @@ namespace Ogre {
             This method is similar to the addTemplate method, except this just creates a new template
             and returns a pointer to it to be populated. Use this when you don't already have a system
             to add as a template and just want to create a new template which you will build up in-place.
-<<<<<<< HEAD
         @param name
             The name of the template. Must be unique across all templates.
         @param resourceGroup
             The name of the resource group which will be used to 
             load any dependent resources.
-=======
-        @param
-            name The name of the template. Must be unique across all templates.
-        @param
-            resourceGroup The name of the resource group which will be used to 
-                load any dependent resources.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             
         */
         ParticleSystem* createTemplate(const String& name, const String& resourceGroup);
@@ -312,17 +253,10 @@ namespace Ogre {
             Used internally by the engine to create new ParticleEmitter instances from named
             factories. Applications should use the ParticleSystem::addEmitter method instead, 
             which calls this method to create an instance.
-<<<<<<< HEAD
         @param emitterType
             String name of the emitter type to be created. A factory of this type must have been registered.
         @param psys
             The particle system this is being created for
-=======
-        @param
-            emitterType String name of the emitter type to be created. A factory of this type must have been registered.
-        @param 
-            psys The particle system this is being created for
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         ParticleEmitter* _createEmitter(const String& emitterType, ParticleSystem* psys);
 
@@ -331,13 +265,8 @@ namespace Ogre {
             Because emitters are created by factories which may allocate memory from separate heaps,
             the memory allocated must be freed from the same place. This method is used to ask the factory
             to destroy the instance passed in as a pointer.
-<<<<<<< HEAD
         @param emitter
             Pointer to emitter to be destroyed. On return this pointer will point to invalid (freed) memory.
-=======
-        @param
-            emitter Pointer to emitter to be destroyed. On return this pointer will point to invalid (freed) memory.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         void _destroyEmitter(ParticleEmitter* emitter);
 
@@ -346,17 +275,10 @@ namespace Ogre {
             Used internally by the engine to create new ParticleAffector instances from named
             factories. Applications should use the ParticleSystem::addAffector method instead, 
             which calls this method to create an instance.
-<<<<<<< HEAD
         @param affectorType
             String name of the affector type to be created. A factory of this type must have been registered.
         @param psys
             The particle system it is being created for
-=======
-        @param
-            effectorType String name of the affector type to be created. A factory of this type must have been registered.
-        @param
-            psys The particle system it is being created for
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         ParticleAffector* _createAffector(const String& affectorType, ParticleSystem* psys);
 
@@ -365,13 +287,8 @@ namespace Ogre {
             Because affectors are created by factories which may allocate memory from separate heaps,
             the memory allocated must be freed from the same place. This method is used to ask the factory
             to destroy the instance passed in as a pointer.
-<<<<<<< HEAD
         @param affector
             Pointer to affector to be destroyed. On return this pointer will point to invalid (freed) memory.
-=======
-        @param
-            affector Pointer to affector to be destroyed. On return this pointer will point to invalid (freed) memory.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         void _destroyAffector(ParticleAffector* affector);
 
@@ -380,13 +297,8 @@ namespace Ogre {
             Used internally by the engine to create new ParticleSystemRenderer instances from named
             factories. Applications should use the ParticleSystem::setRenderer method instead, 
             which calls this method to create an instance.
-<<<<<<< HEAD
         @param rendererType
             String name of the renderer type to be created. A factory of this type must have been registered.
-=======
-        @param
-            rendererType String name of the renderer type to be created. A factory of this type must have been registered.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         ParticleSystemRenderer* _createRenderer(const String& rendererType);
 
@@ -395,13 +307,8 @@ namespace Ogre {
             Because renderer are created by factories which may allocate memory from separate heaps,
             the memory allocated must be freed from the same place. This method is used to ask the factory
             to destroy the instance passed in as a pointer.
-<<<<<<< HEAD
         @param renderer
             Pointer to renderer to be destroyed. On return this pointer will point to invalid (freed) memory.
-=======
-        @param
-            renderer Pointer to renderer to be destroyed. On return this pointer will point to invalid (freed) memory.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         void _destroyRenderer(ParticleSystemRenderer* renderer);
 
@@ -496,10 +403,7 @@ namespace Ogre {
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 

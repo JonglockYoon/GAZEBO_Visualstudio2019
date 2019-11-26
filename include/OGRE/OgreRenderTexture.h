@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -33,13 +29,8 @@ THE SOFTWARE.
 #define __RenderTexture_H__
 
 #include "OgrePrerequisites.h"
-<<<<<<< HEAD
 #include "OgreRenderTarget.h"
 #include "OgreHeaderPrefix.h"
-=======
-
-#include "OgreRenderTarget.h"
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {    
@@ -57,11 +48,7 @@ namespace Ogre
     class _OgreExport RenderTexture: public RenderTarget
     {
     public:
-<<<<<<< HEAD
         RenderTexture(HardwarePixelBuffer *buffer, uint32 zoffset);
-=======
-        RenderTexture(HardwarePixelBuffer *buffer, size_t zoffset);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         virtual ~RenderTexture();
 
 		virtual void copyContentsToMemory(const PixelBox &dst, FrameBuffer buffer);
@@ -69,11 +56,7 @@ namespace Ogre
 
 	protected:
 		HardwarePixelBuffer *mBuffer;
-<<<<<<< HEAD
 		uint32 mZOffset;
-=======
-		size_t mZOffset;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
 
 	/** This class represents a render target that renders to multiple RenderTextures
@@ -143,15 +126,9 @@ namespace Ogre
 	protected:
 		BoundSufaceList mBoundSurfaces;
 
-<<<<<<< HEAD
 		/// Implementation of bindSurface, must be provided
 		virtual void bindSurfaceImpl(size_t attachment, RenderTexture *target) = 0;
 		/// Implementation of unbindSurface, must be provided
-=======
-		/// implementation of bindSurface, must be provided
-		virtual void bindSurfaceImpl(size_t attachment, RenderTexture *target) = 0;
-		/// implementation of unbindSurface, must be provided
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		virtual void unbindSurfaceImpl(size_t attachment) = 0;
 
 
@@ -160,9 +137,6 @@ namespace Ogre
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

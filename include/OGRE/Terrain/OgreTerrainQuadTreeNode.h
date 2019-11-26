@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -92,11 +88,7 @@ namespace Ogre
 		/** Constructor.
 		@param terrain The ultimate parent terrain
 		@param parent Optional parent node (in which case xoff, yoff are 0 and size must be entire terrain)
-<<<<<<< HEAD
 		@param xoff, yoff Offsets from the start of the terrain data in 2D
-=======
-		@param xoff,off Offsets from the start of the terrain data in 2D
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		@param size The size of the node in vertices at the highest LOD
 		@param lod The base LOD level
 		@param depth The depth that this node is at in the tree (or convenience)
@@ -129,7 +121,6 @@ namespace Ogre
 		void prepare(StreamSerialiser& stream);
 		/// Load node and children (perform GPU tasks, will be render thread)
 		void load();
-<<<<<<< HEAD
 		/// Load node and children in a depth range (perform GPU tasks, will be render thread)
 		void load(uint16 depthStart, uint16 depthEnd);
 		void loadSelf();
@@ -137,10 +128,6 @@ namespace Ogre
 		void unload();
 		/// Unload node and children in a depth range (perform GPU tasks, will be render thread)
 		void unload(uint16 depthStart, uint16 depthEnd);
-=======
-		/// Unload node and children (perform GPU tasks, will be render thread)
-		void unload();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// Unprepare node and children (perform CPU tasks, may be background thread)
 		void unprepare();
 		/// Save node to a stream
@@ -161,11 +148,7 @@ namespace Ogre
 			/// The cFactor value used to calculate transitionDist
 			Real lastCFactor;
 
-<<<<<<< HEAD
 			LodLevel() : batchSize(0), gpuIndexData(0), maxHeightDelta(0), calcMaxHeightDelta(0),
-=======
-			LodLevel() : gpuIndexData(0), maxHeightDelta(0), calcMaxHeightDelta(0),
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 				lastTransitionDist(0), lastCFactor(0) {}
 		};
 		typedef vector<LodLevel*>::type LodLevelList;
@@ -289,30 +272,17 @@ namespace Ogre
 
 		uint16 mOffsetX, mOffsetY;
 		uint16 mBoundaryX, mBoundaryY;
-<<<<<<< HEAD
 		/// The number of vertices at the original terrain resolution this node encompasses
-=======
-		/// the number of vertices at the original terrain resolution this node encompasses
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		uint16 mSize;
 		uint16 mBaseLod;
 		uint16 mDepth;
 		uint16 mQuadrant;
-<<<<<<< HEAD
 		Vector3 mLocalCentre; /// Relative to terrain centre
 		AxisAlignedBox mAABB; /// Relative to mLocalCentre
 		Real mBoundingRadius; /// Relative to mLocalCentre
 		int mCurrentLod; /// -1 = none (do not render)
 		unsigned short mMaterialLodIndex;
 		float mLodTransition; /// 0-1 transition to lower LOD
-=======
-		Vector3 mLocalCentre; // relative to terrain centre
-		AxisAlignedBox mAABB; //relative to mLocalCentre
-		Real mBoundingRadius; //relative to mLocalCentre
-		int mCurrentLod; // -1 = none (do not render)
-		unsigned short mMaterialLodIndex;
-		float mLodTransition; // 0-1 transition to lower LOD
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/// The child with the largest height delta 
 		TerrainQuadTreeNode* mChildWithMaxHeightDelta;
 		bool mSelfOrChildRendered;
@@ -321,15 +291,9 @@ namespace Ogre
 		{
 			VertexData* cpuVertexData;
 			VertexData* gpuVertexData;
-<<<<<<< HEAD
 			/// Resolution of the data compared to the base terrain data (NOT number of vertices!)
 			uint16 resolution;
 			/// Size of the data along one edge
-=======
-			/// resolution of the data compared to the base terrain data (NOT number of vertices!)
-			uint16 resolution;
-			/// size of the data along one edge
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			uint16 size;
 			/// Number of quadtree levels (including this one) this data applies to
 			uint16 treeLevels;
@@ -342,12 +306,8 @@ namespace Ogre
 
 			VertexDataRecord(uint16 res, uint16 sz, uint16 lvls) 
 				: cpuVertexData(0), gpuVertexData(0), resolution(res), size(sz),
-<<<<<<< HEAD
 				treeLevels(lvls), numSkirtRowsCols(0),
                 skirtRowColSkip(0), gpuVertexDataDirty(false) {}
-=======
-				treeLevels(lvls), gpuVertexDataDirty(false) {}
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		};
 		
 		TerrainQuadTreeNode* mNodeWithVertexData;
@@ -378,11 +338,7 @@ namespace Ogre
 			TerrainQuadTreeNode* mParent;
 		public:
 			Movable(TerrainQuadTreeNode* parent);
-<<<<<<< HEAD
 			virtual ~Movable();
-=======
-			~Movable();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			
 	        // necessary overrides
 			const String& getMovableType(void) const;
@@ -407,11 +363,7 @@ namespace Ogre
 			TerrainQuadTreeNode* mParent;
 		public:
 			Rend(TerrainQuadTreeNode* parent);
-<<<<<<< HEAD
 			virtual ~Rend();
-=======
-			~Rend();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 			const MaterialPtr& getMaterial(void) const;
 			Technique* getTechnique(void) const;

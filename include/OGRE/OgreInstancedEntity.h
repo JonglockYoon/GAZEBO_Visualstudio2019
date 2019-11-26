@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -34,10 +30,7 @@ THE SOFTWARE.
 
 #include "OgreMovableObject.h"
 #include "OgreNode.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre
 {
@@ -145,17 +138,12 @@ namespace Ogre
 		void createSkeletonInstance();
 		void destroySkeletonInstance();
 
-<<<<<<< HEAD
 		/// When this entity is a slave, stopSharingTransform delegates to this function.
 		///	nofityMaster = false is used to prevent iterator invalidation in specific cases.
 		void stopSharingTransformAsSlave( bool notifyMaster );
 
 		/// Just unlinks, and tells our master we're no longer sharing
 		void unlinkTransform( bool notifyMaster=true );
-=======
-		/// Just unlinks, and tells our master we're no longer sharing
-		void unlinkTransform();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 		/// Called when a slave has unlinked from us
 		void notifyUnlink( const InstancedEntity *slave );
@@ -210,11 +198,7 @@ namespace Ogre
             when not attached to a scene node */
 		Real getSquaredViewDepth( const Camera* cam ) const;
 
-<<<<<<< HEAD
 		/// Overridden so we can tell the InstanceBatch it needs to update it's bounds
-=======
-		/// Overriden so we can tell the InstanceBatch it needs to update it's bounds
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		void _notifyMoved(void);
 		void _notifyAttached( Node* parent, bool isTagPoint = false );
 
@@ -290,7 +274,6 @@ namespace Ogre
 			return mInUse;
 		}
 
-<<<<<<< HEAD
 		/** Sets the custom parameter for this instance @see InstanceManager::setNumCustomParams
 			Because not all techniques support custom params, and some users may not need it while
 			using millions of InstancedEntities, the params have been detached from InstancedEntity
@@ -309,11 +292,4 @@ namespace Ogre
 
 #include "OgreHeaderSuffix.h"
 
-=======
-
-
-	};
-}
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

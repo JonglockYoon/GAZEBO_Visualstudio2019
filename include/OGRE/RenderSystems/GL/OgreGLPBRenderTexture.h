@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -79,11 +75,7 @@ namespace Ogre {
         
         /** Create PBuffer for a certain pixel format and size
         */
-<<<<<<< HEAD
         void requestPBuffer(PixelComponentType ctype, uint32 width, uint32 height);
-=======
-        void requestPBuffer(PixelComponentType ctype, size_t width, size_t height);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         
         /** Release PBuffer for a certain pixel format
         */
@@ -91,11 +83,7 @@ namespace Ogre {
         
         /** Get GL rendering context for a certain component type and size.
         */
-<<<<<<< HEAD
         GLContext *getContextFor(PixelComponentType ctype, uint32 width, uint32 height);
-=======
-        GLContext *getContextFor(PixelComponentType ctype, size_t width, size_t height);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     protected:
         /** GLSupport reference, used to create PBuffers */
         GLSupport *mSupport;

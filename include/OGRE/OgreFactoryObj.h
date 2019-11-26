@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,7 +32,6 @@ THE SOFTWARE.
 
 namespace Ogre {
 
-<<<<<<< HEAD
     /** \addtogroup Core
     *  @{
     */
@@ -44,15 +39,6 @@ namespace Ogre {
     *  @{
     */
     /** Abstract factory class. Does nothing by itself, but derived classes can add
-=======
-	/** \addtogroup Core
-	*  @{
-	*/
-	/** \addtogroup General
-	*  @{
-	*/
-	/** Abstract factory class. Does nothing by itself, but derived classes can add
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         functionality.
     */
     template< typename T > class FactoryObj
@@ -61,13 +47,8 @@ namespace Ogre {
         virtual ~FactoryObj() {}
 
         /** Returns the factory type.
-<<<<<<< HEAD
         @return
             The factory type.
-=======
-            @return
-                The factory type.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         virtual const String& getType() const = 0;
 
@@ -77,7 +58,6 @@ namespace Ogre {
             An object created by the factory. The type of the object depends on
             the factory.
         */
-<<<<<<< HEAD
         virtual T* createInstance(const String& name) = 0;
         /** Destroys an object which was created by this factory.
         @param ptr Pointer to the object to destroy
@@ -90,17 +70,3 @@ namespace Ogre {
 } // namespace Ogre
 
 #endif // _FactoryObj_H__
-=======
-        virtual T* createInstance( const String& name ) = 0;    
-        /** Destroys an object which was created by this factory.
-        @param ptr Pointer to the object to destroy
-        */
-        virtual void destroyInstance( T* ) = 0;    
-    };
-
-	/** @} */
-	/** @} */
-} // namespace
-
-#endif
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14

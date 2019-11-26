@@ -48,11 +48,7 @@ namespace gazebo
   /// \endverbatim
   ///
   /// See worlds/blink_visual.world for a complete example.
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE BlinkVisualPlugin : public VisualPlugin
-=======
-  class GAZEBO_VISIBLE BlinkVisualPlugin : public VisualPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Constructor.
     public: BlinkVisualPlugin();

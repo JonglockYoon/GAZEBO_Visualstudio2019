@@ -4,11 +4,7 @@ This source file is a part of OGRE
 
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -30,13 +26,10 @@ THE SOFTWARE
 #ifndef __OgreThreadHeaders_H__
 #define __OgreThreadHeaders_H__
 
-<<<<<<< HEAD
 #if !defined(NOMINMAX) && defined(_MSC_VER)
 #	define NOMINMAX // required to stop windows.h messing up std::min
 #endif
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #if OGRE_THREAD_PROVIDER == 1
 	#include "OgreThreadHeadersBoost.h"
 #elif OGRE_THREAD_PROVIDER == 2
@@ -45,11 +38,8 @@ THE SOFTWARE
 	#include "OgreThreadHeadersTBB.h"
 #endif
 
-<<<<<<< HEAD
 #include "OgreThreadDefines.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 
 

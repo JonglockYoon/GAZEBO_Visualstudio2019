@@ -36,11 +36,7 @@ namespace gazebo
   /// The message format is PosesStamped. The pose's x and y position fields are
   /// the image coordinates of the center of the detected fiducial, and the
   /// orientation is currently always an identity quaternion.
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE FiducialCameraPlugin : public SensorPlugin
-=======
-  class GAZEBO_VISIBLE FiducialCameraPlugin : public SensorPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Constructor
     public: FiducialCameraPlugin();

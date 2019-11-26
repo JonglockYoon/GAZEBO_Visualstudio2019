@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -54,11 +50,7 @@ protected:
     /// @copydoc ResourceManager::createImpl
     Resource* createImpl(const String& name, ResourceHandle handle, 
         const String& group, bool isManual, ManualResourceLoader* loader,
-<<<<<<< HEAD
         const NameValuePairList* createParams);
-=======
-        const NameValuePairList* params);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     /// Specialised create method with specific parameters
     Resource* createImpl(const String& name, ResourceHandle handle, 
         const String& group, bool isManual, ManualResourceLoader* loader,

@@ -52,11 +52,7 @@ namespace gazebo
   ///              API documentation for more details.
   /// <use_cache>  Use model in gazebo model path if exists, otherwise
   ///              recreate the model and save it in <HOME>/.gazebo/models
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE StaticMapPlugin : public WorldPlugin
-=======
-  class GAZEBO_VISIBLE StaticMapPlugin : public WorldPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Constructor.
     public: StaticMapPlugin();

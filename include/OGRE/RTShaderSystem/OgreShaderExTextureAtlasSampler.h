@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -182,7 +178,6 @@ protected:
 
 // Attributes.
 protected:
-<<<<<<< HEAD
 	/// The index of the information on the texture in the table
 	ParameterPtr mVSInpTextureTableIndex;
 	
@@ -206,30 +201,6 @@ protected:
 	/// Tells if the data in mAtlasTableData has been uploaded to the corresponding mVSTextureTable parameter
 	bool mIsTableDataUpdated;
 	/// Tells whether border issue handling uses auto adjust polling position.
-=======
-	// The index of the information on the texture in the table
-	ParameterPtr mVSInpTextureTableIndex;
-	
-	TextureUnitState::UVWAddressingMode mTextureAddressings[TAS_MAX_TEXTURES]; // The addressing mode for each texture
-	// The position and size of the texture in the atlas 
-	ParameterPtr mVSOutTextureDatas[TAS_MAX_TEXTURES];
-	// The position and size of the texture in the atlas
-	ParameterPtr mPSInpTextureDatas[TAS_MAX_TEXTURES];
-	//A parameter carrying the sizes of the atlas textures
-	UniformParameterPtr mPSTextureSizes[TAS_MAX_TEXTURES];
-	// The table containing information on the textures in the atlas
-	UniformParameterPtr mVSTextureTable[TAS_MAX_TEXTURES];
-
-	//The position of the texture coordinates containing the index information 
-	ushort mAtlasTexcoordPos; 
-	//The texture atlas table data
-	TextureAtlasTablePtr mAtlasTableDatas[TAS_MAX_TEXTURES];
-	//For each texture unit in the pass tells if it uses atlas texture
-	bool mIsAtlasTextureUnits[TAS_MAX_TEXTURES];
-	//Tells if the data in mAtlasTableData has been uploaded to the corresponding mVSTextureTable parameter
-	bool mIsTableDataUpdated;
-	//Tells whether border issue handling uses auto adjust polling position.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	bool mAutoAdjustPollPosition;
 };
 
@@ -296,7 +267,6 @@ public:
 		# <original texture filename>/t/t<atlas filename>, <atlas idx>, <atlas type>, <woffset>, <hoffset>, <depth offset>, <width>, <height>
 	
 		@param filename The full path to the file containing a ".tai" format data.
-<<<<<<< HEAD
 		@param textureAtlasTable A table into which the data in the stream will be filled. This
 			parameter will be filled only if it is not null. The system factory keeps a copy of this
 			information in any case.
@@ -312,30 +282,17 @@ public:
 		in the texture atlas. Each line has the following format:
 		# <original texture filename>/t/t<atlas filename>, <atlas idx>, <atlas type>, <woffset>, <hoffset>, <depth offset>, <width>, <height>
 	
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		@param stream A stream to a file containing ".tai" format data
 		@param textureAtlasTable A table into which the data in the stream will be filled. This
 			parameter will be filled only if it is not null. The system factory keeps a copy of this
 			information in any case.
-<<<<<<< HEAD
 	*/
-=======
-		@param autoBorderAdjust Sets whether to automatically adjust the image polling area for border 
-			issues.See the Border issues paragraph under the class documentation for more information.
-	*/
-	bool addTexutreAtlasDefinition( const Ogre::String& filename, TextureAtlasTablePtr textureAtlasTable = TextureAtlasTablePtr());
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	bool addTexutreAtlasDefinition( DataStreamPtr stream, TextureAtlasTablePtr textureAtlasTable = TextureAtlasTablePtr());
 
 	/**
 		Set the texture atlas information for a given texture
 		@param textureName Name of an atlas texture
-<<<<<<< HEAD
 		@param atlasData A list of records containing the position and size of each 
-=======
-		@param atlasData a list of records containing the position and size of each 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			texture in the atlas
 		@param autoBorderAdjust Sets whether to automatically adjust the image polling area for border 
 			issues.See the Border issues paragraph under the class documentation for more information.

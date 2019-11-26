@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -34,14 +30,11 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 
-<<<<<<< HEAD
 #ifndef __has_builtin
     // Compatibility with non-clang compilers
     #define __has_builtin(x) 0
 #endif
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 namespace Ogre {
 	/** \addtogroup Core
 	*  @{
@@ -54,7 +47,6 @@ namespace Ogre {
     */
     class Bitwise {
     public:
-<<<<<<< HEAD
         /** Returns value with reversed bytes order.
         */
         static FORCEINLINE uint16 bswap16(uint16 arg)
@@ -127,8 +119,6 @@ namespace Ogre {
             }
         }
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Returns the most significant bit set in a value.
         */
         static FORCEINLINE unsigned int mostSignificantBitSet(unsigned int value)
@@ -284,7 +274,6 @@ namespace Ogre {
         static inline unsigned int intRead(const void *src, int n) {
             switch(n) {
                 case 1:
-<<<<<<< HEAD
                     return ((const uint8*)src)[0];
                 case 2:
                     return ((const uint16*)src)[0];
@@ -300,23 +289,6 @@ namespace Ogre {
 #endif
                 case 4:
                     return ((const uint32*)src)[0];
-=======
-                    return ((uint8*)src)[0];
-                case 2:
-                    return ((uint16*)src)[0];
-                case 3:
-#if OGRE_ENDIAN == OGRE_ENDIAN_BIG      
-                    return ((uint32)((uint8*)src)[0]<<16)|
-                            ((uint32)((uint8*)src)[1]<<8)|
-                            ((uint32)((uint8*)src)[2]);
-#else
-                    return ((uint32)((uint8*)src)[0])|
-                            ((uint32)((uint8*)src)[1]<<8)|
-                            ((uint32)((uint8*)src)[2]<<16);
-#endif
-                case 4:
-                    return ((uint32*)src)[0];
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             } 
             return 0; // ?
         }

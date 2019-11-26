@@ -4,11 +4,7 @@ This source file is a part of OGRE
 
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -27,17 +23,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE
 -------------------------------------------------------------------------*/
-<<<<<<< HEAD
 // ATTENTION: No header guard as this header is meant to be included
 // multiple times.
 //#ifndef __OgreHeaderPrefix_H__
 //#define __OgreHeaderPrefix_H__
-=======
-#ifndef __OgreHeaderPrefix_H__
-#define __OgreHeaderPrefix_H__
-
-#include "OgrePrerequisites.h"
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #if OGRE_COMPILER == OGRE_COMPILER_MSVC
 
@@ -79,11 +68,7 @@ THE SOFTWARE
 
 // disable: "conditional expression constant", always occurs on 
 // OGRE_MUTEX_CONDITIONAL when no threading enabled
-<<<<<<< HEAD
 #   pragma warning (disable : 4127)
-=======
-#   pragma warning (disable : 201)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 // disable: "unreferenced formal parameter"
 // Many versions of VC have bugs which generate this error in cases where they shouldn't
@@ -92,10 +77,6 @@ THE SOFTWARE
 #endif
 
 
-<<<<<<< HEAD
 //#endif
-=======
-#endif
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 

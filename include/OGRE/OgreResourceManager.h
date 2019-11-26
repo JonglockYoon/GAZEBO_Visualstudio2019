@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -41,7 +37,6 @@ THE SOFTWARE.
 #include "OgreDataStream.h"
 #include "OgreStringVector.h"
 #include "OgreScriptLoader.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
 
 namespace Ogre {
@@ -94,11 +89,6 @@ namespace Ogre {
 		}
 	};
 
-=======
-
-namespace Ogre {
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	/** \addtogroup Core
 	*  @{
 	*/
@@ -132,11 +122,7 @@ namespace Ogre {
 	class _OgreExport ResourceManager : public ScriptLoader, public ResourceAlloc
     {
     public:
-<<<<<<< HEAD
         OGRE_AUTO_MUTEX; // public to allow external locking
-=======
-		OGRE_AUTO_MUTEX // public to allow external locking
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         ResourceManager();
         virtual ~ResourceManager();
 
@@ -159,11 +145,7 @@ namespace Ogre {
         @param createParams If any parameters are required to create an instance,
             they should be supplied here as name / value pairs
         */
-<<<<<<< HEAD
         virtual ResourcePtr createResource(const String& name, const String& group,
-=======
-        virtual ResourcePtr create(const String& name, const String& group, 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             bool isManual = false, ManualResourceLoader* loader = 0, 
             const NameValuePairList* createParams = 0);
 
@@ -176,13 +158,8 @@ namespace Ogre {
 			in one call so there are no race conditions if using multiple
 			threads that could cause getByName() to return null, but create() to
 			fail because another thread created a resource in between.
-<<<<<<< HEAD
 		@see ResourceManager::createResource
 		@see ResourceManager::getResourceByName
-=======
-		@see ResourceManager::create
-		@see ResourceManager::getByName
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		@return A pair, the first element being the pointer, and the second being 
 			an indicator specifying whether the resource was newly created.
 		*/
@@ -198,11 +175,7 @@ namespace Ogre {
                 is not permanent and the Resource is not destroyed; it simply needs to be reloaded when
                 next used.
         */
-<<<<<<< HEAD
         virtual void setMemoryBudget(size_t bytes);
-=======
-        virtual void setMemoryBudget( size_t bytes);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Get the limit on the amount of memory this resource handler may use.
         */
@@ -375,11 +348,7 @@ namespace Ogre {
 
         /** Retrieves a pointer to a resource by name, or null if the resource does not exist.
         */
-<<<<<<< HEAD
         virtual ResourcePtr getResourceByName(const String& name, const String& groupName = ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);
-=======
-        virtual ResourcePtr getByName(const String& name, const String& groupName = ResourceGroupManager::AUTODETECT_RESOURCE_GROUP_NAME);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         /** Retrieves a pointer to a resource by handle, or null if the resource does not exist.
         */
         virtual ResourcePtr getByHandle(ResourceHandle handle);
@@ -387,11 +356,7 @@ namespace Ogre {
 		/// Returns whether the named resource exists in this manager
 		virtual bool resourceExists(const String& name)
 		{
-<<<<<<< HEAD
 			return !getResourceByName(name).isNull();
-=======
-			return !getByName(name).isNull();
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		}
 		/// Returns whether a resource with the given handle exists in this manager
 		virtual bool resourceExists(ResourceHandle handle)
@@ -567,11 +532,7 @@ namespace Ogre {
 		virtual void addImpl( ResourcePtr& res );
 		/** Remove a resource from this manager; remove it from the lists. */
 		virtual void removeImpl( ResourcePtr& res );
-<<<<<<< HEAD
 		/** Checks memory usage and pages out if required. This is automatically done after a new resource is loaded.
-=======
-		/** Checks memory usage and pages out if required.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		virtual void checkUsage(void);
 
@@ -584,15 +545,9 @@ namespace Ogre {
         ResourceHandleMap mResourcesByHandle;
         ResourceMap mResources;
 		ResourceWithGroupMap mResourcesWithGroup;
-<<<<<<< HEAD
         size_t mMemoryBudget; /// In bytes
         AtomicScalar<ResourceHandle> mNextHandle;
         AtomicScalar<size_t> mMemoryUsage; /// In bytes
-=======
-        ResourceHandle mNextHandle;
-        size_t mMemoryBudget; // In bytes
-        AtomicScalar<size_t> mMemoryUsage; // In bytes
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         bool mVerbose;
 
@@ -619,24 +574,13 @@ namespace Ogre {
 	protected:
 		typedef map<String, ResourcePool*>::type ResourcePoolMap;
 		ResourcePoolMap mResourcePoolMap;
-<<<<<<< HEAD
     };
 
-=======
-
-
-    
-
-    };
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	/** @} */
 	/** @} */
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

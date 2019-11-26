@@ -4,11 +4,7 @@ This source file is a part of OGRE
 
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -30,7 +26,6 @@ THE SOFTWARE
 #ifndef __OgreThreadDefinesBoost_H__
 #define __OgreThreadDefinesBoost_H__
 
-<<<<<<< HEAD
 #define OGRE_TOKEN_PASTE(x, y) x ## y
 #define OGRE_TOKEN_PASTE_EXTRA(x, y) OGRE_TOKEN_PASTE(x, y)
 
@@ -67,31 +62,6 @@ THE SOFTWARE
 #define OGRE_RW_MUTEX(name) mutable boost::shared_mutex name
 #define OGRE_LOCK_RW_MUTEX_READ(name) boost::shared_lock<boost::shared_mutex> OGRE_TOKEN_PASTE_EXTRA(ogrenameLock, __LINE__) (name)
 #define OGRE_LOCK_RW_MUTEX_WRITE(name) boost::unique_lock<boost::shared_mutex> OGRE_TOKEN_PASTE_EXTRA(ogrenameLock, __LINE__) (name)
-=======
-#define OGRE_AUTO_MUTEX mutable boost::recursive_mutex OGRE_AUTO_MUTEX_NAME;
-#define OGRE_LOCK_AUTO_MUTEX boost::recursive_mutex::scoped_lock ogreAutoMutexLock(OGRE_AUTO_MUTEX_NAME);
-#define OGRE_MUTEX(name) mutable boost::recursive_mutex name;
-#define OGRE_STATIC_MUTEX(name) static boost::recursive_mutex name;
-#define OGRE_STATIC_MUTEX_INSTANCE(name) boost::recursive_mutex name;
-#define OGRE_LOCK_MUTEX(name) boost::recursive_mutex::scoped_lock ogrenameLock(name);
-#define OGRE_LOCK_MUTEX_NAMED(mutexName, lockName) boost::recursive_mutex::scoped_lock lockName(mutexName);
-// like OGRE_AUTO_MUTEX but mutex held by pointer
-#define OGRE_AUTO_SHARED_MUTEX mutable boost::recursive_mutex *OGRE_AUTO_MUTEX_NAME;
-#define OGRE_LOCK_AUTO_SHARED_MUTEX assert(OGRE_AUTO_MUTEX_NAME); boost::recursive_mutex::scoped_lock ogreAutoMutexLock(*OGRE_AUTO_MUTEX_NAME);
-#define OGRE_NEW_AUTO_SHARED_MUTEX assert(!OGRE_AUTO_MUTEX_NAME); OGRE_AUTO_MUTEX_NAME = new boost::recursive_mutex();
-#define OGRE_DELETE_AUTO_SHARED_MUTEX assert(OGRE_AUTO_MUTEX_NAME); delete OGRE_AUTO_MUTEX_NAME;
-#define OGRE_COPY_AUTO_SHARED_MUTEX(from) assert(!OGRE_AUTO_MUTEX_NAME); OGRE_AUTO_MUTEX_NAME = from;
-#define OGRE_SET_AUTO_SHARED_MUTEX_NULL OGRE_AUTO_MUTEX_NAME = 0;
-#define OGRE_MUTEX_CONDITIONAL(mutex) if (mutex)
-#define OGRE_THREAD_SYNCHRONISER(sync) boost::condition sync;
-#define OGRE_THREAD_WAIT(sync, mutex, lock) sync.wait(lock);
-#define OGRE_THREAD_NOTIFY_ONE(sync) sync.notify_one(); 
-#define OGRE_THREAD_NOTIFY_ALL(sync) sync.notify_all(); 
-// Read-write mutex
-#define OGRE_RW_MUTEX(name) mutable boost::shared_mutex name;
-#define OGRE_LOCK_RW_MUTEX_READ(name) boost::shared_lock<boost::shared_mutex> ogrenameLock(name)
-#define OGRE_LOCK_RW_MUTEX_WRITE(name) boost::unique_lock<boost::shared_mutex> ogrenameLock(name)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 // Thread-local pointer
 #define OGRE_THREAD_POINTER(T, var) boost::thread_specific_ptr<T> var
 #define OGRE_THREAD_POINTER_INIT(var) var(&deletePtr)
@@ -101,21 +71,13 @@ THE SOFTWARE
 #define OGRE_THREAD_POINTER_DELETE(var) var.reset(0)
 // Thread objects and related functions
 #define OGRE_THREAD_TYPE boost::thread
-<<<<<<< HEAD
 #define OGRE_THREAD_CREATE(name, worker) boost::thread* name = OGRE_NEW_T(boost::thread, MEMCATEGORY_GENERAL)(worker)
-=======
-#define OGRE_THREAD_CREATE(name, worker) boost::thread* name = OGRE_NEW_T(boost::thread, MEMCATEGORY_GENERAL)(worker);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #define OGRE_THREAD_DESTROY(name) OGRE_DELETE_T(name, thread, MEMCATEGORY_GENERAL)
 #define OGRE_THREAD_HARDWARE_CONCURRENCY boost::thread::hardware_concurrency()
 #define OGRE_THREAD_CURRENT_ID boost::this_thread::get_id()
 #define OGRE_THREAD_WORKER_INHERIT
 // Utility
-<<<<<<< HEAD
 #define OGRE_THREAD_ID_TYPE boost::thread::id
 #define OGRE_THREAD_YIELD boost::this_thread::yield()
-=======
-#define OGRE_THREAD_SLEEP(ms) boost::this_thread::sleep(boost::posix_time::millisec(ms));
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #endif

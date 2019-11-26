@@ -57,11 +57,7 @@ namespace gazebo
   /// \endverbatim
   ///
   /// See worlds/init_joint_control.world for a complete example.
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE JointControlPlugin : public ModelPlugin
-=======
-  class GAZEBO_VISIBLE JointControlPlugin : public ModelPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Parses plugin parameters and sends them to the joint controller.
     public: virtual void Load(physics::ModelPtr _model, sdf::ElementPtr _sdf);

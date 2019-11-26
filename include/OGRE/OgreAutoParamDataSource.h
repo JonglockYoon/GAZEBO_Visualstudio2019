@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -196,10 +192,7 @@ namespace Ogre {
         virtual const ColourValue& getSurfaceSpecularColour(void) const;
         virtual const ColourValue& getSurfaceEmissiveColour(void) const;
         virtual Real getSurfaceShininess(void) const;
-<<<<<<< HEAD
         virtual Real getSurfaceAlphaRejectionValue(void) const;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         virtual ColourValue getDerivedAmbientLightColour(void) const;
         virtual ColourValue getDerivedSceneColour(void) const;
         virtual void setFog(FogMode mode, const ColourValue& colour, Real expDensity, Real linearStart, Real linearEnd);

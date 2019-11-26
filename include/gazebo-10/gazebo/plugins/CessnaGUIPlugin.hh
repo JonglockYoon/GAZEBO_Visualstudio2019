@@ -43,11 +43,7 @@ namespace gazebo
   /// 1         Preset for take-off
   /// 2         Preset for cruise
   /// 3         Preset for landing
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE CessnaGUIPlugin : public GUIPlugin
-=======
-  class GAZEBO_VISIBLE CessnaGUIPlugin : public GUIPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     Q_OBJECT
 

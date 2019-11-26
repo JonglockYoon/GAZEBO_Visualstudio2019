@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -45,10 +41,7 @@ namespace Ogre {
 #define OGRE_CPU_X86        1
 #define OGRE_CPU_PPC        2
 #define OGRE_CPU_ARM        3
-<<<<<<< HEAD
 #define OGRE_CPU_MIPS       4
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 /* Find CPU type
 */
@@ -62,15 +55,10 @@ namespace Ogre {
 #	define OGRE_CPU OGRE_CPU_X86
 #elif OGRE_PLATFORM == OGRE_PLATFORM_APPLE_IOS && (defined(__i386__) || defined(__x86_64__))
 #	define OGRE_CPU OGRE_CPU_X86
-<<<<<<< HEAD
 #elif defined(__arm__) || defined(_M_ARM) || defined(__arm64__) || defined(__aarch64__)
 #	define OGRE_CPU OGRE_CPU_ARM
 #elif defined(__mips64) || defined(__mips64_)
 #	define OGRE_CPU OGRE_CPU_MIPS
-=======
-#elif defined(__arm__)
-#	define OGRE_CPU OGRE_CPU_ARM
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #else
 #   define OGRE_CPU OGRE_CPU_UNKNOWN
 #endif
@@ -110,35 +98,24 @@ namespace Ogre {
 #   define __OGRE_HAVE_SSE  1
 #endif
 
-<<<<<<< HEAD
 /* Define whether or not Ogre compiled with VFP support.
-=======
-/* Define whether or not Ogre compiled with VFP supports.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  */
 #if OGRE_DOUBLE_PRECISION == 0 && OGRE_CPU == OGRE_CPU_ARM && (OGRE_COMPILER == OGRE_COMPILER_GNUC || OGRE_COMPILER == OGRE_COMPILER_CLANG) && defined(__ARM_ARCH_6K__) && defined(__VFP_FP__)
 #   define __OGRE_HAVE_VFP  1
 #endif
 
-<<<<<<< HEAD
 /* Define whether or not Ogre compiled with NEON support.
-=======
-/* Define whether or not Ogre compiled with NEON supports.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
  */
 #if OGRE_DOUBLE_PRECISION == 0 && OGRE_CPU == OGRE_CPU_ARM && (OGRE_COMPILER == OGRE_COMPILER_GNUC || OGRE_COMPILER == OGRE_COMPILER_CLANG) && defined(__ARM_ARCH_7A__) && defined(__ARM_NEON__)
 #   define __OGRE_HAVE_NEON  1
 #endif
 
-<<<<<<< HEAD
 /* Define whether or not Ogre compiled with MSA support.
  */
 #if OGRE_DOUBLE_PRECISION == 0 && OGRE_CPU == OGRE_CPU_MIPS && (OGRE_COMPILER == OGRE_COMPILER_GNUC || OGRE_COMPILER == OGRE_COMPILER_CLANG) && defined(__mips_msa)
 #   define __OGRE_HAVE_MSA  1
 #endif
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #ifndef __OGRE_HAVE_SSE
 #   define __OGRE_HAVE_SSE  0
 #endif
@@ -150,15 +127,11 @@ namespace Ogre {
 #ifndef __OGRE_HAVE_NEON
 #   define __OGRE_HAVE_NEON  0
 #endif
-<<<<<<< HEAD
 
 #ifndef __OGRE_HAVE_MSA
 #   define __OGRE_HAVE_MSA  0
 #endif
 
-=======
-    
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 	/** \addtogroup Core
 	*  @{
 	*/
@@ -203,11 +176,8 @@ namespace Ogre {
 #elif OGRE_CPU == OGRE_CPU_ARM
             CPU_FEATURE_VFP         = 1 << 12,
             CPU_FEATURE_NEON        = 1 << 13,
-<<<<<<< HEAD
 #elif OGRE_CPU == OGRE_CPU_MIPS
             CPU_FEATURE_MSA         = 1 << 14,
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 
             CPU_FEATURE_NONE        = 0

@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -38,10 +34,7 @@ THE SOFTWARE.
 #include "OgreVector3.h"
 #include "OgreColourValue.h"
 #include "OgreCommon.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 	/** \addtogroup Core
@@ -78,24 +71,15 @@ namespace Ogre {
     protected:
         bool mOwnDimensions;
         bool mUseTexcoordRect;
-<<<<<<< HEAD
         uint16 mTexcoordIndex;      /// Index into the BillboardSet array of texture coordinates
         FloatRect mTexcoordRect;    /// Individual texture coordinates
-=======
-        uint16 mTexcoordIndex;      // index into the BillboardSet array of texture coordinates
-        FloatRect mTexcoordRect;    // individual texture coordinates
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         Real mWidth;
         Real mHeight;
     public:
         // Note the intentional public access to main internal variables used at runtime
         // Forcing access via get/set would be too costly for 000's of billboards
         Vector3 mPosition;
-<<<<<<< HEAD
         /// Normalised direction vector
-=======
-        // Normalised direction vector
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         Vector3 mDirection;
         BillboardSet* mParentSet;
         ColourValue mColour;
@@ -179,11 +163,7 @@ namespace Ogre {
         /** Retrieves the billboard's personal width, if hasOwnDimensions is true. */
         Real getOwnWidth(void) const;
 
-<<<<<<< HEAD
         /** Retrieves the billboard's personal height, if hasOwnDimensions is true. */
-=======
-        /** Retrieves the billboard's personal width, if hasOwnDimensions is true. */
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         Real getOwnHeight(void) const;
 
         /** Internal method for notifying the billboard of it's owner.
@@ -233,11 +213,7 @@ namespace Ogre {
 
         /** getTexcoordRect() returns the previous value set by setTexcoordRect(). 
             @remarks
-<<<<<<< HEAD
                 This value is useful only when isUseTexcoordRect returns true.
-=======
-                This value is useful only when isUseTexcoordRect return true.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         */
         const FloatRect& getTexcoordRect(void) const { return mTexcoordRect; }
     };
@@ -247,9 +223,6 @@ namespace Ogre {
 
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

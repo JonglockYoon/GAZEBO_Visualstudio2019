@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -52,13 +48,7 @@ namespace Ogre
 
     class PCZone;
 
-<<<<<<< HEAD
     /** Specialized viewpoint from which an PCZone Scene can be rendered.
-=======
-
-    /** Specialized viewpoint from which an PCZone Scene can be rendered.
-    @remarks
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     */
 
     class _OgrePCZPluginExport PCZCamera : public Camera
@@ -89,19 +79,11 @@ namespace Ogre
 		/* isVisible() function for portals */
 		bool isVisible(PortalBase* portal, FrustumPlane* culledBy = 0) const;
 
-<<<<<<< HEAD
         /** Returns the visibility of the box
         */
         bool isVisibile( const AxisAlignedBox &bound );
 
         /** Returns the detailed visibility of the box
-=======
-        /** Returns the visiblity of the box
-        */
-        bool isVisibile( const AxisAlignedBox &bound );
-
-        /** Returns the detailed visiblity of the box
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		PCZCamera::Visibility getVisibility( const AxisAlignedBox &bound );
 
@@ -112,21 +94,12 @@ namespace Ogre
            extra culling frustum is up to date */
         void update(void);
 
-<<<<<<< HEAD
 		/** Calculate extra culling planes from portal and camera
 		   origin and add to list of extra culling planes */
 		int addPortalCullingPlanes(PortalBase* portal);
 		/// Remove extra culling planes created from the given portal
 		void removePortalCullingPlanes(PortalBase* portal);
 		/// Remove all extra culling planes
-=======
-		// calculate extra culling planes from portal and camera 
-		// origin and add to list of extra culling planes
-		int addPortalCullingPlanes(PortalBase* portal);
-		// remove extra culling planes created from the given portal
-		void removePortalCullingPlanes(PortalBase* portal);
-		// remove all extra culling planes
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         void removeAllExtraCullingPlanes(void);
     protected:
 		AxisAlignedBox mBox;

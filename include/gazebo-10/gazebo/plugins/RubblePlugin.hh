@@ -28,11 +28,7 @@
 
 namespace gazebo
 {
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE RubblePlugin : public WorldPlugin
-=======
-  class GAZEBO_VISIBLE RubblePlugin : public WorldPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Constructor.
     public: RubblePlugin();

@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,10 +32,7 @@ THE SOFTWARE.
 #include "OgreString.h"
 #include "OgreSharedPtr.h"
 #include <istream>
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 	
@@ -189,11 +182,7 @@ namespace Ogre {
 			WRITE = 2
 		};
 	protected:
-<<<<<<< HEAD
 		/// The name (e.g. resource name) that can be used to identify the source for this data (optional)
-=======
-		/// The name (e.g. resource name) that can be used to identify the source fot his data (optional)
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		String mName;		
         /// Size of the data in the stream (may be 0 if size cannot be determined)
         size_t mSize;
@@ -342,15 +331,9 @@ namespace Ogre {
 		@param pMem Pointer to the existing memory
 		@param size The size of the memory chunk in bytes
 		@param freeOnClose If true, the memory associated will be destroyed
-<<<<<<< HEAD
 			when the stream is closed. Note: it's important that if you set
 			this option to true, that you allocated the memory using OGRE_ALLOC_T
 			with a category of MEMCATEGORY_GENERAL to ensure the freeing of memory 
-=======
-			when the stream is destroyed. Note: it's important that if you set
-			this option to true, that you allocated the memory using OGRE_ALLOC_T
-			with a category of MEMCATEGORY_GENERAL ensure the freeing of memory 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			matches up.
 		@param readOnly Whether to make the stream on this memory read-only once created
 		*/
@@ -389,11 +372,7 @@ namespace Ogre {
 			This constructor can be used to intentionally read in the entire
 			contents of another stream, copying them to the internal buffer
 			and thus making them available in memory as a single unit.
-<<<<<<< HEAD
 		@param sourceStream Another DataStream which will provide the source
-=======
-		@param sourceStream Weak reference to another DataStream which will provide the source
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			of data
 		@param freeOnClose If true, the memory associated will be destroyed
 			when the stream is destroyed.
@@ -682,11 +661,8 @@ namespace Ogre {
 	/** @} */
 	/** @} */
 }
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 

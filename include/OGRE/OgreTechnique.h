@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -57,11 +53,7 @@ namespace Ogre {
 	class _OgreExport Technique : public TechniqueAlloc
     {
     protected:
-<<<<<<< HEAD
         /// Illumination pass state type
-=======
-        // illumination pass state type
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         enum IlluminationPassesState
         {
             IPS_COMPILE_DISABLED = -1,
@@ -74,12 +66,8 @@ namespace Ogre {
         Passes mPasses;
         /// List of derived passes, categorised into IlluminationStage (ordered)
         IlluminationPassList mIlluminationPasses;
-<<<<<<< HEAD
         // Raw pointer since we don't want child to stop parent's destruction
         Material* mParent;
-=======
-        Material* mParent; // raw pointer since we don't want child to stop parent's destruction
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         bool mIsSupported;
         IlluminationPassesState mIlluminationPassesCompilationPhase;
 		/// LOD level
@@ -88,12 +76,8 @@ namespace Ogre {
 			MaterialManager, for speed an index is used here.
 		*/
 		unsigned short mSchemeIndex;
-<<<<<<< HEAD
         /// Optional name for the technique
         String mName;
-=======
-        String mName; // optional name for the technique
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /// Internal method for clearing illumination pass list
         void clearIlluminationPasses(void);
@@ -184,11 +168,7 @@ namespace Ogre {
 		bool checkHardwareSupport(bool autoManageTextureUnits, StringUtil::StrStreamType& compileErrors);
         /** Internal method for splitting the passes into illumination passes. */        
         void _compileIlluminationPasses(void);
-<<<<<<< HEAD
 		size_t calculateSize(void) const;
-=======
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Creates a new Pass for this Technique.
         @remarks
@@ -265,11 +245,7 @@ namespace Ogre {
         /** Internal unload method, derived from call to Material::unload. */
         void _unload(void);
 
-<<<<<<< HEAD
         /// Is this loaded?
-=======
-        // Is this loaded?
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         bool isLoaded(void) const;
 
         /** Tells the technique that it needs recompilation. */

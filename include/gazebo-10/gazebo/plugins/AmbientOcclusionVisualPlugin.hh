@@ -28,11 +28,7 @@ namespace gazebo
   /// \brief Plugin that creates an ambient occlusion effect
   /// The current implementation uses the Crease Shading method ported
   /// from OGRE.
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE AmbientOcclusionVisualPlugin : public VisualPlugin
-=======
-  class GAZEBO_VISIBLE AmbientOcclusionVisualPlugin : public VisualPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Constructor.
     public: AmbientOcclusionVisualPlugin();

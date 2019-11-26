@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -34,10 +30,7 @@ THE SOFTWARE.
 
 #include "OgrePrerequisites.h"
 #include "OgreIteratorWrappers.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 	/** \addtogroup Core
@@ -59,13 +52,8 @@ namespace Ogre {
         */
         enum InputMode
         {
-<<<<<<< HEAD
             IM_NONE,        /// No input
             IM_PREVIOUS     /// Output of previous Composition in chain
-=======
-            IM_NONE,        // No input
-            IM_PREVIOUS     // Output of previous Composition in chain
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         };
         typedef vector<CompositionPass *>::type Passes;
         typedef VectorIterator<Passes> PassIterator;
@@ -161,11 +149,7 @@ namespace Ogre {
     private:
         /// Parent technique
         CompositionTechnique *mParent;
-<<<<<<< HEAD
         /// Input mode
-=======
-        /// Input name
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         InputMode mInputMode;
         /// (local) output texture
         String mOutputName;
@@ -188,9 +172,6 @@ namespace Ogre {
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

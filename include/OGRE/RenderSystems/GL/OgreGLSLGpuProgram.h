@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,14 +33,8 @@ THE SOFTWARE.
 #include "OgreGLSLExtSupport.h"
 #include "OgreGLGpuProgram.h"
 
-<<<<<<< HEAD
 namespace Ogre {
     namespace GLSL {
-=======
-
-namespace Ogre {
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     /** GLSL low level compiled shader object - this class is used to get at the linked program object 
 		and provide an interface for GLRenderSystem calls.  GLSL does not provide access to the
 		low level code of the shader so this class is really just a dummy place holder.
@@ -93,10 +83,6 @@ namespace Ogre {
 		
 		/// @copydoc GLGpuProgram::isAttributeValid
 		bool isAttributeValid(VertexElementSemantic semantic, uint index);
-<<<<<<< HEAD
-=======
-		
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
     protected:
         /// Overridden from GpuProgram
@@ -105,17 +91,9 @@ namespace Ogre {
 		void unloadImpl(void);
 		/// @copydoc Resource::loadImpl
 		void loadImpl(void);
-<<<<<<< HEAD
     };
 
     }
-=======
-
-
-    };
-
-
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 }
 
 

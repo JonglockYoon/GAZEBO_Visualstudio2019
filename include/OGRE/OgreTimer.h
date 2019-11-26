@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,11 +32,7 @@ THE SOFTWARE.
 #include "OgrePlatform.h"
 
 //Bring in the specific platform's header file
-<<<<<<< HEAD
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32 || OGRE_PLATFORM == OGRE_PLATFORM_WINRT
-=======
-#if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 # include "WIN32/OgreTimerImp.h"
 #elif OGRE_PLATFORM == OGRE_PLATFORM_LINUX
 # include "GLX/OgreTimerImp.h"
@@ -52,11 +44,8 @@ THE SOFTWARE.
 # include "iOS/OgreTimerImp.h"
 #elif OGRE_PLATFORM == OGRE_PLATFORM_ANDROID
 # include "Android/OgreTimerImp.h"
-<<<<<<< HEAD
 #elif OGRE_PLATFORM == OGRE_PLATFORM_FLASHCC
 # include "FlashCC/OgreTimerImp.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 
 #endif

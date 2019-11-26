@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -34,10 +30,7 @@ THE SOFTWARE.
 #define __MemoryAllocatorConfig_H__
 
 #include "OgreMemoryAllocatedObject.h" 
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 /** \addtogroup Core
 *  @{
@@ -324,10 +317,7 @@ namespace Ogre
 	typedef GeometryAllocatedObject		VertexDataAlloc;
 	typedef RenderSysAllocatedObject	ViewportAlloc;
 	typedef SceneCtlAllocatedObject		LodAlloc;
-<<<<<<< HEAD
     typedef GeneralAllocatedObject      FileSystemLayerAlloc;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 	// Containers (by-value only)
 	// Will  be of the form:
@@ -502,10 +492,7 @@ namespace Ogre
 /** @} */
 /** @} */
 
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif

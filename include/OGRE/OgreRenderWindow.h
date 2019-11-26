@@ -4,11 +4,7 @@ This source file is a part of OGRE
 
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -77,28 +73,10 @@ namespace Ogre
             @param
                 height The height of the window in pixels.
             @param
-<<<<<<< HEAD
                 fullScreen If true, the window fills the screen,
                 with no title bar or border.
             @param
                 miscParams A variable number of pointers to platform-specific arguments. The
-=======
-                colourDepth The colour depth in bits. Ignored if
-                fullScreen is false since the desktop depth is used.
-            @param
-                fullScreen If true, the window fills the screen,
-                with no title bar or border.
-            @param
-                left The x-position of the window. Ignored if
-                fullScreen = true.
-            @param
-                top The y-position of the window. Ignored if
-                fullScreen = true.
-            @param
-                depthBuffer Specify true to include a depth-buffer.
-            @param
-                miscParam A variable number of pointers to platform-specific arguments. The
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
                 actual requirements must be defined by the implementing subclasses.
         */
 		virtual void create(const String& name, unsigned int width, unsigned int height,
@@ -210,13 +188,8 @@ namespace Ogre
         bool isDeactivatedOnFocusChange() const;
 
         /** Indicates whether the window will automatically deactivate itself when it loses focus.
-<<<<<<< HEAD
           * @param deactivate a value of 'true' will cause the window to deactivate itself when it loses focus.  'false' will allow it to continue to render even when window focus is lost.
           * @note 'true' is the default behavior.
-=======
-          * \param deactivate a value of 'true' will cause the window to deactivate itself when it loses focus.  'false' will allow it to continue to render even when window focus is lost.
-          * \note 'true' is the default behavior.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
           */
         void setDeactivateOnFocusChange(bool deactivate);
 

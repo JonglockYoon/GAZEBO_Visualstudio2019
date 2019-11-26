@@ -24,11 +24,7 @@
 namespace gazebo
 {
   /// \brief This plugin will stop the world.
-<<<<<<< HEAD
   class GZ_PLUGIN_VISIBLE StopWorldPlugin : public SystemPlugin
-=======
-  class GAZEBO_VISIBLE StopWorldPlugin : public SystemPlugin
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
   {
     /// \brief Destructor
     public: virtual ~StopWorldPlugin();

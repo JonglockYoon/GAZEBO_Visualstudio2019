@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -42,13 +38,10 @@ THE SOFTWARE.
 #include "OgreLodStrategyManager.h"
 #include "OgreWorkQueue.h"       
 
-<<<<<<< HEAD
 #if OGRE_PLATFORM == OGRE_PLATFORM_ANDROID
 #include "Android/OgreAndroidLogListener.h"
 #endif
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #include <exception>
 
 namespace Ogre
@@ -86,11 +79,7 @@ namespace Ogre
         String mVersion;
 		String mConfigFileName;
 	    bool mQueuedEnd;
-<<<<<<< HEAD
         /// In case multiple render windows are created, only once are the resources loaded.
-=======
-        // In case multiple render windows are created, only once are the resources loaded.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         bool mFirstTimePostWindowInit;
 
         // Singletons
@@ -105,7 +94,6 @@ namespace Ogre
         MeshManager* mMeshManager;
         ParticleSystemManager* mParticleManager;
         SkeletonManager* mSkeletonManager;
-<<<<<<< HEAD
         
         ArchiveFactory *mZipArchiveFactory;
         ArchiveFactory *mEmbeddedZipArchiveFactory;
@@ -115,29 +103,14 @@ namespace Ogre
         AndroidLogListener* mAndroidLogger;
 #endif
         
-=======
-        OverlayElementFactory* mPanelFactory;
-        OverlayElementFactory* mBorderPanelFactory;
-        OverlayElementFactory* mTextAreaFactory;
-        OverlayManager* mOverlayManager;
-        FontManager* mFontManager;
-        ArchiveFactory *mZipArchiveFactory;
-        ArchiveFactory *mEmbeddedZipArchiveFactory;
-        ArchiveFactory *mFileSystemArchiveFactory;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		ResourceGroupManager* mResourceGroupManager;
 		ResourceBackgroundQueue* mResourceBackgroundQueue;
 		ShadowTextureManager* mShadowTextureManager;
 		RenderSystemCapabilitiesManager* mRenderSystemCapabilitiesManager;
-<<<<<<< HEAD
         ScriptCompilerManager *mCompilerManager;
         LodStrategyManager *mLodStrategyManager;
         PMWorker* mPMWorker;
         PMInjector* mPMInjector;
-=======
-		ScriptCompilerManager *mCompilerManager;
-        LodStrategyManager *mLodStrategyManager;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         Timer* mTimer;
         RenderWindow* mAutoWindow;
@@ -187,16 +160,10 @@ namespace Ogre
             plugins.
             @param
                 pluginsfile The file that contains plugins information.
-<<<<<<< HEAD
                 Defaults to "plugins.cfg" in release and to "plugins_d.cfg"
                 in debug build.
         */
         void loadPlugins(const String& pluginsfile = "plugins" OGRE_BUILD_SUFFIX ".cfg");
-=======
-                Defaults to "plugins.cfg".
-        */
-        void loadPlugins( const String& pluginsfile = "plugins.cfg" );
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Initialise all loaded plugins - allows plugins to perform actions
 			once the renderer is initialised.
 		*/
@@ -210,25 +177,16 @@ namespace Ogre
         */
         void unloadPlugins();
 
-<<<<<<< HEAD
         /// Internal method for one-time tasks after first window creation
-=======
-        // Internal method for one-time tasks after first window creation
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         void oneTimePostWindowInit(void);
 
         /** Set of registered frame listeners */
         set<FrameListener*>::type mFrameListeners;
 
-<<<<<<< HEAD
         /** Set of frame listeners marked for removal and addition*/
         set<FrameListener*>::type mRemovedFrameListeners;
         set<FrameListener*>::type mAddedFrameListeners;
         void _syncAddedRemovedFrameListeners();
-=======
-        /** Set of frame listeners marked for removal*/
-        set<FrameListener*>::type mRemovedFrameListeners;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Indicates the type of event to be considered by calculateEventTime(). */
         enum FrameEventTimeType {
@@ -256,22 +214,14 @@ namespace Ogre
 
         /** Constructor
         @param pluginFileName The file that contains plugins information.
-<<<<<<< HEAD
             Defaults to "plugins.cfg" in release build and to "plugins_d.cfg"
             in debug build. May be left blank to ignore.
-=======
-            Defaults to "plugins.cfg", may be left blank to ignore.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		@param configFileName The file that contains the configuration to be loaded.
 			Defaults to "ogre.cfg", may be left blank to load nothing.
 		@param logFileName The logfile to create, defaults to Ogre.log, may be 
 			left blank if you've already set up LogManager & Log yourself
 		*/
-<<<<<<< HEAD
         Root(const String& pluginFileName = "plugins" OGRE_BUILD_SUFFIX ".cfg", 
-=======
-        Root(const String& pluginFileName = "plugins.cfg", 
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			const String& configFileName = "ogre.cfg", 
 			const String& logFileName = "Ogre.log");
         ~Root();
@@ -538,7 +488,6 @@ namespace Ogre
             @see
                 Root, Root::startRendering
         */
-<<<<<<< HEAD
         void queueEndRendering(bool state = true);
 
         /** Check for planned end of rendering.
@@ -548,9 +497,6 @@ namespace Ogre
                 Root, Root::queueEndRendering, Root::startRendering
         */
         bool endRenderingQueued(void);
-=======
-        void queueEndRendering(void);
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Starts / restarts the automatic rendering cycle.
             @remarks
@@ -718,11 +664,7 @@ namespace Ogre
         /** Retrieves a pointer to the window that was created automatically
             @remarks
                 When Root is initialised an optional window is created. This
-<<<<<<< HEAD
                 method retrieves a pointer to that window.
-=======
-                method retreives a pointer to that window.
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
             @note
                 returns a null pointer when Root has not been initialised with
                 the option of creating a window.
@@ -768,11 +710,7 @@ namespace Ogre
 		/** Manually load a Plugin contained in a DLL / DSO.
 		 @remarks
 		 	Plugins embedded in DLLs can be loaded at startup using the plugin 
-<<<<<<< HEAD
 			configuration file specified when you create Root.
-=======
-			configuration file specified when you create Root (default: plugins.cfg).
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 			This method allows you to load plugin DLLs directly in code.
 			The DLL in question is expected to implement a dllStartPlugin 
 			method which instantiates a Plugin subclass and calls Root::installPlugin.
@@ -989,10 +927,6 @@ namespace Ogre
 		/** Destroy all RenderQueueInvocationSequences. 
 		@remarks
 			You must ensure that no Viewports are using custom sequences.
-<<<<<<< HEAD
-=======
-		@param name The name to identify the sequence
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		*/
 		void destroyAllRenderQueueInvocationSequences(void);
 

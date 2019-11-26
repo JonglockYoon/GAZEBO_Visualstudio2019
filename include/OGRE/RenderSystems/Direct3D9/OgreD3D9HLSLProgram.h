@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -98,7 +94,6 @@ namespace Ogre {
 			String doGet(const void* target) const;
 			void doSet(void* target, const String& val);
 		};
-<<<<<<< HEAD
 
 		/// Command object for enabling backwards compatibility
 		class CmdBackwardsCompatibility : public ParamCommand
@@ -108,8 +103,6 @@ namespace Ogre {
 			void doSet(void* target, const String& val);
 		};
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     protected:
 
         static CmdEntryPoint msCmdEntryPoint;
@@ -119,10 +112,7 @@ namespace Ogre {
 		static CmdOptimisation msCmdOptimisation;
 		static CmdMicrocode msCmdMicrocode;
 		static CmdAssemblerCode msCmdAssemblerCode;
-<<<<<<< HEAD
         static CmdBackwardsCompatibility msCmdBackwardsCompatibility;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         /** Internal load implementation, must be implemented by subclasses.
         */
@@ -143,10 +133,7 @@ namespace Ogre {
         String mEntryPoint;
         String mPreprocessorDefines;
         bool mColumnMajorMatrices;
-<<<<<<< HEAD
         bool mBackwardsCompatibility;
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
         LPD3DXBUFFER mMicroCode;
 
@@ -201,13 +188,10 @@ namespace Ogre {
         void setColumnMajorMatrices(bool columnMajor) { mColumnMajorMatrices = columnMajor; }
         /** Gets whether matrix packed in column-major order. */
         bool getColumnMajorMatrices(void) const { return mColumnMajorMatrices; }
-<<<<<<< HEAD
 		/** Sets whether backwards compatibility mode should be enabled. */
 		void setBackwardsCompatibility(bool compat) { mBackwardsCompatibility = compat; }
 		/** Gets whether backwards compatibility mode should be enabled. */
 		bool getBackwardsCompatibility(void) const { return mBackwardsCompatibility; }
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		/** Sets the optimisation level to use.
 		@param opt Optimisation level
 		*/

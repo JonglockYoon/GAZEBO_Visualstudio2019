@@ -4,11 +4,7 @@ This source file is part of OGRE
 (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -33,10 +29,7 @@ THE SOFTWARE.
 #define __ParticleIterator_H__
 
 #include "OgrePrerequisites.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 
@@ -61,11 +54,7 @@ namespace Ogre {
         ParticleIterator(list<Particle*>::type::iterator start, list<Particle*>::type::iterator end);
 
     public:
-<<<<<<< HEAD
         /// Returns true when at the end of the particle list
-=======
-        // Returns true when at the end of the particle list
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
         bool end(void);
 
         /** Returns a pointer to the next particle, and moves the iterator on by 1 element. */
@@ -75,10 +64,7 @@ namespace Ogre {
 	/** @} */
 }
 
-<<<<<<< HEAD
 #include "OgreHeaderSuffix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 #endif
 

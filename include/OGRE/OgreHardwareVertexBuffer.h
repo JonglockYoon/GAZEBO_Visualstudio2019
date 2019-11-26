@@ -4,11 +4,7 @@ This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
 For the latest info, see http://www.ogre3d.org/
 
-<<<<<<< HEAD
 Copyright (c) 2000-2014 Torus Knot Software Ltd
-=======
-Copyright (c) 2000-2012 Torus Knot Software Ltd
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,10 +33,7 @@ THE SOFTWARE.
 #include "OgreHardwareBuffer.h"
 #include "OgreSharedPtr.h"
 #include "OgreColourValue.h"
-<<<<<<< HEAD
 #include "OgreHeaderPrefix.h"
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 namespace Ogre {
 	class HardwareBufferManagerBase;
@@ -76,11 +69,7 @@ namespace Ogre {
 		    /// Get the number of vertices in this buffer
 		    size_t getNumVertices(void) const { return mNumVertices; }
 		    /// Get if this vertex buffer is an "instance data" buffer (per instance)
-<<<<<<< HEAD
 		    bool isInstanceData() const { return mIsInstanceData; }
-=======
-		    bool getIsInstanceData() const { return mIsInstanceData; }
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 		    /// Set if this vertex buffer is an "instance data" buffer (per instance)
 		    void setIsInstanceData(const bool val);
 			/// Get the number of instances to draw using the same per-instance data before advancing in the buffer by one element.
@@ -93,11 +82,7 @@ namespace Ogre {
 
     };
 
-<<<<<<< HEAD
     /** Shared pointer implementation used to share vertex buffers. */
-=======
-    /** Shared pointer implementation used to share index buffers. */
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     class _OgreExport HardwareVertexBufferSharedPtr : public SharedPtr<HardwareVertexBuffer>
     {
     public:
@@ -107,12 +92,9 @@ namespace Ogre {
 
     };
 
-<<<<<<< HEAD
     /** Locking helper. */    
     typedef HardwareBufferLockGuard<HardwareVertexBufferSharedPtr> HardwareVertexBufferLockGuard;
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     /// Vertex element semantics, used to identify the meaning of vertex buffer contents
 	enum VertexElementSemantic {
 		/// Position, 3 reals per vertex
@@ -137,13 +119,8 @@ namespace Ogre {
         VES_COUNT = 9
 	};
 
-<<<<<<< HEAD
 	/// Vertex element type, used to identify the base types of the vertex contents
 	enum VertexElementType
-=======
-    /// Vertex element type, used to identify the base types of the vertex contents
-    enum VertexElementType
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     {
         VET_FLOAT1 = 0,
         VET_FLOAT2 = 1,
@@ -159,7 +136,6 @@ namespace Ogre {
         /// D3D style compact colour
         VET_COLOUR_ARGB = 10,
         /// GL style compact colour
-<<<<<<< HEAD
         VET_COLOUR_ABGR = 11,
 		VET_DOUBLE1 = 12,
         VET_DOUBLE2 = 13,
@@ -177,9 +153,6 @@ namespace Ogre {
         VET_UINT2 = 25,
         VET_UINT3 = 26,
         VET_UINT4 = 27
-=======
-        VET_COLOUR_ABGR = 11
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
     };
 
     /** This class declares the usage of a single vertex buffer as a component
@@ -613,13 +586,8 @@ namespace Ogre {
         */
         virtual void closeGaps(BindingIndexMap& bindingIndexMap);
 
-<<<<<<< HEAD
         /// Returns true if this binding has an element that contains instance data
         virtual bool hasInstanceData() const;
-=======
-        /// returns true if has an element that is instance data
-        virtual bool getHasInstanceData() const;
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 
 
 	};
@@ -629,11 +597,8 @@ namespace Ogre {
 
 
 }
-<<<<<<< HEAD
 
 #include "OgreHeaderSuffix.h"
 
-=======
->>>>>>> 04f0a22d68ab5ea7ec5fa8e056bdf7c5978eeb14
 #endif
 
