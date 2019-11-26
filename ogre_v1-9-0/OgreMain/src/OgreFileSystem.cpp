@@ -376,6 +376,10 @@ namespace Ogre {
 			// case insensitive on windows
 			String lowerCaseName = mName;
 			StringUtil::toLowerCase(lowerCaseName);
+
+			std::replace(full_path.begin(), full_path.end(), '\\', '/');
+			std::replace(lowerCaseName.begin(), lowerCaseName.end(), '\\', '/');
+
 			ret = Ogre::StringUtil::startsWith(full_path, lowerCaseName, true);
 #else
 			// case sensitive

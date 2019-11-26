@@ -18,7 +18,7 @@
 @echo Configuring for build type %build_type%
 
 @set qt5_path=G:/dev/Qt/5.12.5/msvc2015_64
-#@set vcpkg_path=D:/vcpkg/installed/x64-windows
+@set vcpkg_path=D:/vcpkg/installed/x64-windows
 @if "%build_type%"=="Debug" set vcpkg_path=D:/vcpkg/installed/x64-windows/debug
 
 @set BOOST_PATH=%vcpkg_path%
