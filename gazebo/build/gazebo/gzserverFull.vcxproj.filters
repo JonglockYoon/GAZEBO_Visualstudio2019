@@ -1,0 +1,1539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\gz-ws\gazebo\gazebo\server_main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\Server.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\gazebo.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\Master.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\gazebo_shared.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Model.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\ModelState.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\MultiRayShape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\PhysicsEngine.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\PhysicsIface.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\PlaneShape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\PolylineShape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Population.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\PresetManager.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\RayShape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Road.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Shape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\SphereShape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\State.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\SurfaceParams.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\UserCmdManager.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Wind.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\World.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\WorldState.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Actor.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\AdiabaticAtmosphere.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Atmosphere.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\AtmosphereFactory.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Base.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\BoxShape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Collision.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\CollisionState.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Contact.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\ContactManager.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\CylinderShape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Entity.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Gripper.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\HeightmapShape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Inertial.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Joint.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\JointController.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\JointState.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Light.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\LightState.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\Link.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\LinkState.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\MapShape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\physics\MeshShape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\AltimeterSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\CameraSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\ContactSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\DepthCameraSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\ForceTorqueSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\GaussianNoiseModel.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\GpsSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\GpuRaySensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\ImuSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\LogicalCameraSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\MagnetometerSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\MultiCameraSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\Noise.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\RaySensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\RFIDSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\RFIDTag.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\Sensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\SensorFactory.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\SensorManager.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\SensorsIface.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\SensorTypes.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\SonarSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\WideAngleCameraSensor.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\WirelessReceiver.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\WirelessTransceiver.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\sensors\WirelessTransmitter.cc">
+      <Filter>sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Animation.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Assert.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\AudioDecoder.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Base64.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Battery.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\BVHLoader.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\ColladaExporter.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\ColladaLoader.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\CommonIface.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Console.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Dem.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Event.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Events.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Exception.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\ffmpeg_inc.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\HeightmapData.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Image.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\ImageHeightmap.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\KeyEvent.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\KeyFrame.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Material.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\MaterialDensity.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Mesh.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\MeshExporter.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\MeshLoader.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\MeshManager.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\ModelDatabase.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\MouseEvent.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\OBJLoader.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\PID.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Plugin.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\SemanticVersion.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Skeleton.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\SkeletonAnimation.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\SphericalCoordinates.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\STLLoader.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\SVGLoader.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\SystemPaths.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\tarlib.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\tarlibfilesys.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\tarlibstring.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Time.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Timer.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\URI.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\Video.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\common\VideoEncoder.cc">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\transport\CallbackHelper.cc">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\transport\Connection.cc">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\transport\ConnectionManager.cc">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\transport\IOManager.cc">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\transport\Node.cc">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\transport\Publication.cc">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\transport\PublicationTransport.cc">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\transport\Publisher.cc">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\transport\Subscriber.cc">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\transport\SubscriptionTransport.cc">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\transport\TopicManager.cc">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\transport\TransportIface.cc">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\util\Diagnostics.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\util\IgnMsgSdf.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\util\IntrospectionClient.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\util\IntrospectionManager.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\util\LogPlay.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\util\LogRecord.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\util\OpenAL.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\WideAngleCamera.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\WindowManager.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\WireBox.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\WrenchVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\ApplyWrenchVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\ArrowVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\AxisVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\Camera.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\CameraVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\COMVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\ContactVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\Conversions.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\CustomPSSMShadowCameraSetup.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\DepthCamera.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\Distortion.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\DynamicLines.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\DynamicRenderable.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\FPSViewController.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\GpuLaser.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\Grid.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\Heightmap.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\InertiaVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\JointVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\LaserVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\LensFlare.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\Light.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\LinkFrameVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\LogicalCameraVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\MarkerManager.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\MarkerVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\Material.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\MovableText.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\OrbitViewController.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\OriginVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\OrthoViewController.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\Projector.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\RayQuery.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\RenderEngine.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\RenderEvents.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\RenderingIface.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\RFIDTagVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\RFIDVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\Road2d.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\RTShaderSystem.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\Scene.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\SelectionObj.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\SonarVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\TransmitterVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\UserCamera.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\VideoVisual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\ViewController.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\Visual.cc">
+      <Filter>rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\AtmosphereManager.cpp">
+      <Filter>rendering\sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\BasicController.cpp">
+      <Filter>rendering\sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\CloudsManager.cpp">
+      <Filter>rendering\sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\ColorGradient.cpp">
+      <Filter>rendering\sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\GPUManager.cpp">
+      <Filter>rendering\sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\MeshManager.cpp">
+      <Filter>rendering\sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\MoonManager.cpp">
+      <Filter>rendering\sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\Prerequisites.cpp">
+      <Filter>rendering\sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\SkyX.cpp">
+      <Filter>rendering\sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VCloudsManager.cpp">
+      <Filter>rendering\sky</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\VClouds.cpp">
+      <Filter>rendering\sky\VClouds</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\DataManager.cpp">
+      <Filter>rendering\sky\VClouds</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\Ellipsoid.cpp">
+      <Filter>rendering\sky\VClouds</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\FastFakeRandom.cpp">
+      <Filter>rendering\sky\VClouds</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\GeometryBlock.cpp">
+      <Filter>rendering\sky\VClouds</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\GeometryManager.cpp">
+      <Filter>rendering\sky\VClouds</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\Lightning.cpp">
+      <Filter>rendering\sky\VClouds</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\LightningManager.cpp">
+      <Filter>rendering\sky\VClouds</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\deps\tinyxml2\gazebo\tinyxml2.cpp">
+      <Filter>tinyxml2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\DeferredLight.cc">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\GBufferMaterialGenerator.cc">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\GBufferSchemeHandler.cc">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\GeomUtils.cc">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\MaterialGenerator.cc">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\MergeMaterialGenerator.cc">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\MergeSchemeHandler.cc">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\SSAOLogic.cc">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\selection_buffer\MaterialSwitcher.cc">
+      <Filter>rendering\selection_buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\selection_buffer\SelectionBuffer.cc">
+      <Filter>rendering\selection_buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gazebo\rendering\selection_buffer\SelectionRenderListener.cc">
+      <Filter>rendering\selection_buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\altimeter.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\any.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\atmosphere.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\axis.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\battery.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\boxgeom.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\camera_cmd.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\camera_lens.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\camerasensor.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\cessna.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\collision.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\color.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\contact.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\contacts.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\contactsensor.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\cylindergeom.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\density.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\diagnostics.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\distortion.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\empty.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\factory.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\fluid.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\fog.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\friction.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\geometry.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\gps.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\gps_sensor.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\gui.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\gui_camera.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\gz_string.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\gz_string_v.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\header.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\heightmapgeom.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\hydra.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\image.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\image_stamped.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\imagegeom.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\images_stamped.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\imu.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\imu_sensor.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\inertial.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\int.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\joint.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\joint_animation.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\joint_cmd.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\joint_wrench.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\joint_wrench_stamped.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\joystick.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\laserscan.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\laserscan_stamped.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\light.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\link.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\link_data.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\log_control.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\log_playback_control.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\log_playback_stats.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\log_status.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\logical_camera_image.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\logical_camera_sensor.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\magnetometer.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\material.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\meshgeom.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\model.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\model_configuration.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\model_v.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\packet.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\param.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\param_v.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\physics.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\pid.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\planegeom.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\plugin.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\pointcloud.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\polylinegeom.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\pose.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\pose_animation.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\pose_stamped.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\pose_trajectory.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\pose_v.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\poses_stamped.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\projector.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\propagation_grid.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\propagation_particle.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\publish.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\publishers.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\quaternion.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\raysensor.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\request.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\response.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\rest_login.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\rest_logout.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\rest_post.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\rest_response.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\road.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\scene.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\selection.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\sensor.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\sensor_noise.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\server_control.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\shadows.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\sim_event.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\sky.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\sonar.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\sonar_stamped.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\spheregeom.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\spherical_coordinates.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\subscribe.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\surface.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\tactile.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\test.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\time.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\topic_info.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\track_visual.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\undo_redo.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\user_cmd.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\user_cmd_stats.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\vector2d.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\vector3d.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\visual.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\wind.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\wireless_node.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\wireless_nodes.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\world_control.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\world_modify.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\world_reset.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\world_stats.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\wrench.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+    <ClCompile Include="msgs\wrench_stamped.pb.cc">
+      <Filter>msgs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B24A42E7-959C-3761-9179-2309828A0B99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physics">
+      <UniqueIdentifier>{36a27744-40dd-4daa-a462-943d8b3520ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sensors">
+      <UniqueIdentifier>{2e5b9f9c-981d-418e-b1db-0204759dfbb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{6b32ef7d-50f8-42b8-8966-db81965f9733}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="transport">
+      <UniqueIdentifier>{36eac925-f9d1-4801-b9b5-534b5caac59d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{e94db655-2cf7-4cd2-acd2-99db279bee43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rendering">
+      <UniqueIdentifier>{f7f2e38f-6e4f-4f9b-90bb-5e767ee4fada}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rendering\sky">
+      <UniqueIdentifier>{fb87e394-3b39-4b34-9678-e76ca029c67d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rendering\sky\VClouds">
+      <UniqueIdentifier>{2bff5650-c68e-4bec-bd12-62fcb1cff19a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tinyxml2">
+      <UniqueIdentifier>{2097417e-f6f1-4214-9f3b-88f0126f2735}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rendering\selection_buffer">
+      <UniqueIdentifier>{d7dfbd1f-49b6-4293-93ba-b717232e4f40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rendering\deferred_shading">
+      <UniqueIdentifier>{8c7b51a9-9d6b-45f3-a668-87f2aa395d9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msgs">
+      <UniqueIdentifier>{f50bcd5d-4c7b-4604-95bf-47b6a3bfb8aa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\deps\tinyxml2\gazebo\tinyxml2.h">
+      <Filter>tinyxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\DeferredLight.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\DeferredLightCP.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\GBufferMaterialGenerator.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\GBufferSchemeHandler.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\GeomUtils.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\LightMaterialGenerator.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\ListenerFactoryLogic.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\MaterialGenerator.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\MergeCP.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\MergeMaterialGenerator.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\MergeSchemeHandler.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\NullSchemeHandler.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\SSAOLogic.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\TechniqueDefinitions.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\AmbientLight.hh">
+      <Filter>rendering\deferred_shading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\selection_buffer\MaterialSwitcher.hh">
+      <Filter>rendering\selection_buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\selection_buffer\SelectionBuffer.hh">
+      <Filter>rendering\selection_buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gazebo\rendering\selection_buffer\SelectionRenderListener.hh">
+      <Filter>rendering\selection_buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\altimeter.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\any.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\atmosphere.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\axis.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\battery.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\boxgeom.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\camera_cmd.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\camera_lens.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\camerasensor.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\cessna.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\collision.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\color.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\contact.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\contacts.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\contactsensor.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\cylindergeom.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\density.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\diagnostics.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\distortion.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\empty.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\factory.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\fluid.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\fog.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\friction.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\geometry.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\gps.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\gps_sensor.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\gui.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\gui_camera.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\gz_string.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\gz_string_v.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\header.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\heightmapgeom.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\hydra.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\image.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\image_stamped.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\imagegeom.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\images_stamped.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\imu.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\imu_sensor.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\inertial.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\int.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\joint.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\joint_animation.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\joint_cmd.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\joint_wrench.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\joint_wrench_stamped.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\joystick.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\laserscan.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\laserscan_stamped.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\light.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\link.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\link_data.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\log_control.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\log_playback_control.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\log_playback_stats.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\log_status.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\logical_camera_image.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\logical_camera_sensor.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\magnetometer.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\material.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\meshgeom.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\MessageTypes.hh">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\model.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\model_configuration.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\model_v.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\packet.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\param.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\param_v.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\physics.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\pid.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\planegeom.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\plugin.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\pointcloud.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\polylinegeom.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\pose.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\pose_animation.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\pose_stamped.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\pose_trajectory.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\pose_v.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\poses_stamped.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\projector.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\propagation_grid.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\propagation_particle.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\publish.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\publishers.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\quaternion.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\raysensor.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\request.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\response.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\rest_login.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\rest_logout.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\rest_post.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\rest_response.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\road.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\scene.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\selection.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\sensor.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\sensor_noise.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\server_control.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\shadows.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\sim_event.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\sky.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\sonar.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\sonar_stamped.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\spheregeom.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\spherical_coordinates.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\subscribe.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\surface.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\tactile.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\test.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\time.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\topic_info.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\track_visual.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\undo_redo.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\user_cmd.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\user_cmd_stats.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\vector2d.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\vector3d.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\visual.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\wind.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\wireless_node.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\wireless_nodes.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\world_control.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\world_modify.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\world_reset.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\world_stats.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\wrench.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+    <ClInclude Include="msgs\wrench_stamped.pb.h">
+      <Filter>msgs</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

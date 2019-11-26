@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CF1F9DC0-7874-3098-9656-AC52CAAB603D}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>gzserver</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\gz-ws\gazebo\build\gazebo\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gzserver.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gzserver</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\gz-ws\gazebo\build\gazebo\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gzserver.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gzserver</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\gz-ws\gazebo\build\gazebo\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gzserver.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gzserver</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\gz-ws\gazebo\build\gazebo\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gzserver.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gzserver</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\gazebo\rendering\skyx\include;D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\include;D:\vcpkg\installed\x64-windows\include\ignition\msgs1;D:\vcpkg\installed\x64-windows\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\gz-ws\include;D:\gz-ws\include\OGRE;D:\gz-ws\include\OGRE\RTShaderSystem;D:\gz-ws\include\OGRE\Terrain;D:\gz-ws\include\OGRE\Paging;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;D:\gz-ws\include\gazebo-10;D:\gz-ws\gazebo\deps\tinyobjloader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4068;4244;4267;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>GAZEBO_MODEL_DATABASE_URI="http://models.gazebosim.org";GAZEBO_MODEL_PATH="D:\\gz-ws\\share\\gazebo-10\\models";GAZEBO_PLUGIN_PATH="D:\\gz-ws\\lib\\gazebo-10\\plugins";GAZEBO_RESOURCE_PATH="D:\\gz-ws\\share\\gazebo-10";OGRE_RESOURCE_PATH="D:\\gz-ws\\lib\\debug\\opt";GAZEBO_DEFAULT_MASTER_HOST="localhost";GAZEBO_DEFAULT_MASTER_PORT=11345;BUILDING_STATIC_LIBS;WIN32;_WINDOWS;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;BUILDING_DLL;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;BUILDING_DLL;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\gz-ws\include;D:\gz-ws\include\OGRE;D:\gz-ws\include\OGRE\RTShaderSystem;D:\gz-ws\include\OGRE\Terrain;D:\gz-ws\include\OGRE\Paging;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\gz-ws\include;D:\gz-ws\include\OGRE;D:\gz-ws\include\OGRE\RTShaderSystem;D:\gz-ws\include\OGRE\Terrain;D:\gz-ws\include\OGRE\Paging;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\vcpkg\installed\x64-windows\debug\lib\ignition-math4.lib;D:\vcpkg\installed\x64-windows\debug\lib\ignition-msgs1.lib;D:\vcpkg\installed\x64-windows\debug\lib\ignition-transport4.lib;D:\vcpkg\installed\x64-windows\debug\lib\FreeImaged.lib;D:\gz-ws\lib\Debug\OgreMain_d.lib;D:\gz-ws\lib\Debug\OgreRTShaderSystem_d.lib;D:\gz-ws\lib\Debug\OgreTerrain_d.lib;D:\gz-ws\lib\Debug\OgrePaging_d.lib;d:\gz-ws\lib\gazebo_physics.lib;d:\gz-ws\lib\gazebo_sensors.lib;d:\gz-ws\lib\gazebo_common.lib;d:\gz-ws\lib\gazebo_transport.lib;d:\gz-ws\lib\gazebo_util.lib;d:\gz-ws\lib\gazebo_rendering.lib;d:\gz-ws\lib\gazebo_msgs.lib;d:\gz-ws\lib\gazebo_ode.lib;d:\gz-ws\lib\gazebo_gimpact.lib;d:\gz-ws\lib\gazebo_opende_ou.lib;d:\gz-ws\lib\gazebo_ccd.lib;d:\gz-ws\lib\gazebo_opcode.lib;ws2_32.lib;Iphlpapi.lib;opengl32.lib;glu32.lib;D:\vcpkg\installed\x64-windows\debug\lib\dl.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_thread-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_system-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_filesystem-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_program_options-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_regex-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_iostreams-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_date_time-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_chrono-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\boost_atomic-vc140-mt-gd.lib;D:\vcpkg\installed\x64-windows\debug\lib\libcurl-d.lib;D:\vcpkg\installed\x64-windows\debug\lib\sdformat.lib;D:\vcpkg\installed\x64-windows\debug\lib\libprotobufd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/gz-ws/gazebo/build/test;D:/gz-ws/gazebo/build/test/$(Configuration);D:/vcpkg/installed/x64-windows/lib/$(Configuration);D:/vcpkg/installed/x64-windows/bin/$(Configuration);D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/gz-ws/gazebo/build/gazebo/Debug/gzserver.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/gz-ws/gazebo/build/gazebo/Debug/gzserver.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\gz-ws\include;D:\gz-ws\include\OGRE;D:\gz-ws\include\OGRE\RTShaderSystem;D:\gz-ws\include\OGRE\Terrain;D:\gz-ws\include\OGRE\Paging;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4005;4068;4244;4267;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;BUILDING_DLL;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;BUILDING_DLL;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\gz-ws\include;D:\gz-ws\include\OGRE;D:\gz-ws\include\OGRE\RTShaderSystem;D:\gz-ws\include\OGRE\Terrain;D:\gz-ws\include\OGRE\Paging;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\gz-ws\include;D:\gz-ws\include\OGRE;D:\gz-ws\include\OGRE\RTShaderSystem;D:\gz-ws\include\OGRE\Terrain;D:\gz-ws\include\OGRE\Paging;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Release\gazebo.lib;sensors\Release\gazebo_sensors.lib;rendering\Release\gazebo_rendering.lib;D:\vcpkg\installed\x64-windows\lib\FreeImage.lib;D:\gz-ws\lib\OgreMain.lib;;D:\gz-ws\lib\OgreRTShaderSystem.lib;D:\gz-ws\lib\OgreTerrain.lib;D:\gz-ws\lib\OgrePaging.lib;physics\Release\gazebo_physics.lib;util\Release\gazebo_util.lib;..\deps\opende\Release\gazebo_ode.lib;..\deps\opende\GIMPACT\Release\gazebo_gimpact.lib;..\deps\opende\ou\Release\gazebo_opende_ou.lib;..\deps\libccd\Release\gazebo_ccd.lib;..\deps\opende\OPCODE\Release\gazebo_opcode.lib;transport\Release\gazebo_transport.lib;D:\gz-ws\lib\ignition-transport4.lib;ws2_32.lib;Iphlpapi.lib;opengl32.lib;glu32.lib;msgs\Release\gazebo_msgs.lib;common\Release\gazebo_common.lib;D:\vcpkg\installed\x64-windows\lib\dl.lib;D:\vcpkg\installed\x64-windows\lib\FreeImage.lib;D:\vcpkg\installed\x64-windows\lib\boost_thread-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_system-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_filesystem-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_program_options-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_regex-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_iostreams-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_date_time-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_chrono-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_atomic-vc140-mt.lib;common\Release\tinyxml_internal.lib;D:\vcpkg\installed\x64-windows\lib\libcurl.lib;D:\vcpkg\installed\x64-windows\lib\sdformat.lib;D:\gz-ws\lib\ignition-msgs1.lib;D:\vcpkg\installed\x64-windows\lib\ignition-math4.lib;D:\vcpkg\installed\x64-windows\lib\libprotobuf.lib;D:\vcpkg\installed\x64-windows\lib\libprotobuf.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/gz-ws/gazebo/build/test;D:/gz-ws/gazebo/build/test/$(Configuration);D:/vcpkg/installed/x64-windows/lib;D:/vcpkg/installed/x64-windows/lib/$(Configuration);D:/vcpkg/installed/x64-windows/bin;D:/vcpkg/installed/x64-windows/bin/$(Configuration);D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib;D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/gz-ws/gazebo/build/gazebo/Release/gzserver.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/gz-ws/gazebo/build/gazebo/Release/gzserver.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\gz-ws\include;D:\gz-ws\include\OGRE;D:\gz-ws\include\OGRE\RTShaderSystem;D:\gz-ws\include\OGRE\Terrain;D:\gz-ws\include\OGRE\Paging;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4005;4068;4244;4267;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;BUILDING_DLL;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;BUILDING_DLL;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\gz-ws\include;D:\gz-ws\include\OGRE;D:\gz-ws\include\OGRE\RTShaderSystem;D:\gz-ws\include\OGRE\Terrain;D:\gz-ws\include\OGRE\Paging;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\gz-ws\include;D:\gz-ws\include\OGRE;D:\gz-ws\include\OGRE\RTShaderSystem;D:\gz-ws\include\OGRE\Terrain;D:\gz-ws\include\OGRE\Paging;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>MinSizeRel\gazebo.lib;sensors\MinSizeRel\gazebo_sensors.lib;rendering\MinSizeRel\gazebo_rendering.lib;D:\vcpkg\installed\x64-windows\lib\FreeImage.lib;D:\gz-ws\lib\OgreMain.lib;;D:\gz-ws\lib\OgreRTShaderSystem.lib;D:\gz-ws\lib\OgreTerrain.lib;D:\gz-ws\lib\OgrePaging.lib;physics\MinSizeRel\gazebo_physics.lib;util\MinSizeRel\gazebo_util.lib;..\deps\opende\MinSizeRel\gazebo_ode.lib;..\deps\opende\GIMPACT\MinSizeRel\gazebo_gimpact.lib;..\deps\opende\ou\MinSizeRel\gazebo_opende_ou.lib;..\deps\libccd\MinSizeRel\gazebo_ccd.lib;..\deps\opende\OPCODE\MinSizeRel\gazebo_opcode.lib;transport\MinSizeRel\gazebo_transport.lib;D:\gz-ws\lib\ignition-transport4.lib;ws2_32.lib;Iphlpapi.lib;opengl32.lib;glu32.lib;msgs\MinSizeRel\gazebo_msgs.lib;common\MinSizeRel\gazebo_common.lib;D:\vcpkg\installed\x64-windows\lib\dl.lib;D:\vcpkg\installed\x64-windows\lib\FreeImage.lib;D:\vcpkg\installed\x64-windows\lib\boost_thread-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_system-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_filesystem-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_program_options-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_regex-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_iostreams-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_date_time-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_chrono-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_atomic-vc140-mt.lib;common\MinSizeRel\tinyxml_internal.lib;D:\vcpkg\installed\x64-windows\lib\libcurl.lib;D:\vcpkg\installed\x64-windows\lib\sdformat.lib;D:\gz-ws\lib\ignition-msgs1.lib;D:\vcpkg\installed\x64-windows\debug\lib\ignition-math4.lib;D:\vcpkg\installed\x64-windows\lib\libprotobuf.lib;D:\vcpkg\installed\x64-windows\lib\libprotobuf.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/gz-ws/gazebo/build/test;D:/gz-ws/gazebo/build/test/$(Configuration);D:/vcpkg/installed/x64-windows/lib;D:/vcpkg/installed/x64-windows/lib/$(Configuration);D:/vcpkg/installed/x64-windows/bin;D:/vcpkg/installed/x64-windows/bin/$(Configuration);D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib;D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/gz-ws/gazebo/build/gazebo/MinSizeRel/gzserver.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/gz-ws/gazebo/build/gazebo/MinSizeRel/gzserver.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\gz-ws\include;D:\gz-ws\include\OGRE;D:\gz-ws\include\OGRE\RTShaderSystem;D:\gz-ws\include\OGRE\Terrain;D:\gz-ws\include\OGRE\Paging;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /Zc:__cplusplus</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4005;4068;4244;4267;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;BUILDING_DLL;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;LIBBULLET_VERSION=0.0;WIN32_LEAN_AND_MEAN;_USE_MATH_DEFINES;NOMINMAX;FREEIMAGE_LIB;BOOST_ALL_DYN_LINK;PROTOBUF_USE_DLLS;BUILDING_DLL;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\gz-ws\include;D:\gz-ws\include\OGRE;D:\gz-ws\include\OGRE\RTShaderSystem;D:\gz-ws\include\OGRE\Terrain;D:\gz-ws\include\OGRE\Paging;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\gz-ws\gazebo\test\gtest\include;D:\gz-ws\gazebo;D:\gz-ws\gazebo\build;D:\gz-ws\gazebo\deps\win\tinyxml;D:\gz-ws\gazebo\deps\tinyxml2;D:\vcpkg\installed\x64-windows\include;D:\gz-ws\include\ignition\msgs1;D:\gz-ws\include\ignition\transport4;D:\vcpkg\installed\x64-windows\include\ignition\math4;D:\gz-ws\include;D:\gz-ws\include\OGRE;D:\gz-ws\include\OGRE\RTShaderSystem;D:\gz-ws\include\OGRE\Terrain;D:\gz-ws\include\OGRE\Paging;D:\vcpkg\installed\x64-windows\share\sdformat6\..\..\include\sdformat-6.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>RelWithDebInfo\gazebo.lib;sensors\RelWithDebInfo\gazebo_sensors.lib;rendering\RelWithDebInfo\gazebo_rendering.lib;D:\vcpkg\installed\x64-windows\lib\FreeImage.lib;D:\gz-ws\lib\OgreMain.lib;;D:\gz-ws\lib\OgreRTShaderSystem.lib;D:\gz-ws\lib\OgreTerrain.lib;D:\gz-ws\lib\OgrePaging.lib;physics\RelWithDebInfo\gazebo_physics.lib;util\RelWithDebInfo\gazebo_util.lib;..\deps\opende\RelWithDebInfo\gazebo_ode.lib;..\deps\opende\GIMPACT\RelWithDebInfo\gazebo_gimpact.lib;..\deps\opende\ou\RelWithDebInfo\gazebo_opende_ou.lib;..\deps\libccd\RelWithDebInfo\gazebo_ccd.lib;..\deps\opende\OPCODE\RelWithDebInfo\gazebo_opcode.lib;transport\RelWithDebInfo\gazebo_transport.lib;D:\gz-ws\lib\ignition-transport4.lib;ws2_32.lib;Iphlpapi.lib;opengl32.lib;glu32.lib;msgs\RelWithDebInfo\gazebo_msgs.lib;common\RelWithDebInfo\gazebo_common.lib;D:\vcpkg\installed\x64-windows\lib\dl.lib;D:\vcpkg\installed\x64-windows\lib\FreeImage.lib;D:\vcpkg\installed\x64-windows\lib\boost_thread-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_system-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_filesystem-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_program_options-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_regex-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_iostreams-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_date_time-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_chrono-vc140-mt.lib;D:\vcpkg\installed\x64-windows\lib\boost_atomic-vc140-mt.lib;common\RelWithDebInfo\tinyxml_internal.lib;D:\vcpkg\installed\x64-windows\lib\libcurl.lib;D:\vcpkg\installed\x64-windows\lib\sdformat.lib;D:\gz-ws\lib\ignition-msgs1.lib;D:\vcpkg\installed\x64-windows\debug\lib\ignition-math4.lib;D:\vcpkg\installed\x64-windows\lib\libprotobuf.lib;D:\vcpkg\installed\x64-windows\lib\libprotobuf.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/gz-ws/gazebo/build/test;D:/gz-ws/gazebo/build/test/$(Configuration);D:/vcpkg/installed/x64-windows/lib;D:/vcpkg/installed/x64-windows/lib/$(Configuration);D:/vcpkg/installed/x64-windows/bin;D:/vcpkg/installed/x64-windows/bin/$(Configuration);D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib;D:/vcpkg/installed/x64-windows/share/sdformat6/../../lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/gz-ws/gazebo/build/gazebo/RelWithDebInfo/gzserver.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/gz-ws/gazebo/build/gazebo/RelWithDebInfo/gzserver.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\deps\tinyxml2\gazebo\tinyxml2.cpp" />
+    <ClCompile Include="..\..\gazebo\common\Animation.cc" />
+    <ClCompile Include="..\..\gazebo\common\Assert.cc" />
+    <ClCompile Include="..\..\gazebo\common\AudioDecoder.cc" />
+    <ClCompile Include="..\..\gazebo\common\Base64.cc" />
+    <ClCompile Include="..\..\gazebo\common\Battery.cc" />
+    <ClCompile Include="..\..\gazebo\common\BVHLoader.cc" />
+    <ClCompile Include="..\..\gazebo\common\ColladaExporter.cc" />
+    <ClCompile Include="..\..\gazebo\common\ColladaLoader.cc" />
+    <ClCompile Include="..\..\gazebo\common\CommonIface.cc" />
+    <ClCompile Include="..\..\gazebo\common\Console.cc" />
+    <ClCompile Include="..\..\gazebo\common\Dem.cc" />
+    <ClCompile Include="..\..\gazebo\common\Event.cc" />
+    <ClCompile Include="..\..\gazebo\common\Events.cc" />
+    <ClCompile Include="..\..\gazebo\common\Exception.cc" />
+    <ClCompile Include="..\..\gazebo\common\ffmpeg_inc.cc" />
+    <ClCompile Include="..\..\gazebo\common\HeightmapData.cc" />
+    <ClCompile Include="..\..\gazebo\common\Image.cc" />
+    <ClCompile Include="..\..\gazebo\common\ImageHeightmap.cc" />
+    <ClCompile Include="..\..\gazebo\common\KeyEvent.cc" />
+    <ClCompile Include="..\..\gazebo\common\KeyFrame.cc" />
+    <ClCompile Include="..\..\gazebo\common\Material.cc" />
+    <ClCompile Include="..\..\gazebo\common\MaterialDensity.cc" />
+    <ClCompile Include="..\..\gazebo\common\Mesh.cc" />
+    <ClCompile Include="..\..\gazebo\common\MeshExporter.cc" />
+    <ClCompile Include="..\..\gazebo\common\MeshLoader.cc" />
+    <ClCompile Include="..\..\gazebo\common\MeshManager.cc" />
+    <ClCompile Include="..\..\gazebo\common\ModelDatabase.cc" />
+    <ClCompile Include="..\..\gazebo\common\MouseEvent.cc" />
+    <ClCompile Include="..\..\gazebo\common\OBJLoader.cc" />
+    <ClCompile Include="..\..\gazebo\common\PID.cc" />
+    <ClCompile Include="..\..\gazebo\common\Plugin.cc" />
+    <ClCompile Include="..\..\gazebo\common\SemanticVersion.cc" />
+    <ClCompile Include="..\..\gazebo\common\Skeleton.cc" />
+    <ClCompile Include="..\..\gazebo\common\SkeletonAnimation.cc" />
+    <ClCompile Include="..\..\gazebo\common\SphericalCoordinates.cc" />
+    <ClCompile Include="..\..\gazebo\common\STLLoader.cc" />
+    <ClCompile Include="..\..\gazebo\common\SVGLoader.cc" />
+    <ClCompile Include="..\..\gazebo\common\SystemPaths.cc" />
+    <ClCompile Include="..\..\gazebo\common\tarlib.cc" />
+    <ClCompile Include="..\..\gazebo\common\tarlibfilesys.cc" />
+    <ClCompile Include="..\..\gazebo\common\tarlibstring.cc" />
+    <ClCompile Include="..\..\gazebo\common\Time.cc" />
+    <ClCompile Include="..\..\gazebo\common\Timer.cc" />
+    <ClCompile Include="..\..\gazebo\common\URI.cc" />
+    <ClCompile Include="..\..\gazebo\common\Video.cc" />
+    <ClCompile Include="..\..\gazebo\common\VideoEncoder.cc" />
+    <ClCompile Include="..\..\gazebo\gazebo.cc" />
+    <ClCompile Include="..\..\gazebo\gazebo_shared.cc" />
+    <ClCompile Include="..\..\gazebo\Master.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Actor.cc" />
+    <ClCompile Include="..\..\gazebo\physics\AdiabaticAtmosphere.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Atmosphere.cc" />
+    <ClCompile Include="..\..\gazebo\physics\AtmosphereFactory.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Base.cc" />
+    <ClCompile Include="..\..\gazebo\physics\BoxShape.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Collision.cc" />
+    <ClCompile Include="..\..\gazebo\physics\CollisionState.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Contact.cc" />
+    <ClCompile Include="..\..\gazebo\physics\ContactManager.cc" />
+    <ClCompile Include="..\..\gazebo\physics\CylinderShape.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Entity.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Gripper.cc" />
+    <ClCompile Include="..\..\gazebo\physics\HeightmapShape.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Inertial.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Joint.cc" />
+    <ClCompile Include="..\..\gazebo\physics\JointController.cc" />
+    <ClCompile Include="..\..\gazebo\physics\JointState.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Light.cc" />
+    <ClCompile Include="..\..\gazebo\physics\LightState.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Link.cc" />
+    <ClCompile Include="..\..\gazebo\physics\LinkState.cc" />
+    <ClCompile Include="..\..\gazebo\physics\MapShape.cc" />
+    <ClCompile Include="..\..\gazebo\physics\MeshShape.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Model.cc" />
+    <ClCompile Include="..\..\gazebo\physics\ModelState.cc" />
+    <ClCompile Include="..\..\gazebo\physics\MultiRayShape.cc" />
+    <ClCompile Include="..\..\gazebo\physics\PhysicsEngine.cc" />
+    <ClCompile Include="..\..\gazebo\physics\PhysicsIface.cc" />
+    <ClCompile Include="..\..\gazebo\physics\PlaneShape.cc" />
+    <ClCompile Include="..\..\gazebo\physics\PolylineShape.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Population.cc" />
+    <ClCompile Include="..\..\gazebo\physics\PresetManager.cc" />
+    <ClCompile Include="..\..\gazebo\physics\RayShape.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Road.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Shape.cc" />
+    <ClCompile Include="..\..\gazebo\physics\SphereShape.cc" />
+    <ClCompile Include="..\..\gazebo\physics\State.cc" />
+    <ClCompile Include="..\..\gazebo\physics\SurfaceParams.cc" />
+    <ClCompile Include="..\..\gazebo\physics\UserCmdManager.cc" />
+    <ClCompile Include="..\..\gazebo\physics\Wind.cc" />
+    <ClCompile Include="..\..\gazebo\physics\World.cc" />
+    <ClCompile Include="..\..\gazebo\physics\WorldState.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\ApplyWrenchVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\ArrowVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\AxisVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\Camera.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\CameraVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\COMVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\ContactVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\Conversions.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\CustomPSSMShadowCameraSetup.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\DeferredLight.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\GBufferMaterialGenerator.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\GBufferSchemeHandler.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\GeomUtils.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\MaterialGenerator.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\MergeMaterialGenerator.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\MergeSchemeHandler.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\deferred_shading\SSAOLogic.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\DepthCamera.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\Distortion.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\DynamicLines.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\DynamicRenderable.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\FPSViewController.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\GpuLaser.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\Grid.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\Heightmap.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\InertiaVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\JointVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\LaserVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\LensFlare.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\Light.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\LinkFrameVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\LogicalCameraVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\MarkerManager.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\MarkerVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\Material.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\MovableText.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\OrbitViewController.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\OriginVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\OrthoViewController.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\Projector.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\RayQuery.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\RenderEngine.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\RenderEvents.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\RenderingIface.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\RFIDTagVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\RFIDVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\Road2d.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\RTShaderSystem.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\Scene.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\SelectionObj.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\selection_buffer\MaterialSwitcher.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\selection_buffer\SelectionBuffer.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\selection_buffer\SelectionRenderListener.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\AtmosphereManager.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\BasicController.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\CloudsManager.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\ColorGradient.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\GPUManager.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\MeshManager.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\MoonManager.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\Prerequisites.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\SkyX.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VCloudsManager.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\DataManager.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\Ellipsoid.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\FastFakeRandom.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\GeometryBlock.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\GeometryManager.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\Lightning.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\LightningManager.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\skyx\src\VClouds\VClouds.cpp" />
+    <ClCompile Include="..\..\gazebo\rendering\SonarVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\TransmitterVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\UserCamera.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\VideoVisual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\ViewController.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\Visual.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\WideAngleCamera.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\WindowManager.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\WireBox.cc" />
+    <ClCompile Include="..\..\gazebo\rendering\WrenchVisual.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\AltimeterSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\CameraSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\ContactSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\DepthCameraSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\ForceTorqueSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\GaussianNoiseModel.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\GpsSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\GpuRaySensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\ImuSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\LogicalCameraSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\MagnetometerSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\MultiCameraSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\Noise.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\RaySensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\RFIDSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\RFIDTag.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\Sensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\SensorFactory.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\SensorManager.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\SensorsIface.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\SensorTypes.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\SonarSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\WideAngleCameraSensor.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\WirelessReceiver.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\WirelessTransceiver.cc" />
+    <ClCompile Include="..\..\gazebo\sensors\WirelessTransmitter.cc" />
+    <ClCompile Include="..\..\gazebo\Server.cc" />
+    <ClCompile Include="..\..\gazebo\transport\CallbackHelper.cc" />
+    <ClCompile Include="..\..\gazebo\transport\Connection.cc" />
+    <ClCompile Include="..\..\gazebo\transport\ConnectionManager.cc" />
+    <ClCompile Include="..\..\gazebo\transport\IOManager.cc" />
+    <ClCompile Include="..\..\gazebo\transport\Node.cc" />
+    <ClCompile Include="..\..\gazebo\transport\Publication.cc" />
+    <ClCompile Include="..\..\gazebo\transport\PublicationTransport.cc" />
+    <ClCompile Include="..\..\gazebo\transport\Publisher.cc" />
+    <ClCompile Include="..\..\gazebo\transport\Subscriber.cc" />
+    <ClCompile Include="..\..\gazebo\transport\SubscriptionTransport.cc" />
+    <ClCompile Include="..\..\gazebo\transport\TopicManager.cc" />
+    <ClCompile Include="..\..\gazebo\transport\TransportIface.cc" />
+    <ClCompile Include="..\..\gazebo\util\Diagnostics.cc" />
+    <ClCompile Include="..\..\gazebo\util\IgnMsgSdf.cc" />
+    <ClCompile Include="..\..\gazebo\util\IntrospectionClient.cc" />
+    <ClCompile Include="..\..\gazebo\util\IntrospectionManager.cc" />
+    <ClCompile Include="..\..\gazebo\util\LogPlay.cc" />
+    <ClCompile Include="..\..\gazebo\util\LogRecord.cc" />
+    <ClCompile Include="..\..\gazebo\util\OpenAL.cc" />
+    <ClCompile Include="D:\gz-ws\gazebo\gazebo\server_main.cc" />
+    <ClCompile Include="msgs\altimeter.pb.cc" />
+    <ClCompile Include="msgs\any.pb.cc" />
+    <ClCompile Include="msgs\atmosphere.pb.cc" />
+    <ClCompile Include="msgs\axis.pb.cc" />
+    <ClCompile Include="msgs\battery.pb.cc" />
+    <ClCompile Include="msgs\boxgeom.pb.cc" />
+    <ClCompile Include="msgs\camerasensor.pb.cc" />
+    <ClCompile Include="msgs\camera_cmd.pb.cc" />
+    <ClCompile Include="msgs\camera_lens.pb.cc" />
+    <ClCompile Include="msgs\cessna.pb.cc" />
+    <ClCompile Include="msgs\collision.pb.cc" />
+    <ClCompile Include="msgs\color.pb.cc" />
+    <ClCompile Include="msgs\contact.pb.cc" />
+    <ClCompile Include="msgs\contacts.pb.cc" />
+    <ClCompile Include="msgs\contactsensor.pb.cc" />
+    <ClCompile Include="msgs\cylindergeom.pb.cc" />
+    <ClCompile Include="msgs\density.pb.cc" />
+    <ClCompile Include="msgs\diagnostics.pb.cc" />
+    <ClCompile Include="msgs\distortion.pb.cc" />
+    <ClCompile Include="msgs\empty.pb.cc" />
+    <ClCompile Include="msgs\factory.pb.cc" />
+    <ClCompile Include="msgs\fluid.pb.cc" />
+    <ClCompile Include="msgs\fog.pb.cc" />
+    <ClCompile Include="msgs\friction.pb.cc" />
+    <ClCompile Include="msgs\geometry.pb.cc" />
+    <ClCompile Include="msgs\gps.pb.cc" />
+    <ClCompile Include="msgs\gps_sensor.pb.cc" />
+    <ClCompile Include="msgs\gui.pb.cc" />
+    <ClCompile Include="msgs\gui_camera.pb.cc" />
+    <ClCompile Include="msgs\gz_string.pb.cc" />
+    <ClCompile Include="msgs\gz_string_v.pb.cc" />
+    <ClCompile Include="msgs\header.pb.cc" />
+    <ClCompile Include="msgs\heightmapgeom.pb.cc" />
+    <ClCompile Include="msgs\hydra.pb.cc" />
+    <ClCompile Include="msgs\image.pb.cc" />
+    <ClCompile Include="msgs\imagegeom.pb.cc" />
+    <ClCompile Include="msgs\images_stamped.pb.cc" />
+    <ClCompile Include="msgs\image_stamped.pb.cc" />
+    <ClCompile Include="msgs\imu.pb.cc" />
+    <ClCompile Include="msgs\imu_sensor.pb.cc" />
+    <ClCompile Include="msgs\inertial.pb.cc" />
+    <ClCompile Include="msgs\int.pb.cc" />
+    <ClCompile Include="msgs\joint.pb.cc" />
+    <ClCompile Include="msgs\joint_animation.pb.cc" />
+    <ClCompile Include="msgs\joint_cmd.pb.cc" />
+    <ClCompile Include="msgs\joint_wrench.pb.cc" />
+    <ClCompile Include="msgs\joint_wrench_stamped.pb.cc" />
+    <ClCompile Include="msgs\joystick.pb.cc" />
+    <ClCompile Include="msgs\laserscan.pb.cc" />
+    <ClCompile Include="msgs\laserscan_stamped.pb.cc" />
+    <ClCompile Include="msgs\light.pb.cc" />
+    <ClCompile Include="msgs\link.pb.cc" />
+    <ClCompile Include="msgs\link_data.pb.cc" />
+    <ClCompile Include="msgs\logical_camera_image.pb.cc" />
+    <ClCompile Include="msgs\logical_camera_sensor.pb.cc" />
+    <ClCompile Include="msgs\log_control.pb.cc" />
+    <ClCompile Include="msgs\log_playback_control.pb.cc" />
+    <ClCompile Include="msgs\log_playback_stats.pb.cc" />
+    <ClCompile Include="msgs\log_status.pb.cc" />
+    <ClCompile Include="msgs\magnetometer.pb.cc" />
+    <ClCompile Include="msgs\material.pb.cc" />
+    <ClCompile Include="msgs\meshgeom.pb.cc" />
+    <ClCompile Include="msgs\model.pb.cc" />
+    <ClCompile Include="msgs\model_configuration.pb.cc" />
+    <ClCompile Include="msgs\model_v.pb.cc" />
+    <ClCompile Include="msgs\packet.pb.cc" />
+    <ClCompile Include="msgs\param.pb.cc" />
+    <ClCompile Include="msgs\param_v.pb.cc" />
+    <ClCompile Include="msgs\physics.pb.cc" />
+    <ClCompile Include="msgs\pid.pb.cc" />
+    <ClCompile Include="msgs\planegeom.pb.cc" />
+    <ClCompile Include="msgs\plugin.pb.cc" />
+    <ClCompile Include="msgs\pointcloud.pb.cc" />
+    <ClCompile Include="msgs\polylinegeom.pb.cc" />
+    <ClCompile Include="msgs\pose.pb.cc" />
+    <ClCompile Include="msgs\poses_stamped.pb.cc" />
+    <ClCompile Include="msgs\pose_animation.pb.cc" />
+    <ClCompile Include="msgs\pose_stamped.pb.cc" />
+    <ClCompile Include="msgs\pose_trajectory.pb.cc" />
+    <ClCompile Include="msgs\pose_v.pb.cc" />
+    <ClCompile Include="msgs\projector.pb.cc" />
+    <ClCompile Include="msgs\propagation_grid.pb.cc" />
+    <ClCompile Include="msgs\propagation_particle.pb.cc" />
+    <ClCompile Include="msgs\publish.pb.cc" />
+    <ClCompile Include="msgs\publishers.pb.cc" />
+    <ClCompile Include="msgs\quaternion.pb.cc" />
+    <ClCompile Include="msgs\raysensor.pb.cc" />
+    <ClCompile Include="msgs\request.pb.cc" />
+    <ClCompile Include="msgs\response.pb.cc" />
+    <ClCompile Include="msgs\rest_login.pb.cc" />
+    <ClCompile Include="msgs\rest_logout.pb.cc" />
+    <ClCompile Include="msgs\rest_post.pb.cc" />
+    <ClCompile Include="msgs\rest_response.pb.cc" />
+    <ClCompile Include="msgs\road.pb.cc" />
+    <ClCompile Include="msgs\scene.pb.cc" />
+    <ClCompile Include="msgs\selection.pb.cc" />
+    <ClCompile Include="msgs\sensor.pb.cc" />
+    <ClCompile Include="msgs\sensor_noise.pb.cc" />
+    <ClCompile Include="msgs\server_control.pb.cc" />
+    <ClCompile Include="msgs\shadows.pb.cc" />
+    <ClCompile Include="msgs\sim_event.pb.cc" />
+    <ClCompile Include="msgs\sky.pb.cc" />
+    <ClCompile Include="msgs\sonar.pb.cc" />
+    <ClCompile Include="msgs\sonar_stamped.pb.cc" />
+    <ClCompile Include="msgs\spheregeom.pb.cc" />
+    <ClCompile Include="msgs\spherical_coordinates.pb.cc" />
+    <ClCompile Include="msgs\subscribe.pb.cc" />
+    <ClCompile Include="msgs\surface.pb.cc" />
+    <ClCompile Include="msgs\tactile.pb.cc" />
+    <ClCompile Include="msgs\test.pb.cc" />
+    <ClCompile Include="msgs\time.pb.cc" />
+    <ClCompile Include="msgs\topic_info.pb.cc" />
+    <ClCompile Include="msgs\track_visual.pb.cc" />
+    <ClCompile Include="msgs\undo_redo.pb.cc" />
+    <ClCompile Include="msgs\user_cmd.pb.cc" />
+    <ClCompile Include="msgs\user_cmd_stats.pb.cc" />
+    <ClCompile Include="msgs\vector2d.pb.cc" />
+    <ClCompile Include="msgs\vector3d.pb.cc" />
+    <ClCompile Include="msgs\visual.pb.cc" />
+    <ClCompile Include="msgs\wind.pb.cc" />
+    <ClCompile Include="msgs\wireless_node.pb.cc" />
+    <ClCompile Include="msgs\wireless_nodes.pb.cc" />
+    <ClCompile Include="msgs\world_control.pb.cc" />
+    <ClCompile Include="msgs\world_modify.pb.cc" />
+    <ClCompile Include="msgs\world_reset.pb.cc" />
+    <ClCompile Include="msgs\world_stats.pb.cc" />
+    <ClCompile Include="msgs\wrench.pb.cc" />
+    <ClCompile Include="msgs\wrench_stamped.pb.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\deps\tinyxml2\gazebo\tinyxml2.h" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\AmbientLight.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\DeferredLight.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\DeferredLightCP.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\GBufferMaterialGenerator.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\GBufferSchemeHandler.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\GeomUtils.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\LightMaterialGenerator.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\ListenerFactoryLogic.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\MaterialGenerator.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\MergeCP.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\MergeMaterialGenerator.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\MergeSchemeHandler.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\NullSchemeHandler.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\SSAOLogic.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\deferred_shading\TechniqueDefinitions.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\selection_buffer\MaterialSwitcher.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\selection_buffer\SelectionBuffer.hh" />
+    <ClInclude Include="..\..\gazebo\rendering\selection_buffer\SelectionRenderListener.hh" />
+    <ClInclude Include="msgs\altimeter.pb.h" />
+    <ClInclude Include="msgs\any.pb.h" />
+    <ClInclude Include="msgs\atmosphere.pb.h" />
+    <ClInclude Include="msgs\axis.pb.h" />
+    <ClInclude Include="msgs\battery.pb.h" />
+    <ClInclude Include="msgs\boxgeom.pb.h" />
+    <ClInclude Include="msgs\camerasensor.pb.h" />
+    <ClInclude Include="msgs\camera_cmd.pb.h" />
+    <ClInclude Include="msgs\camera_lens.pb.h" />
+    <ClInclude Include="msgs\cessna.pb.h" />
+    <ClInclude Include="msgs\collision.pb.h" />
+    <ClInclude Include="msgs\color.pb.h" />
+    <ClInclude Include="msgs\contact.pb.h" />
+    <ClInclude Include="msgs\contacts.pb.h" />
+    <ClInclude Include="msgs\contactsensor.pb.h" />
+    <ClInclude Include="msgs\cylindergeom.pb.h" />
+    <ClInclude Include="msgs\density.pb.h" />
+    <ClInclude Include="msgs\diagnostics.pb.h" />
+    <ClInclude Include="msgs\distortion.pb.h" />
+    <ClInclude Include="msgs\empty.pb.h" />
+    <ClInclude Include="msgs\factory.pb.h" />
+    <ClInclude Include="msgs\fluid.pb.h" />
+    <ClInclude Include="msgs\fog.pb.h" />
+    <ClInclude Include="msgs\friction.pb.h" />
+    <ClInclude Include="msgs\geometry.pb.h" />
+    <ClInclude Include="msgs\gps.pb.h" />
+    <ClInclude Include="msgs\gps_sensor.pb.h" />
+    <ClInclude Include="msgs\gui.pb.h" />
+    <ClInclude Include="msgs\gui_camera.pb.h" />
+    <ClInclude Include="msgs\gz_string.pb.h" />
+    <ClInclude Include="msgs\gz_string_v.pb.h" />
+    <ClInclude Include="msgs\header.pb.h" />
+    <ClInclude Include="msgs\heightmapgeom.pb.h" />
+    <ClInclude Include="msgs\hydra.pb.h" />
+    <ClInclude Include="msgs\image.pb.h" />
+    <ClInclude Include="msgs\imagegeom.pb.h" />
+    <ClInclude Include="msgs\images_stamped.pb.h" />
+    <ClInclude Include="msgs\image_stamped.pb.h" />
+    <ClInclude Include="msgs\imu.pb.h" />
+    <ClInclude Include="msgs\imu_sensor.pb.h" />
+    <ClInclude Include="msgs\inertial.pb.h" />
+    <ClInclude Include="msgs\int.pb.h" />
+    <ClInclude Include="msgs\joint.pb.h" />
+    <ClInclude Include="msgs\joint_animation.pb.h" />
+    <ClInclude Include="msgs\joint_cmd.pb.h" />
+    <ClInclude Include="msgs\joint_wrench.pb.h" />
+    <ClInclude Include="msgs\joint_wrench_stamped.pb.h" />
+    <ClInclude Include="msgs\joystick.pb.h" />
+    <ClInclude Include="msgs\laserscan.pb.h" />
+    <ClInclude Include="msgs\laserscan_stamped.pb.h" />
+    <ClInclude Include="msgs\light.pb.h" />
+    <ClInclude Include="msgs\link.pb.h" />
+    <ClInclude Include="msgs\link_data.pb.h" />
+    <ClInclude Include="msgs\logical_camera_image.pb.h" />
+    <ClInclude Include="msgs\logical_camera_sensor.pb.h" />
+    <ClInclude Include="msgs\log_control.pb.h" />
+    <ClInclude Include="msgs\log_playback_control.pb.h" />
+    <ClInclude Include="msgs\log_playback_stats.pb.h" />
+    <ClInclude Include="msgs\log_status.pb.h" />
+    <ClInclude Include="msgs\magnetometer.pb.h" />
+    <ClInclude Include="msgs\material.pb.h" />
+    <ClInclude Include="msgs\meshgeom.pb.h" />
+    <ClInclude Include="msgs\MessageTypes.hh" />
+    <ClInclude Include="msgs\model.pb.h" />
+    <ClInclude Include="msgs\model_configuration.pb.h" />
+    <ClInclude Include="msgs\model_v.pb.h" />
+    <ClInclude Include="msgs\packet.pb.h" />
+    <ClInclude Include="msgs\param.pb.h" />
+    <ClInclude Include="msgs\param_v.pb.h" />
+    <ClInclude Include="msgs\physics.pb.h" />
+    <ClInclude Include="msgs\pid.pb.h" />
+    <ClInclude Include="msgs\planegeom.pb.h" />
+    <ClInclude Include="msgs\plugin.pb.h" />
+    <ClInclude Include="msgs\pointcloud.pb.h" />
+    <ClInclude Include="msgs\polylinegeom.pb.h" />
+    <ClInclude Include="msgs\pose.pb.h" />
+    <ClInclude Include="msgs\poses_stamped.pb.h" />
+    <ClInclude Include="msgs\pose_animation.pb.h" />
+    <ClInclude Include="msgs\pose_stamped.pb.h" />
+    <ClInclude Include="msgs\pose_trajectory.pb.h" />
+    <ClInclude Include="msgs\pose_v.pb.h" />
+    <ClInclude Include="msgs\projector.pb.h" />
+    <ClInclude Include="msgs\propagation_grid.pb.h" />
+    <ClInclude Include="msgs\propagation_particle.pb.h" />
+    <ClInclude Include="msgs\publish.pb.h" />
+    <ClInclude Include="msgs\publishers.pb.h" />
+    <ClInclude Include="msgs\quaternion.pb.h" />
+    <ClInclude Include="msgs\raysensor.pb.h" />
+    <ClInclude Include="msgs\request.pb.h" />
+    <ClInclude Include="msgs\response.pb.h" />
+    <ClInclude Include="msgs\rest_login.pb.h" />
+    <ClInclude Include="msgs\rest_logout.pb.h" />
+    <ClInclude Include="msgs\rest_post.pb.h" />
+    <ClInclude Include="msgs\rest_response.pb.h" />
+    <ClInclude Include="msgs\road.pb.h" />
+    <ClInclude Include="msgs\scene.pb.h" />
+    <ClInclude Include="msgs\selection.pb.h" />
+    <ClInclude Include="msgs\sensor.pb.h" />
+    <ClInclude Include="msgs\sensor_noise.pb.h" />
+    <ClInclude Include="msgs\server_control.pb.h" />
+    <ClInclude Include="msgs\shadows.pb.h" />
+    <ClInclude Include="msgs\sim_event.pb.h" />
+    <ClInclude Include="msgs\sky.pb.h" />
+    <ClInclude Include="msgs\sonar.pb.h" />
+    <ClInclude Include="msgs\sonar_stamped.pb.h" />
+    <ClInclude Include="msgs\spheregeom.pb.h" />
+    <ClInclude Include="msgs\spherical_coordinates.pb.h" />
+    <ClInclude Include="msgs\subscribe.pb.h" />
+    <ClInclude Include="msgs\surface.pb.h" />
+    <ClInclude Include="msgs\tactile.pb.h" />
+    <ClInclude Include="msgs\test.pb.h" />
+    <ClInclude Include="msgs\time.pb.h" />
+    <ClInclude Include="msgs\topic_info.pb.h" />
+    <ClInclude Include="msgs\track_visual.pb.h" />
+    <ClInclude Include="msgs\undo_redo.pb.h" />
+    <ClInclude Include="msgs\user_cmd.pb.h" />
+    <ClInclude Include="msgs\user_cmd_stats.pb.h" />
+    <ClInclude Include="msgs\vector2d.pb.h" />
+    <ClInclude Include="msgs\vector3d.pb.h" />
+    <ClInclude Include="msgs\visual.pb.h" />
+    <ClInclude Include="msgs\wind.pb.h" />
+    <ClInclude Include="msgs\wireless_node.pb.h" />
+    <ClInclude Include="msgs\wireless_nodes.pb.h" />
+    <ClInclude Include="msgs\world_control.pb.h" />
+    <ClInclude Include="msgs\world_modify.pb.h" />
+    <ClInclude Include="msgs\world_reset.pb.h" />
+    <ClInclude Include="msgs\world_stats.pb.h" />
+    <ClInclude Include="msgs\wrench.pb.h" />
+    <ClInclude Include="msgs\wrench_stamped.pb.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
