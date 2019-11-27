@@ -1,4 +1,4 @@
-"# GAZEBO_Visualstudio2019" <br />
+GAZEBO Windows Visual Studio 2019 <br />
 <br />
 Run procedure<br />
 =============<br />
@@ -7,11 +7,11 @@ Run procedure<br />
 ​2. <br />
 d:\vcpkg>vcpkg install --triplet x64-windows tinyxml tinyxml2 pugixml ois<br />
 d:\vcpkg>vcpkg install --triplet x64-windows ignition-math4 ignition-msgs1 ignition-transport4<br />
+d:\vcpkg>vcpkg install --triplet x64-windows Qt5​<br />
 <br />
-​3. d:\vcpkg>vcpkg install --triplet x64-windows Qt5​<br />
-<br />
-4. <br />
+3. <br />
 HOME=D:\gz-ws<br />
+HOMEPATH=D:\gz-ws<br />
 GAZEBO_MASTER_URI=http://localhost:11345<br />
 GAZEBO_MODEL_DATABASE_URI=http://models.gazebosim.org<br />
 GAZEBO_RESOURCE_PATH=D:\gz-ws\share\gazebo-10<br />
@@ -20,7 +20,7 @@ GAZEBO_MODEL_PATH=D:\gz-ws\share\gazebo-10\models<br />
 OGRE_RESOURCE_PATH=D:\gz-ws\bin\Debug<br />
 PATH=%PATH%;D:\gz-ws\bin;D:\gz-ws\bin\Debug;D:\gz-ws\lib;D:\vcpkg\installed\x64-windows\debug\bin;D:\vcpkg\installed\x64-windows\bin<br />
 <br />
-5. d:\gz-ws\bin>gzserver<br />
+4. d:\gz-ws\bin>gzserver<br />
    d:\gz-ws\bin>gzclient<br />
 <br />
 BLOB :<br />
