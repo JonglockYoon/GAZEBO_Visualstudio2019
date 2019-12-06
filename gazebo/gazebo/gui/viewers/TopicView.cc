@@ -149,7 +149,9 @@ void TopicView::Update()
       }
 
       // Compute the bandwidth
-      common::Time dt = this->times.back() - this->times.front();
+	  common::Time dt = common::Time(0, 0);
+	  if (!this->dataTimes.empty())
+		dt = this->times.back() - this->times.front();
       double bandwidth = 0;
 
       if (dt != common::Time(0, 0))
